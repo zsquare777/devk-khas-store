@@ -11,6 +11,64 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "marquee-announcement-bar": {
+      "type": "marquee-announcement-bar",
+      "blocks": {
+        "marquee-item-0": {
+          "type": "item",
+          "settings": {
+            "icon_preset": "loyalty",
+            "text": "Huel+ Loyalty Programme",
+            "link": ""
+          }
+        },
+        "marquee-item-1": {
+          "type": "item",
+          "settings": {
+            "icon_preset": "person",
+            "text": "Give 20, Get 20",
+            "link": ""
+          }
+        },
+        "marquee-item-2": {
+          "type": "item",
+          "settings": {
+            "icon_preset": "truck",
+            "text": "Free Express Delivery on Orders 45+",
+            "link": ""
+          }
+        },
+        "marquee-item-3": {
+          "type": "item",
+          "settings": {
+            "icon_preset": "mail",
+            "text": "Subscribe and Save 10%",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "marquee-item-0",
+        "marquee-item-1",
+        "marquee-item-2",
+        "marquee-item-3"
+      ],
+      "settings": {
+        "background_color": "#111111",
+        "text_color": "#ffffff",
+        "scroll_speed": 30,
+        "bar_padding": 18,
+        "item_gap": 32,
+        "show_dividers": false,
+        "font_size": 13,
+        "font_weight": "400",
+        "letter_spacing": 1,
+        "icon_size": 20,
+        "icon_gap": 8,
+        "icon_filter": "brightness(0) invert(1)",
+        "accessibility_label": "Announcements"
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -46,9 +104,20 @@
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "enable_customer_avatar": true,
+        "cta_nav_text": "Give 20, Get 20",
+        "cta_nav_link": "",
+        "cta_nav_bg_color": "#1c5e2e",
+        "cta_nav_text_color": "#ffffff",
+        "feature_btn_text": "Which product is right for you?",
+        "feature_btn_link": "",
+        "feature_btn_bg_color": "#d5f0dd",
+        "feature_btn_text_color": "#1c5e2e",
+        "show_feature_icon": true,
+        "show_help_icon": true,
+        "help_link": "",
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20
@@ -56,6 +125,7 @@
     }
   },
   "order": [
+    "marquee-announcement-bar",
     "announcement-bar",
     "header"
   ]
