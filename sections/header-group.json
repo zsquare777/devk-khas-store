@@ -83,6 +83,7 @@
       "block_order": [
         "announcement-bar-0"
       ],
+      "disabled": true,
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -107,6 +108,17 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "enable_customer_avatar": true,
+        "cta_nav_text": "Give 20, Get 20",
+        "cta_nav_link": "",
+        "cta_nav_bg_color": "#1c5e2e",
+        "cta_nav_text_color": "#ffffff",
+        "feature_btn_text": "Which product is right for you?",
+        "feature_btn_link": "",
+        "feature_btn_bg_color": "#d5f0dd",
+        "feature_btn_text_color": "#1c5e2e",
+        "show_feature_icon": true,
+        "show_help_icon": true,
+        "help_link": "",
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20
