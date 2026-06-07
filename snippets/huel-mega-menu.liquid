@@ -1,0 +1,61 @@
+<div class="huel-mega-menu">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="huel-sidebar">
+
+    <a href="#" class="sidebar-link active">
+      Shop by Collection
+    </a>
+
+    <a href="#" class="sidebar-link">
+      Shop by Goal
+    </a>
+
+    <a href="#" class="sidebar-link">
+      Shop by Lifestyle
+    </a>
+
+    <a href="#" class="sidebar-link">
+      Help Me Choose
+    </a>
+
+    <a href="#" class="sidebar-button">
+      Shop All →
+    </a>
+
+  </div>
+
+  <!-- RIGHT GRID -->
+
+  <div class="huel-grid">
+
+   {% for childlink in link.links %}
+
+  {% assign collection = collections[childlink.handle] %}
+
+  {% if collection %}
+
+    <a href="{{ childlink.url }}" class="huel-card">
+
+      {% if collection.featured_image %}
+        {{
+          collection.featured_image
+          | image_url: width: 500
+          | image_tag
+        }}
+      {% endif %}
+
+      <div class="card-content">
+        <h3>{{ childlink.title }}</h3>
+        <span>→</span>
+      </div>
+
+    </a>
+
+  {% endif %}
+
+{% endfor %}
+
+  </div>
+
+</div>

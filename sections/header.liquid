@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+{{ 'huel-mega-menu.css' | asset_url | stylesheet_tag }}
 <link
   rel="stylesheet"
   href="{{ 'component-cart-notification.css' | asset_url }}"
@@ -39,6 +40,7 @@
   .menu-drawer-container {
     display: flex;
   }
+
 
   .list-menu {
     list-style: none;
@@ -90,8 +92,23 @@
       gap: 0;
     }
     .header__menu-item {
-      color: rgb(var(--color-foreground));
-      padding: 1rem 1.2rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      color: #666666;
+      padding: 0.6rem 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .header__menu-item:hover,
+    .header__menu-item:hover span {
+      color: #111111;
+      text-decoration: none;
+    }
+    .header__active-menu-item {
+      color: #111111;
+      text-decoration: none;
     }
     .section-header .header.page-width {
       max-width: 100%;

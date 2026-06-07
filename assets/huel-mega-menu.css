@@ -1,0 +1,203 @@
+/* ==========================
+   MEGA MENU CONTAINER
+========================== */
+
+.huel-mega-menu{
+    display:flex;
+    width:1400px;
+    max-width:95vw;
+    min-height:650px;
+    background:#fff;
+    margin:30px auto;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   LEFT SIDEBAR
+========================== */
+
+.huel-sidebar{
+
+    width:300px;
+
+    background:#F5F3EF;
+
+    padding:50px 35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.sidebar-link{
+
+    display:block;
+
+    padding:16px 0;
+
+    color:#333;
+
+    font-size:20px;
+
+    font-weight:500;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+
+.sidebar-link:hover{
+
+    color:#0F6D3B;
+
+    padding-left:10px;
+
+}
+
+
+.sidebar-link.active{
+
+    font-weight:700;
+
+}
+
+
+/* Shop All Button */
+
+.sidebar-button{
+
+    margin-top:auto;
+
+    background:#0F6D3B;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================
+      RIGHT GRID
+========================== */
+
+.huel-grid{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    padding:40px;
+
+    align-content:start;
+
+}
+
+
+/* ==========================
+      CARD
+========================== */
+
+.huel-card{
+
+    background:#F8F8F8;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    min-height:240px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:#111;
+
+    transition:.25s;
+
+}
+
+
+.huel-card{
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+
+}
+
+.huel-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+
+.huel-card img{
+
+    position:absolute;
+
+    bottom:15px;
+
+    right:15px;
+
+    width:140px;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+
+.card-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+}
+
+.card-content h3{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin:0;
+
+}
+
+.card-content span{
+
+    font-size:26px;
+
+}
