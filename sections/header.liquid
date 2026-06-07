@@ -87,6 +87,11 @@
     }
     .header .list-menu--inline {
       flex-wrap: nowrap;
+      gap: 0;
+    }
+    .header__menu-item {
+      color: rgb(var(--color-foreground));
+      padding: 1rem 1.2rem;
     }
     .section-header .header.page-width {
       max-width: 100%;
@@ -124,7 +129,7 @@
     display: none;
     align-items: center;
     padding: 0.7rem 1.6rem;
-    border-radius: 50px;
+    border-radius: 8px;
     background-color: {{ section.settings.cta_nav_bg_color }};
     color: {{ section.settings.cta_nav_text_color }};
     font-size: 1.35rem;
