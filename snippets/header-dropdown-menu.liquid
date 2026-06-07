@@ -1,102 +1,103 @@
 {% comment %}
-  Renders the desktop header nav with Huel-style mega menu for items with children.
+  Renders a standard dropdown style menu for the header.
+
+  Usage:
+  {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
-
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
-
-          {%- comment -%} ── Mega menu dropdown ── {%- endcomment -%}
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}">
               <summary
                 id="HeaderMenu-{{ link.handle }}"
                 class="header__menu-item list-menu__item link focus-inset"
               >
-                <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>
+                <span
+                  {%- if link.child_active %}
+                    class="header__active-menu-item"
+                  {% endif %}
+                >
                   {{- link.title | escape -}}
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
-
-              <div class="khas-mega-dropdown" tabindex="-1">
-                <div class="khas-mega-dropdown__inner">
-
-                  {%- comment -%} Left sidebar {%- endcomment -%}
-                  <div class="khas-mega-dropdown__sidebar">
-                    <a href="{{ link.url }}" class="khas-mega-dropdown__sidebar-link">Shop by Collection</a>
-                    <a href="{{ routes.collections_url }}" class="khas-mega-dropdown__sidebar-link">Shop by Type</a>
-                    <a href="/pages/contact" class="khas-mega-dropdown__sidebar-link">Help me choose</a>
-                    <a href="{{ link.url }}" class="khas-mega-dropdown__shop-all">Shop all</a>
-                  </div>
-
-                  {%- comment -%} Right collection grid {%- endcomment -%}
-                  <div class="khas-mega-dropdown__grid">
-                    {%- for childlink in link.links -%}
-                      <a href="{{ childlink.url }}" class="khas-mega-card">
-                        <span class="khas-mega-card__title">{{ childlink.title | escape }}</span>
-                        <div class="khas-mega-card__bottom">
-                          <div class="khas-mega-card__arrow">
-                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M3 8h10M9 4l4 4-4 4" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                          </div>
-                        </div>
-                        {%- if childlink.object.image -%}
-                          {{ childlink.object.image | image_url: width: 300 | image_tag:
-                              class: 'khas-mega-card__image',
-                              loading: 'lazy',
-                              widths: '150, 200, 300',
-                              alt: childlink.title }}
-                        {%- elsif childlink.object.featured_image -%}
-                          {{ childlink.object.featured_image | image_url: width: 300 | image_tag:
-                              class: 'khas-mega-card__image',
-                              loading: 'lazy',
-                              alt: childlink.title }}
-                        {%- endif -%}
+              <ul
+                id="HeaderMenu-MenuList-{{ forloop.index }}"
+                class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
+                role="list"
+                tabindex="-1"
+              >
+                {%- for childlink in link.links -%}
+                  <li>
+                    {%- if childlink.links == blank -%}
+                      <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                        href="{{ childlink.url }}"
+                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ childlink.title | escape }}
                       </a>
-                    {%- endfor -%}
-                  </div>
-
-                </div>
-              </div>
-
+                    {%- else -%}
+                      <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
+                        <summary
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
+                        >
+                          <span>{{ childlink.title | escape }}</span>
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </summary>
+                        <ul
+                          id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                          class="header__submenu list-menu motion-reduce"
+                        >
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{{ grandchildlink.url }}"
+                                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
+                                {% if grandchildlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ grandchildlink.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </details>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
             </details>
           </header-menu>
-
         {%- else -%}
-
-          {%- comment -%} ── Simple nav link ── {%- endcomment -%}
           <a
             id="HeaderMenu-{{ link.handle }}"
             href="{{ link.url }}"
             class="header__menu-item list-menu__item link link--text focus-inset"
-            {% if link.current %}aria-current="page"{% endif %}
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
           >
-            <span {%- if link.current %} class="header__active-menu-item"{% endif %}>
+            <span
+              {%- if link.current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
               {{- link.title | escape -}}
             </span>
           </a>
-
         {%- endif -%}
       </li>
     {%- endfor -%}
-
-    {%- comment -%} ── Hardcoded: Guides & Articles ── {%- endcomment -%}
-    <li>
-      <a
-        href="/blogs/guides-and-articles"
-        class="header__menu-item list-menu__item link link--text focus-inset"
-        {% if request.path contains '/blogs/guides-and-articles' %}aria-current="page"{% endif %}
-      >
-        <span {%- if request.path contains '/blogs/guides-and-articles' %} class="header__active-menu-item"{% endif %}>
-          Guides &amp; Articles
-        </span>
-      </a>
-    </li>
-
   </ul>
 </nav>
