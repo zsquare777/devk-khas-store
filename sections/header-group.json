@@ -56,6 +56,7 @@
       "settings": {
         "background_color": "#111111",
         "text_color": "#ffffff",
+        "icon_filter": "brightness(0) invert(1)",
         "scroll_speed": 30,
         "bar_padding": 18,
         "item_gap": 32,
@@ -65,7 +66,6 @@
         "letter_spacing": 1,
         "icon_size": 20,
         "icon_gap": 8,
-        "icon_filter": "brightness(0) invert(1)",
         "accessibility_label": "Announcements"
       }
     },
@@ -107,17 +107,6 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "enable_customer_avatar": true,
-        "cta_nav_text": "Give 20, Get 20",
-        "cta_nav_link": "",
-        "cta_nav_bg_color": "#1c5e2e",
-        "cta_nav_text_color": "#ffffff",
-        "feature_btn_text": "Which product is right for you?",
-        "feature_btn_link": "",
-        "feature_btn_bg_color": "#d5f0dd",
-        "feature_btn_text_color": "#1c5e2e",
-        "show_feature_icon": true,
-        "show_help_icon": true,
-        "help_link": "",
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20
