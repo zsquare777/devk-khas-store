@@ -3595,3 +3595,42 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* Active Shop Menu */
+
+.mega-menu[open] > summary{
+    background:#fff;
+}
+
+.mega-menu[open] > summary span{
+    color:#111;
+    font-weight:600;
+}
+
+.mega-menu[open] svg{
+    transform:rotate(180deg);
+    transition:.25s;
+}
+
+.mega-menu summary svg{
+    transition:.25s;
+}
+
+/* Open mega menu on hover */
+
+header-menu:hover details{
+    display:block;
+}
+
+header-menu details:hover>.mega-menu__content{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+header-menu details .mega-menu__content{
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:.25s;
+}
