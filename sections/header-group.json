@@ -120,14 +120,35 @@
         "show_help_icon": true,
         "help_link": "",
         "margin_bottom": 0,
-        "padding_top": 10,
-        "padding_bottom": 10
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "khas_hero_banner_FJkyLg": {
+      "type": "khas-hero-banner",
+      "name": "Khas Hero Banner",
+      "settings": {
+        "background_color": "#f2f0eb",
+        "show_rating": true,
+        "rating_text": "4M+ happy customers",
+        "heading_start": "Fast, nutritious,",
+        "heading_italic": "complete",
+        "heading_end": "food.",
+        "subheading": "Designed by expert nutritionists as a convenient way to get all the daily nutrients you need.",
+        "button1_text": "Shop all",
+        "button1_link": "",
+        "button2_text": "Discover more",
+        "button2_link": "",
+        "image": "shopify://shop_images/Gemini_Generated_Image_95sna695sna695sn.png",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "marquee-announcement-bar",
     "announcement-bar",
-    "header"
+    "header",
+    "khas_hero_banner_FJkyLg"
   ]
 }
