@@ -9,6 +9,52 @@
  */
 {
   "sections": {
+    "khas_goals_section": {
+      "type": "khas-goals-section",
+      "blocks": {
+        "card_protein": {
+          "type": "goal_card",
+          "settings": {
+            "title": "More protein",
+            "bg_color": "#3d3a8c",
+            "link": "/collections/all"
+          }
+        },
+        "card_healthy": {
+          "type": "goal_card",
+          "settings": {
+            "title": "Eat healthy",
+            "bg_color": "#c8940f",
+            "link": "/collections/all"
+          }
+        },
+        "card_weight": {
+          "type": "goal_card",
+          "settings": {
+            "title": "Manage weight",
+            "bg_color": "#6d9471",
+            "link": "/collections/all"
+          }
+        },
+        "card_time": {
+          "type": "goal_card",
+          "settings": {
+            "title": "Save time",
+            "bg_color": "#a0703a",
+            "link": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["card_protein", "card_healthy", "card_weight", "card_time"],
+      "settings": {
+        "heading_start": "Food to",
+        "heading_italic": "fuel",
+        "heading_end": "your goals.",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -78,6 +124,7 @@
     }
   },
   "order": [
+    "khas_goals_section",
     "image_banner",
     "featured_collection"
   ]
