@@ -11,103 +11,85 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "marquee_section_qMzM3k": {
-      "type": "marquee-section",
+    "marquee-announcement-bar": {
+      "type": "marquee-announcement-bar",
       "blocks": {
-        "text_HKkfcC": {
-          "type": "text",
+        "marquee-item-0": {
+          "type": "item",
           "settings": {
-            "new_text": "Welcome to  Shoes"
+            "icon_preset": "loyalty",
+            "text": "Huel+ Loyalty Programme",
+            "link": ""
           }
         },
-        "text_6kwyBN": {
-          "type": "text",
+        "marquee-item-1": {
+          "type": "item",
           "settings": {
-            "new_text": "Free Shipping"
+            "icon_preset": "person",
+            "text": "Give 20, Get 20",
+            "link": ""
           }
         },
-        "text_BfQfnp": {
-          "type": "text",
+        "marquee-item-2": {
+          "type": "item",
           "settings": {
-            "new_text": "Get 10% Off"
+            "icon_preset": "truck",
+            "text": "Free Express Delivery on Orders 45+",
+            "link": ""
           }
         },
-        "text_ifz9WY": {
-          "type": "text",
+        "marquee-item-3": {
+          "type": "item",
           "settings": {
-            "new_text": "Welcome to store"
-          }
-        },
-        "text_h3J6aW": {
-          "type": "text",
-          "settings": {
-            "new_text": "Welcome to store"
+            "icon_preset": "mail",
+            "text": "Subscribe and Save 10%",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "text_HKkfcC",
-        "text_6kwyBN",
-        "text_BfQfnp",
-        "text_ifz9WY",
-        "text_h3J6aW"
+        "marquee-item-0",
+        "marquee-item-1",
+        "marquee-item-2",
+        "marquee-item-3"
       ],
-      "name": "Marquee",
       "settings": {
-        "colorBackground": "#000",
-        "marquee_speed": 20,
-        "colorText": "#fff",
-        "link": "",
-        "marquee_height": 34,
-        "font_size": 16
+        "background_color": "#111111",
+        "text_color": "#ffffff",
+        "icon_filter": "brightness(0) invert(1)",
+        "scroll_speed": 30,
+        "bar_padding": 18,
+        "item_gap": 32,
+        "show_dividers": false,
+        "font_size": 13,
+        "font_weight": "400",
+        "letter_spacing": 1,
+        "icon_size": 20,
+        "icon_gap": 8,
+        "accessibility_label": "Announcements"
       }
     },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_icMjTY": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        },
-        "announcement_KNiRwV": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
             "link": ""
           }
-        },
-        "announcement_EfHMrD": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free Shipping",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement_icMjTY",
-        "announcement_KNiRwV",
-        "announcement-bar-0",
-        "announcement_EfHMrD"
+        "announcement-bar-0"
       ],
+      "disabled": true,
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
         "color_scheme": "scheme-1",
         "show_line_separator": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
@@ -115,22 +97,18 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "top-center",
+        "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
-        "menu_type_desktop": "drawer",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "enable_customer_avatar": true,
         "margin_bottom": 0,
-<<<<<<< HEAD
-        "padding_top": 20,
-        "padding_bottom": 20
-=======
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -153,81 +131,13 @@
         "image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_09_48_26_PM.png",
         "padding_top": 0,
         "padding_bottom": 0
->>>>>>> ccb02325c3168174570d5cb79193c2f5b82cabae
       }
-    },
-    "announcement_slider_UNjpCQ": {
-      "type": "announcement-slider",
-      "blocks": {
-        "item_nmLf6w": {
-          "type": "item",
-          "settings": {
-            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
-            "text": "Free Shipping",
-            "link": "shopify://collections/slippers"
-          }
-        },
-        "item_YLxaEc": {
-          "type": "item",
-          "settings": {
-            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
-            "text": "Free Shipping",
-            "link": "shopify://collections/slippers"
-          }
-        },
-        "item_Wn3Wwx": {
-          "type": "item",
-          "settings": {
-            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
-            "text": "Free Shipping",
-            "link": "shopify://collections/slippers"
-          }
-        },
-        "item_G3rXWh": {
-          "type": "item",
-          "settings": {
-            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
-            "text": "Free Shipping",
-            "link": "shopify://collections/slippers"
-          }
-        },
-        "item_PzejtK": {
-          "type": "item",
-          "settings": {
-            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
-            "text": "Free Shipping",
-            "link": "shopify://collections/slippers"
-          }
-        },
-        "item_6AAAEP": {
-          "type": "item",
-          "settings": {
-            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
-            "text": "Free Shipping",
-            "link": "shopify://collections/slippers"
-          }
-        }
-      },
-      "block_order": [
-        "item_nmLf6w",
-        "item_YLxaEc",
-        "item_Wn3Wwx",
-        "item_G3rXWh",
-        "item_PzejtK",
-        "item_6AAAEP"
-      ],
-      "name": "Announcement Slider",
-      "settings": {}
     }
   },
   "order": [
-    "marquee_section_qMzM3k",
+    "marquee-announcement-bar",
     "announcement-bar",
     "header",
-<<<<<<< HEAD
-    "announcement_slider_UNjpCQ"
-=======
     "khas_hero_banner_FJkyLg"
->>>>>>> ccb02325c3168174570d5cb79193c2f5b82cabae
   ]
 }
