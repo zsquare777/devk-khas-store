@@ -127,8 +127,33 @@
         "enable_language_selector": true,
         "enable_customer_avatar": true,
         "margin_bottom": 0,
+<<<<<<< HEAD
         "padding_top": 20,
         "padding_bottom": 20
+=======
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "khas_hero_banner_FJkyLg": {
+      "type": "khas-hero-banner",
+      "name": "Khas Hero Banner",
+      "settings": {
+        "background_color": "#f2f0eb",
+        "show_rating": true,
+        "rating_text": "4M+ happy customers",
+        "heading_start": "Fast, nutritious,",
+        "heading_italic": "complete",
+        "heading_end": "food.",
+        "subheading": "Designed by expert nutritionists as a convenient way to get all the daily nutrients you need.",
+        "button1_text": "Shop all",
+        "button1_link": "",
+        "button2_text": "Discover more",
+        "button2_link": "",
+        "image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_09_48_26_PM.png",
+        "padding_top": 0,
+        "padding_bottom": 0
+>>>>>>> ccb02325c3168174570d5cb79193c2f5b82cabae
       }
     },
     "announcement_slider_UNjpCQ": {
@@ -199,6 +224,10 @@
     "marquee_section_qMzM3k",
     "announcement-bar",
     "header",
+<<<<<<< HEAD
     "announcement_slider_UNjpCQ"
+=======
+    "khas_hero_banner_FJkyLg"
+>>>>>>> ccb02325c3168174570d5cb79193c2f5b82cabae
   ]
 }
