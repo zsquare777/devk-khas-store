@@ -75,6 +75,25 @@
         "padding_bottom": 60
       }
     },
+    "khas_benefits": {
+      "type": "khas-benefits",
+      "blocks": {
+        "b1": { "type": "benefit", "settings": { "icon": "clipboard", "title": "100% Complete",    "description": "All the nutrition you need. Every day." } },
+        "b2": { "type": "benefit", "settings": { "icon": "clock",     "title": "Save Time",        "description": "Meals ready in 15 seconds." } },
+        "b3": { "type": "benefit", "settings": { "icon": "money",     "title": "Save Money",       "description": "From Rs.1.00 per meal." } },
+        "b4": { "type": "benefit", "settings": { "icon": "trash",     "title": "No Fillers",       "description": "No unnecessary ingredients. No GMO." } },
+        "b5": { "type": "benefit", "settings": { "icon": "leaf",      "title": "Taste Guaranteed", "description": "Love it or your money back." } },
+        "b6": { "type": "benefit", "settings": { "icon": "thumbsup",  "title": "Easy",             "description": "No prep. No cooking. No mess." } }
+      },
+      "block_order": ["b1","b2","b3","b4","b5","b6"],
+      "settings": {
+        "heading_italic": "Benefits",
+        "heading_end": "of Khas",
+        "background_color": "#111111",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -146,6 +165,7 @@
   "order": [
     "khas_goals_section",
     "khas_shop_way",
+    "khas_benefits",
     "image_banner",
     "featured_collection"
   ]
