@@ -1,0 +1,231 @@
+.khas-bestsellers {
+  width: 100%;
+}
+
+.khas-bestsellers-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* HEADER ROW */
+.khas-bestsellers-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 16px;
+}
+
+.khas-bestsellers-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.khas-bestsellers-heading {
+  margin: 0;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: -0.03em;
+  color: #111;
+  line-height: 1.1;
+}
+
+.khas-bestsellers-heading em {
+  font-style: italic;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.khas-bestsellers-subheading {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.khas-bestsellers-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 100px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, sans-serif;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.khas-bestsellers-btn:hover {
+  opacity: 0.8;
+}
+
+/* GRID */
+.khas-bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* CARD */
+.khas-bestsellers-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F0EDE8;
+  transition: transform 0.25s ease;
+  position: relative;
+}
+
+.khas-bestsellers-card:hover {
+  transform: translateY(-3px);
+}
+
+/* BADGE */
+.khas-bestsellers-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.khas-bestsellers-badge--hot {
+  background: rgba(255,255,255,0.85);
+  color: #e85a00;
+}
+
+.khas-bestsellers-badge--new {
+  background: rgba(255,255,255,0.85);
+  color: #b07d00;
+}
+
+/* IMAGE */
+.khas-bestsellers-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.khas-bestsellers-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.khas-bestsellers-card:hover .khas-bestsellers-card-img {
+  transform: scale(1.05);
+}
+
+/* BODY */
+.khas-bestsellers-card-body {
+  background: #fff;
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.khas-bestsellers-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+  color: #111;
+  line-height: 1.3;
+}
+
+.khas-bestsellers-card-desc {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #666;
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.4;
+}
+
+.khas-bestsellers-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.khas-bestsellers-card-price {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #111;
+}
+
+.khas-bestsellers-card-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, sans-serif;
+  align-self: flex-start;
+  transition: opacity 0.2s;
+}
+
+.khas-bestsellers-card:hover .khas-bestsellers-card-cta {
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .khas-bestsellers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .khas-bestsellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .khas-bestsellers-inner {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .khas-bestsellers-grid {
+    grid-template-columns: 1fr;
+  }
+  .khas-bestsellers-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

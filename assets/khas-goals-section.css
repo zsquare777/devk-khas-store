@@ -1,0 +1,118 @@
+.khas-goals-section {
+  width: 100%;
+}
+
+.khas-goals-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.khas-goals-heading {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: -0.03em;
+  color: #111;
+  margin: 0 0 40px;
+  line-height: 1.1;
+}
+
+.khas-goals-heading em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.khas-goals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.khas-goals-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.khas-goals-card:hover {
+  transform: translateY(-4px);
+}
+
+.khas-goals-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.khas-goals-card:hover .khas-goals-card-img {
+  transform: scale(1.04);
+}
+
+.khas-goals-card-title {
+  position: relative;
+  z-index: 2;
+  padding: 20px 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.khas-goals-card-arrow {
+  position: absolute;
+  z-index: 2;
+  bottom: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.khas-goals-card-arrow svg {
+  transform: rotate(0deg) !important;
+  transition: none !important;
+}
+
+.khas-goals-card:hover .khas-goals-card-arrow {
+  transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+  .khas-goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .khas-goals-inner {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .khas-goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .khas-goals-inner {
+    padding: 0 16px;
+  }
+  .khas-goals-heading {
+    margin-bottom: 24px;
+  }
+}
