@@ -16,46 +16,60 @@
           "type": "goal_card",
           "settings": {
             "title": "More protein",
-            "link": "/collections/all",
             "bg_color": "#3d3a8c",
-            "image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_01_51_01_AM.png"
+            "link": "/collections/all"
           }
         },
         "card_healthy": {
           "type": "goal_card",
           "settings": {
             "title": "Eat healthy",
-            "link": "/collections/all",
-            "bg_color": "#c8940f"
+            "bg_color": "#c8940f",
+            "link": "/collections/all"
           }
         },
         "card_weight": {
           "type": "goal_card",
           "settings": {
             "title": "Manage weight",
-            "link": "/collections/all",
-            "bg_color": "#6d9471"
+            "bg_color": "#6d9471",
+            "link": "/collections/all"
           }
         },
         "card_time": {
           "type": "goal_card",
           "settings": {
             "title": "Save time",
-            "link": "/collections/all",
-            "bg_color": "#a0703a"
+            "bg_color": "#a0703a",
+            "link": "/collections/all"
           }
         }
       },
-      "block_order": [
-        "card_protein",
-        "card_healthy",
-        "card_weight",
-        "card_time"
-      ],
+      "block_order": ["card_protein", "card_healthy", "card_weight", "card_time"],
       "settings": {
         "heading_start": "Food to",
         "heading_italic": "fuel",
         "heading_end": "your goals.",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "khas_shop_way": {
+      "type": "khas-shop-way",
+      "blocks": {
+        "card_1": { "type": "category_card", "settings": { "title": "Powdered Meals", "link": "/collections/all" } },
+        "card_2": { "type": "category_card", "settings": { "title": "Bundles", "link": "/collections/all" } },
+        "card_3": { "type": "category_card", "settings": { "title": "Ready-to-drink Meals", "link": "/collections/all" } },
+        "card_4": { "type": "category_card", "settings": { "title": "Hot Instant Meals", "link": "/collections/all" } },
+        "card_5": { "type": "category_card", "settings": { "title": "Greens & Superfoods", "link": "/collections/all" } },
+        "card_6": { "type": "category_card", "settings": { "title": "Drinks & Snacks", "link": "/collections/all" } }
+      },
+      "block_order": ["card_1", "card_2", "card_3", "card_4", "card_5", "card_6"],
+      "settings": {
+        "heading_start": "Shop",
+        "heading_italic": "your",
+        "heading_end": "way",
         "background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
@@ -90,32 +104,33 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "image_behavior": "none",
         "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
         "show_text_box": false,
+        "image_behavior": "none",
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
         "columns_desktop": 4,
-        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": false,
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -123,7 +138,6 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
@@ -131,6 +145,7 @@
   },
   "order": [
     "khas_goals_section",
+    "khas_shop_way",
     "image_banner",
     "featured_collection"
   ]
