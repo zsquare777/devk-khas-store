@@ -94,6 +94,20 @@
         "padding_bottom": 72
       }
     },
+    "khas_bestsellers": {
+      "type": "khas-bestsellers",
+      "settings": {
+        "heading_start": "Shop our",
+        "heading_italic": "Bestsellers",
+        "subheading": "Discover our most popular products",
+        "btn_text": "Shop now",
+        "btn_link": "/collections/all",
+        "products_count": 4,
+        "background_color": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -166,6 +180,7 @@
     "khas_goals_section",
     "khas_shop_way",
     "khas_benefits",
+    "khas_bestsellers",
     "image_banner",
     "featured_collection"
   ]
