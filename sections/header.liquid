@@ -467,6 +467,23 @@
   </script>
 {%- endif -%}
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('header-menu .mega-menu').forEach(function (details) {
+    var closeTimer;
+    details.addEventListener('mouseenter', function () {
+      clearTimeout(closeTimer);
+      details.setAttribute('open', '');
+    });
+    details.addEventListener('mouseleave', function () {
+      closeTimer = setTimeout(function () {
+        details.removeAttribute('open');
+      }, 200);
+    });
+  });
+});
+</script>
+
 {% schema %}
 {
   "name": "t:sections.header.name",
