@@ -1,0 +1,109 @@
+{{ 'vet-approved.css' | asset_url | stylesheet_tag }}
+
+{% assign card = section.settings.vet_card.value %}
+
+{% if card %}
+<section class="vet-approved">
+  <div class="vet-approved__wrapper">
+
+    <div class="vet-approved__image-wrapper">
+
+      {% if card.main_image %}
+        {{
+          card.main_image
+          | image_url: width: 800
+          | image_tag:
+            class: 'vet-approved__image',
+            loading: 'lazy'
+        }}
+      {% endif %}
+
+      {% if card.badge_image %}
+        <img
+          src="{{ card.badge_image | image_url: width: 200 }}"
+          alt=""
+          width="{{ card.badge_image.width }}"
+          height="{{ card.badge_image.height }}"
+          class="vet-approved__badge badge--{{ section.settings.badge_position }}"
+        >
+      {% endif %}
+
+    </div>
+
+    <div class="vet-approved__content">
+
+      {% if card.doctor_name %}
+        <p class="vet-approved__doctor">
+          {{ card.doctor_name }}
+        </p>
+      {% endif %}
+
+      {% if card.heading %}
+        <h2>
+          {{ card.heading }}
+        </h2>
+      {% endif %}
+
+      {% if card.description %}
+        <div class="vet-approved__text">
+          {{ card.description }}
+        </div>
+      {% endif %}
+
+      {% if card.button_text != blank %}
+        <a
+          href="{{ card.button_link }}"
+          class="vet-approved__button"
+        >
+          {{ card.button_text }}
+        </a>
+      {% endif %}
+
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Vet Approved",
+  "settings": [
+    {
+      "type": "metaobject",
+      "id": "vet_card",
+      "label": "Vet Approved Card",
+      "metaobject_type": "vet_approved_card"
+    },
+    {
+      "type": "select",
+      "id": "badge_position",
+      "label": "Badge Position",
+      "default": "top-left",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top Left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top Right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom Left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vet Approved"
+    }
+  ]
+}
+{% endschema %}
