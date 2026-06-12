@@ -1,0 +1,176 @@
+{{ 'khas-bestsellers.css' | asset_url | stylesheet_tag }}
+
+<section class="khas-bestsellers" style="background: {{ section.settings.background_color }}; padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;">
+  <div class="khas-bestsellers-inner">
+
+    <div class="khas-bestsellers-header">
+      <div class="khas-bestsellers-header-left">
+        <h2 class="khas-bestsellers-heading">
+          {{ section.settings.heading_start }}
+          {% if section.settings.heading_italic != blank %}
+            <em>{{ section.settings.heading_italic }}</em>
+          {% endif %}
+        </h2>
+        {% if section.settings.subheading != blank %}
+          <p class="khas-bestsellers-subheading">{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+      {% if section.settings.btn_text != blank %}
+        <a href="{{ section.settings.btn_link }}" class="khas-bestsellers-btn">
+          {{ section.settings.btn_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="khas-bestsellers-grid">
+      {% assign collection = collections[section.settings.collection] %}
+      {% if collection != blank %}
+        {% for product in collection.products limit: section.settings.products_count %}
+          {% assign badge_label = '' %}
+          {% assign badge_type = '' %}
+          {% for tag in product.tags %}
+            {% assign tag_lower = tag | downcase %}
+            {% if tag_lower == 'bestseller' %}
+              {% assign badge_label = 'Bestseller' %}
+              {% assign badge_type = 'hot' %}
+            {% elsif tag_lower == 'new-flavour' or tag_lower == 'new flavour' or tag_lower == 'new' %}
+              {% assign badge_label = 'New Flavour' %}
+              {% assign badge_type = 'new' %}
+            {% endif %}
+          {% endfor %}
+
+          <a href="{{ product.url }}" class="khas-bestsellers-card">
+            {% if badge_label != '' %}
+              <span class="khas-bestsellers-badge khas-bestsellers-badge--{{ badge_type }}">
+                {% if badge_type == 'hot' %}
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1c0 2-2 3-2 5a2 2 0 004 0c0-2-2-3-2-5z" fill="currentColor"/></svg>
+                {% else %}
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l.9 2.7H10L7.5 5.4l.9 2.8L6 6.5l-2.4 1.7.9-2.8L2 3.7h3.1z" fill="currentColor"/></svg>
+                {% endif %}
+                {{ badge_label | upcase }}
+              </span>
+            {% endif %}
+
+            <div class="khas-bestsellers-card-img-wrap">
+              {% if product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 600 }}"
+                  alt="{{ product.featured_image.alt | default: product.title }}"
+                  class="khas-bestsellers-card-img"
+                  loading="lazy"
+                >
+              {% endif %}
+            </div>
+
+            <div class="khas-bestsellers-card-body">
+              <div class="khas-bestsellers-card-info">
+                <h3 class="khas-bestsellers-card-title">{{ product.title }}</h3>
+                {% if product.description != blank %}
+                  <p class="khas-bestsellers-card-desc">{{ product.description | strip_html | truncate: 60 }}</p>
+                {% endif %}
+              </div>
+
+              <div class="khas-bestsellers-card-footer">
+                <div class="khas-bestsellers-card-price">
+                  {% if product.price_varies %}
+                    <span>From {{ product.price_min | money }}</span>
+                  {% else %}
+                    <span>{{ product.price | money }}</span>
+                  {% endif %}
+                </div>
+                <span class="khas-bestsellers-card-cta">View product</span>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      {% else %}
+        <p style="color:#999; grid-column: 1/-1; text-align:center; padding: 40px 0;">Select a collection in the theme editor to show products here.</p>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Khas Bestsellers",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_start",
+      "label": "Heading (normal part)",
+      "default": "Shop our"
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading (italic part)",
+      "default": "Bestsellers"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover our most popular products"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button link"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Number of products",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    }
+  ],
+  "presets": [
+    {
+      "name": "Khas Bestsellers"
+    }
+  ]
+}
+{% endschema %}
