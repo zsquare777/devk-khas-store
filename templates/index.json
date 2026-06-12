@@ -16,36 +16,42 @@
           "type": "goal_card",
           "settings": {
             "title": "More protein",
+            "link": "/collections/all",
             "bg_color": "#3d3a8c",
-            "link": "/collections/all"
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_01_51_01_AM.png"
           }
         },
         "card_healthy": {
           "type": "goal_card",
           "settings": {
             "title": "Eat healthy",
-            "bg_color": "#c8940f",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#c8940f"
           }
         },
         "card_weight": {
           "type": "goal_card",
           "settings": {
             "title": "Manage weight",
-            "bg_color": "#6d9471",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#6d9471"
           }
         },
         "card_time": {
           "type": "goal_card",
           "settings": {
             "title": "Save time",
-            "bg_color": "#a0703a",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#a0703a"
           }
         }
       },
-      "block_order": ["card_protein", "card_healthy", "card_weight", "card_time"],
+      "block_order": [
+        "card_protein",
+        "card_healthy",
+        "card_weight",
+        "card_time"
+      ],
       "settings": {
         "heading_start": "Food to",
         "heading_italic": "fuel",
@@ -84,33 +90,32 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -118,6 +123,7 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
