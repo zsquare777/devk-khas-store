@@ -98,15 +98,7 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                 <details>
-  <summary style="cursor:pointer;font-size:22px;font-weight:700;">
-    {{ product.title }}
-  </summary>
-
-  <div style="padding-top:10px;">
-    Extra title content here
-  </div>
-</details>
+                  <h1>{{ product.title | escape }}</h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
@@ -682,9 +674,6 @@
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
-
-                  {% when 'gm-trustbadge-icons-only' %}
-    {% render 'gm-trustbadge-icons-only', block: block %}
             {%- endcase -%}
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -866,42 +855,6 @@
           "id": "show_inventory_quantity",
           "label": "t:sections.main-product.blocks.inventory.settings.show_inventory_quantity.label",
           "default": true
-        }
-      ]
-    },
-         {
-      "type": "gm-trustbadge-icons-only",
-      "name": "Trustbadge Icons",
-      "settings":[
-        {
-          "type": "range",
-          "id": "number_of_icons",
-          "label": "Number of icons to show",
-          "min": 1,
-          "max": 4,
-          "step": 1,
-          "unit": "icn",
-          "default": 4
-        },
-        {
-          "type": "image_picker",
-          "id": "trustbadge_icon_1",
-          "label": "Trustbadge icon 1"
-        },
-        {
-          "type": "image_picker",
-          "id": "trustbadge_icon_2",
-          "label": "Trustbadge icon 2"
-        },
-        {
-          "type": "image_picker",
-          "id": "trustbadge_icon_3",
-          "label": "Trustbadge icon 3"
-        },
-        {
-          "type": "image_picker",
-          "id": "trustbadge_icon_4",
-          "label": "Trustbadge icon 4"
         }
       ]
     },

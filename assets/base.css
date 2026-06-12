@@ -3596,21 +3596,41 @@ details-disclosure > details {
   }
 }
 
-/*****Bullet List***/
-/* Start Fix bullet list item alignment */
-ul, ol {
-  padding-left: 20px; /* Adjust padding as needed */
+/* Active Shop Menu */
+
+.mega-menu[open] > summary{
+    background:#fff;
 }
 
-li {
-  list-style-position: outside; /* Ensures bullets are outside the text */
-  margin-bottom: 10px; /* Adds spacing between list items */
+.mega-menu[open] > summary span{
+    color:#111;
+    font-weight:600;
 }
 
-li p {
-  display: inline; /* Ensures text aligns properly with the bullet */
-  margin: 0; /* Removes default paragraph margin */
+.mega-menu[open] svg{
+    transform:rotate(180deg);
+    transition:.25s;
 }
 
-/* End Fix bullet list item alignment */
+.mega-menu summary svg{
+    transition:.25s;
+}
 
+/* Open mega menu on hover */
+
+header-menu:hover details{
+    display:block;
+}
+
+header-menu details:hover>.mega-menu__content{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+header-menu details .mega-menu__content{
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:.25s;
+}
