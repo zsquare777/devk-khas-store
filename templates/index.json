@@ -9,6 +9,115 @@
  */
 {
   "sections": {
+    "khas_goals_section": {
+      "type": "khas-goals-section",
+      "blocks": {
+        "card_protein": {
+          "type": "goal_card",
+          "settings": {
+            "title": "More protein",
+            "bg_color": "#3d3a8c",
+            "link": "/collections/all"
+          }
+        },
+        "card_healthy": {
+          "type": "goal_card",
+          "settings": {
+            "title": "Eat healthy",
+            "bg_color": "#c8940f",
+            "link": "/collections/all"
+          }
+        },
+        "card_weight": {
+          "type": "goal_card",
+          "settings": {
+            "title": "Manage weight",
+            "bg_color": "#6d9471",
+            "link": "/collections/all"
+          }
+        },
+        "card_time": {
+          "type": "goal_card",
+          "settings": {
+            "title": "Save time",
+            "bg_color": "#a0703a",
+            "link": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["card_protein", "card_healthy", "card_weight", "card_time"],
+      "settings": {
+        "heading_start": "Food to",
+        "heading_italic": "fuel",
+        "heading_end": "your goals.",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "khas_shop_way": {
+      "type": "khas-shop-way",
+      "blocks": {
+        "card_1": { "type": "category_card", "settings": { "title": "Powdered Meals", "link": "/collections/all" } },
+        "card_2": { "type": "category_card", "settings": { "title": "Bundles", "link": "/collections/all" } },
+        "card_3": { "type": "category_card", "settings": { "title": "Ready-to-drink Meals", "link": "/collections/all" } },
+        "card_4": { "type": "category_card", "settings": { "title": "Hot Instant Meals", "link": "/collections/all" } },
+        "card_5": { "type": "category_card", "settings": { "title": "Greens & Superfoods", "link": "/collections/all" } },
+        "card_6": { "type": "category_card", "settings": { "title": "Drinks & Snacks", "link": "/collections/all" } }
+      },
+      "block_order": ["card_1", "card_2", "card_3", "card_4", "card_5", "card_6"],
+      "settings": {
+        "heading_start": "Shop",
+        "heading_italic": "your",
+        "heading_end": "way",
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "khas_benefits": {
+      "type": "khas-benefits",
+      "blocks": {
+        "b1": { "type": "benefit", "settings": { "icon": "clipboard", "title": "100% Complete",    "description": "All the nutrition you need. Every day." } },
+        "b2": { "type": "benefit", "settings": { "icon": "clock",     "title": "Save Time",        "description": "Meals ready in 15 seconds." } },
+        "b3": { "type": "benefit", "settings": { "icon": "money",     "title": "Save Money",       "description": "From Rs.1.00 per meal." } },
+        "b4": { "type": "benefit", "settings": { "icon": "trash",     "title": "No Fillers",       "description": "No unnecessary ingredients. No GMO." } },
+        "b5": { "type": "benefit", "settings": { "icon": "leaf",      "title": "Taste Guaranteed", "description": "Love it or your money back." } },
+        "b6": { "type": "benefit", "settings": { "icon": "thumbsup",  "title": "Easy",             "description": "No prep. No cooking. No mess." } }
+      },
+      "block_order": ["b1","b2","b3","b4","b5","b6"],
+      "settings": {
+        "heading_italic": "Benefits",
+        "heading_end": "of Khas",
+        "background_color": "#111111",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "khas_bestsellers": {
+      "type": "khas-bestsellers",
+      "settings": {
+        "heading_start": "Shop our",
+        "heading_italic": "Bestsellers",
+        "subheading": "Discover our most popular products",
+        "btn_text": "Shop now",
+        "btn_link": "/collections/all",
+        "products_count": 4,
+        "background_color": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "khas_collection_row": {
+      "type": "khas-collection-row",
+      "settings": {
+        "heading": "Fresh Vegetables",
+        "products_count": 6,
+        "background_color": "#f8f8f8",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -78,6 +187,11 @@
     }
   },
   "order": [
+    "khas_goals_section",
+    "khas_shop_way",
+    "khas_benefits",
+    "khas_bestsellers",
+    "khas_collection_row",
     "image_banner",
     "featured_collection"
   ]

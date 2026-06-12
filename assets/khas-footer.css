@@ -1,0 +1,231 @@
+.khas-footer {
+  width: 100%;
+  color: #fff;
+}
+
+.khas-footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 64px 40px 32px;
+}
+
+/* TOP: left panel + columns */
+.khas-footer-top {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  padding-bottom: 48px;
+}
+
+/* LEFT PANEL */
+.khas-footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.khas-footer-badge {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.khas-footer-heading {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.khas-footer-subtext {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.khas-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, sans-serif;
+  align-self: flex-start;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.khas-footer-btn:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+/* LINK COLUMNS */
+.khas-footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.khas-footer-col-title {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.khas-footer-col-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.khas-footer-col-links a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  transition: color 0.15s;
+}
+
+.khas-footer-col-links a:hover {
+  color: #fff;
+}
+
+/* DIVIDER */
+.khas-footer-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 0;
+}
+
+/* MIDDLE BAR */
+.khas-footer-mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.khas-footer-copyright {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.khas-footer-payments {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.khas-footer-payment-icon {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0.85;
+}
+
+/* BOTTOM BAR */
+.khas-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.khas-footer-brand {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  font-family: 'Inter', -apple-system, sans-serif;
+  letter-spacing: -0.04em;
+  color: #fff;
+  line-height: 1;
+}
+
+.khas-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.khas-footer-social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.khas-footer-social:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* LEGAL */
+.khas-footer-legal {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.khas-footer-legal p {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .khas-footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .khas-footer-inner {
+    padding: 48px 20px 24px;
+  }
+  .khas-footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .khas-footer-columns {
+    grid-template-columns: 1fr;
+  }
+  .khas-footer-mid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
