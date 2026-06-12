@@ -166,6 +166,17 @@
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
 
+
+
+
+
+
+
+                        <!-- Start of Judge.me code -->
+            <div class='jdgm-widget jdgm-preview-badge' data-id='{{ card_product.id }}'>
+            {{ card_product.metafields.judgeme.badge }}
+            </div>
+            <!-- End of Judge.me code -->
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
             {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}

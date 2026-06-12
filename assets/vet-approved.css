@@ -1,0 +1,107 @@
+.vet-approved {
+  max-width: 330px;
+  margin: 40px auto;
+}
+
+.vet-approved__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.vet-approved__image-wrapper {
+  position: relative;
+}
+
+.vet-approved__image {
+  width: 100%;
+  display: block;
+}
+
+.vet-approved__badge {
+  position: absolute;
+  width: 80px;
+  z-index: 2;
+}
+
+.badge--top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.badge--top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.badge--bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.badge--bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+.vet-approved__content {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.vet-approved__doctor {
+  color: #d89b2b;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vet-approved__content h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.vet-approved__text {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.vet-approved__button {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 999px;
+}
+
+@media (min-width: 750px) {
+  .vet-approved {
+    max-width: 1200px;
+  }
+
+  .vet-approved__wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .vet-approved__image-wrapper,
+  .vet-approved__content {
+    flex: 1;
+  }
+
+  .vet-approved__content {
+    text-align: left;
+    padding: 0;
+  }
+
+  .vet-approved__button {
+    margin: 0;
+  }
+}

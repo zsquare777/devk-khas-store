@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-{{ 'khas-mega-menu.css' | asset_url | stylesheet_tag }}
 <link
   rel="stylesheet"
   href="{{ 'component-cart-notification.css' | asset_url }}"
@@ -41,7 +40,6 @@
     display: flex;
   }
 
-
   .list-menu {
     list-style: none;
     padding: 0;
@@ -76,46 +74,6 @@
       padding-top: 0.5rem;
     }
   }
-
-  @media screen and (min-width: 990px) {
-    .header--middle-left.header--has-nav-cta:not(.drawer-menu) {
-      grid-template-areas: 'heading navigation nav-cta icons';
-      grid-template-columns: auto auto auto 1fr;
-    }
-    .header--middle-left.header--has-nav-cta .header__nav-cta {
-      grid-area: nav-cta;
-      align-self: center;
-      display: inline-flex;
-    }
-    .header .list-menu--inline {
-      flex-wrap: nowrap;
-      gap: 0;
-    }
-    .header__menu-item {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      color: #666666;
-      padding: 0.6rem 1.6rem;
-      font-size: 1.4rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-      line-height: 1;
-    }
-    .header__menu-item:hover,
-    .header__menu-item:hover span {
-      color: #111111;
-      text-decoration: none;
-    }
-    .header__active-menu-item {
-      color: #111111;
-      text-decoration: none;
-    }
-    .section-header .header.page-width {
-      max-width: 100%;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
 </style>
 
 {%- style -%}
@@ -124,7 +82,7 @@
   }
 
   .section-header {
-    position: sticky;
+    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
 
@@ -139,66 +97,6 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-  }
-
-  /* Nav CTA pill */
-  .header__nav-cta {
-    display: none;
-    align-items: center;
-    padding: 0.7rem 1.6rem;
-    border-radius: 8px;
-    background-color: {{ section.settings.cta_nav_bg_color }};
-    color: {{ section.settings.cta_nav_text_color }};
-    font-size: 1.35rem;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    line-height: 1;
-    transition: opacity 0.18s;
-  }
-
-  .header__nav-cta:hover {
-    opacity: 0.82;
-    color: {{ section.settings.cta_nav_text_color }};
-    text-decoration: none;
-  }
-
-  /* Feature pill */
-  .header__feature-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    padding: 0.7rem 1.8rem;
-    border-radius: 50px;
-    background-color: {{ section.settings.feature_btn_bg_color }};
-    color: {{ section.settings.feature_btn_text_color }};
-    font-size: 1.35rem;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    line-height: 1;
-    transition: opacity 0.18s;
-    margin-right: 0.6rem;
-    flex-shrink: 0;
-  }
-
-  .header__feature-btn:hover {
-    opacity: 0.82;
-    color: {{ section.settings.feature_btn_text_color }};
-    text-decoration: none;
-  }
-
-  .header__feature-btn svg {
-    width: 1.4rem;
-    height: 1.4rem;
-    fill: {{ section.settings.feature_btn_text_color }};
-    flex-shrink: 0;
-  }
-
-  /* Help icon */
-  .header__icon--help svg {
-    width: 2.2rem;
-    height: 2.2rem;
   }
 {%- endstyle -%}
 
@@ -238,7 +136,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}{% if section.settings.cta_nav_text != blank %} header--has-nav-cta{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
@@ -325,15 +223,6 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- if section.settings.cta_nav_text != blank -%}
-      <a
-        href="{{ section.settings.cta_nav_link | default: '#' }}"
-        class="header__nav-cta small-hide"
-      >
-        {{ section.settings.cta_nav_text | escape }}
-      </a>
-    {%- endif -%}
-
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -358,34 +247,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {%- if section.settings.feature_btn_text != blank -%}
-        <a
-          href="{{ section.settings.feature_btn_link | default: '#' }}"
-          class="header__feature-btn small-hide"
-        >
-          {%- if section.settings.show_feature_icon -%}
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M12 1 L13.5 10.5 L23 12 L13.5 13.5 L12 23 L10.5 13.5 L1 12 L10.5 10.5 Z"/>
-            </svg>
-          {%- endif -%}
-          {{ section.settings.feature_btn_text | escape }}
-        </a>
-      {%- endif -%}
-
       {% render 'header-search', input_id: 'Search-In-Modal' %}
-
-      {%- if section.settings.show_help_icon -%}
-        <a
-          href="{{ section.settings.help_link | default: '#' }}"
-          class="header__icon header__icon--help link focus-inset small-hide"
-          aria-label="Help"
-        >
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
-          </svg>
-          <span class="visually-hidden">Help</span>
-        </a>
-      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled -%}
         <a
@@ -747,83 +609,6 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
-    },
-    {
-      "type": "header",
-      "content": "Nav CTA Button"
-    },
-    {
-      "type": "text",
-      "id": "cta_nav_text",
-      "label": "Button text",
-      "default": "Give 20, Get 20",
-      "info": "Leave blank to hide"
-    },
-    {
-      "type": "url",
-      "id": "cta_nav_link",
-      "label": "Button link"
-    },
-    {
-      "type": "color",
-      "id": "cta_nav_bg_color",
-      "label": "Background color",
-      "default": "#1c5e2e"
-    },
-    {
-      "type": "color",
-      "id": "cta_nav_text_color",
-      "label": "Text color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "header",
-      "content": "Feature Button"
-    },
-    {
-      "type": "text",
-      "id": "feature_btn_text",
-      "label": "Button text",
-      "default": "Which product is right for you?",
-      "info": "Leave blank to hide"
-    },
-    {
-      "type": "url",
-      "id": "feature_btn_link",
-      "label": "Button link"
-    },
-    {
-      "type": "color",
-      "id": "feature_btn_bg_color",
-      "label": "Background color",
-      "default": "#d5f0dd"
-    },
-    {
-      "type": "color",
-      "id": "feature_btn_text_color",
-      "label": "Text color",
-      "default": "#1c5e2e"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_feature_icon",
-      "label": "Show sparkle icon",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Help Icon"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_help_icon",
-      "label": "Show help (?) icon",
-      "default": true
-    },
-    {
-      "type": "url",
-      "id": "help_link",
-      "label": "Help link"
     },
     {
       "type": "header",

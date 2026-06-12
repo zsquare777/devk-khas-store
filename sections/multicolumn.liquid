@@ -101,6 +101,13 @@
                         assign image_width = 1
                       endif
                     -%}
+
+                                      <a style="opacity: 0; z-index: 3" class="img-click"
+                  {% if block.settings.link == blank %}
+                  role="link" aria-disabled="true"
+                  {% else %}
+                  href="{{ block.settings.link }}"
+                  {% endif %}>img link</a>
                     {% capture sizes %}
                       (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
                       (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),

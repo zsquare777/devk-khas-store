@@ -1,0 +1,145 @@
+{{ 'fuel-goals.css' | asset_url | stylesheet_tag }}
+
+{{ 'fuel-goals.css' | asset_url | stylesheet_tag }}
+
+<section class="fuel-goals">
+
+  <div class="page-width">
+
+    <div class="fuel-heading">
+
+      <h2>
+
+        {{ section.settings.heading_before }}
+
+        <em>{{ section.settings.heading_italic }}</em>
+
+        {{ section.settings.heading_after }}
+
+      </h2>
+
+    </div>
+
+    <div class="fuel-grid">
+
+      {% for block in section.blocks %}
+
+        <a
+          href="{{ block.settings.link }}"
+          class="fuel-card"
+          style="background: {{ block.settings.background }}"
+          {{ block.shopify_attributes }}
+        >
+
+          <h3>
+
+            {{ block.settings.title }}
+
+          </h3>
+
+          {% if block.settings.image != blank %}
+
+            {{
+              block.settings.image
+              | image_url: width:700
+              | image_tag
+            }}
+
+          {% endif %}
+
+          <div class="fuel-arrow">
+
+            →
+
+          </div>
+
+        </a>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Fuel Goals",
+
+  "settings":[
+
+    {
+      "type":"text",
+      "id":"heading_before",
+      "label":"Heading Before",
+      "default":"Food to"
+    },
+
+    {
+      "type":"text",
+      "id":"heading_italic",
+      "label":"Italic Word",
+      "default":"fuel"
+    },
+
+    {
+      "type":"text",
+      "id":"heading_after",
+      "label":"Heading After",
+      "default":"your goals"
+    }
+
+  ],
+
+  "blocks":[
+
+    {
+
+      "type":"card",
+
+      "name":"Goal Card",
+
+      "settings":[
+
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Title"
+        },
+
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+
+        {
+          "type":"url",
+          "id":"link",
+          "label":"Link"
+        },
+
+        {
+          "type":"color",
+          "id":"background",
+          "label":"Background",
+          "default":"#e6e4df"
+        }
+
+      ]
+
+    }
+
+  ],
+
+  "presets":[
+
+    {
+      "name":"Fuel Goals"
+    }
+
+  ]
+
+}
+{% endschema %}
