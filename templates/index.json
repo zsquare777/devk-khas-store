@@ -16,32 +16,32 @@
           "type": "goal_card",
           "settings": {
             "title": "More protein",
-            "bg_color": "#3d3a8c",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#3d3a8c"
           }
         },
         "card_healthy": {
           "type": "goal_card",
           "settings": {
             "title": "Eat healthy",
-            "bg_color": "#c8940f",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#c8940f"
           }
         },
         "card_weight": {
           "type": "goal_card",
           "settings": {
             "title": "Manage weight",
-            "bg_color": "#6d9471",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#6d9471"
           }
         },
         "card_time": {
           "type": "goal_card",
           "settings": {
             "title": "Save time",
-            "bg_color": "#a0703a",
-            "link": "/collections/all"
+            "link": "/collections/all",
+            "bg_color": "#a0703a"
           }
         }
       },
@@ -199,6 +199,7 @@
         "subheading": "Discover our most popular products",
         "btn_text": "Shop now",
         "btn_link": "/collections/all",
+        "collection": "",
         "products_count": 4,
         "background_color": "#ffffff",
         "padding_top": 64,
@@ -209,6 +210,7 @@
       "type": "khas-collection-row",
       "settings": {
         "heading": "Fresh Vegetables",
+        "collection": "",
         "products_count": 6,
         "background_color": "#f8f8f8",
         "padding_top": 48,
@@ -286,6 +288,7 @@
         "banner_TREQcU",
         "banner_ib7mfD"
       ],
+      "disabled": true,
       "name": "Autoplay Banner",
       "settings": {
         "autoplay_speed": 2000,
@@ -295,6 +298,7 @@
     },
     "gm_collection_slider_thBGwn": {
       "type": "gm-collection-slider",
+      "disabled": true,
       "name": "GM Collection Slider",
       "settings": {
         "collection_slider": [
@@ -308,6 +312,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         "h2 {text-align: center;}"
       ],
@@ -407,6 +412,7 @@
         "collection_dg4dj8",
         "collection_GdqUfG"
       ],
+      "disabled": true,
       "name": "SS - Featured Collections (tabs)",
       "settings": {
         "tabs_color": "#7e7e7e",
@@ -474,6 +480,7 @@
         "featured_collection_gnbybm",
         "featured_collection_cgDwDi"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "Collections",
@@ -501,6 +508,7 @@
       "block_order": [
         "scrolling_text_6EgTac"
       ],
+      "disabled": true,
       "name": "GM Scrolling Text",
       "settings": {
         "bg_color": "linear-gradient(90deg, hsl(147deg 100% 58%) 0%, hsl(200deg 85% 62%) 34%, hsl(246deg 84% 70%) 68%, hsl(284deg 100% 84%) 100%)",
@@ -555,6 +563,7 @@
         "testimonial_slide_HVPfCM",
         "testimonial_slide_Wi8idi"
       ],
+      "disabled": true,
       "name": "GM Testimonial Slider",
       "settings": {
         "show_border": true,
@@ -612,6 +621,7 @@
         "column_C4jgqq",
         "column_BCnUA8"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Multicolumn",
@@ -676,6 +686,7 @@
         "image_gpjaeH",
         "image_qrGDkq"
       ],
+      "disabled": true,
       "name": "Basic Trust Badges",
       "settings": {
         "feature_row": 4,
@@ -770,6 +781,7 @@
         "logo_Ew8pqy",
         "logo_wNYRyY"
       ],
+      "disabled": true,
       "name": "Logo Slider",
       "settings": {
         "background_color": "#ffffff",
@@ -912,8 +924,10 @@
     },
     "vet_approved_PhxwUD": {
       "type": "vet-approved",
+      "disabled": true,
       "name": "Vet Approved",
       "settings": {
+        "vet_card": "",
         "badge_position": "top-left"
       }
     }
