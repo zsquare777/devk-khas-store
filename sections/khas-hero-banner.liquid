@@ -1,0 +1,341 @@
+<style>
+  .khas-hero {
+    overflow: hidden;
+  }
+
+  .khas-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    min-height: 52rem;
+  }
+
+  .khas-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 5rem 0 5rem 2rem;
+  }
+
+  .khas-hero__rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .khas-hero__stars {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .khas-hero__stars svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: #22c55e;
+  }
+
+  .khas-hero__rating-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #444444;
+  }
+
+  .khas-hero__heading {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(3.8rem, 4.5vw, 6.4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  .khas-hero__heading em {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .khas-hero__subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.65;
+    max-width: 44rem;
+    margin: 0;
+  }
+
+  .khas-hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+  }
+
+  .khas-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem 3rem;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.18s ease;
+    cursor: pointer;
+    letter-spacing: -0.01em;
+  }
+
+  .khas-hero__btn--primary {
+    background-color: #111111;
+    color: #ffffff;
+    border: 0.15rem solid #111111;
+  }
+
+  .khas-hero__btn--secondary {
+    background-color: transparent;
+    color: #111111;
+    border: 0.15rem solid #111111;
+  }
+
+  .khas-hero__btn:hover {
+    opacity: 0.75;
+  }
+
+  .khas-hero__image-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .khas-hero__image {
+    width: 100%;
+    height: auto;
+    max-height: 580px;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
+  }
+
+  @media screen and (max-width: 989px) {
+    .khas-hero__inner {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      gap: 0;
+    }
+
+    .khas-hero__image-wrapper {
+      order: -1;
+      max-height: 36rem;
+    }
+
+    .khas-hero__content {
+      padding: 3rem 2rem 4rem;
+    }
+  }
+</style>
+
+{%- style -%}
+  .khas-hero-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<section class="khas-hero khas-hero-{{ section.id }}">
+  <div class="khas-hero__inner page-width">
+
+    <div class="khas-hero__content">
+
+      {%- if section.settings.show_rating -%}
+        <div class="khas-hero__rating">
+          <div class="khas-hero__stars">
+            {%- for i in (1..5) -%}
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/>
+              </svg>
+            {%- endfor -%}
+          </div>
+          <span class="khas-hero__rating-text">
+            {{- section.settings.rating_text | escape -}}
+          </span>
+        </div>
+      {%- endif -%}
+
+      <h2 class="khas-hero__heading">
+        {{- section.settings.heading_start | escape -}}
+        {%- if section.settings.heading_italic != blank -%}
+          <em>{{- section.settings.heading_italic | escape -}}</em>
+        {%- endif -%}
+        {{- section.settings.heading_end | escape -}}
+      </h2>
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="khas-hero__subheading">{{ section.settings.subheading | escape }}</p>
+      {%- endif -%}
+
+      <div class="khas-hero__buttons">
+        {%- if section.settings.button1_text != blank -%}
+          <a href="{{ section.settings.button1_link | default: '#' }}" class="khas-hero__btn khas-hero__btn--primary">
+            {{- section.settings.button1_text | escape -}}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button2_text != blank -%}
+          <a href="{{ section.settings.button2_link | default: '#' }}" class="khas-hero__btn khas-hero__btn--secondary">
+            {{- section.settings.button2_text | escape -}}
+          </a>
+        {%- endif -%}
+      </div>
+
+    </div>
+
+    {%- if section.settings.image != blank -%}
+      <div class="khas-hero__image-wrapper">
+        {{
+          section.settings.image
+          | image_url: width: 900
+          | image_tag:
+            class: 'khas-hero__image',
+            loading: 'lazy',
+            widths: '450, 600, 750, 900',
+            sizes: '(max-width: 989px) 100vw, 50vw',
+            alt: section.settings.image.alt | default: shop.name
+        }}
+      </div>
+    {%- endif -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Khas Hero Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f2f0eb"
+    },
+    {
+      "type": "header",
+      "content": "Rating"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show star rating",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating text",
+      "default": "4M+ happy customers"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_start",
+      "label": "Heading (bold part)",
+      "default": "Fast, nutritious, "
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading italic word",
+      "default": "complete",
+      "info": "This word renders in italic serif style"
+    },
+    {
+      "type": "text",
+      "id": "heading_end",
+      "label": "Heading end (bold part)",
+      "default": " food."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Designed by expert nutritionists as a convenient way to get all the daily nutrients you need."
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button1_text",
+      "label": "Primary button text",
+      "default": "Shop all"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "button2_text",
+      "label": "Secondary button text",
+      "default": "Discover more"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Khas Hero Banner"
+    }
+  ]
+}
+{% endschema %}
