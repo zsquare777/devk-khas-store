@@ -15,33 +15,37 @@
         "card_protein": {
           "type": "goal_card",
           "settings": {
-            "title": "More protein",
+            "title": "Ginger Garlic Paste",
             "link": "/collections/all",
-            "bg_color": "#3d3a8c"
+            "bg_color": "#3d3a8c",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_12_29_58_AM.png"
           }
         },
         "card_healthy": {
           "type": "goal_card",
           "settings": {
-            "title": "Eat healthy",
+            "title": "Chili Powder",
             "link": "/collections/all",
-            "bg_color": "#c8940f"
+            "bg_color": "#c8940f",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_12_38_06_AM.png"
           }
         },
         "card_weight": {
           "type": "goal_card",
           "settings": {
-            "title": "Manage weight",
+            "title": "Himalayan Pink Salt",
             "link": "/collections/all",
-            "bg_color": "#6d9471"
+            "bg_color": "#6d9471",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_12_49_53_AM.png"
           }
         },
         "card_time": {
           "type": "goal_card",
           "settings": {
-            "title": "Save time",
+            "title": "Dry Parsley",
             "link": "/collections/all",
-            "bg_color": "#a0703a"
+            "bg_color": "#a0703a",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_11_40_31_PM.png"
           }
         }
       },
@@ -199,7 +203,7 @@
         "subheading": "Discover our most popular products",
         "btn_text": "Shop now",
         "btn_link": "/collections/all",
-        "collection": "",
+        "collection": "ginger-garlic-paste",
         "products_count": 4,
         "background_color": "#ffffff",
         "padding_top": 64,
