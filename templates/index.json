@@ -203,7 +203,7 @@
         "subheading": "Discover our most popular products",
         "btn_text": "Shop now",
         "btn_link": "/collections/all",
-        "collection": "ginger-garlic-paste",
+        "collection": "khas",
         "products_count": 4,
         "background_color": "#ffffff",
         "padding_top": 64,
@@ -214,7 +214,7 @@
       "type": "khas-collection-row",
       "settings": {
         "heading": "Fresh Vegetables",
-        "collection": "",
+        "collection": "khas",
         "products_count": 6,
         "background_color": "#f8f8f8",
         "padding_top": 48,
