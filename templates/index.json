@@ -70,43 +70,49 @@
         "card_1": {
           "type": "category_card",
           "settings": {
-            "title": "Powdered Meals",
-            "link": "/collections/all"
+            "title": "Ginger Garlic Paste",
+            "link": "shopify://collections/khas",
+            "image": "shopify://shop_images/ChatGPTImageJun16_2026_12_29_58AM.png"
           }
         },
         "card_2": {
           "type": "category_card",
           "settings": {
-            "title": "Bundles",
-            "link": "/collections/all"
+            "title": "Paprika Powder",
+            "link": "/collections/all",
+            "image": "shopify://shop_images/ChatGPTImageJun16_2026_11_16_00PM.png"
           }
         },
         "card_3": {
           "type": "category_card",
           "settings": {
-            "title": "Ready-to-drink Meals",
-            "link": "/collections/all"
+            "title": "Chilli Powder",
+            "link": "/collections/all",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_12_37_12_AM.png"
           }
         },
         "card_4": {
           "type": "category_card",
           "settings": {
-            "title": "Hot Instant Meals",
-            "link": "/collections/all"
+            "title": "Himalayan Pink Salt",
+            "link": "/collections/all",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_12_49_53_AM.png"
           }
         },
         "card_5": {
           "type": "category_card",
           "settings": {
-            "title": "Greens & Superfoods",
-            "link": "/collections/all"
+            "title": "Dry Parsley",
+            "link": "/collections/all",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_16_2026_11_40_47_PM.png"
           }
         },
         "card_6": {
           "type": "category_card",
           "settings": {
-            "title": "Drinks & Snacks",
-            "link": "/collections/all"
+            "title": "Garam Masala Powder",
+            "link": "/collections/all",
+            "image": "shopify://shop_images/ChatGPTImageJun16_2026_11_23_19PM.png"
           }
         }
       },
