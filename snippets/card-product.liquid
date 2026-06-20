@@ -165,14 +165,33 @@
           {%- elsif card_product.product_type != blank -%}
             <p class="khas-card-subtitle">{{ card_product.product_type }}</p>
           {%- endif -%}
-          {%- if card_product.variants.size > 1 -%}
+          {%- if card_product.metafields.custom.item_count != blank -%}
+            <p class="khas-card-variants">{{ card_product.metafields.custom.item_count }}</p>
+          {%- elsif card_product.variants.size > 1 -%}
             <p class="khas-card-variants">{{ card_product.variants.size }} variants</p>
           {%- endif -%}
-          {%- if card_product.tags.size > 0 -%}
+          {%- assign f1 = card_product.metafields.custom.feature_1.value -%}
+          {%- assign f2 = card_product.metafields.custom.feature_2.value -%}
+          {%- if f1 != blank or f2 != blank -%}
+            <ul class="khas-card-tags">
+              {%- if f1 != blank -%}
+                <li class="khas-card-tag">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
+                  {{ f1 }}
+                </li>
+              {%- endif -%}
+              {%- if f2 != blank -%}
+                <li class="khas-card-tag">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="7" width="20" height="5" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="22" x2="12" y2="7" stroke="currentColor" stroke-width="1.5"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" stroke="currentColor" stroke-width="1.5"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="currentColor" stroke-width="1.5"/></svg>
+                  {{ f2 }}
+                </li>
+              {%- endif -%}
+            </ul>
+          {%- elsif card_product.tags.size > 0 -%}
             <ul class="khas-card-tags">
               {%- for tag in card_product.tags limit: 2 -%}
                 <li class="khas-card-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
                   {{ tag }}
                 </li>
               {%- endfor -%}
