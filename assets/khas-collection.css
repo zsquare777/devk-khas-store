@@ -206,8 +206,7 @@ body.template-collection {
   font-family: 'Inter', -apple-system, sans-serif !important;
   letter-spacing: 0 !important;
   transition: opacity 0.2s !important;
-  width: fit-content !important;
-  align-self: flex-start !important;
+  width: auto !important;
 }
 
 .template-collection .khas-view-btn:hover {
