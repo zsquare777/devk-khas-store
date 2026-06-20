@@ -49,48 +49,66 @@
                             </span>
                             {{ link.title | escape }}
                           </button>
-                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                            {%- if link.title == 'Shop' -%}
-                              {%- assign khas_panels = 'herbs-dried-leaves::🌿 Herbs & Dried Leaves,cooking-pastes::🧄 Cooking Pastes,spices-masalas::🌶️ Spices & Powdered,whole-spices::🌰 Whole Spices,salt-seasoning::🧂 Salt & Seasoning,pasta-noodles::🍜 Pasta & Noodles,crispy-toppings::🧅 Crispy & Cooking Toppings' | split: ',' -%}
-                              {%- for panel_item in khas_panels -%}
-                                {%- assign panel_parts = panel_item | split: '::' -%}
-                                {%- assign panel_handle = panel_parts[0] -%}
-                                {%- assign panel_label = panel_parts[1] -%}
-                                {%- assign panel_menu = linklists[panel_handle] -%}
-                                <li>
-                                  {%- if panel_menu.links.size > 0 -%}
-                                    <details id="Details-mobile-{{ panel_handle }}">
-                                      <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                        {{ panel_label }}
-                                        <span class="svg-wrapper">{{- 'icon-arrow.svg' | inline_asset_content -}}</span>
-                                        <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
-                                      </summary>
-                                      <div class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
-                                        <div class="menu-drawer__inner-submenu">
-                                          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                            <span class="svg-wrapper">{{- 'icon-arrow.svg' | inline_asset_content -}}</span>
-                                            {{ panel_label }}
-                                          </button>
-                                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                                            {%- for panel_link in panel_menu.links -%}
-                                              <li>
-                                                <a href="{{ panel_link.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                  {{ panel_link.title | escape }}
-                                                </a>
-                                              </li>
-                                            {%- endfor -%}
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </details>
+                          {%- if link.title == 'Shop' -%}
+                            <div class="khas-mobile-mega">
+                              <p class="khas-mobile-mega__heading">Shop by</p>
+                              <div class="khas-mobile-tabs">
+                                <button class="khas-mobile-tab active" data-mpanel="herbs">🌿 Herbs</button>
+                                <button class="khas-mobile-tab" data-mpanel="pastes">🧄 Pastes</button>
+                                <button class="khas-mobile-tab" data-mpanel="spices">🌶️ Spices</button>
+                                <button class="khas-mobile-tab" data-mpanel="whole-spices">🌰 Whole Spices</button>
+                                <button class="khas-mobile-tab" data-mpanel="salt">🧂 Salt</button>
+                                <button class="khas-mobile-tab" data-mpanel="pasta">🍜 Pasta</button>
+                                <button class="khas-mobile-tab" data-mpanel="toppings">🧅 Toppings</button>
+                              </div>
+
+                              {%- assign mobile_panels = 'herbs::herbs-dried-leaves,pastes::cooking-pastes,spices::spices-masalas,whole-spices::whole-spices,salt::salt-seasoning,pasta::pasta-noodles,toppings::crispy-toppings' | split: ',' -%}
+                              {%- for mp in mobile_panels -%}
+                                {%- assign mp_parts = mp | split: '::' -%}
+                                {%- assign mp_id = mp_parts[0] -%}
+                                {%- assign mp_handle = mp_parts[1] -%}
+                                {%- assign mp_menu = linklists[mp_handle] -%}
+                                <div class="khas-mobile-panel{% if forloop.first %} active{% endif %}" data-mpanel="{{ mp_id }}">
+                                  {%- if mp_menu.links.size > 0 -%}
+                                    {%- for mp_link in mp_menu.links -%}
+                                      {%- assign mp_col = collections[mp_link.handle] -%}
+                                      <a href="{{ mp_link.url }}" class="khas-mobile-card">
+                                        <span class="khas-mobile-card__title">{{ mp_link.title | escape }}</span>
+                                        <span class="khas-mobile-card__arrow">
+                                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                            <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                        </span>
+                                        {%- if mp_col.featured_image.id -%}
+                                          <img src="{{ mp_col.featured_image | image_url: width: 300 }}" class="khas-mobile-card__img" loading="lazy" width="300" height="200" alt="{{ mp_link.title | escape }}">
+                                        {%- endif -%}
+                                      </a>
+                                    {%- endfor -%}
                                   {%- else -%}
-                                    <a href="{{ routes.collections_url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                      {{ panel_label }}
-                                    </a>
+                                    <p class="khas-mobile-panel__empty">No items added yet.</p>
                                   {%- endif -%}
-                                </li>
+                                </div>
                               {%- endfor -%}
-                            {%- else -%}
+                            </div>
+                            <script>
+                            (function(){
+                              var tabs = document.querySelectorAll('.khas-mobile-tab');
+                              tabs.forEach(function(btn){
+                                btn.addEventListener('click', function(e){
+                                  e.stopPropagation();
+                                  e.preventDefault();
+                                  var id = this.getAttribute('data-mpanel');
+                                  tabs.forEach(function(b){ b.classList.remove('active'); });
+                                  this.classList.add('active');
+                                  document.querySelectorAll('.khas-mobile-panel').forEach(function(p){ p.classList.remove('active'); });
+                                  var t = document.querySelector('.khas-mobile-panel[data-mpanel="'+id+'"]');
+                                  if(t) t.classList.add('active');
+                                });
+                              });
+                            })();
+                            </script>
+                          {%- else -%}
+                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                               {%- for childlink in link.links -%}
                                 <li>
                                   {%- if childlink.links == blank -%}
@@ -156,8 +174,8 @@
                                   {%- endif -%}
                                 </li>
                               {%- endfor -%}
-                            {%- endif -%}
                           </ul>
+                          {%- endif -%}
                         </div>
                       </div>
                     </details>
