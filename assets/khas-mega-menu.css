@@ -386,6 +386,22 @@ summary.menu-drawer__menu-item {
   height: 18px !important;
   color: #999 !important;
   flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.menu-drawer__menu-item svg,
+.menu-drawer__menu-item .svg-wrapper svg {
+  transform: rotate(0deg) !important;
+  transition: none !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: #aaa !important;
+}
+
+.menu-drawer__menu-item .icon-caret {
+  display: none !important;
 }
 
 .menu-drawer__close-button {
