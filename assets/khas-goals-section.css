@@ -9,12 +9,12 @@
 }
 
 .khas-goals-heading {
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: clamp(24px, 3vw, 40px);
   font-weight: 700;
   font-family: 'Inter', -apple-system, sans-serif;
   letter-spacing: -0.03em;
   color: #111;
-  margin: 0 0 40px;
+  margin: 0 0 24px;
   line-height: 1.1;
 }
 
@@ -26,14 +26,14 @@
 .khas-goals-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 
 .khas-goals-card {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
   text-decoration: none;
   display: flex;
   flex-direction: column;
