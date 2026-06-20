@@ -58,14 +58,15 @@
 .khas-panels {
   position: relative;
   min-width: 0;
+  background: #fff;
 }
 
-.khas-panel {
-  display: none;
+.khas-panels > .khas-panel {
+  display: none !important;
 }
 
-.khas-panel.active {
-  display: grid;
+.khas-panels > .khas-panel.active {
+  display: grid !important;
 }
 
 .khas-panel-empty {
