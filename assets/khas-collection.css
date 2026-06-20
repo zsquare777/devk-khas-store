@@ -14,9 +14,9 @@ body.template-collection {
   gap: 20px !important;
 }
 
-/* ---- Force square image card ---- */
+/* ---- Image card height — slightly under square like Huel ---- */
 .template-collection .card__inner.ratio {
-  --ratio-percent: 100% !important;
+  --ratio-percent: 85% !important;
 }
 
 /* ---- Image card: white/light, rounded ---- */
@@ -77,7 +77,7 @@ body.template-collection {
 
 /* ---- Below-card content ---- */
 .template-collection .card__content {
-  padding: 16px 0 0 !important;
+  padding: 12px 0 0 !important;
   background: transparent !important;
 }
 
@@ -135,8 +135,8 @@ body.template-collection {
 /* ---- Second separator — before price (below icons) ---- */
 .template-collection .card-information {
   border-top: 1px solid #E5E0D9 !important;
-  padding-top: 14px !important;
-  margin-top: 14px !important;
+  padding-top: 10px !important;
+  margin-top: 10px !important;
 }
 
 /* ---- Price ---- */
@@ -163,7 +163,7 @@ body.template-collection {
 .template-collection .khas-card-tags {
   display: block !important;
   list-style: none !important;
-  padding: 14px 0 0 !important;
+  padding: 10px 0 0 !important;
   margin: 0 !important;
   border-top: 1px solid #E5E0D9 !important;
 }
