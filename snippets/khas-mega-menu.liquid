@@ -12,98 +12,90 @@
   <!-- RIGHT PANELS -->
   <div class="khas-panels">
 
-    <!-- Panel: Shop by Collection (pulled from Shop nav sub-links) -->
+    <!-- Panel: Shop by Collection -->
     <div class="khas-grid khas-panel active" data-panel="collection">
       {%- for childlink in link.links -%}
-        {%- assign collection = collections[childlink.handle] -%}
-        {%- if collection -%}
-          <a href="{{ collection.url }}" class="khas-card">
-            <h3>{{ collection.title | escape }}</h3>
+        <a href="{{ childlink.url }}" class="khas-card">
+          <h3>{{ childlink.title | escape }}</h3>
+          <div class="khas-card-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          {%- assign col = collections[childlink.handle] -%}
+          {%- if col.featured_image.id -%}
+            <img src="{{ col.featured_image | img_url: '400x' }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ childlink.title | escape }}">
+          {%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+
+    <!-- Panel: Shop by Goal -->
+    <div class="khas-grid khas-panel" data-panel="goal">
+      {%- assign goal_menu = linklists['shop-by-goal'] -%}
+      {%- if goal_menu.links.size > 0 -%}
+        {%- for goallink in goal_menu.links -%}
+          <a href="{{ goallink.url }}" class="khas-card">
+            <h3>{{ goallink.title | escape }}</h3>
             <div class="khas-card-arrow">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if collection.featured_image -%}
-              {{ collection.featured_image | image_url: width: 400 | image_tag: class: 'khas-card-img', loading: 'lazy', alt: collection.title }}
+            {%- assign col = collections[goallink.handle] -%}
+            {%- if col.featured_image.id -%}
+              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ goallink.title | escape }}">
             {%- endif -%}
           </a>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
-
-    <!-- Panel: Shop by Goal (Admin → Navigation → mega-menu-goal) -->
-    <div class="khas-grid khas-panel" data-panel="goal">
-      {%- assign goal_menu = linklists['shop-by-goal'] -%}
-      {%- if goal_menu.links.size > 0 -%}
-        {%- for goallink in goal_menu.links -%}
-          {%- assign collection = collections[goallink.handle] -%}
-          {%- if collection -%}
-            <a href="{{ collection.url }}" class="khas-card">
-              <h3>{{ collection.title | escape }}</h3>
-              <div class="khas-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              {%- if collection.featured_image -%}
-                {{ collection.featured_image | image_url: width: 400 | image_tag: class: 'khas-card-img', loading: 'lazy', alt: collection.title }}
-              {%- endif -%}
-            </a>
-          {%- endif -%}
         {%- endfor -%}
       {%- else -%}
-        <p class="khas-panel-empty">No collections added yet. Go to Admin → Navigation → mega-menu-goal to add collections.</p>
+        <p class="khas-panel-empty">No items added yet — go to Admin → Navigation → shop-by-goal to add collections.</p>
       {%- endif -%}
     </div>
 
-    <!-- Panel: Shop by Lifestyle (Admin → Navigation → mega-menu-lifestyle) -->
+    <!-- Panel: Shop by Lifestyle -->
     <div class="khas-grid khas-panel" data-panel="lifestyle">
       {%- assign lifestyle_menu = linklists['mega-menu-lifestyle'] -%}
       {%- if lifestyle_menu.links.size > 0 -%}
         {%- for lifestylelink in lifestyle_menu.links -%}
-          {%- assign collection = collections[lifestylelink.handle] -%}
-          {%- if collection -%}
-            <a href="{{ collection.url }}" class="khas-card">
-              <h3>{{ collection.title | escape }}</h3>
-              <div class="khas-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              {%- if collection.featured_image -%}
-                {{ collection.featured_image | image_url: width: 400 | image_tag: class: 'khas-card-img', loading: 'lazy', alt: collection.title }}
-              {%- endif -%}
-            </a>
-          {%- endif -%}
+          <a href="{{ lifestylelink.url }}" class="khas-card">
+            <h3>{{ lifestylelink.title | escape }}</h3>
+            <div class="khas-card-arrow">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            {%- assign col = collections[lifestylelink.handle] -%}
+            {%- if col.featured_image.id -%}
+              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ lifestylelink.title | escape }}">
+            {%- endif -%}
+          </a>
         {%- endfor -%}
       {%- else -%}
-        <p class="khas-panel-empty">No collections added yet. Go to Admin → Navigation → mega-menu-lifestyle to add collections.</p>
+        <p class="khas-panel-empty">No items added yet — go to Admin → Navigation → mega-menu-lifestyle to add collections.</p>
       {%- endif -%}
     </div>
 
-    <!-- Panel: Help Me Choose (Admin → Navigation → mega-menu-help) -->
+    <!-- Panel: Help Me Choose -->
     <div class="khas-grid khas-panel" data-panel="help">
       {%- assign help_menu = linklists['mega-menu-help'] -%}
       {%- if help_menu.links.size > 0 -%}
         {%- for helplink in help_menu.links -%}
-          {%- assign collection = collections[helplink.handle] -%}
-          {%- if collection -%}
-            <a href="{{ collection.url }}" class="khas-card">
-              <h3>{{ collection.title | escape }}</h3>
-              <div class="khas-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              {%- if collection.featured_image -%}
-                {{ collection.featured_image | image_url: width: 400 | image_tag: class: 'khas-card-img', loading: 'lazy', alt: collection.title }}
-              {%- endif -%}
-            </a>
-          {%- endif -%}
+          <a href="{{ helplink.url }}" class="khas-card">
+            <h3>{{ helplink.title | escape }}</h3>
+            <div class="khas-card-arrow">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            {%- assign col = collections[helplink.handle] -%}
+            {%- if col.featured_image.id -%}
+              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ helplink.title | escape }}">
+            {%- endif -%}
+          </a>
         {%- endfor -%}
       {%- else -%}
-        <p class="khas-panel-empty">No collections added yet. Go to Admin → Navigation → mega-menu-help to add collections.</p>
+        <p class="khas-panel-empty">No items added yet — go to Admin → Navigation → mega-menu-help to add collections.</p>
       {%- endif -%}
     </div>
 
