@@ -3,20 +3,25 @@
    Applies only to collection pages via .template-collection
    ================================================ */
 
+/* ---- Page background: cream like Huel ---- */
+body.template-collection {
+  background: #F5F2EE !important;
+}
+
 /* ---- 3-column grid ---- */
 .template-collection #product-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 20px !important;
 }
 
-/* ---- Square image card ---- */
+/* ---- Force square image card ---- */
 .template-collection .card__inner.ratio {
   --ratio-percent: 100% !important;
 }
 
-/* ---- Card image box: cream, rounded, no border ---- */
+/* ---- Image card: white/light, rounded ---- */
 .template-collection .card__inner {
-  background: #F2EFEA !important;
+  background: #EDEAE4 !important;
   border-radius: 16px !important;
   border: none !important;
   box-shadow: none !important;
@@ -35,12 +40,12 @@
   border: none !important;
 }
 
-/* ---- Media area: transparent bg ---- */
+/* ---- Media area: transparent ---- */
 .template-collection .card__media .media {
   background: transparent !important;
 }
 
-/* ---- Product image: float with padding, fully visible (contain) ---- */
+/* ---- Product image: float on card with padding + fully visible ---- */
 .template-collection .card__media .media > img {
   inset: 20px !important;
   width: calc(100% - 40px) !important;
@@ -89,7 +94,7 @@
   font-family: 'Inter', -apple-system, sans-serif !important;
   color: #111 !important;
   line-height: 1.2 !important;
-  margin: 0 0 4px !important;
+  margin: 0 0 5px !important;
 }
 
 .template-collection .card__heading a,
@@ -98,25 +103,46 @@
   text-decoration: none !important;
 }
 
-/* ---- Subtitle — hidden everywhere except collection pages ---- */
+/* ---- Subtitle (product description) — amber like Huel ---- */
 .khas-card-subtitle {
   display: none;
 }
 
 .template-collection .khas-card-subtitle {
   display: block !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
   color: #C17B35 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   line-height: 1.35 !important;
-  margin: 0 0 10px !important;
+  margin: 0 0 8px !important;
+}
+
+/* ---- Variant count ("X variants") ---- */
+.khas-card-variants {
+  display: none;
+}
+
+.template-collection .khas-card-variants {
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #888 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  margin: 0 0 12px !important;
+}
+
+/* ---- Separator line before price (like Huel) ---- */
+.template-collection .card-information {
+  border-top: 1px solid #E0DBD4 !important;
+  padding-top: 14px !important;
+  margin-top: 4px !important;
 }
 
 /* ---- Price ---- */
 .template-collection .price .price-item--regular,
 .template-collection .price .price-item--sale {
-  font-size: 17px !important;
+  font-size: 18px !important;
   font-weight: 700 !important;
   color: #111 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
@@ -136,8 +162,8 @@
 
 .template-collection .khas-view-btn {
   display: block !important;
-  margin-top: 14px !important;
-  padding: 15px 20px !important;
+  margin-top: 16px !important;
+  padding: 16px 24px !important;
   background: #111 !important;
   color: #fff !important;
   border-radius: 100px !important;
@@ -163,6 +189,13 @@
   display: none !important;
 }
 
+/* ---- Facets/filter sidebar: cream background ---- */
+.template-collection .facets-wrapper,
+.template-collection .facets__form,
+.template-collection .facets-vertical-sort {
+  background: transparent !important;
+}
+
 /* ---- Mobile: 2 columns ---- */
 @media (max-width: 749px) {
   .template-collection #product-grid {
@@ -181,13 +214,14 @@
     font-size: 13px !important;
   }
 
-  .template-collection .khas-card-subtitle {
+  .template-collection .khas-card-subtitle,
+  .template-collection .khas-card-variants {
     display: none !important;
   }
 
   .template-collection .khas-view-btn {
     font-size: 13px !important;
-    padding: 12px 16px !important;
+    padding: 12px 14px !important;
     margin-top: 10px !important;
   }
 

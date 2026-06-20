@@ -165,6 +165,9 @@
           {%- elsif card_product.product_type != blank -%}
             <p class="khas-card-subtitle">{{ card_product.product_type }}</p>
           {%- endif -%}
+          {%- if card_product.variants.size > 1 -%}
+            <p class="khas-card-variants">{{ card_product.variants.size }} variants</p>
+          {%- endif -%}
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
