@@ -9,12 +9,12 @@
 }
 
 .khas-goals-heading {
-  font-size: clamp(24px, 3vw, 40px);
+  font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 700;
   font-family: 'Inter', -apple-system, sans-serif;
   letter-spacing: -0.03em;
   color: #111;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   line-height: 1.1;
 }
 
@@ -33,11 +33,11 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
+  display: block;
   transition: transform 0.25s ease;
+  background: #e8e4de;
 }
 
 .khas-goals-card:hover {
@@ -59,25 +59,37 @@
   transform: scale(1.04);
 }
 
-.khas-goals-card-title {
-  position: relative;
+/* subtle gradient so white title stays readable over any image */
+.khas-goals-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(0,0,0,0.28) 0%, transparent 50%);
   z-index: 2;
-  padding: 20px 20px 0;
-  font-size: 18px;
+  pointer-events: none;
+}
+
+.khas-goals-card-title {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  font-size: 16px;
   font-weight: 600;
   font-family: 'Inter', -apple-system, sans-serif;
   color: #fff;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  max-width: 70%;
 }
 
 .khas-goals-card-arrow {
   position: absolute;
-  z-index: 2;
-  bottom: 16px;
-  left: 16px;
-  width: 40px;
-  height: 40px;
+  z-index: 3;
+  bottom: 14px;
+  left: 14px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -93,7 +105,7 @@
 }
 
 .khas-goals-card:hover .khas-goals-card-arrow {
-  transform: translateX(6px);
+  transform: translateX(5px);
 }
 
 @media (max-width: 1024px) {
@@ -108,12 +120,16 @@
 @media (max-width: 600px) {
   .khas-goals-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
   .khas-goals-inner {
     padding: 0 16px;
   }
   .khas-goals-heading {
-    margin-bottom: 24px;
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+  .khas-goals-card-title {
+    font-size: 13px;
   }
 }
