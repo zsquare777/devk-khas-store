@@ -168,6 +168,16 @@
           {%- if card_product.variants.size > 1 -%}
             <p class="khas-card-variants">{{ card_product.variants.size }} variants</p>
           {%- endif -%}
+          {%- if card_product.tags.size > 0 -%}
+            <ul class="khas-card-tags">
+              {%- for tag in card_product.tags limit: 2 -%}
+                <li class="khas-card-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="currentColor" stroke-width="1.5"/></svg>
+                  {{ tag }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
