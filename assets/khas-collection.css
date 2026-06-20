@@ -132,11 +132,11 @@ body.template-collection {
   margin: 0 0 14px !important;
 }
 
-/* ---- Separator line goes ABOVE the icons section (between count and icons) ---- */
+/* ---- Second separator — before price (below icons) ---- */
 .template-collection .card-information {
-  border-top: none !important;
-  padding-top: 0 !important;
-  margin-top: 0 !important;
+  border-top: 1px solid #E5E0D9 !important;
+  padding-top: 14px !important;
+  margin-top: 14px !important;
 }
 
 /* ---- Price ---- */
@@ -164,8 +164,8 @@ body.template-collection {
   display: block !important;
   list-style: none !important;
   padding: 14px 0 0 !important;
-  margin: 0 0 16px !important;
-  border-top: 1px solid #E0DBD4 !important;
+  margin: 0 !important;
+  border-top: 1px solid #E5E0D9 !important;
 }
 
 .template-collection .khas-card-tag {
@@ -174,16 +174,16 @@ body.template-collection {
   gap: 10px !important;
   font-size: 14px !important;
   font-weight: 400 !important;
-  color: #555 !important;
+  color: #666 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
-  padding: 4px 0 !important;
+  padding: 5px 0 !important;
 }
 
 .template-collection .khas-card-tag svg {
   flex-shrink: 0 !important;
   width: 20px !important;
   height: 20px !important;
-  color: #999 !important;
+  color: #aaa !important;
 }
 
 /* ---- "View product" button — hidden everywhere except collection pages ---- */
