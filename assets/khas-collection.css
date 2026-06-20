@@ -14,9 +14,9 @@ body.template-collection {
   gap: 20px !important;
 }
 
-/* ---- Image card height — slightly under square like Huel ---- */
+/* ---- Image card height — close to square like Huel ---- */
 .template-collection .card__inner.ratio {
-  --ratio-percent: 85% !important;
+  --ratio-percent: 90% !important;
 }
 
 /* ---- Image card: white/light, rounded ---- */
@@ -104,6 +104,7 @@ body.template-collection {
   color: #111 !important;
   line-height: 1.2 !important;
   margin: 0 0 5px !important;
+  width: 100% !important;
 }
 
 .template-collection .card__heading a,
@@ -125,6 +126,7 @@ body.template-collection {
   font-family: 'Inter', -apple-system, sans-serif !important;
   line-height: 1.35 !important;
   margin: 0 0 5px !important;
+  width: 100% !important;
 }
 
 /* ---- Item count ("100g pack" / "X variants") ---- */
@@ -139,6 +141,7 @@ body.template-collection {
   color: #888 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   margin: 0 0 14px !important;
+  width: 100% !important;
 }
 
 /* ---- Second separator — before price (below icons) ---- */
@@ -146,6 +149,7 @@ body.template-collection {
   border-top: 1px solid #E5E0D9 !important;
   padding-top: 10px !important;
   margin-top: 10px !important;
+  width: 100% !important;
 }
 
 /* ---- Price ---- */
@@ -175,6 +179,7 @@ body.template-collection {
   padding: 10px 0 0 !important;
   margin: 0 !important;
   border-top: 1px solid #E5E0D9 !important;
+  width: 100% !important;
 }
 
 .template-collection .khas-card-tag {
