@@ -161,7 +161,7 @@
             </a>
           </h3>
           {%- if card_product.description != blank -%}
-            <p class="khas-card-subtitle">{{ card_product.description | strip_html | truncate: 65 }}</p>
+            <p class="khas-card-subtitle">{{ card_product.description | strip_html | truncate: 40 }}</p>
           {%- elsif card_product.product_type != blank -%}
             <p class="khas-card-subtitle">{{ card_product.product_type }}</p>
           {%- endif -%}

@@ -103,7 +103,7 @@ body.template-collection {
   text-decoration: none !important;
 }
 
-/* ---- Subtitle (product description) — amber like Huel ---- */
+/* ---- Subtitle (product description) — dark color same as title ---- */
 .khas-card-subtitle {
   display: none;
 }
@@ -112,10 +112,10 @@ body.template-collection {
   display: block !important;
   font-size: 16px !important;
   font-weight: 400 !important;
-  color: #C17B35 !important;
+  color: #333 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   line-height: 1.35 !important;
-  margin: 0 0 6px !important;
+  margin: 0 0 5px !important;
 }
 
 /* ---- Item count ("100g pack" / "X variants") ---- */
@@ -193,17 +193,17 @@ body.template-collection {
 
 .template-collection .khas-view-btn {
   display: inline-block !important;
-  margin-top: 16px !important;
-  padding: 14px 28px !important;
+  margin-top: 14px !important;
+  padding: 12px 24px !important;
   background: #111 !important;
   color: #fff !important;
   border-radius: 100px !important;
   text-align: center !important;
   text-decoration: none !important;
-  font-size: 15px !important;
+  font-size: 14px !important;
   font-weight: 600 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: 0 !important;
   transition: opacity 0.2s !important;
   width: auto !important;
 }
