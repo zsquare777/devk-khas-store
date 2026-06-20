@@ -34,7 +34,7 @@
 
     <!-- Panel: Shop by Goal (Admin → Navigation → mega-menu-goal) -->
     <div class="khas-grid khas-panel" data-panel="goal">
-      {%- assign goal_menu = linklists['mega-menu-goal'] -%}
+      {%- assign goal_menu = linklists['shop-by-goal'] -%}
       {%- if goal_menu.links.size > 0 -%}
         {%- for goallink in goal_menu.links -%}
           {%- assign collection = collections[goallink.handle] -%}
