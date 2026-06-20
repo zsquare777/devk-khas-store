@@ -110,15 +110,15 @@ body.template-collection {
 
 .template-collection .khas-card-subtitle {
   display: block !important;
-  font-size: 15px !important;
+  font-size: 16px !important;
   font-weight: 400 !important;
   color: #C17B35 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   line-height: 1.35 !important;
-  margin: 0 0 8px !important;
+  margin: 0 0 6px !important;
 }
 
-/* ---- Variant count ("X variants") ---- */
+/* ---- Item count ("100g pack" / "X variants") ---- */
 .khas-card-variants {
   display: none;
 }
@@ -129,20 +129,20 @@ body.template-collection {
   font-weight: 400 !important;
   color: #888 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
-  margin: 0 0 12px !important;
+  margin: 0 0 14px !important;
 }
 
-/* ---- Separator line before price (like Huel) ---- */
+/* ---- Separator line goes ABOVE the icons section (between count and icons) ---- */
 .template-collection .card-information {
-  border-top: 1px solid #E0DBD4 !important;
-  padding-top: 14px !important;
-  margin-top: 4px !important;
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 /* ---- Price ---- */
 .template-collection .price .price-item--regular,
 .template-collection .price .price-item--sale {
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-weight: 700 !important;
   color: #111 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
@@ -163,23 +163,26 @@ body.template-collection {
 .template-collection .khas-card-tags {
   display: block !important;
   list-style: none !important;
-  padding: 0 !important;
+  padding: 14px 0 0 !important;
   margin: 0 0 16px !important;
+  border-top: 1px solid #E0DBD4 !important;
 }
 
 .template-collection .khas-card-tag {
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
-  font-size: 13px !important;
+  gap: 10px !important;
+  font-size: 14px !important;
   font-weight: 400 !important;
   color: #555 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
-  padding: 3px 0 !important;
+  padding: 4px 0 !important;
 }
 
 .template-collection .khas-card-tag svg {
   flex-shrink: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
   color: #999 !important;
 }
 
