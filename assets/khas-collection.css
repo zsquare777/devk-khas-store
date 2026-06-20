@@ -83,6 +83,9 @@ body.template-collection {
 
 .template-collection .card__information {
   padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
 }
 
 /* ---- Product title ---- */
