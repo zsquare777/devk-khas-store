@@ -171,12 +171,12 @@ body.template-collection {
 .template-collection .khas-card-tag {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
-  font-size: 14px !important;
+  gap: 8px !important;
+  font-size: 13px !important;
   font-weight: 400 !important;
   color: #666 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
-  padding: 5px 0 !important;
+  padding: 3px 0 !important;
 }
 
 .template-collection .khas-card-tag svg {
@@ -193,14 +193,14 @@ body.template-collection {
 
 .template-collection .khas-view-btn {
   display: inline-block !important;
-  margin-top: 14px !important;
-  padding: 12px 24px !important;
+  margin-top: 12px !important;
+  padding: 10px 20px !important;
   background: #111 !important;
   color: #fff !important;
   border-radius: 100px !important;
   text-align: center !important;
   text-decoration: none !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   letter-spacing: 0 !important;
