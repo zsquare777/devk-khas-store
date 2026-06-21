@@ -117,10 +117,10 @@
   border-radius: 16px;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   text-decoration: none;
   color: #111;
-  padding: 22px 20px 18px;
+  padding: 20px 20px 16px;
   display: flex;
   flex-direction: column;
   transition: background 0.25s ease;
@@ -133,12 +133,12 @@
 /* TITLE */
 .khas-card h3 {
   margin: 0;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 17px;
+  line-height: 1.25;
   font-weight: 600;
   font-family: 'Inter', -apple-system, sans-serif;
   color: #111;
-  max-width: 100%;
+  max-width: 55%;
   letter-spacing: -0.02em;
   position: relative;
   z-index: 2;
@@ -171,13 +171,13 @@
   transform: translateX(8px);
 }
 
-/* IMAGE — right-aligned so arrow (bottom-left) has clear space */
+/* IMAGE — flush to bottom-right like Huel */
 .khas-card .khas-card-img {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  width: 66%;
-  height: 58%;
+  bottom: 0;
+  right: 0;
+  width: 72%;
+  height: 80%;
   object-fit: contain;
   object-position: right bottom;
   transition: transform 0.3s ease;
