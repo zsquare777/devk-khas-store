@@ -8,9 +8,8 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Force all parent containers to be full-width ---- */
-.template-collection #ProductGridContainer,
-.template-collection #ProductGridContainer > .collection {
+/* ---- Force the grid container to be full-width (no width constraint on parent) ---- */
+.template-collection #ProductGridContainer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
