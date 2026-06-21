@@ -8,21 +8,19 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Force parent to be full-width ---- */
+/* ---- Flex-center the grid inside its full-width parent ---- */
 .template-collection #ProductGridContainer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 
-/* ---- Centered grid wrapper (inline style on the div is the primary source; this is a CSS fallback) ---- */
+/* ---- Grid wrapper width is set by inline style; only set width here so flex child expands ---- */
 .template-collection .khas-grid-wrapper {
-  max-width: 1260px !important;
-  margin: 0 auto !important;
-  padding-left: 40px !important;
-  padding-right: 40px !important;
-  box-sizing: border-box !important;
+  width: 100% !important;
 }
 
 /* ---- 3-column grid ---- */
