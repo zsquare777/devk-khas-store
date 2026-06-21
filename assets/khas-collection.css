@@ -237,6 +237,8 @@ body.template-collection {
   transition: background 0.2s, opacity 0.2s !important;
   width: fit-content !important;
   align-self: flex-start !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 body.template-collection .khas-view-btn:hover {
