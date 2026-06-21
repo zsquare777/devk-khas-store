@@ -18,16 +18,16 @@ body.template-collection {
 
 /* ---- Centered grid wrapper (inline style on the div is the primary source; this is a CSS fallback) ---- */
 .template-collection .khas-grid-wrapper {
-  max-width: 1400px !important;
+  max-width: 1200px !important;
   margin: 0 auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
   box-sizing: border-box !important;
 }
 
-/* ---- 4-column grid ---- */
+/* ---- 3-column grid ---- */
 .template-collection #product-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 16px !important;
 }
 
