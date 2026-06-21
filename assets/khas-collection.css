@@ -8,9 +8,11 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Expand collection to full viewport width like Huel ---- */
+/* ---- Expand collection to full viewport width, centered like Huel ---- */
 .template-collection .collection.page-width {
-  max-width: 100% !important;
+  max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
 }
@@ -120,7 +122,7 @@ body.template-collection {
   text-decoration: none !important;
 }
 
-/* ---- Subtitle (product description) — dark color same as title ---- */
+/* ---- Subtitle (product description) ---- */
 .khas-card-subtitle {
   display: none;
 }
