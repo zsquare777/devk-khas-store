@@ -98,12 +98,12 @@ body.template-collection {
 .template-collection .card__heading,
 .template-collection .card__heading.h5 {
   font-size: 18px !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.025em !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   color: #111 !important;
   line-height: 1.2 !important;
-  margin: 0 0 5px !important;
+  margin: 0 0 4px !important;
   width: 100% !important;
 }
 
@@ -120,9 +120,9 @@ body.template-collection {
 
 .template-collection .khas-card-subtitle {
   display: block !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
-  color: #333 !important;
+  color: #666 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   line-height: 1.35 !important;
   margin: 0 0 5px !important;
