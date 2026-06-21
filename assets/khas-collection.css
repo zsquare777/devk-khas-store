@@ -8,15 +8,22 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
+/* ---- Expand collection to full viewport width like Huel ---- */
+.template-collection .collection.page-width {
+  max-width: 100% !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
 /* ---- 3-column grid ---- */
 .template-collection #product-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 20px !important;
+  gap: 16px !important;
 }
 
-/* ---- Image card height — nearly square like Huel ---- */
+/* ---- Image card height — fully square like Huel ---- */
 .template-collection .card__inner.ratio {
-  --ratio-percent: 95% !important;
+  --ratio-percent: 100% !important;
 }
 
 /* ---- Image card: white/light, rounded ---- */
