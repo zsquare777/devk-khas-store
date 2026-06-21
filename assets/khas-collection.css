@@ -8,22 +8,23 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Force the grid container to be full-width (no width constraint on parent) ---- */
+/* ---- Center grid container using flexbox ---- */
 .template-collection #ProductGridContainer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 
-/* ---- Centered grid wrapper ---- */
+/* ---- Centered grid wrapper: capped width, equal padding each side ---- */
 .template-collection .khas-grid-wrapper {
-  max-width: 1400px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 40px;
-  padding-right: 40px;
-  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 1400px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
 }
 
 /* ---- 3-column grid ---- */
