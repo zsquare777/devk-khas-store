@@ -15,15 +15,13 @@
   <!-- RIGHT PANELS -->
   <div class="khas-panels">
 
-    <!-- Panel 1: Herbs & Dried Leaves — menu handle: herbs-dried-leaves -->
+    <!-- Panel 1: Herbs & Dried Leaves -->
     <div class="khas-grid khas-panel active" data-panel="herbs">
       {%- assign panel_menu = linklists['herbs-dried-leaves'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -31,8 +29,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -41,15 +39,13 @@
       {%- endif -%}
     </div>
 
-    <!-- Panel 2: Cooking Pastes — menu handle: cooking-pastes -->
+    <!-- Panel 2: Cooking Pastes -->
     <div class="khas-grid khas-panel" data-panel="pastes">
       {%- assign panel_menu = linklists['cooking-pastes'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -57,8 +53,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -67,15 +63,13 @@
       {%- endif -%}
     </div>
 
-    <!-- Panel 3: Spices & Powdered Masalas — menu handle: spices-masalas -->
+    <!-- Panel 3: Spices & Powdered Masalas -->
     <div class="khas-grid khas-panel" data-panel="spices">
       {%- assign panel_menu = linklists['spices-masalas'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -83,8 +77,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -93,15 +87,13 @@
       {%- endif -%}
     </div>
 
-    <!-- Panel 4: Whole Spices — menu handle: whole-spices -->
+    <!-- Panel 4: Whole Spices -->
     <div class="khas-grid khas-panel" data-panel="whole-spices">
       {%- assign panel_menu = linklists['whole-spices'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -109,8 +101,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -119,15 +111,13 @@
       {%- endif -%}
     </div>
 
-    <!-- Panel 5: Salt & Seasoning — menu handle: salt-seasoning -->
+    <!-- Panel 5: Salt & Seasoning -->
     <div class="khas-grid khas-panel" data-panel="salt">
       {%- assign panel_menu = linklists['salt-seasoning'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -135,8 +125,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -145,15 +135,13 @@
       {%- endif -%}
     </div>
 
-    <!-- Panel 6: Pasta & Noodles — menu handle: pasta-noodles -->
+    <!-- Panel 6: Pasta & Noodles -->
     <div class="khas-grid khas-panel" data-panel="pasta">
       {%- assign panel_menu = linklists['pasta-noodles'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -161,8 +149,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -171,15 +159,13 @@
       {%- endif -%}
     </div>
 
-    <!-- Panel 7: Crispy & Cooking Toppings — menu handle: crispy-toppings -->
+    <!-- Panel 7: Crispy & Cooking Toppings -->
     <div class="khas-grid khas-panel" data-panel="toppings">
       {%- assign panel_menu = linklists['crispy-toppings'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
-          {%- assign url_parts = menulink.url | split: '/' -%}
-          {%- assign col_handle = url_parts | last -%}
-          {%- assign col = collections[col_handle] -%}
-          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
+          {%- assign linked = menulink.object -%}
+          {%- assign card_img = linked.featured_image | default: linked.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -187,8 +173,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- if col_img -%}
-              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if card_img -%}
+              <img src="{{ card_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
