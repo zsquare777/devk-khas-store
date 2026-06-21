@@ -8,12 +8,20 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Full-width centered grid wrapper (replaces page-width constraint) ---- */
+/* ---- Force all parent containers to be full-width ---- */
+.template-collection #ProductGridContainer,
+.template-collection #ProductGridContainer > .collection {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ---- Centered grid wrapper ---- */
 .template-collection .khas-grid-wrapper {
-  width: 100%;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1400px;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 40px;
   padding-right: 40px;
   box-sizing: border-box;
