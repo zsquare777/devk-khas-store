@@ -171,32 +171,19 @@
   transform: translateX(8px);
 }
 
-/* IMAGE — focus on product (lower portion of lifestyle photos) */
+/* IMAGE — full photo visible, no cropping */
 .khas-card .khas-card-img {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 72%;
-  object-fit: cover;
+  height: 70%;
+  object-fit: contain;
   object-position: center bottom;
   transition: transform 0.3s ease;
   pointer-events: none;
   z-index: 1;
-}
-
-/* Smooth gradient from card color into photo */
-.khas-card::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
-  height: 16%;
-  background: linear-gradient(to bottom, #EDEAE3 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 2;
 }
 
 .khas-card:hover .khas-card-img {
