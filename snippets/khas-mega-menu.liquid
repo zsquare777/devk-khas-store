@@ -20,6 +20,10 @@
       {%- assign panel_menu = linklists['herbs-dried-leaves'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -27,9 +31,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -43,6 +46,10 @@
       {%- assign panel_menu = linklists['cooking-pastes'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -50,9 +57,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -66,6 +72,10 @@
       {%- assign panel_menu = linklists['spices-masalas'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -73,9 +83,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -89,6 +98,10 @@
       {%- assign panel_menu = linklists['whole-spices'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -96,9 +109,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -112,6 +124,10 @@
       {%- assign panel_menu = linklists['salt-seasoning'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -119,9 +135,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -135,6 +150,10 @@
       {%- assign panel_menu = linklists['pasta-noodles'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -142,9 +161,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
@@ -158,6 +176,10 @@
       {%- assign panel_menu = linklists['crispy-toppings'] -%}
       {%- if panel_menu.links.size > 0 -%}
         {%- for menulink in panel_menu.links -%}
+          {%- assign url_parts = menulink.url | split: '/' -%}
+          {%- assign col_handle = url_parts | last -%}
+          {%- assign col = collections[col_handle] -%}
+          {%- assign col_img = col.featured_image | default: col.products.first.featured_image -%}
           <a href="{{ menulink.url }}" class="khas-card">
             <h3>{{ menulink.title | escape }}</h3>
             <div class="khas-card-arrow">
@@ -165,9 +187,8 @@
                 <path d="M2 8h12M9 3l5 5-5 5" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            {%- assign col = collections[menulink.handle] -%}
-            {%- if col.featured_image.id -%}
-              <img src="{{ col.featured_image | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
+            {%- if col_img -%}
+              <img src="{{ col_img | image_url: width: 400 }}" class="khas-card-img" loading="lazy" width="400" height="267" alt="{{ menulink.title | escape }}">
             {%- endif -%}
           </a>
         {%- endfor -%}
