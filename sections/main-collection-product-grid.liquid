@@ -119,7 +119,7 @@
       {%- endif -%}
 
       <div
-        class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="product-grid-container page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         id="ProductGridContainer"
         {% if settings.animations_reveal_on_scroll %}
           data-cascade
@@ -142,7 +142,6 @@
         {%- else -%}
           <div
             class="collection{% if section.settings.filter_type != 'vertical' %} khas-grid-wrapper{% else %} page-width{% endif %}"
-            {% if section.settings.filter_type != 'vertical' %}style="max-width:1260px;padding:0 40px;box-sizing:border-box;"{% endif %}
           >
             <div class="loading-overlay gradient"></div>
             <ul

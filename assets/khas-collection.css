@@ -8,18 +8,18 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Flex-center the grid inside its full-width parent ---- */
+/* ---- Override page-width max-width to match our grid; margin:auto centering comes from page-width class ---- */
 .template-collection #ProductGridContainer {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
+  max-width: 1260px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* ---- Grid wrapper width is set by inline style; only set width here so flex child expands ---- */
+/* ---- Grid wrapper: side padding for breathing room ---- */
 .template-collection .khas-grid-wrapper {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
   width: 100% !important;
 }
 
