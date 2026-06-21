@@ -18,7 +18,7 @@ body.template-collection {
 
 /* ---- Centered grid wrapper (inline style on the div is the primary source; this is a CSS fallback) ---- */
 .template-collection .khas-grid-wrapper {
-  max-width: 1200px !important;
+  max-width: 1260px !important;
   margin: 0 auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
@@ -64,9 +64,9 @@ body.template-collection {
 
 /* ---- Product image: float on card with padding + fully visible ---- */
 .template-collection .card__media .media > img {
-  inset: 20px !important;
-  width: calc(100% - 40px) !important;
-  height: calc(100% - 40px) !important;
+  inset: 12px !important;
+  width: calc(100% - 24px) !important;
+  height: calc(100% - 24px) !important;
   object-fit: contain !important;
   object-position: center center !important;
 }
