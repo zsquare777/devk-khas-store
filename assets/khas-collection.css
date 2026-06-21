@@ -18,8 +18,7 @@ body.template-collection {
 
 /* ---- Centered grid wrapper (inline style on the div is the primary source; this is a CSS fallback) ---- */
 .template-collection .khas-grid-wrapper {
-  width: 90% !important;
-  max-width: 1350px !important;
+  max-width: 1200px !important;
   margin: 0 auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
