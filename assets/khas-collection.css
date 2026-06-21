@@ -8,13 +8,21 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Expand collection to full viewport width, centered like Huel ---- */
+/* ---- Expand all collection containers to full width, centered ---- */
+.template-collection #ProductGridContainer,
+.template-collection #ProductGridContainer > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 .template-collection .collection.page-width {
+  width: 100% !important;
   max-width: 1600px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
+  box-sizing: border-box !important;
 }
 
 /* ---- 3-column grid ---- */
