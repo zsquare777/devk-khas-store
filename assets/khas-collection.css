@@ -23,10 +23,17 @@ body.template-collection {
   width: 100% !important;
 }
 
-/* ---- 3-column grid ---- */
+/* ---- 3-column grid (CSS Grid, not Dawn's flex) ---- */
 .template-collection #product-grid {
+  display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 16px !important;
+}
+
+/* Override Dawn's flex-based item widths so grid cells fill correctly */
+.template-collection #product-grid .grid__item {
+  width: 100% !important;
+  max-width: none !important;
 }
 
 /* ---- Image card height — fully square like Huel ---- */
@@ -264,6 +271,7 @@ body.template-collection .khas-view-btn:hover {
 /* ---- Mobile: 2 columns ---- */
 @media (max-width: 749px) {
   .template-collection #product-grid {
+    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 10px !important;
   }
