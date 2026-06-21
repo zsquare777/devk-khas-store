@@ -8,20 +8,18 @@ body.template-collection {
   background: #F5F2EE !important;
 }
 
-/* ---- Center grid container using flexbox ---- */
+/* ---- Force parent to be full-width ---- */
 .template-collection #ProductGridContainer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
 }
 
-/* ---- Centered grid wrapper: capped width, equal padding each side ---- */
+/* ---- Centered grid wrapper (inline style on the div is the primary source; this is a CSS fallback) ---- */
 .template-collection .khas-grid-wrapper {
-  width: 100% !important;
   max-width: 1400px !important;
+  margin: 0 auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
   box-sizing: border-box !important;
