@@ -14,14 +14,14 @@ body.template-collection {
   gap: 20px !important;
 }
 
-/* ---- Image card height — close to square like Huel ---- */
+/* ---- Image card height — nearly square like Huel ---- */
 .template-collection .card__inner.ratio {
-  --ratio-percent: 90% !important;
+  --ratio-percent: 95% !important;
 }
 
 /* ---- Image card: white/light, rounded ---- */
 .template-collection .card__inner {
-  background: #EDEAE4 !important;
+  background: #EFECE6 !important;
   border-radius: 16px !important;
   border: none !important;
   box-shadow: none !important;
@@ -220,7 +220,8 @@ body.template-collection {
   font-family: 'Inter', -apple-system, sans-serif !important;
   letter-spacing: 0 !important;
   transition: opacity 0.2s !important;
-  width: auto !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
 }
 
 .template-collection .khas-view-btn:hover {
