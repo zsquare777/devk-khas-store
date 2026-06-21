@@ -138,7 +138,7 @@
   font-weight: 600;
   font-family: 'Inter', -apple-system, sans-serif;
   color: #111;
-  max-width: 55%;
+  max-width: 80%;
   letter-spacing: -0.02em;
   position: relative;
   z-index: 2;
@@ -171,22 +171,23 @@
   transform: translateX(8px);
 }
 
-/* IMAGE — flush to bottom-right like Huel */
+/* IMAGE — large, bottom-center like Huel */
 .khas-card .khas-card-img {
   position: absolute;
   bottom: 0;
+  left: 0;
   right: 0;
-  width: 72%;
-  height: 80%;
+  width: 100%;
+  height: 72%;
   object-fit: contain;
-  object-position: right bottom;
+  object-position: center bottom;
   transition: transform 0.3s ease;
   pointer-events: none;
   z-index: 1;
 }
 
 .khas-card:hover .khas-card-img {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 
 /* RESPONSIVE */
