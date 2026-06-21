@@ -240,8 +240,9 @@ body.template-collection {
 }
 
 .template-collection .khas-view-btn:hover {
-  opacity: 0.80 !important;
+  background: #5bb450 !important;
   color: #fff !important;
+  opacity: 1 !important;
   text-decoration: none !important;
 }
 
