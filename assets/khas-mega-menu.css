@@ -117,7 +117,7 @@
   border-radius: 16px;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 5 / 3;
   text-decoration: none;
   color: #111;
   padding: 18px;
@@ -171,14 +171,14 @@
   transform: translateX(8px);
 }
 
-/* IMAGE — right-center like Huel */
+/* IMAGE — right-center like Huel, flush to right edge */
 .khas-card .khas-card-img {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 0;
   transform: translateY(-50%);
-  width: 62%;
-  height: 82%;
+  width: 65%;
+  height: 85%;
   object-fit: contain;
   object-position: right center;
   transition: transform 0.3s ease;
