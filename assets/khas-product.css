@@ -1,0 +1,250 @@
+/* ================================================
+   KHAS PRODUCT PAGE — Add to Cart section styling
+   ================================================ */
+
+/* ---- Page background ---- */
+body.template-product {
+  background: #F5F2EE !important;
+}
+
+/* ---- Product title ---- */
+.template-product .product__title h2.h1 {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #111 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+/* ---- Price ---- */
+.template-product .price--large .price-item--regular,
+.template-product .price--large .price-item--sale {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #111 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.template-product .price--large .price-item--compare {
+  font-size: 18px !important;
+  color: #999 !important;
+  font-weight: 400 !important;
+  text-decoration: line-through !important;
+}
+
+/* ---- Variant swatch / option buttons ---- */
+.template-product .product-form__input .swatch-input__input + .swatch__label,
+.template-product .product-form__input .swatch-input__input + label {
+  border: 2px solid #D8D3CB !important;
+  border-radius: 100px !important;
+  padding: 9px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #333 !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  transition: border-color 0.18s, background 0.18s, color 0.18s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.template-product .swatch-input__input:checked + .swatch__label,
+.template-product .swatch-input__input:checked + label {
+  border-color: #111 !important;
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.template-product .product-form__input .swatch-input__input + label:hover {
+  border-color: #111 !important;
+}
+
+/* Label for variant options */
+.template-product .product-form__input .form__label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #666 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+}
+
+/* ---- Quantity label: hide ---- */
+.template-product .quantity__label.form__label {
+  display: none !important;
+}
+
+/* ---- Quantity + Buy button: same row ---- */
+.template-product .product-form__quantity {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: 136px !important;
+  margin-right: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+.template-product product-form.product-form {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  width: calc(100% - 160px) !important;
+}
+
+/* ---- Quantity selector pill ---- */
+.template-product .quantity {
+  border: 2px solid #D8D3CB !important;
+  border-radius: 100px !important;
+  background: #fff !important;
+  height: 52px !important;
+  width: 136px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+.template-product .quantity__button {
+  width: 46px !important;
+  height: 52px !important;
+  border: none !important;
+  background: transparent !important;
+  color: #111 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  cursor: pointer !important;
+  transition: background 0.15s !important;
+}
+
+.template-product .quantity__button:hover {
+  background: #F0EDE8 !important;
+}
+
+.template-product .quantity__button svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.template-product .quantity__input {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #111 !important;
+  text-align: center !important;
+  border: none !important;
+  background: transparent !important;
+  width: 36px !important;
+  padding: 0 !important;
+  -moz-appearance: textfield !important;
+}
+
+.template-product .quantity__input::-webkit-outer-spin-button,
+.template-product .quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* ---- Add to Cart button ---- */
+.template-product .product-form__submit.button--primary {
+  background: #111 !important;
+  color: #fff !important;
+  border: 2px solid #111 !important;
+  border-radius: 100px !important;
+  height: 52px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  letter-spacing: 0 !important;
+  transition: background 0.2s, border-color 0.2s !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.template-product .product-form__submit.button--primary:hover:not(:disabled) {
+  background: #5bb450 !important;
+  border-color: #5bb450 !important;
+}
+
+.template-product .product-form__submit.button--primary:disabled {
+  background: #ccc !important;
+  border-color: #ccc !important;
+  cursor: not-allowed !important;
+}
+
+/* ---- Product form buttons container ---- */
+.template-product .product-form__buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+/* ---- Inventory / In stock ---- */
+.template-product .product__inventory {
+  font-size: 14px !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* ---- Product info wrapper card ---- */
+.template-product .product__info-wrapper {
+  background: #fff !important;
+  border-radius: 20px !important;
+  padding: 32px !important;
+}
+
+/* ---- Product image area ---- */
+.template-product .product__media-wrapper .media {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: #F5F2EE !important;
+}
+
+/* ---- Accordion / collapsible tabs ---- */
+.template-product .accordion summary {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #111 !important;
+  padding: 16px 0 !important;
+  border-top: 1px solid #E8E3DC !important;
+}
+
+.template-product .accordion__content {
+  font-size: 14px !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  color: #555 !important;
+  line-height: 1.6 !important;
+  padding-bottom: 16px !important;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 749px) {
+  .template-product .product__info-wrapper {
+    border-radius: 0 !important;
+    padding: 20px 16px !important;
+  }
+
+  .template-product product-form.product-form {
+    width: calc(100% - 152px) !important;
+  }
+
+  .template-product .product__title h2.h1 {
+    font-size: 20px !important;
+  }
+
+  .template-product .price--large .price-item--regular,
+  .template-product .price--large .price-item--sale {
+    font-size: 24px !important;
+  }
+}
