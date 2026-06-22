@@ -174,7 +174,7 @@
 /* IMAGE — large, fills bottom of card like Huel */
 .khas-card .khas-card-img {
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
   left: 0;
   right: 0;
   width: 100%;
