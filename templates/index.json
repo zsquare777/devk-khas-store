@@ -203,6 +203,9 @@
     },
     "khas_bestsellers": {
       "type": "khas-bestsellers",
+      "custom_css": [
+        "img {height: 350px; width: 100%; object-fit: cover;}"
+      ],
       "settings": {
         "heading_start": "Shop our",
         "heading_italic": "Bestsellers",
@@ -837,7 +840,8 @@
             "transition_speed": 5,
             "carousel_style": "highlight",
             "header_text": "Real customer stories",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
@@ -879,7 +883,8 @@
             "arrows_color": "#000000",
             "transition_speed": 5,
             "header_text": "Customers are saying",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
@@ -921,7 +926,8 @@
             "arrows_color": "#000000",
             "transition_speed": 5,
             "header_text": "Customers are saying",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
