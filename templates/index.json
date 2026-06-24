@@ -55,7 +55,10 @@
         "card_weight",
         "card_time"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".khas-goals-grid {grid-template-columns: repeat(4, 1fr); gap: 16px;}",
+        ".khas-goals-card {aspect-ratio: 3 / 4; background: transparent !important;}"
+      ],
       "settings": {
         "heading_start": "Food to",
         "heading_italic": "fuel",
