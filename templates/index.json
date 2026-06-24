@@ -55,6 +55,7 @@
         "card_weight",
         "card_time"
       ],
+      "custom_css": [],
       "settings": {
         "heading_start": "Food to",
         "heading_italic": "fuel",
@@ -221,6 +222,9 @@
     },
     "khas_collection_row": {
       "type": "khas-collection-row",
+      "custom_css": [
+        "img {height: 225px; width: 100%; object-fit: cover;}"
+      ],
       "settings": {
         "heading": "Kitchen Collection",
         "collection": "khas",
