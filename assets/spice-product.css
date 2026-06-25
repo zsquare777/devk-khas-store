@@ -22,10 +22,7 @@ body.spice-product-page-body {
 .spice-custom-product-page .product__tax,
 .spice-custom-product-page .installment,
 .spice-custom-product-page .share-button,
-.spice-custom-product-page .rating-wrapper,
-.spice-custom-product-page .price .badge,
-.spice-custom-product-page .price__badge-sale,
-.spice-custom-product-page .price__badge-sold-out {
+.spice-custom-product-page .rating-wrapper {
   display: none !important;
 }
 
@@ -128,9 +125,7 @@ body.spice-product-page-body {
 }
 
 /* Submit/Add-to-cart button styling */
-.spice-custom-product-page .product-form__submit.button--primary,
-.spice-custom-product-page .product-form__submit.button--primary:disabled,
-.spice-custom-product-page .product-form__submit.button--primary[disabled] {
+.spice-custom-product-page .product-form__submit.button--primary {
   background: #be9051 !important;
   color: #fff !important;
   border: none !important;
@@ -146,10 +141,9 @@ body.spice-product-page-body {
   justify-content: center !important;
   position: relative !important;
   cursor: pointer !important;
-  opacity: 1 !important;
 }
 
-.spice-custom-product-page .product-form__submit.button--primary:hover:not(:disabled) {
+.spice-custom-product-page .product-form__submit.button--primary:hover {
   background: #a97d43 !important;
 }
 

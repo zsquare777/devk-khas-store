@@ -29,13 +29,7 @@
   assign money_price = price | money
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
-
-  assign is_chilli = false
-  if product.handle contains 'chilli' or product.handle contains 'chili' or product.title contains 'Chilli Powder' or product.title contains 'Chili Powder'
-    assign is_chilli = true
-  endif
-
-  if settings.currency_code_enabled and is_chilli == false
+  if settings.currency_code_enabled
     assign money_price = price | money_with_currency
     assign money_price_min = price_min | money_with_currency
     assign money_price_max = price_max | money_with_currency
