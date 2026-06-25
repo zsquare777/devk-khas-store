@@ -389,6 +389,7 @@ body.spice-product-page-body .spice-custom-slides-container {
   position: relative !important;
   overflow: hidden !important;
   border-radius: 8px !important;
+  min-height: 600px !important;
 }
 
 body.spice-product-page-body .spice-custom-slide {
@@ -396,6 +397,7 @@ body.spice-product-page-body .spice-custom-slide {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
+  height: 100% !important;
   opacity: 0 !important;
   transform: translateX(100%) !important;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
@@ -405,6 +407,7 @@ body.spice-product-page-body .spice-custom-slide.active {
   position: relative !important;
   opacity: 1 !important;
   transform: translateX(0) !important;
+  z-index: 1 !important;
 }
 
 body.spice-product-page-body .spice-custom-slide.prev-slide {
