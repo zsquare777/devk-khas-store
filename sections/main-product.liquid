@@ -113,20 +113,26 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                 <details>
-  <summary style="cursor:pointer;font-size:22px;font-weight:700;">
-    {{ product.title }}
-  </summary>
+                  {% if is_chilli %}
+                    <div class="spice-vendor">VIXCE</div>
+                    <h1 class="spice-title">CHILLI POWDER</h1>
+                    <div class="spice-subtitle">100g</div>
+                  {% else %}
+                    <details>
+                      <summary style="cursor:pointer;font-size:22px;font-weight:700;">
+                        {{ product.title }}
+                      </summary>
 
-  <div style="padding-top:10px;">
-    Extra title content here
-  </div>
-</details>
-                  <a href="{{ product.url }}" class="product__title">
-                    <h2 class="h1">
-                      {{ product.title | escape }}
-                    </h2>
-                  </a>
+                      <div style="padding-top:10px;">
+                        Extra title content here
+                      </div>
+                    </details>
+                    <a href="{{ product.url }}" class="product__title">
+                      <h2 class="h1">
+                        {{ product.title | escape }}
+                      </h2>
+                    </a>
+                  {% endif %}
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
