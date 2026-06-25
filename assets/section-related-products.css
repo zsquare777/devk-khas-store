@@ -139,3 +139,51 @@ body.spice-product-page-body .related-products a.khas-view-btn[href]:hover {
   outline: none !important;
   cursor: pointer !important;
 }
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 749px) {
+  body.spice-product-page-body .related-products__heading {
+    font-size: 24px !important;
+  }
+
+  body.spice-product-page-body .related-products .grid__item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  body.spice-product-page-body .related-products .card-wrapper {
+    width: 100% !important;
+  }
+
+  body.spice-product-page-body .related-products .card {
+    width: 100% !important;
+  }
+
+  body.spice-product-page-body .khas-view-btn {
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+
+  body.spice-product-page-body .related-products .khas-card-tag {
+    font-size: 13px !important;
+  }
+
+  body.spice-product-page-body .related-products .card__heading.h5 {
+    font-size: 16px !important;
+  }
+}
+
+/* Responsive styles for tablet */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  body.spice-product-page-body .related-products__heading {
+    font-size: 28px !important;
+  }
+
+  body.spice-product-page-body .related-products .grid__item {
+    width: calc(50% - 10px) !important;
+  }
+
+  body.spice-product-page-body .khas-view-btn {
+    width: 120px !important;
+  }
+}
