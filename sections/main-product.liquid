@@ -304,7 +304,7 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images %}
+        {% render 'product-media-gallery', variant_images: variant_images, is_chilli: is_chilli %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -2640,3 +2640,66 @@
   ]
 }
 {% endschema %}
+
+{%- if is_chilli -%}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Carousel dots functionality for chilli powder product page
+    const dotsContainer = document.querySelector('.spice-carousel-dots');
+    if (!dotsContainer) return;
+
+    const dots = dotsContainer.querySelectorAll('.spice-carousel-dot');
+    const slider = document.querySelector('#GalleryViewer-{{ section.id }}');
+    if (!slider || dots.length === 0) return;
+
+    // Function to update active dot based on current slide
+    function updateActiveDot() {
+      const activeSlide = slider.querySelector('.slider__slide.is-active');
+      if (!activeSlide) return;
+
+      const activeMediaId = activeSlide.getAttribute('data-media-id');
+      dots.forEach(dot => {
+        const dotMediaId = dot.getAttribute('data-media-id');
+        if (dotMediaId === activeMediaId) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Click handler for dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        const targetMediaId = this.getAttribute('data-media-id');
+        const targetSlide = slider.querySelector(`[data-media-id="${targetMediaId}"]`);
+        if (targetSlide) {
+          // Use the slider's existing navigation
+          const sliderComponent = slider.closest('slider-component');
+          if (sliderComponent) {
+            const slideIndex = Array.from(slider.querySelectorAll('.slider__slide')).indexOf(targetSlide);
+            sliderComponent.goToSlide(slideIndex);
+          }
+        }
+      });
+    });
+
+    // Listen for slider changes to update dots
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'class') {
+          updateActiveDot();
+        }
+      });
+    });
+
+    const slides = slider.querySelectorAll('.slider__slide');
+    slides.forEach(slide => {
+      observer.observe(slide, { attributes: true });
+    });
+
+    // Initial update
+    updateActiveDot();
+  });
+</script>
+{%- endif -%}
