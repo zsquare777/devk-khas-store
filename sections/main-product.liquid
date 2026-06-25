@@ -1,5 +1,7 @@
+{%- assign product_title_downcase = product.title | downcase -%}
+{%- assign product_handle_downcase = product.handle | downcase -%}
 {%- assign is_chilli = false -%}
-{% if product.handle contains 'chilli' or product.handle contains 'chili' or product.title contains 'Chilli Powder' or product.title contains 'Chili Powder' %}
+{% if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili' %}
   {%- assign is_chilli = true -%}
 {% endif %}
 
@@ -24,6 +26,217 @@
   
   {% if is_chilli %}
     {{ 'spice-product.css' | asset_url | stylesheet_tag }}
+    <style>
+      body.spice-product-page-body {
+        background: #ffffff !important;
+      }
+      .spice-custom-product-page .product__info-wrapper {
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+      }
+      .spice-custom-product-page .product__text.caption-with-letter-spacing,
+      .spice-custom-product-page .product-popup-modal__opener,
+      .spice-custom-product-page .estimated-delivery-date--container,
+      .spice-custom-product-page .gm-trustbadge-icons-only,
+      .spice-custom-product-page .four-icon-row,
+      .spice-custom-product-page .product__pickup-availabilities,
+      .spice-custom-product-page .shopify-payment-button,
+      .spice-custom-product-page .product__view-details,
+      .spice-custom-product-page .product__tax,
+      .spice-custom-product-page .installment,
+      .spice-custom-product-page .share-button,
+      .spice-custom-product-page .product__description,
+      .spice-custom-product-page .rating-wrapper {
+        display: none !important;
+      }
+      .spice-custom-product-page .spice-vendor {
+        font-family: inherit !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: #be9051 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+        margin-bottom: 8px !important;
+      }
+      .spice-custom-product-page .spice-title {
+        font-family: inherit !important;
+        font-size: 32px !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+        text-transform: uppercase !important;
+        letter-spacing: -0.01em !important;
+        margin: 0 0 8px 0 !important;
+        line-height: 1.2 !important;
+      }
+      .spice-custom-product-page .spice-subtitle {
+        font-family: inherit !important;
+        font-size: 14px !important;
+        color: #111 !important;
+        margin-bottom: 15px !important;
+        font-weight: 500 !important;
+      }
+      .spice-custom-product-page .product__title a.product__title {
+        display: none !important;
+      }
+      .spice-custom-product-page .price-item--regular {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+        font-family: inherit !important;
+      }
+      .spice-custom-product-page .product-form__quantity {
+        display: block !important;
+        width: auto !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+      }
+      .spice-custom-product-page product-form.product-form {
+        display: block !important;
+        width: 100% !important;
+      }
+      .spice-custom-product-page .quantity {
+        border: none !important;
+        border-radius: 100px !important;
+        background: #f5eff0 !important;
+        height: 44px !important;
+        width: 120px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+      }
+      .spice-custom-product-page .quantity__button {
+        width: 36px !important;
+        height: 44px !important;
+        border: none !important;
+        background: transparent !important;
+        color: #111 !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .spice-custom-product-page .quantity__button:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+      }
+      .spice-custom-product-page .quantity__input {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        color: #111 !important;
+        text-align: center !important;
+        border: none !important;
+        background: transparent !important;
+        width: 32px !important;
+        padding: 0 !important;
+      }
+      .spice-custom-product-page .quantity::after,
+      .spice-custom-product-page .quantity::before {
+        display: none !important;
+        content: none !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .spice-custom-product-page .price .badge {
+        display: none !important;
+      }
+      .spice-custom-product-page .product-form__submit.button--primary,
+      .spice-custom-product-page .product-form__submit.button--secondary {
+        background: #be9051 !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 4px !important;
+        height: 50px !important;
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.05em !important;
+        text-transform: uppercase !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        cursor: pointer !important;
+      }
+      .spice-custom-product-page .product-form__submit.button--primary:hover,
+      .spice-custom-product-page .product-form__submit.button--secondary:hover {
+        background: #a97d43 !important;
+      }
+      .spice-custom-product-page .product-form__submit.button--primary span,
+      .spice-custom-product-page .product-form__submit.button--secondary span {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      .spice-custom-product-page .product-form__submit.button--primary .btn-chevron,
+      .spice-custom-product-page .product-form__submit.button--secondary .btn-chevron {
+        position: absolute !important;
+        right: 20px !important;
+        font-weight: 400 !important;
+      }
+      .spice-custom-product-page .product-form__submit.button--primary::after,
+      .spice-custom-product-page .product-form__submit.button--secondary::after {
+        display: none !important;
+        content: none !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .spice-accordions-wrapper {
+        margin-top: 30px !important;
+        border-top: 1.5px solid #111 !important;
+      }
+      .spice-accordion {
+        border-bottom: 1.5px solid #111 !important;
+        display: block !important;
+      }
+      .spice-accordion-summary {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+        font-family: inherit !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        list-style: none !important;
+        color: #111 !important;
+      }
+      .spice-accordion-summary::-webkit-details-marker {
+        display: none !important;
+      }
+      .spice-accordion-summary .accordion-icon {
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        width: 20px !important;
+        height: 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .spice-accordion:not([open]) .accordion-icon::after {
+        content: "+" !important;
+      }
+      .spice-accordion[open] .accordion-icon::after {
+        content: "-" !important;
+      }
+      .spice-accordion .accordion-content {
+        padding-bottom: 15px !important;
+        font-family: inherit !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        color: #333 !important;
+        text-align: left !important;
+      }
+      .spice-accordion .accordion-content p {
+        margin: 0 0 10px 0 !important;
+      }
+      .spice-accordion .accordion-content p:last-child {
+        margin-bottom: 0 !important;
+      }
+    </style>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add("spice-product-page-body");
@@ -514,6 +727,46 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                {% if is_chilli %}
+                  <div class="spice-accordions-wrapper">
+                    
+                    <!-- Accordion 1: Product Info -->
+                    <details class="spice-accordion" open>
+                      <summary class="spice-accordion-summary">
+                        <span>Product Info</span>
+                        <span class="accordion-icon"></span>
+                      </summary>
+                      <div class="accordion-content">
+                        <p>Pure, bold, and authentic Chilli Powder. Milled from premium sun-dried red chillies to deliver a vibrant color, natural warmth, and a rich, bold spice level that enhances the flavor of your favorite recipes.</p>
+                      </div>
+                    </details>
+
+                    <!-- Accordion 2: Ingredients & Nutritionals -->
+                    <details class="spice-accordion">
+                      <summary class="spice-accordion-summary">
+                        <span>Ingredients & Nutritionals</span>
+                        <span class="accordion-icon"></span>
+                      </summary>
+                      <div class="accordion-content">
+                        <p><strong>Ingredients:</strong> 100% Ground Chilli Powder.</p>
+                        <p>No artificial colors, preservatives, fillers, or additives. Gluten-free, non-GMO, and 100% natural.</p>
+                      </div>
+                    </details>
+
+                    <!-- Accordion 3: Delivery Information -->
+                    <details class="spice-accordion">
+                      <summary class="spice-accordion-summary">
+                        <span>Delivery Information</span>
+                        <span class="accordion-icon"></span>
+                      </summary>
+                      <div class="accordion-content">
+                        <p>Standard Delivery: 3-5 working days. Express Delivery options available at checkout.</p>
+                        <p>Freshly packed and shipped to ensure maximum aroma and flavor retention.</p>
+                      </div>
+                    </details>
+
+                  </div>
+                {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -708,6 +961,7 @@
     {% render 'gm-trustbadge-icons-only', block: block %}
             {%- endcase -%}
           {%- endfor -%}
+
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
