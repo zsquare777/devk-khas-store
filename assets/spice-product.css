@@ -378,6 +378,12 @@ body.spice-product-page-body {
 /* Ensure custom slider is visible */
 .spice-custom-product-page .spice-custom-slider {
   display: block !important;
+  visibility: visible !important;
+}
+
+.spice-custom-product-page .spice-custom-arrow {
+  display: flex !important;
+  visibility: visible !important;
 }
 
 /* Custom Slider Styling */
@@ -415,7 +421,6 @@ body.spice-product-page-body {
   background: rgba(255, 255, 255, 0.9) !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   border-radius: 50% !important;
-  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
@@ -423,7 +428,6 @@ body.spice-product-page-body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
   z-index: 100 !important;
   opacity: 1 !important;
-  visibility: visible !important;
 }
 
 .spice-custom-product-page .spice-custom-arrow:hover {
