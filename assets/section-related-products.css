@@ -13,7 +13,7 @@ body.spice-product-page-body .related-products__heading {
 }
 
 body.spice-product-page-body .related-products__heading::after {
-  content: "More From the House of KHAS" !important;
+  content: "More From the House of <i>KHAS</i>" !important;
   display: block !important;
 }
 
