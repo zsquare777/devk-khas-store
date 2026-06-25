@@ -431,28 +431,9 @@ body.spice-product-page-body {
   pointer-events: none !important;
 }
 
-.spice-custom-product-page .slider-button {
-  pointer-events: auto !important;
-}
-
-/* Disable all zoom-related interactions */
-.spice-custom-product-page .product__media-item:hover {
-  cursor: default !important;
-}
-
-.spice-custom-product-page .product__media-item .deferred-media__poster-wrapper {
-  pointer-events: none !important;
-}
-
-.spice-custom-product-page .product__media-item img,
-.spice-custom-product-page .product__media-item video,
-.spice-custom-product-page .product__media-item model-viewer {
-  pointer-events: none !important;
-}
-
 /* Ensure slider buttons remain clickable */
 .spice-custom-product-page .slider-buttons {
-  pointer-events: none !important;
+  pointer-events: auto !important;
 }
 
 .spice-custom-product-page .slider-button {
