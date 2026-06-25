@@ -365,6 +365,12 @@ body.spice-product-page-body {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: -25px !important;
+  right: -25px !important;
+  transform: translateY(-50%) !important;
+  width: calc(100% + 50px) !important;
 }
 
 .spice-custom-product-page .slider-button {
