@@ -23,6 +23,7 @@ body.spice-product-page-body {
 .spice-custom-product-page .product__tax,
 .spice-custom-product-page .installment,
 .spice-custom-product-page .share-button,
+.spice-custom-product-page .product__description,
 .spice-custom-product-page .rating-wrapper {
   display: none !important;
 }
