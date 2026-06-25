@@ -216,6 +216,7 @@ body.spice-product-page-body .related-products .quick-add {
   body.spice-product-page-body .related-products .khas-card-subtitle {
     font-size: 13px !important;
     -webkit-line-clamp: 2 !important;
+    line-clamp: 2 !important;
   }
 
   body.spice-product-page-body .related-products .khas-card-variants {
