@@ -368,14 +368,6 @@ body.spice-product-page-body {
 
 .spice-custom-product-page .slider-buttons {
   display: flex !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 0 !important;
-  right: 0 !important;
-  transform: translateY(-50%) !important;
-  width: 100% !important;
-  padding: 0 10px !important;
-  z-index: 20 !important;
   justify-content: space-between !important;
 }
 
@@ -386,19 +378,17 @@ body.spice-product-page-body {
 }
 
 .spice-custom-product-page .slider-button {
-  display: flex !important;
   background: rgba(255, 255, 255, 0.9) !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   border-radius: 50% !important;
   width: 44px !important;
   height: 44px !important;
+  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
 .spice-custom-product-page .slider-button:hover {
@@ -410,7 +400,6 @@ body.spice-product-page-body {
 .spice-custom-product-page .slider-button .svg-wrapper {
   width: 20px !important;
   height: 20px !important;
-  display: flex !important;
 }
 
 .spice-custom-product-page .slider-button .svg-wrapper svg {
