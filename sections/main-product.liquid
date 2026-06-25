@@ -1,6 +1,11 @@
+{%- assign is_chilli = false -%}
+{% if product.handle contains 'chilli' or product.handle contains 'chili' or product.title contains 'Chilli Powder' or product.title contains 'Chili Powder' %}
+  {%- assign is_chilli = true -%}
+{% endif %}
+
 <product-info
   id="MainProduct-{{ section.id }}"
-  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
+  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}{% if is_chilli %} spice-custom-product-page{% endif %}"
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
   data-update-url="true"
@@ -16,6 +21,15 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
   {{ 'khas-product.css' | asset_url | stylesheet_tag }}
+  
+  {% if is_chilli %}
+    {{ 'spice-product.css' | asset_url | stylesheet_tag }}
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add("spice-product-page-body");
+      });
+    </script>
+  {% endif %}
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
