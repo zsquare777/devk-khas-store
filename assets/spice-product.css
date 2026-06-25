@@ -129,9 +129,9 @@ body.spice-product-page-body {
 /* Submit/Add-to-cart button styling */
 .spice-custom-product-page .product-form__submit.button--primary,
 .spice-custom-product-page .product-form__submit.button--secondary {
-  background: #fff !important;
-  color: #be9051 !important;
-  border: 2px solid #be9051 !important;
+  background: #be9051 !important;
+  color: #fff !important;
+  border: none !important;
   border-radius: 4px !important;
   height: 50px !important;
   font-size: 14px !important;
@@ -148,9 +148,7 @@ body.spice-product-page-body {
 
 .spice-custom-product-page .product-form__submit.button--primary:hover,
 .spice-custom-product-page .product-form__submit.button--secondary:hover {
-  background: #f8f8f8 !important;
-  border-color: #a97d43 !important;
-  color: #a97d43 !important;
+  background: #a97d43 !important;
 }
 
 .spice-custom-product-page .product-form__submit.button--primary span,
