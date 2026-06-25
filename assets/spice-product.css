@@ -162,9 +162,7 @@ body.spice-product-page-body {
 
 .spice-custom-product-page .product-form__submit.button--primary .btn-chevron,
 .spice-custom-product-page .product-form__submit.button--secondary .btn-chevron {
-  position: static !important;
-  font-weight: 400 !important;
-  margin-left: auto !important;
+  display: none !important;
 }
 
 /* Accordions styling */
