@@ -417,11 +417,6 @@ body.spice-product-page-body {
   transition: all 0.3s ease !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
   z-index: 10 !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-
-.spice-custom-product-page .spice-custom-slides-container:hover .spice-custom-arrow {
   opacity: 1 !important;
   visibility: visible !important;
 }
