@@ -371,7 +371,7 @@ body.spice-product-page-body {
 }
 
 /* Hide original Shopify slider for chilli page */
-.spice-custom-product-page #GalleryViewer-{{ section.id }} {
+.spice-custom-product-page slider-component {
   display: none !important;
 }
 

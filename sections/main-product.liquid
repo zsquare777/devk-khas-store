@@ -2644,58 +2644,72 @@
 {%- if is_chilli -%}
 <script>
  document.addEventListener('DOMContentLoaded', function() {
-    // Carousel dots functionality for chilli powder product page
-    const dotsContainer = document.querySelector('.spice-carousel-dots');
-    if (!dotsContainer) return;
+    // Custom Slider Functionality for Chilli Powder Page
+    const customSlider = document.getElementById('SpiceSlider-{{ section.id }}');
+    if (!customSlider) return;
 
-    const dots = dotsContainer.querySelectorAll('.spice-carousel-dot');
-    const slider = document.querySelector('#GalleryViewer-{{ section.id }}');
-    if (!slider || dots.length === 0) return;
+    const slides = customSlider.querySelectorAll('.spice-custom-slide');
+    const prevBtn = customSlider.querySelector('.spice-custom-arrow-prev');
+    const nextBtn = customSlider.querySelector('.spice-custom-arrow-next');
+    const dotsContainer = document.getElementById('CarouselDots-{{ section.id }}');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.spice-carousel-dot') : [];
 
-    // Function to update active dot based on current slide
-    function updateActiveDot() {
-      const activeSlide = slider.querySelector('.slider__slide.is-active');
-      if (!activeSlide) return;
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-      const activeMediaId = activeSlide.getAttribute('data-media-id');
-      dots.forEach(dot => {
-        const dotMediaId = dot.getAttribute('data-media-id');
-        if (dotMediaId === activeMediaId) {
+    function showSlide(index) {
+      // Handle wrap-around
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+
+      currentIndex = index;
+
+      // Hide all slides
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        }
+      });
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.remove('active');
+        if (i === currentIndex) {
           dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
         }
       });
     }
 
-    // Click handler for dots - trigger thumbnail click
-    dots.forEach(dot => {
-      dot.addEventListener('click', function(e) {
+    // Previous button click
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
         e.stopPropagation();
-        const targetMediaId = this.getAttribute('data-media-id');
-        const thumbnailButton = document.querySelector(`.thumbnail-list__item[data-target="${targetMediaId}"] button`);
-        if (thumbnailButton) {
-          thumbnailButton.click();
-        }
+        showSlide(currentIndex - 1);
+      });
+    }
+
+    // Next button click
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        showSlide(currentIndex + 1);
+      });
+    }
+
+    // Dot clicks
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        showSlide(index);
       });
     });
 
-    // Listen for slider changes to update dots
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          updateActiveDot();
-        }
-      });
-    });
-
-    const slides = slider.querySelectorAll('.slider__slide');
-    slides.forEach(slide => {
-      observer.observe(slide, { attributes: true });
-    });
-
-    // Initial update
-    updateActiveDot();
+    // Initialize first slide
+    showSlide(0);
   });
 </script>
 {%- endif -%}
