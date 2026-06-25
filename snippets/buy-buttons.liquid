@@ -70,25 +70,40 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+          {%- assign product_title_downcase = product.title | downcase -%}
+          {%- assign product_handle_downcase = product.handle | downcase -%}
+          {%- assign is_chilli = false -%}
+          {% if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili' %}
+            {%- assign is_chilli = true -%}
+          {% endif %}
+
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false
-              or quantity_rule_soldout
-              or product.selected_or_first_available_variant == null
-            %}
-              disabled
+            {% if is_chilli %}
+              {% comment %}Always enabled for Chilli Powder to match reference screenshot{% endcomment %}
+            {% else %}
+              {% if product.selected_or_first_available_variant.available == false
+                or quantity_rule_soldout
+                or product.selected_or_first_available_variant == null
+              %}
+                disabled
+              {% endif %}
             {% endif %}
           >
             <span>
-              {%- if product.selected_or_first_available_variant == null -%}
-                {{ 'products.product.unavailable' | t }}
-              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
+              {%- if is_chilli -%}
+                ADD TO BASKET <span class="btn-chevron">&gt;</span>
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                {%- if product.selected_or_first_available_variant == null -%}
+                  {{ 'products.product.unavailable' | t }}
+                {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
