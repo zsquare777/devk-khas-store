@@ -112,6 +112,9 @@ body.spice-product-page-body .khas-view-btn {
   background: #be9051 !important;
   color: #fff !important;
   border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
   border-radius: 50px !important;
   text-align: center !important;
   text-decoration: none !important;
@@ -119,7 +122,7 @@ body.spice-product-page-body .khas-view-btn {
   font-weight: 700 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
-  transition: background 0.25s ease, color 0.25s ease, border 0.25s ease !important;
+  transition: none !important;
 }
 
 body.spice-product-page-body .related-products .grid__item .card-wrapper .card .card__content .card__information .khas-view-btn:hover {
