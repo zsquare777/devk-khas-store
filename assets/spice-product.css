@@ -371,8 +371,13 @@ body.spice-product-page-body {
 }
 
 /* Hide original Shopify slider for chilli page */
-.spice-custom-product-page slider-component {
+.spice-custom-product-page .product__media-gallery slider-component {
   display: none !important;
+}
+
+/* Ensure custom slider is visible */
+.spice-custom-product-page .spice-custom-slider {
+  display: block !important;
 }
 
 /* Custom Slider Styling */
@@ -416,7 +421,7 @@ body.spice-product-page-body {
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-  z-index: 10 !important;
+  z-index: 100 !important;
   opacity: 1 !important;
   visibility: visible !important;
 }
