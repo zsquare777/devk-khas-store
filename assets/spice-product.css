@@ -155,16 +155,16 @@ body.spice-product-page-body {
 .spice-custom-product-page .product-form__submit.button--secondary span {
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
   width: 100% !important;
+  padding: 0 20px !important;
 }
 
 .spice-custom-product-page .product-form__submit.button--primary .btn-chevron,
 .spice-custom-product-page .product-form__submit.button--secondary .btn-chevron {
-  position: absolute !important;
-  right: 15px !important;
+  position: static !important;
   font-weight: 400 !important;
-  margin-left: 10px !important;
+  margin-left: auto !important;
 }
 
 /* Accordions styling */
