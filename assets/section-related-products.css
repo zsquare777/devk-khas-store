@@ -18,6 +18,8 @@ body.spice-product-page-body .related-products .grid__item {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
+  min-width: 280px !important;
+  width: 100% !important;
 }
 
 body.spice-product-page-body .related-products .card-wrapper {
@@ -108,6 +110,9 @@ body.spice-product-page-body .related-products .khas-card-subtitle {
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
 }
 
 /* Size/Weight */
