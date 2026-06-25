@@ -51,6 +51,17 @@ body.spice-product-page-body .related-products .card__information {
   flex: 1 !important;
 }
 
+/* Hide overlay heading (product name above picture) */
+body.spice-product-page-body .related-products .card__inner .card__heading {
+  display: none !important;
+}
+
+/* Increase font size for product name below picture */
+body.spice-product-page-body .related-products .card__heading.h5 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
 /* Remove bullets from feature lists */
 body.spice-product-page-body .related-products .khas-card-tags {
   list-style: none !important;
