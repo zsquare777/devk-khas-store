@@ -362,20 +362,20 @@ body.spice-product-page-body {
 }
 
 /* Image Carousel Styling for Chilli Powder Page */
-.spice-custom-product-page .thumbnail-slider {
+body.spice-product-page-body .thumbnail-slider {
   display: none !important;
 }
 
-.spice-custom-product-page .slider-buttons {
+body.spice-product-page-body .slider-buttons {
   display: none !important;
 }
 
 /* Hide original Shopify slider for chilli page */
-.spice-custom-product-page .product__media-gallery slider-component {
+body.spice-product-page-body .product__media-gallery slider-component {
   display: none !important;
 }
 
-/* Custom Slider Styling - using body class for broader scope */
+/* Custom Slider Styling */
 body.spice-product-page-body .spice-custom-slider {
   display: block !important;
   visibility: visible !important;
