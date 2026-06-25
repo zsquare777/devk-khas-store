@@ -15,6 +15,7 @@ body.spice-product-page-body {
 .spice-custom-product-page .product__media-wrapper {
   min-width: 500px !important;
   max-width: 600px !important;
+  position: relative !important;
 }
 
 .spice-custom-product-page .product__media-wrapper img,
@@ -373,6 +374,7 @@ body.spice-product-page-body {
   margin-left: -20px !important;
   padding: 0 20px !important;
   pointer-events: none !important;
+  z-index: 10 !important;
 }
 
 .spice-custom-product-page .slider-button {
@@ -388,6 +390,8 @@ body.spice-product-page-body {
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  z-index: 11 !important;
+  position: relative !important;
 }
 
 .spice-custom-product-page .slider-button:hover {
@@ -399,6 +403,7 @@ body.spice-product-page-body {
 .spice-custom-product-page .slider-button .svg-wrapper {
   width: 20px !important;
   height: 20px !important;
+  pointer-events: none !important;
 }
 
 .spice-custom-product-page .slider-button .svg-wrapper svg {
@@ -409,6 +414,49 @@ body.spice-product-page-body {
 
 .spice-custom-product-page .slider-counter {
   display: none !important;
+}
+
+/* Disable zoom on slider buttons area */
+.spice-custom-product-page .product__media-wrapper {
+  position: relative !important;
+}
+
+/* Disable zoom functionality for chilli powder page */
+.spice-custom-product-page .product__media-item {
+  cursor: default !important;
+}
+
+.spice-custom-product-page .deferred-media,
+.spice-custom-product-page .media {
+  pointer-events: none !important;
+}
+
+.spice-custom-product-page .slider-button {
+  pointer-events: auto !important;
+}
+
+/* Disable all zoom-related interactions */
+.spice-custom-product-page .product__media-item:hover {
+  cursor: default !important;
+}
+
+.spice-custom-product-page .product__media-item .deferred-media__poster-wrapper {
+  pointer-events: none !important;
+}
+
+.spice-custom-product-page .product__media-item img,
+.spice-custom-product-page .product__media-item video,
+.spice-custom-product-page .product__media-item model-viewer {
+  pointer-events: none !important;
+}
+
+/* Ensure slider buttons remain clickable */
+.spice-custom-product-page .slider-buttons {
+  pointer-events: none !important;
+}
+
+.spice-custom-product-page .slider-button {
+  pointer-events: auto !important;
 }
 
 /* Pagination Dots */
