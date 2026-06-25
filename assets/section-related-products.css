@@ -56,6 +56,27 @@ body.spice-product-page-body .related-products .khas-card-tags {
   list-style: none !important;
   padding: 0 !important;
   margin: 10px 0 !important;
+  position: relative !important;
+}
+
+/* Divider above features */
+body.spice-product-page-body .related-products .khas-card-tags::before {
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #e5e5e5 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Divider below features */
+body.spice-product-page-body .related-products .khas-card-tags::after {
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #e5e5e5 !important;
+  margin-top: 10px !important;
 }
 
 body.spice-product-page-body .related-products .khas-card-tag {
