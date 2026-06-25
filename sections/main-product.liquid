@@ -2644,6 +2644,14 @@
 {%- if is_chilli -%}
 <script>
  document.addEventListener('DOMContentLoaded', function() {
+    // Handle slider button clicks - use native Shopify slider functionality
+    const sliderButtons = document.querySelectorAll('.slider-button');
+    sliderButtons.forEach(button => {
+      // Clone the button to remove our event listener and let Shopify's work
+      const newButton = button.cloneNode(true);
+      button.parentNode.replaceChild(newButton, button);
+    });
+
     // Carousel dots functionality for chilli powder product page
     const dotsContainer = document.querySelector('.spice-carousel-dots');
     if (!dotsContainer) return;
@@ -2668,18 +2676,14 @@
       });
     }
 
-    // Click handler for dots
+    // Click handler for dots - trigger thumbnail click
     dots.forEach(dot => {
       dot.addEventListener('click', function(e) {
         e.stopPropagation();
         const targetMediaId = this.getAttribute('data-media-id');
-        const targetSlide = slider.querySelector(`[data-media-id="${targetMediaId}"]`);
-        if (targetSlide) {
-          // Click the corresponding thumbnail to trigger Shopify's navigation
-          const thumbnailButton = document.querySelector(`.thumbnail-list__item[data-target="${targetMediaId}"] button`);
-          if (thumbnailButton) {
-            thumbnailButton.click();
-          }
+        const thumbnailButton = document.querySelector(`.thumbnail-list__item[data-target="${targetMediaId}"] button`);
+        if (thumbnailButton) {
+          thumbnailButton.click();
         }
       });
     });
