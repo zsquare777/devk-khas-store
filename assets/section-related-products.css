@@ -125,7 +125,8 @@ body.spice-product-page-body .khas-view-btn {
 body.spice-product-page-body .khas-view-btn:hover {
   background: transparent !important;
   color: #be9051 !important;
-  border: 1px solid #be9051 !important;
-  text-decoration: none !important;
+  border-width: 1px !important;
   border-style: solid !important;
+  border-color: #be9051 !important;
+  text-decoration: none !important;
 }
