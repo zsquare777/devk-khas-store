@@ -26,10 +26,17 @@
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
+  assign product_title_downcase = product.title | downcase
+  assign product_handle_downcase = product.handle | downcase
+  assign is_chilli_price = false
+  if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili'
+    assign is_chilli_price = true
+  endif
+
   assign money_price = price | money
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
-  if settings.currency_code_enabled
+  if settings.currency_code_enabled and is_chilli_price == false
     assign money_price = price | money_with_currency
     assign money_price_min = price_min | money_with_currency
     assign money_price_max = price_max | money_with_currency
