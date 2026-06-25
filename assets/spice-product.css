@@ -11,6 +11,21 @@ body.spice-product-page-body {
   padding: 0 !important;
 }
 
+/* Fix image overlap on zoom and set image size */
+.spice-custom-product-page .product__media-wrapper {
+  min-width: 500px !important;
+  max-width: 600px !important;
+}
+
+.spice-custom-product-page .product__media-wrapper img,
+.spice-custom-product-page .product__media-wrapper .media {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 543px !important;
+  aspect-ratio: 1086 / 1448 !important;
+  object-fit: contain !important;
+}
+
 /* Hide unwanted elements on Chilli Powder page */
 .spice-custom-product-page .product__text.caption-with-letter-spacing,
 .spice-custom-product-page .product-popup-modal__opener,
