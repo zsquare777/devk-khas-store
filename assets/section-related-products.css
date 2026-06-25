@@ -162,3 +162,17 @@ body.spice-product-page-body.related-products .khas-view-btn:hover {
   box-shadow: none !important;
   outline: none !important;
 }
+
+/* Override for link elements specifically */
+body.spice-product-page-body a.khas-view-btn:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #be9051 !important;
+  border: 1px solid #be9051 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #be9051 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
