@@ -127,6 +127,7 @@ body.spice-product-page-body .khas-view-btn:hover {
   color: #be9051 !important;
   border: 1px solid #be9051 !important;
   text-decoration: none !important;
+  box-shadow: none !important;
 }
 
 body.spice-product-page-body .related-products .card__content .khas-view-btn:hover {
@@ -134,6 +135,7 @@ body.spice-product-page-body .related-products .card__content .khas-view-btn:hov
   color: #be9051 !important;
   border: 1px solid #be9051 !important;
   text-decoration: none !important;
+  box-shadow: none !important;
 }
 
 /* Override collection page hover styles */
@@ -142,4 +144,14 @@ body.spice-product-page-body .related-products .khas-view-btn:hover {
   color: #be9051 !important;
   border: 1px solid #be9051 !important;
   text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* Most specific selector for hover */
+body.spice-product-page-body .related-products .grid__item .card-wrapper .card .card__content .card__information .khas-view-btn:hover {
+  background: transparent !important;
+  color: #be9051 !important;
+  border: 1px solid #be9051 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
 }
