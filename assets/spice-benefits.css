@@ -97,7 +97,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .spice-benefits-heading {
     font-size: 26px;
     margin-bottom: 40px;
@@ -116,9 +116,53 @@
   .spice-benefits-col:not(:last-child)::after {
     display: none;
   }
-  
+
   .spice-benefits-col:not(:last-child) {
     border-bottom: 1.5px dashed rgba(250, 246, 238, 0.2);
     padding-bottom: 40px;
+  }
+
+  .spice-benefits-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .spice-benefits-col-title {
+    font-size: 16px;
+  }
+
+  .spice-benefits-col-desc {
+    font-size: 13px;
+  }
+}
+
+/* Responsive styles for tablet */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .spice-benefits-heading {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .spice-benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .spice-benefits-col {
+    padding: 0 20px;
+  }
+
+  .spice-benefits-icon {
+    height: 70px;
+    width: 70px;
+  }
+
+  .spice-benefits-col-title {
+    font-size: 17px;
+  }
+
+  .spice-benefits-col-desc {
+    font-size: 13px;
+    max-width: 280px;
   }
 }

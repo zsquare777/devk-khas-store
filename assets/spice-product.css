@@ -355,27 +355,96 @@ body.spice-product-page-body {
   color: #111 !important;
 }
 
-/* Related products "View product" button styling for chilli powder page */
-body.spice-product-page-body .khas-view-btn {
-  display: inline-block !important;
-  margin-top: 15px !important;
-  padding: 12px 24px !important;
-  background: #be9051 !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 4px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  transition: background 0.2s ease !important;
-  width: auto !important;
-  align-self: flex-start !important;
+/* Responsive styles for mobile */
+@media screen and (max-width: 749px) {
+  .spice-custom-product-page .product__media-wrapper {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .spice-custom-product-page .product__media-wrapper img,
+  .spice-custom-product-page .product__media-wrapper .media {
+    max-width: 100% !important;
+  }
+
+  .spice-custom-product-page .spice-title {
+    font-size: 24px !important;
+  }
+
+  .spice-custom-product-page .spice-vendor {
+    font-size: 12px !important;
+  }
+
+  .spice-custom-product-page .price-item--regular {
+    font-size: 20px !important;
+  }
+
+  .spice-custom-product-page .quantity {
+    width: 100px !important;
+  }
+
+  .spice-custom-product-page .product-form__submit.button--primary,
+  .spice-custom-product-page .product-form__submit.button--secondary {
+    height: 45px !important;
+    font-size: 13px !important;
+  }
+
+  .spice-accordions-wrapper {
+    margin-top: 20px !important;
+  }
+
+  .spice-accordion-summary {
+    padding: 12px 0 !important;
+    font-size: 15px !important;
+  }
+
+  .spice-feature-boxes-wrapper {
+    margin-top: 20px !important;
+  }
+
+  .spice-feature-box {
+    padding: 15px !important;
+  }
+
+  .spice-feature-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .spice-feature-title {
+    font-size: 14px !important;
+  }
+
+  .spice-feature-description {
+    font-size: 13px !important;
+  }
 }
 
-body.spice-product-page-body .khas-view-btn:hover {
-  background: #a97d43 !important;
-  text-decoration: none !important;
+/* Responsive styles for tablet */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .spice-custom-product-page .product__media-wrapper {
+    min-width: 400px !important;
+    max-width: 500px !important;
+  }
+
+  .spice-custom-product-page .product__media-wrapper img,
+  .spice-custom-product-page .product__media-wrapper .media {
+    max-width: 450px !important;
+  }
+
+  .spice-custom-product-page .spice-title {
+    font-size: 28px !important;
+  }
+
+  .spice-custom-product-page .price-item--regular {
+    font-size: 22px !important;
+  }
+
+  .spice-accordions-wrapper {
+    margin-top: 25px !important;
+  }
+
+  .spice-feature-boxes-wrapper {
+    margin-top: 25px !important;
+  }
 }
