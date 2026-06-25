@@ -5,3 +5,28 @@
 .related-products__heading {
   margin: 0 0 3rem;
 }
+
+/* View product button styling for chilli powder product page */
+body.spice-product-page-body .khas-view-btn {
+  display: inline-block !important;
+  margin-top: 15px !important;
+  padding: 12px 24px !important;
+  background: #be9051 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  transition: background 0.2s ease !important;
+  width: auto !important;
+  align-self: flex-start !important;
+}
+
+body.spice-product-page-body .khas-view-btn:hover {
+  background: #a97d43 !important;
+  text-decoration: none !important;
+}
