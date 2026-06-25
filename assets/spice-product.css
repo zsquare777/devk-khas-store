@@ -309,3 +309,34 @@ body.spice-product-page-body {
 .spice-feature-link:hover {
   opacity: 0.7 !important;
 }
+
+/* Stock Status styling */
+.spice-stock-status {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+}
+
+.spice-stock-indicator {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+
+.spice-stock-in-stock {
+  background: #62d660 !important;
+}
+
+.spice-stock-out-of-stock {
+  background: #c8c8c8 !important;
+}
+
+.spice-stock-text {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #111 !important;
+}

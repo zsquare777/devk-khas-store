@@ -382,6 +382,27 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                {% if is_chilli %}
+                  <div class="spice-stock-status">
+                    {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+                      {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+                        <span class="spice-stock-indicator spice-stock-in-stock"></span>
+                        <span class="spice-stock-text">In Stock</span>
+                      {%- else -%}
+                        {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                          <span class="spice-stock-indicator spice-stock-in-stock"></span>
+                          <span class="spice-stock-text">In Stock</span>
+                        {%- else -%}
+                          <span class="spice-stock-indicator spice-stock-out-of-stock"></span>
+                          <span class="spice-stock-text">Out of Stock</span>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- else -%}
+                      <span class="spice-stock-indicator spice-stock-in-stock"></span>
+                      <span class="spice-stock-text">In Stock</span>
+                    {%- endif -%}
+                  </div>
+                {% endif %}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
