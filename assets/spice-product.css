@@ -126,7 +126,8 @@ body.spice-product-page-body {
 }
 
 /* Submit/Add-to-cart button styling */
-.spice-custom-product-page .product-form__submit.button--primary {
+.spice-custom-product-page .product-form__submit.button--primary,
+.spice-custom-product-page .product-form__submit.button--secondary {
   background: #be9051 !important;
   color: #fff !important;
   border: none !important;
@@ -144,18 +145,21 @@ body.spice-product-page-body {
   cursor: pointer !important;
 }
 
-.spice-custom-product-page .product-form__submit.button--primary:hover {
+.spice-custom-product-page .product-form__submit.button--primary:hover,
+.spice-custom-product-page .product-form__submit.button--secondary:hover {
   background: #a97d43 !important;
 }
 
-.spice-custom-product-page .product-form__submit.button--primary span {
+.spice-custom-product-page .product-form__submit.button--primary span,
+.spice-custom-product-page .product-form__submit.button--secondary span {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   width: 100% !important;
 }
 
-.spice-custom-product-page .product-form__submit.button--primary .btn-chevron {
+.spice-custom-product-page .product-form__submit.button--primary .btn-chevron,
+.spice-custom-product-page .product-form__submit.button--secondary .btn-chevron {
   position: absolute !important;
   right: 20px !important;
   font-weight: 400 !important;
