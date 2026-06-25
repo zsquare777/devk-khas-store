@@ -125,65 +125,8 @@ body.spice-product-page-body .khas-view-btn {
   transition: none !important;
 }
 
-/* Most specific hover selector - targeting the exact path */
-body.spice-product-page-body.related-products section .product-grid .grid__item .card-wrapper .card .card__content .card__information a.khas-view-btn:hover {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #be9051 !important;
-  border: 1px solid #be9051 !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: #be9051 !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
-/* Fallback hover selectors */
-body.spice-product-page-body .related-products .grid__item .card-wrapper .card .card__content .card__information .khas-view-btn:hover {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #be9051 !important;
-  border: 1px solid #be9051 !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: #be9051 !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
-body.spice-product-page-body .related-products .khas-view-btn:hover {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #be9051 !important;
-  border: 1px solid #be9051 !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: #be9051 !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
-body.spice-product-page-body.related-products .khas-view-btn:hover {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #be9051 !important;
-  border: 1px solid #be9051 !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: #be9051 !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
-body.spice-product-page-body a.khas-view-btn:hover {
+/* Hover state - using attribute selector for maximum specificity */
+body.spice-product-page-body .related-products a.khas-view-btn[href]:hover {
   background: transparent !important;
   background-color: transparent !important;
   color: #be9051 !important;
