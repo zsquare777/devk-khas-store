@@ -361,18 +361,6 @@ body.spice-product-page-body {
   display: none !important;
 }
 
-.spice-custom-product-page .slider-buttons {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: -25px !important;
-  right: -25px !important;
-  transform: translateY(-50%) !important;
-  width: calc(100% + 50px) !important;
-}
-
 .spice-custom-product-page .slider-button {
   background: rgba(255, 255, 255, 0.9) !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
