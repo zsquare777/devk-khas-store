@@ -134,3 +134,31 @@ body.spice-product-page-body .related-products .grid__item .card-wrapper .card .
   box-shadow: none !important;
   outline: none !important;
 }
+
+/* Additional hover override for any parent elements */
+body.spice-product-page-body .related-products .khas-view-btn:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #be9051 !important;
+  border: 1px solid #be9051 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #be9051 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Force hover state with higher specificity */
+body.spice-product-page-body.related-products .khas-view-btn:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #be9051 !important;
+  border: 1px solid #be9051 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #be9051 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
