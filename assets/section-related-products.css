@@ -96,7 +96,7 @@ body.spice-product-page-body .related-products .khas-card-tag::before {
 body.spice-product-page-body .khas-view-btn {
   display: inline-block !important;
   width: 140px !important;
-  margin-top: auto !important;
+  margin-top: 15px !important;
   padding: 10px 0 !important;
   background: #be9051 !important;
   color: #fff !important;
