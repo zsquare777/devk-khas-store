@@ -2644,6 +2644,36 @@
 {%- if is_chilli -%}
 <script>
  document.addEventListener('DOMContentLoaded', function() {
+    // Handle slider button clicks
+    const sliderButtons = document.querySelectorAll('.slider-button');
+    sliderButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isNext = this.classList.contains('slider-button--next');
+        const sliderComponent = this.closest('slider-component');
+        
+        if (sliderComponent) {
+          const sliderList = sliderComponent.querySelector('.slider');
+          if (sliderList) {
+            const slideWidth = sliderList.querySelector('.slider__slide').offsetWidth;
+            const currentScroll = sliderList.scrollLeft;
+            
+            if (isNext) {
+              sliderList.scrollTo({
+                left: currentScroll + slideWidth,
+                behavior: 'smooth'
+              });
+            } else {
+              sliderList.scrollTo({
+                left: currentScroll - slideWidth,
+                behavior: 'smooth'
+              });
+            }
+          }
+        }
+      });
+    });
+
     // Carousel dots functionality for chilli powder product page
     const dotsContainer = document.querySelector('.spice-carousel-dots');
     if (!dotsContainer) return;
@@ -2675,10 +2705,12 @@
         const targetMediaId = this.getAttribute('data-media-id');
         const targetSlide = slider.querySelector(`[data-media-id="${targetMediaId}"]`);
         if (targetSlide) {
-          // Click the corresponding thumbnail to trigger Shopify's navigation
-          const thumbnailButton = document.querySelector(`.thumbnail-list__item[data-target="${targetMediaId}"] button`);
-          if (thumbnailButton) {
-            thumbnailButton.click();
+          const sliderList = slider.querySelector('.slider');
+          if (sliderList) {
+            sliderList.scrollTo({
+              left: targetSlide.offsetLeft,
+              behavior: 'smooth'
+            });
           }
         }
       });
