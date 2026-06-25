@@ -6,6 +6,7 @@
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
   - limit: {Number} (optional) When passed, limits the number of media items to render
+  - is_chilli: {Boolean} Whether this is the chilli powder product
 
   Usage:
   {% render 'product-media-gallery' %}
@@ -154,6 +155,22 @@
       </button>
     </div>
   </slider-component>
+  {%- if is_chilli -%}
+    <div class="spice-carousel-dots" id="CarouselDots-{{ section.id }}">
+      {%- if featured_media != null -%}
+        <button class="spice-carousel-dot active" data-media-id="{{ section.id }}-{{ featured_media.id }}" aria-label="Slide 1"></button>
+      {%- endif -%}
+      {%- assign dot_index = 1 -%}
+      {%- for media in product.media -%}
+        {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+          {%- if limit == null or dot_index < limit -%}
+            <button class="spice-carousel-dot" data-media-id="{{ section.id }}-{{ media.id }}" aria-label="Slide {{ dot_index | plus: 1 }}"></button>
+            {%- assign dot_index = dot_index | plus: 1 -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
   {%- if first_3d_model -%}
     <button
       class="button button--full-width product__xr-button"
