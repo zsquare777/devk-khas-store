@@ -21,16 +21,10 @@ body.spice-product-page-body .related-products__heading span {
   display: none !important;
 }
 
-/* Grid layout for equal-height cards */
-body.spice-product-page-body .related-products .product-grid {
-  display: grid !important;
-  align-items: stretch !important;
-}
-
+/* Equal-height cards - work with Shopify's existing grid */
 body.spice-product-page-body .related-products .grid__item {
   display: flex !important;
   flex-direction: column !important;
-  height: 100% !important;
 }
 
 body.spice-product-page-body .related-products .card-wrapper {
