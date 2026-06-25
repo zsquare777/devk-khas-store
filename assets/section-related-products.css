@@ -75,11 +75,11 @@ body.spice-product-page-body .related-products .khas-card-tag::before {
 body.spice-product-page-body .khas-view-btn {
   display: inline-block !important;
   margin-top: auto !important;
-  padding: 12px 24px !important;
+  padding: 10px 24px !important;
   background: #be9051 !important;
   color: #fff !important;
   border: none !important;
-  border-radius: 4px !important;
+  border-radius: 50px !important;
   text-align: center !important;
   text-decoration: none !important;
   font-size: 14px !important;
