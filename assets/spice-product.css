@@ -362,57 +362,55 @@ body.spice-product-page-body {
 }
 
 /* Image Carousel Styling for Chilli Powder Page */
-.spice-custom-product-page .thumbnail-slider {
+body.spice-product-page-body .thumbnail-slider {
   display: none !important;
 }
 
-.spice-custom-product-page .slider-buttons {
+body.spice-product-page-body .slider-buttons {
   display: none !important;
 }
 
-/* Hide original Shopify slider for chilli page */
-.spice-custom-product-page .product__media-gallery slider-component {
+/* Hide only the Shopify slider-component, not the entire gallery */
+body.spice-product-page-body .product__media-gallery slider-component {
   display: none !important;
 }
 
-/* Ensure custom slider is visible */
-.spice-custom-product-page .spice-custom-slider {
-  display: block !important;
-  visibility: visible !important;
-}
-
-.spice-custom-product-page .spice-custom-arrow {
-  display: flex !important;
-  visibility: visible !important;
+/* Hide the slider list from Shopify */
+body.spice-product-page-body .product__media-gallery .slider {
+  display: none !important;
 }
 
 /* Custom Slider Styling */
-.spice-custom-product-page .spice-custom-slider {
+body.spice-product-page-body .spice-custom-slider {
+  display: block !important;
+  visibility: visible !important;
   position: relative !important;
   width: auto !important;
   max-width: 543px !important;
   margin: 0 auto 20px auto !important;
 }
 
-.spice-custom-product-page .spice-custom-slides-container {
+body.spice-product-page-body .spice-custom-slides-container {
   position: relative !important;
   overflow: hidden !important;
   border-radius: 8px !important;
 }
 
-.spice-custom-product-page .spice-custom-slide {
+body.spice-product-page-body .spice-custom-slide {
   display: none !important;
   width: 100% !important;
   opacity: 0 !important;
   transition: opacity 0.4s ease !important;
 }
 
-.spice-custom-product-page .spice-custom-slide.active {
+body.spice-product-page-body .spice-custom-slide.active {
   display: block !important;
   opacity: 1 !important;
 }
 
-.spice-custom-product-page .spice-custom-arrow {
+body.spice-product-page-body .spice-custom-arrow {
+  display: flex !important;
+  visibility: visible !important;
   position: absolute !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
@@ -430,21 +428,21 @@ body.spice-product-page-body {
   opacity: 1 !important;
 }
 
-.spice-custom-product-page .spice-custom-arrow:hover {
+body.spice-product-page-body .spice-custom-arrow:hover {
   background: #fff !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
   transform: translateY(-50%) scale(1.1) !important;
 }
 
-.spice-custom-product-page .spice-custom-arrow-prev {
+body.spice-product-page-body .spice-custom-arrow-prev {
   left: 15px !important;
 }
 
-.spice-custom-product-page .spice-custom-arrow-next {
+body.spice-product-page-body .spice-custom-arrow-next {
   right: 15px !important;
 }
 
-.spice-custom-product-page .spice-custom-arrow svg {
+body.spice-product-page-body .spice-custom-arrow svg {
   color: #111 !important;
   width: 20px !important;
   height: 20px !important;
