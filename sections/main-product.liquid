@@ -2692,7 +2692,7 @@
       prevBtn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        showSlide(currentIndex - 1);
+        showSlide(currentIndex - 1, 'prev');
       });
     }
 
@@ -2701,7 +2701,7 @@
       nextBtn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        showSlide(currentIndex + 1);
+        showSlide(currentIndex + 1, 'next');
       });
     }
 
@@ -2710,7 +2710,8 @@
       dot.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        showSlide(index);
+        const direction = index > currentIndex ? 'next' : 'prev';
+        showSlide(index, direction);
       });
     });
 
