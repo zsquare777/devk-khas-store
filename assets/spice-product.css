@@ -222,3 +222,17 @@ body.spice-product-page-body {
 .spice-accordion .accordion-content p:last-child {
   margin-bottom: 0 !important;
 }
+
+/* Hide theme shadow pseudo-elements on Chilli Powder page quantity selector */
+.spice-custom-product-page .quantity::after,
+.spice-custom-product-page .quantity::before {
+  display: none !important;
+  content: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Hide price badges (Sold out, Sale) on Chilli Powder page */
+.spice-custom-product-page .price .badge {
+  display: none !important;
+}
