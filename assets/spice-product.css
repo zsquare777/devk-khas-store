@@ -18,6 +18,11 @@ body.spice-product-page-body {
   position: relative !important;
 }
 
+/* Ensure slider-component has position relative for absolute positioning of buttons */
+.spice-custom-product-page slider-component {
+  position: relative !important;
+}
+
 .spice-custom-product-page .product__media-wrapper img,
 .spice-custom-product-page .product__media-wrapper .media {
   width: 100% !important;
