@@ -378,8 +378,9 @@ body.spice-product-page-body {
 /* Custom Slider Styling */
 .spice-custom-product-page .spice-custom-slider {
   position: relative !important;
-  width: 100% !important;
-  margin-bottom: 20px !important;
+  width: auto !important;
+  max-width: 543px !important;
+  margin: 0 auto 20px auto !important;
 }
 
 .spice-custom-product-page .spice-custom-slides-container {
@@ -420,7 +421,7 @@ body.spice-product-page-body {
   visibility: hidden !important;
 }
 
-.spice-custom-product-page .spice-custom-slider:hover .spice-custom-arrow {
+.spice-custom-product-page .spice-custom-slides-container:hover .spice-custom-arrow {
   opacity: 1 !important;
   visibility: visible !important;
 }
