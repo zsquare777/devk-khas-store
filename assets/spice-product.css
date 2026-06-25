@@ -356,7 +356,7 @@ body.spice-product-page-body {
 }
 
 /* Related products "View product" button styling for chilli powder page */
-.spice-custom-product-page .khas-view-btn {
+body.spice-product-page-body .khas-view-btn {
   display: inline-block !important;
   margin-top: 15px !important;
   padding: 12px 24px !important;
@@ -375,7 +375,7 @@ body.spice-product-page-body {
   align-self: flex-start !important;
 }
 
-.spice-custom-product-page .khas-view-btn:hover {
+body.spice-product-page-body .khas-view-btn:hover {
   background: #a97d43 !important;
   text-decoration: none !important;
 }
