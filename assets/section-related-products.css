@@ -126,7 +126,8 @@ body.spice-product-page-body .khas-view-btn {
 }
 
 /* Hover state - using attribute selector for maximum specificity */
-body.spice-product-page-body .related-products a.khas-view-btn[href]:hover {
+/* Hover state */
+body.spice-product-page-body .khas-view-btn:hover {
   background: transparent !important;
   background-color: transparent !important;
   color: #be9051 !important;
