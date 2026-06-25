@@ -410,6 +410,12 @@ body.spice-product-page-body .spice-custom-slide.active {
   z-index: 1 !important;
 }
 
+/* Ensure first slide is visible on page load without animation */
+body.spice-product-page-body .spice-custom-slide.active:first-child {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
 body.spice-product-page-body .spice-custom-slide.prev-slide {
   transform: translateX(-100%) !important;
 }
