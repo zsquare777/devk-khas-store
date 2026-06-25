@@ -367,49 +367,75 @@ body.spice-product-page-body {
 }
 
 .spice-custom-product-page .slider-buttons {
-  display: flex !important;
-  justify-content: space-between !important;
+  display: none !important;
 }
 
-.spice-custom-product-page .slider-buttons.small-hide,
-.spice-custom-product-page .slider-buttons.medium-hide,
-.spice-custom-product-page .slider-buttons.large-up-hide {
-  display: flex !important;
+/* Hide original Shopify slider for chilli page */
+.spice-custom-product-page #GalleryViewer-{{ section.id }} {
+  display: none !important;
 }
 
-.spice-custom-product-page .slider-button {
-  background: rgba(255, 255, 255, 0.9) !important;
+/* Custom Slider Styling */
+.spice-custom-product-page .spice-custom-slider {
+  position: relative !important;
+  width: 100% !important;
+  margin-bottom: 20px !important;
+}
+
+.spice-custom-product-page .spice-custom-slides-container {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+}
+
+.spice-custom-product-page .spice-custom-slide {
+  display: none !important;
+  width: 100% !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+}
+
+.spice-custom-product-page .spice-custom-slide.active {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.spice-custom-product-page .spice-custom-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   border-radius: 50% !important;
-  width: 44px !important;
-  height: 44px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-}
-
-.spice-custom-product-page .slider-button:hover {
-  background: #fff !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  transform: scale(1.05) !important;
+  z-index: 10 !important;
 }
 
-.spice-custom-product-page .slider-button .svg-wrapper {
-  width: 20px !important;
-  height: 20px !important;
+.spice-custom-product-page .spice-custom-arrow:hover {
+  background: #fff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-50%) scale(1.1) !important;
 }
 
-.spice-custom-product-page .slider-button .svg-wrapper svg {
-  width: 100% !important;
-  height: 100% !important;
+.spice-custom-product-page .spice-custom-arrow-prev {
+  left: -25px !important;
+}
+
+.spice-custom-product-page .spice-custom-arrow-next {
+  right: -25px !important;
+}
+
+.spice-custom-product-page .spice-custom-arrow svg {
   color: #111 !important;
-}
-
-.spice-custom-product-page .slider-counter {
-  display: none !important;
+  width: 24px !important;
+  height: 24px !important;
 }
 
 /* Disable zoom on slider buttons area */

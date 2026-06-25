@@ -156,6 +156,60 @@
     </div>
   </slider-component>
   {%- if is_chilli -%}
+    <div class="spice-custom-slider" id="SpiceSlider-{{ section.id }}">
+      <button class="spice-custom-arrow spice-custom-arrow-prev" aria-label="Previous image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="spice-custom-slides-container">
+        {%- if featured_media != null -%}
+          <div class="spice-custom-slide active" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+            {% render 'product-thumbnail',
+              media: featured_media,
+              media_count: media_count,
+              position: 1,
+              desktop_layout: section.settings.gallery_layout,
+              mobile_layout: section.settings.mobile_thumbnails,
+              loop: section.settings.enable_video_looping,
+              modal_id: section.id,
+              xr_button: true,
+              media_width: media_width,
+              media_fit: section.settings.media_fit,
+              constrain_to_viewport: section.settings.constrain_to_viewport,
+              lazy_load: false
+            %}
+          </div>
+        {%- endif -%}
+        {%- for media in product.media -%}
+          {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+            {%- if limit == null or forloop.index < limit -%}
+              <div class="spice-custom-slide" data-media-id="{{ section.id }}-{{ media.id }}">
+                {% render 'product-thumbnail',
+                  media: media,
+                  media_count: media_count,
+                  position: forloop.index,
+                  desktop_layout: section.settings.gallery_layout,
+                  mobile_layout: section.settings.mobile_thumbnails,
+                  loop: section.settings.enable_video_looping,
+                  modal_id: section.id,
+                  xr_button: true,
+                  media_width: media_width,
+                  media_fit: section.settings.media_fit,
+                  constrain_to_viewport: section.settings.constrain_to_viewport,
+                  lazy_load: true
+                %}
+              </div>
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+      <button class="spice-custom-arrow spice-custom-arrow-next" aria-label="Next image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
     <div class="spice-carousel-dots" id="CarouselDots-{{ section.id }}">
       {%- if featured_media != null -%}
         <button class="spice-carousel-dot active" data-media-id="{{ section.id }}-{{ featured_media.id }}" aria-label="Slide 1"></button>
