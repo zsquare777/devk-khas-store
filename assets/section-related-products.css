@@ -135,3 +135,11 @@ body.spice-product-page-body .related-products .card__content .khas-view-btn:hov
   border: 1px solid #be9051 !important;
   text-decoration: none !important;
 }
+
+/* Override collection page hover styles */
+body.spice-product-page-body .related-products .khas-view-btn:hover {
+  background: transparent !important;
+  color: #be9051 !important;
+  border: 1px solid #be9051 !important;
+  text-decoration: none !important;
+}
