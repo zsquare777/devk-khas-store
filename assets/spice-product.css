@@ -370,13 +370,8 @@ body.spice-product-page-body .slider-buttons {
   display: none !important;
 }
 
-/* Hide only the Shopify slider-component, not the entire gallery */
-body.spice-product-page-body .product__media-gallery slider-component {
-  display: none !important;
-}
-
-/* Hide the slider list from Shopify */
-body.spice-product-page-body .product__media-gallery .slider {
+/* Hide only the Shopify slider-component */
+body.spice-product-page-body slider-component {
   display: none !important;
 }
 
@@ -397,15 +392,23 @@ body.spice-product-page-body .spice-custom-slides-container {
 }
 
 body.spice-product-page-body .spice-custom-slide {
-  display: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
   width: 100% !important;
   opacity: 0 !important;
-  transition: opacity 0.4s ease !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
 }
 
 body.spice-product-page-body .spice-custom-slide.active {
-  display: block !important;
+  position: relative !important;
   opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+body.spice-product-page-body .spice-custom-slide.prev-slide {
+  transform: translateX(-100%) !important;
 }
 
 body.spice-product-page-body .spice-custom-arrow {
