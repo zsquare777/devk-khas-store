@@ -2644,6 +2644,24 @@
 {%- if is_chilli -%}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Disable zoom functionality for chilli powder product page
+    const mediaItems = document.querySelectorAll('.product__media-item');
+    mediaItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    // Disable any zoom-related event listeners
+    const mediaWrapper = document.querySelector('.product__media-wrapper');
+    if (mediaWrapper) {
+      mediaWrapper.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }, true);
+    }
+
     // Carousel dots functionality for chilli powder product page
     const dotsContainer = document.querySelector('.spice-carousel-dots');
     if (!dotsContainer) return;
