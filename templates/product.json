@@ -114,6 +114,41 @@
         "padding_bottom": 12
       }
     },
+    "spice-benefits": {
+      "type": "spice-benefits",
+      "blocks": {
+        "nature_col": {
+          "type": "benefit",
+          "settings": {
+            "icon": "nature",
+            "title": "ONLY NATURE'S BEST",
+            "description": "Crafted with <strong>all-natural ingredients</strong> for a <strong>clean and guilt-free experience</strong>."
+          }
+        },
+        "gluten_col": {
+          "type": "benefit",
+          "settings": {
+            "icon": "gluten_free",
+            "title": "GLUTEN-FREE & FLAVORFUL",
+            "description": "Enjoy your favorite dishes <strong>without compromise</strong>."
+          }
+        },
+        "preservative_col": {
+          "type": "benefit",
+          "settings": {
+            "icon": "preservative_free",
+            "title": "PRESERVATIVE-FREE PURITY",
+            "description": "You deserve fresh, wholesome spice <strong>every time</strong>."
+          }
+        }
+      },
+      "block_order": [
+        "nature_col",
+        "gluten_col",
+        "preservative_col"
+      ],
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -155,6 +190,7 @@
   },
   "order": [
     "main",
+    "spice-benefits",
     "related-products",
     "1779748822c0fbabec"
   ]
