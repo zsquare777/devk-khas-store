@@ -433,20 +433,6 @@ body.spice-product-page-body {
   cursor: default !important;
 }
 
-.spice-custom-product-page .deferred-media,
-.spice-custom-product-page .media {
-  pointer-events: none !important;
-}
-
-/* Ensure slider buttons remain clickable */
-.spice-custom-product-page .slider-buttons {
-  pointer-events: auto !important;
-}
-
-.spice-custom-product-page .slider-button {
-  pointer-events: auto !important;
-}
-
 /* Pagination Dots */
 .spice-custom-product-page .spice-carousel-dots {
   display: flex !important;

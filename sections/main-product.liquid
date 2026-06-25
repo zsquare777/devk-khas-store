@@ -2644,42 +2644,6 @@
 {%- if is_chilli -%}
 <script>
  document.addEventListener('DOMContentLoaded', function() {
-    // Handle slider button clicks - call Shopify's native slider methods
-    const sliderButtons = document.querySelectorAll('.slider-button');
-    sliderButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const sliderComponent = this.closest('slider-component');
-        
-        if (sliderComponent) {
-          const isNext = this.classList.contains('slider-button--next');
-          
-          // Call Shopify's native slider methods
-          if (isNext) {
-            if (typeof sliderComponent.next === 'function') {
-              sliderComponent.next();
-            } else {
-              // Fallback: trigger click on next button in DOM
-              const nextBtn = sliderComponent.querySelector('.slider-button--next');
-              if (nextBtn && nextBtn !== this) {
-                nextBtn.click();
-              }
-            }
-          } else {
-            if (typeof sliderComponent.previous === 'function') {
-              sliderComponent.previous();
-            } else {
-              // Fallback: trigger click on prev button in DOM
-              const prevBtn = sliderComponent.querySelector('.slider-button--prev');
-              if (prevBtn && prevBtn !== this) {
-                prevBtn.click();
-              }
-            }
-          }
-        }
-      });
-    });
-
     // Carousel dots functionality for chilli powder product page
     const dotsContainer = document.querySelector('.spice-carousel-dots');
     if (!dotsContainer) return;
