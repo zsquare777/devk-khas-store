@@ -4,6 +4,15 @@ body.spice-product-page-body {
   background: #ffffff !important;
 }
 
+/* Ensure related products section is visible */
+body.spice-product-page-body .related-products {
+  display: block !important;
+}
+
+body.spice-product-page-body .related-products-fallback {
+  display: block !important;
+}
+
 .spice-custom-product-page .product__info-wrapper {
   background: transparent !important;
   box-shadow: none !important;
