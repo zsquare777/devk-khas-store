@@ -69,14 +69,32 @@
   position: relative;
 }
 
-/* Divider lines around card wrapper */
-.related-products .card-wrapper,
-.related-products-fallback .card-wrapper {
+/* Divider lines around card content area */
+.related-products .card,
+.related-products-fallback .card {
   position: relative;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  padding-top: 15px;
-  padding-bottom: 15px;
+}
+
+/* Divider above - at top of card content */
+.related-products .card__content::before,
+.related-products-fallback .card__content::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 10px;
+}
+
+/* Divider below - at bottom of card content */
+.related-products .card__content::after,
+.related-products-fallback .card__content::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-top: 10px;
 }
 
 .related-products .khas-card-tag,
