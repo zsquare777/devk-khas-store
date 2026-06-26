@@ -773,6 +773,8 @@
                           <p>Pure, bold, and authentic Black Pepper Powder. Finely ground from premium peppercorns to deliver a robust, pungent flavor and aromatic intensity that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'black pepper' -%}
                           <p>Pure, bold, and authentic Whole Black Pepper. Sourced from premium peppercorns to deliver a robust, pungent flavor and aromatic intensity that enhances the taste of your favorite dishes.</p>
+                        {%- elsif product_title_downcase contains 'ginger-garlic' or product_title_downcase contains 'ginger garlic' -%}
+                          <p>Pure, fresh, and authentic Ginger-Garlic Paste. Made from premium ginger and garlic to deliver a rich, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'garlic' -%}
                           <p>Pure, fresh, and authentic Garlic Paste. Made from premium garlic cloves to deliver a rich, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
                         {%- elsif product.title contains 'Ginger Paste' -%}
@@ -800,6 +802,8 @@
                           <p><strong>Ingredients:</strong> 100% Ground Black Pepper Powder.</p>
                         {%- elsif product_title_downcase contains 'black pepper' -%}
                           <p><strong>Ingredients:</strong> 100% Whole Black Peppercorns.</p>
+                        {%- elsif product_title_downcase contains 'ginger-garlic' or product_title_downcase contains 'ginger garlic' -%}
+                          <p><strong>Ingredients:</strong> Fresh Ginger, Fresh Garlic, Oil, Salt.</p>
                         {%- elsif product_title_downcase contains 'garlic' -%}
                           <p><strong>Ingredients:</strong> Fresh Garlic, Oil, Salt.</p>
                         {%- elsif product.title contains 'Ginger Paste' -%}
