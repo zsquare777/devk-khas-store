@@ -90,21 +90,39 @@
       const recommendationsSection = document.querySelector('.related-products[data-product-id="{{ product.id }}"]');
       const fallbackSection = document.getElementById('related-products-fallback-{{ section.id }}');
       
-      // Check if recommendations were rendered
-      if (recommendationsSection) {
-        const hasProducts = recommendationsSection.querySelector('.product-grid');
-        
-        if (hasProducts) {
-          // Recommendations found, hide fallback
-          if (fallbackSection) {
-            fallbackSection.style.display = 'none';
+      // Function to check and handle visibility
+      function handleRelatedProducts() {
+        if (recommendationsSection) {
+          const hasProducts = recommendationsSection.querySelector('.product-grid');
+          
+          if (hasProducts && hasProducts.children.length > 0) {
+            // Recommendations found with products, hide fallback
+            if (fallbackSection) {
+              fallbackSection.style.display = 'none';
+            }
+            recommendationsSection.style.display = 'block';
+          } else {
+            // No recommendations found or empty, show fallback and hide recommendations
+            if (fallbackSection) {
+              fallbackSection.style.display = 'block';
+            }
+            recommendationsSection.style.display = 'none';
           }
-        } else {
-          // No recommendations found, show fallback
-          if (fallbackSection) {
-            fallbackSection.style.display = 'block';
-          }
+        } else if (fallbackSection) {
+          // No recommendations section at all, show fallback
+          fallbackSection.style.display = 'block';
         }
+      }
+      
+      // Check immediately
+      handleRelatedProducts();
+      
+      // Also check after a short delay in case recommendations load asynchronously
+      setTimeout(handleRelatedProducts, 500);
+      
+      // Also check when product-recommendations element is loaded
+      if (recommendationsSection) {
+        recommendationsSection.addEventListener('load', handleRelatedProducts);
       }
     });
   </script>
