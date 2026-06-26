@@ -55,7 +55,7 @@
   </product-recommendations>
   
   {% comment %} Fallback: Show all products if no recommendations found {% endcomment %}
-  <div class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" id="related-products-fallback-{{ section.id }}" style="display: none;">
+  <div class="related-products-fallback page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" id="related-products-fallback-{{ section.id }}" style="display: none;">
     <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
       {{ section.settings.heading }}
     </h2>
