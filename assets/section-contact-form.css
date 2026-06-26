@@ -2,6 +2,16 @@
   max-width: 100%;
 }
 
+/* Hide any banner images on contact page */
+.contact .page-header,
+.contact .banner,
+.contact .hero-banner,
+.contact .section-banner,
+.contact .featured-image,
+.contact .page-banner {
+  display: none !important;
+}
+
 .contact .form__message {
   align-items: flex-start;
 }
