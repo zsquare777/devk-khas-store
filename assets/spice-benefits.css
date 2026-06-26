@@ -4,10 +4,11 @@
   padding-bottom: 40px;
   color: #FAF6EE;
   text-align: center;
+  width: 100%;
 }
 
 .spice-benefits-section .page-width {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
