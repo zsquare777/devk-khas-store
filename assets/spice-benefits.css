@@ -4,6 +4,13 @@
   color: #FAF6EE;
   text-align: center;
   width: 100%;
+  max-width: 100%;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
 }
 
 .spice-benefits-heading {
