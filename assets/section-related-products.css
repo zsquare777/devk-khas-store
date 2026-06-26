@@ -69,15 +69,17 @@
   position: relative;
 }
 
-/* Divider lines around card content area */
-.related-products .card,
-.related-products-fallback .card {
+/* Divider lines around card information area */
+.related-products .card__information,
+.related-products-fallback .card__information {
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-/* Divider above - at top of card content */
-.related-products .card__content::before,
-.related-products-fallback .card__content::before {
+/* Divider above - at top of card information */
+.related-products .card__information::before,
+.related-products-fallback .card__information::before {
   content: '';
   display: block;
   width: 100%;
@@ -86,9 +88,9 @@
   margin-bottom: 10px;
 }
 
-/* Divider below - at bottom of card content */
-.related-products .card__content::after,
-.related-products-fallback .card__content::after {
+/* Divider below - at bottom of card information */
+.related-products .card__information::after,
+.related-products-fallback .card__information::after {
   content: '';
   display: block;
   width: 100%;
