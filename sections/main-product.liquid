@@ -775,6 +775,8 @@
                           <p>Pure, bold, and authentic Whole Black Pepper. Sourced from premium peppercorns to deliver a robust, pungent flavor and aromatic intensity that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'garlic' -%}
                           <p>Pure, fresh, and authentic Garlic Paste. Made from premium garlic cloves to deliver a rich, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
+                        {%- elsif product.title contains 'Ginger Paste' -%}
+                          <p>Pure, fresh, and authentic Ginger Paste. Made from premium ginger root to deliver a zesty, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'ginger' -%}
                           <p>Pure, fresh, and authentic Ginger Paste. Made from premium ginger root to deliver a zesty, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
                         {%- else -%}
@@ -800,6 +802,8 @@
                           <p><strong>Ingredients:</strong> 100% Whole Black Peppercorns.</p>
                         {%- elsif product_title_downcase contains 'garlic' -%}
                           <p><strong>Ingredients:</strong> Fresh Garlic, Oil, Salt.</p>
+                        {%- elsif product.title contains 'Ginger Paste' -%}
+                          <p><strong>Ingredients:</strong> Fresh Ginger, Oil, Salt.</p>
                         {%- elsif product_title_downcase contains 'ginger' -%}
                           <p><strong>Ingredients:</strong> Fresh Ginger, Oil, Salt.</p>
                         {%- else -%}
