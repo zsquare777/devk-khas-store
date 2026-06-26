@@ -180,7 +180,7 @@
 }
 
 .khas-contact-form-wrapper .field__input {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e5 !important;
   border-radius: 8px;
   padding: 14px 16px;
   font-size: 15px;
@@ -188,6 +188,7 @@
   color: #111;
   background: #f8f6f4;
   transition: border-color 0.2s ease, background 0.2s ease;
+  box-shadow: none !important;
 }
 
 .khas-contact-form-wrapper .field__input:focus {
