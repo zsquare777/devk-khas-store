@@ -69,7 +69,7 @@
   position: relative !important;
 }
 
-/* Divider above features - on khas-card-tags if it exists */
+/* Divider above features - on khas-card-tags */
 .related-products .khas-card-tags::before,
 .related-products-fallback .khas-card-tags::before {
   content: '' !important;
@@ -78,9 +78,10 @@
   height: 1px !important;
   background: #e5e5e5 !important;
   margin-bottom: 15px !important;
+  position: relative !important;
 }
 
-/* Divider below features - on khas-card-tags if it exists */
+/* Divider below features - on khas-card-tags */
 .related-products .khas-card-tags::after,
 .related-products-fallback .khas-card-tags::after {
   content: '' !important;
@@ -89,6 +90,7 @@
   height: 1px !important;
   background: #e5e5e5 !important;
   margin-top: 15px !important;
+  position: relative !important;
 }
 
 .related-products .khas-card-tag,
