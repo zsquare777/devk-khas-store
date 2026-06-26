@@ -63,32 +63,53 @@
 /* Remove bullets from feature lists */
 .related-products .khas-card-tags,
 .related-products-fallback .khas-card-tags {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  position: relative;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 15px 0 !important;
+  position: relative !important;
 }
 
-/* Divider above features */
+/* Divider above features - on khas-card-tags if it exists */
 .related-products .khas-card-tags::before,
 .related-products-fallback .khas-card-tags::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #e5e5e5;
-  margin-bottom: 10px;
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #e5e5e5 !important;
+  margin-bottom: 15px !important;
 }
 
-/* Divider below features */
+/* Divider below features - on khas-card-tags if it exists */
 .related-products .khas-card-tags::after,
 .related-products-fallback .khas-card-tags::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #e5e5e5;
-  margin-top: 10px;
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #e5e5e5 !important;
+  margin-top: 15px !important;
+}
+
+/* Divider lines for products without features - on card__information */
+.related-products .card__information:not(:has(.khas-card-tags))::before,
+.related-products-fallback .card__information:not(:has(.khas-card-tags))::before {
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #e5e5e5 !important;
+  margin-bottom: 15px !important;
+}
+
+.related-products .card__information:not(:has(.khas-card-tags))::after,
+.related-products-fallback .card__information:not(:has(.khas-card-tags))::after {
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: #e5e5e5 !important;
+  margin-top: 15px !important;
 }
 
 .related-products .khas-card-tag,
