@@ -1030,6 +1030,10 @@
       </div>
     </div>
 
+    {% if is_spice_product %}
+      {% render 'spice-benefits' %}
+    {% endif %}
+
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
