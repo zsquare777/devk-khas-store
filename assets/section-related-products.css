@@ -69,34 +69,14 @@
   position: relative;
 }
 
-/* Divider lines around card information area */
-.related-products .card__information,
-.related-products-fallback .card__information {
+/* Divider lines around card wrapper */
+.related-products .card-wrapper,
+.related-products-fallback .card-wrapper {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* Divider above - at top of card information */
-.related-products .card__information::before,
-.related-products-fallback .card__information::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #e5e5e5;
-  margin-bottom: 10px;
-}
-
-/* Divider below - at bottom of card information */
-.related-products .card__information::after,
-.related-products-fallback .card__information::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #e5e5e5;
-  margin-top: 10px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .related-products .khas-card-tag,
