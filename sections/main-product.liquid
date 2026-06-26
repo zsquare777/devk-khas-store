@@ -330,7 +330,14 @@
                     <div class="spice-vendor">Khas Foods</div>
                     <h1 class="spice-title">KHAS {{ product.title }}</h1>
                     {%- assign variant = product.selected_or_first_available_variant -%}
-                    {%- if variant.weight_unit == 'g' -%}
+                    {%- assign product_title_downcase = product.title | downcase -%}
+                    {%- if product_title_downcase contains 'ginger' or product_title_downcase contains 'garlic' or product_title_downcase contains 'himalayan' and product_title_downcase contains 'white' -%}
+                      {%- if variant.weight_unit == 'kg' -%}
+                        <div class="spice-subtitle">{{ variant.weight }}kg</div>
+                      {%- else -%}
+                        <div class="spice-subtitle">{{ variant.weight }}kg</div>
+                      {%- endif -%}
+                    {%- elsif variant.weight_unit == 'g' -%}
                       <div class="spice-subtitle">{{ variant.weight }}g</div>
                     {%- elsif variant.weight_unit == 'kg' -%}
                       <div class="spice-subtitle">{{ variant.weight }}kg</div>
