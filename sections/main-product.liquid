@@ -334,14 +334,7 @@
                     {%- if product_title_downcase contains 'himalayan' and product_title_downcase contains 'white' -%}
                       <div class="spice-subtitle">10kg</div>
                     {%- elsif product_title_downcase contains 'ginger' or product_title_downcase contains 'garlic' -%}
-                      {%- if variant.weight_unit == 'kg' -%}
-                        <div class="spice-subtitle">{{ variant.weight }}kg</div>
-                      {%- elsif variant.weight_unit == 'g' -%}
-                        {%- assign weight_in_kg = variant.weight | divided_by: 1000.0 -%}
-                        <div class="spice-subtitle">{{ weight_in_kg }}kg</div>
-                      {%- else -%}
-                        <div class="spice-subtitle">{{ variant.weight | weight_with_unit }}</div>
-                      {%- endif -%}
+                      <div class="spice-subtitle">1kg</div>
                     {%- elsif variant.weight_unit == 'g' -%}
                       <div class="spice-subtitle">{{ variant.weight }}g</div>
                     {%- elsif variant.weight_unit == 'kg' -%}
