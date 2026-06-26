@@ -329,7 +329,14 @@
                   {% if is_spice_product %}
                     <div class="spice-vendor">Khas Foods</div>
                     <h1 class="spice-title">KHAS {{ product.title }}</h1>
-                    <div class="spice-subtitle">{{ product.selected_or_first_available_variant.weight_in_grams }}g</div>
+                    {%- assign variant = product.selected_or_first_available_variant -%}
+                    {%- if variant.weight_unit == 'g' -%}
+                      <div class="spice-subtitle">{{ variant.weight }}g</div>
+                    {%- elsif variant.weight_unit == 'kg' -%}
+                      <div class="spice-subtitle">{{ variant.weight }}kg</div>
+                    {%- else -%}
+                      <div class="spice-subtitle">{{ variant.weight | weight_with_unit }}</div>
+                    {%- endif -%}
                   {% else %}
                     <details>
                       <summary style="cursor:pointer;font-size:22px;font-weight:700;">
