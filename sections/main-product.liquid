@@ -750,7 +750,7 @@
                 -%}
                 {% if is_spice_product %}
                   <div class="spice-accordions-wrapper">
-                    
+
                     <!-- Accordion 1: Product Info -->
                     <details class="spice-accordion" open>
                       <summary class="spice-accordion-summary">
@@ -758,7 +758,11 @@
                         <span class="accordion-icon"></span>
                       </summary>
                       <div class="accordion-content">
-                        <p>Pure, bold, and authentic Chilli Powder. Milled from premium sun-dried red chillies to deliver a vibrant color, natural warmth, and a rich, bold spice level that enhances the flavor of your favorite recipes.</p>
+                        {%- if product_title_downcase contains 'paprika' -%}
+                          <p>Pure, vibrant, and authentic Paprika Powder. Milled from premium sweet red peppers to deliver a rich red color, mild sweetness, and a subtle smoky flavor that enhances the visual appeal and taste of your favorite dishes.</p>
+                        {%- else -%}
+                          <p>Pure, bold, and authentic Chilli Powder. Milled from premium sun-dried red chillies to deliver a vibrant color, natural warmth, and a rich, bold spice level that enhances the flavor of your favorite recipes.</p>
+                        {%- endif -%}
                       </div>
                     </details>
 
@@ -769,7 +773,11 @@
                         <span class="accordion-icon"></span>
                       </summary>
                       <div class="accordion-content">
-                        <p><strong>Ingredients:</strong> 100% Ground Chilli Powder.</p>
+                        {%- if product_title_downcase contains 'paprika' -%}
+                          <p><strong>Ingredients:</strong> 100% Ground Paprika Powder.</p>
+                        {%- else -%}
+                          <p><strong>Ingredients:</strong> 100% Ground Chilli Powder.</p>
+                        {%- endif -%}
                         <p>No artificial colors, preservatives, fillers, or additives. Gluten-free, non-GMO, and 100% natural.</p>
                       </div>
                     </details>
