@@ -1,0 +1,67 @@
+{% comment %}
+  Renders spice benefits section for spice products.
+  Accepts: No parameters (uses global product object)
+{% endcomment %}
+
+{% if product.handle contains 'chilli' or product.handle contains 'chili' or product.handle contains 'paprika' or product.title contains 'Chilli Powder' or product.title contains 'Chili Powder' or product.title contains 'Paprika Powder' %}
+
+  {{ 'spice-benefits.css' | asset_url | stylesheet_tag }}
+
+  <div class="spice-benefits-section" id="SpiceBenefits">
+    <div class="page-width">
+      <h2 class="spice-benefits-heading">Authentic Ingredients, Exceptional Flavor.</h2>
+
+      <div class="spice-benefits-grid">
+        <!-- Benefit 1: Natural -->
+        <div class="spice-benefits-col">
+          <div class="spice-benefits-icon">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" stroke="#FAF6EE" stroke-width="1.5" />
+              <path d="M35 38 C31 29 42 21 45 21 C45 21 44 31 38 38 Z" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M35 38 C38 31 42 25 45 21" fill="none" stroke="#FAF6EE" stroke-width="1.5"/>
+              <path d="M39 38 C37 32 44 26 46 26 C46 26 47 32 42 38 Z" fill="none" stroke="#FAF6EE" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M39 38 C41 33 44 29 46 26" fill="none" stroke="#FAF6EE" stroke-width="1.2"/>
+              <text x="40" y="52" fill="#FAF6EE" font-size="7" font-weight="700" text-anchor="middle" font-family="sans-serif" letter-spacing="1">NATURAL</text>
+              <text x="40" y="61" fill="#FAF6EE" font-size="7" font-weight="700" text-anchor="middle" font-family="sans-serif" letter-spacing="1">100%</text>
+            </svg>
+          </div>
+          <h3 class="spice-benefits-col-title">100% NATURAL GOODNESS</h3>
+          <div class="spice-benefits-col-desc">Made with <strong>carefully selected ingredients</strong> for <strong>pure taste and everyday cooking</strong>.</div>
+        </div>
+
+        <!-- Benefit 2: Gluten Free -->
+        <div class="spice-benefits-col">
+          <div class="spice-benefits-icon">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" stroke="#FAF6EE" stroke-width="1.5" />
+              <path d="M40 22 L40 58" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M40 26 C36 24 35 19 40 22 C45 19 44 24 40 26" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 33 C36 31 35 26 40 29 C45 26 44 31 40 33" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 40 C36 38 35 33 40 36 C45 33 44 38 40 40" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 47 C36 45 35 40 40 43 C45 40 44 45 40 47" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 54 C36 52 35 47 40 50 C45 47 44 52 40 54" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26 26 L54 54" stroke="#FAF6EE" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="spice-benefits-col-title">REAL FLAVOR, NO COMPROMISE</h3>
+          <div class="spice-benefits-col-desc">From <strong>spices and herbs</strong> to <strong>pastes and vermicelli</strong>, enjoy authentic flavor in every meal.</div>
+        </div>
+
+        <!-- Benefit 3: Preservative Free -->
+        <div class="spice-benefits-col">
+          <div class="spice-benefits-icon">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" stroke="#FAF6EE" stroke-width="1.5" />
+              <path d="M35 50 C29 50 29 40 35 33 C41 40 41 50 35 50 Z" fill="none" stroke="#FAF6EE" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M46 50 C41 50 41 42 46 36 C51 42 51 50 46 50 Z" fill="none" stroke="#FAF6EE" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M26 26 L54 54" stroke="#FAF6EE" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="spice-benefits-col-title">QUALITY YOU CAN TRUST</h3>
+          <div class="spice-benefits-col-desc">Crafted with <strong>care</strong> using quality ingredients and <strong>no unnecessary additives</strong>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endif %}
