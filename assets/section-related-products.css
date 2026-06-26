@@ -75,9 +75,9 @@
   position: relative;
 }
 
-/* Divider above - positioned at bottom of card media */
-.related-products .card__media + .card__content::before,
-.related-products-fallback .card__media + .card__content::before {
+/* Divider above - at top of card content */
+.related-products .card__content::before,
+.related-products-fallback .card__content::before {
   content: '';
   display: block;
   width: 100%;
@@ -86,7 +86,7 @@
   margin-bottom: 10px;
 }
 
-/* Divider below - positioned at bottom of card content */
+/* Divider below - at bottom of card content */
 .related-products .card__content::after,
 .related-products-fallback .card__content::after {
   content: '';
