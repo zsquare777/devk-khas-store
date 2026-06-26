@@ -793,6 +793,8 @@
                           <p>Pure, aromatic, and authentic Dry Oregano. Sourced from premium oregano leaves to deliver a fragrant, earthy flavor and Mediterranean essence that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'parsley' -%}
                           <p>Pure, fresh, and authentic Dry Parsley. Sourced from premium parsley leaves to deliver a vibrant, herbaceous flavor and garden-fresh aroma that enhances the taste of your favorite dishes.</p>
+                        {%- elsif product_title_downcase contains 'methi' or product_title_downcase contains 'kasuri' -%}
+                          <p>Pure, aromatic, and authentic Kasuri Methi. Sourced from premium dried fenugreek leaves to deliver a distinctive, bitter-sweet flavor and traditional essence that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'vermicelli' -%}
                           <p>Pure, authentic, and premium Vermicelli. Made from high-quality wheat to deliver a delicate texture and perfect consistency that enhances the taste of your favorite dishes.</p>
                         {%- else -%}
@@ -836,6 +838,8 @@
                           <p><strong>Ingredients:</strong> 100% Dried Oregano Leaves.</p>
                         {%- elsif product_title_downcase contains 'parsley' -%}
                           <p><strong>Ingredients:</strong> 100% Dried Parsley Leaves.</p>
+                        {%- elsif product_title_downcase contains 'methi' or product_title_downcase contains 'kasuri' -%}
+                          <p><strong>Ingredients:</strong> 100% Dried Fenugreek Leaves.</p>
                         {%- elsif product_title_downcase contains 'vermicelli' -%}
                           <p><strong>Ingredients:</strong> Wheat Flour, Water.</p>
                         {%- else -%}
