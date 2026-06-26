@@ -69,9 +69,9 @@
   position: relative;
 }
 
-/* Divider above features - apply to card content area */
-.related-products .card__content::before,
-.related-products-fallback .card__content::before {
+/* Divider above features - apply to card */
+.related-products .card::before,
+.related-products-fallback .card::before {
   content: '';
   display: block;
   width: 100%;
@@ -80,9 +80,9 @@
   margin-bottom: 10px;
 }
 
-/* Divider below features - apply to card content area */
-.related-products .card__content::after,
-.related-products-fallback .card__content::after {
+/* Divider below features - apply to card */
+.related-products .card::after,
+.related-products-fallback .card::after {
   content: '';
   display: block;
   width: 100%;
