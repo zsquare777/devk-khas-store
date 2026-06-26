@@ -91,10 +91,19 @@
       const fallbackSection = document.getElementById('related-products-fallback-{{ section.id }}');
       
       // Check if recommendations were rendered
-      if (recommendationsSection && !recommendationsSection.querySelector('.product-grid')) {
-        // No recommendations found, show fallback
-        if (fallbackSection) {
-          fallbackSection.style.display = 'block';
+      if (recommendationsSection) {
+        const hasProducts = recommendationsSection.querySelector('.product-grid');
+        
+        if (hasProducts) {
+          // Recommendations found, hide fallback
+          if (fallbackSection) {
+            fallbackSection.style.display = 'none';
+          }
+        } else {
+          // No recommendations found, show fallback
+          if (fallbackSection) {
+            fallbackSection.style.display = 'block';
+          }
         }
       }
     });
