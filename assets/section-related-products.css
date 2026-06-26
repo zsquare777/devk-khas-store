@@ -8,178 +8,179 @@
 
 .related-products__heading {
   margin: 0 0 3rem;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-/* Chilli Powder Product Page - Related Products Styling */
+/* Equal-height cards - work with Shopify's existing grid */
+.related-products .grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.related-products .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.related-products .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.related-products .card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.related-products .card__information {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Hide overlay heading (product name above picture) */
+.related-products .card__inner .card__heading {
+  display: none;
+}
+
+/* Increase font size for product name below picture */
+.related-products .card__heading.h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Remove bullets from feature lists */
+.related-products .khas-card-tags {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  position: relative;
+}
+
+/* Divider above features */
+.related-products .khas-card-tags::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 10px;
+}
+
+/* Divider below features */
+.related-products .khas-card-tags::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-top: 10px;
+}
+
+.related-products .khas-card-tag {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.related-products .khas-card-tag::before {
+  content: none;
+}
+
+/* View Product Button styling */
+.khas-view-btn {
+  display: block;
+  width: 140px;
+  margin: 15px auto 0 auto;
+  padding: 10px 0;
+  background: #be9051;
+  color: #fff;
+  border: none;
+  border-width: 0;
+  border-style: none;
+  border-color: transparent;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: none;
+}
+
+/* Hover state */
+.khas-view-btn:hover {
+  background: transparent;
+  background-color: transparent;
+  color: #be9051;
+  border: 1px solid #be9051;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #be9051;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Chilli Powder Product Page - Related Products Styling (override for spice products) */
 body.spice-product-page-body .related-products__heading {
   font-size: 32px !important;
   font-weight: 700 !important;
 }
 
-/* Equal-height cards - work with Shopify's existing grid */
-body.spice-product-page-body .related-products .grid__item {
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-body.spice-product-page-body .related-products .card-wrapper {
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-}
-
-body.spice-product-page-body .related-products .card {
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-}
-
-body.spice-product-page-body .related-products .card__content {
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 !important;
-}
-
-body.spice-product-page-body .related-products .card__information {
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 !important;
-}
-
-/* Hide overlay heading (product name above picture) */
-body.spice-product-page-body .related-products .card__inner .card__heading {
-  display: none !important;
-}
-
-/* Increase font size for product name below picture */
-body.spice-product-page-body .related-products .card__heading.h5 {
-  font-size: 18px !important;
-  font-weight: 600 !important;
-}
-
-/* Remove bullets from feature lists */
-body.spice-product-page-body .related-products .khas-card-tags {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 10px 0 !important;
-  position: relative !important;
-}
-
-/* Divider above features */
-body.spice-product-page-body .related-products .khas-card-tags::before {
-  content: '' !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: #e5e5e5 !important;
-  margin-bottom: 10px !important;
-}
-
-/* Divider below features */
-body.spice-product-page-body .related-products .khas-card-tags::after {
-  content: '' !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: #e5e5e5 !important;
-  margin-top: 10px !important;
-}
-
-body.spice-product-page-body .related-products .khas-card-tag {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 5px 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-}
-
-body.spice-product-page-body .related-products .khas-card-tag::before {
-  content: none !important;
-}
-
-/* View Product Button styling */
-body.spice-product-page-body .khas-view-btn {
-  display: block !important;
-  width: 140px !important;
-  margin: 15px auto 0 auto !important;
-  padding: 10px 0 !important;
-  background: #be9051 !important;
-  color: #fff !important;
-  border: none !important;
-  border-width: 0 !important;
-  border-style: none !important;
-  border-color: transparent !important;
-  border-radius: 50px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  transition: none !important;
-}
-
-/* Hover state - using attribute selector for maximum specificity */
-/* Hover state */
-body.spice-product-page-body .khas-view-btn:hover {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #be9051 !important;
-  border: 1px solid #be9051 !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: #be9051 !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  cursor: pointer !important;
-}
-
 /* Responsive styles for mobile */
 @media screen and (max-width: 749px) {
-  body.spice-product-page-body .related-products__heading {
-    font-size: 24px !important;
+  .related-products__heading {
+    font-size: 24px;
   }
 
-  body.spice-product-page-body .related-products .grid__item {
-    width: 100% !important;
-    max-width: 100% !important;
+  .related-products .grid__item {
+    width: 100%;
+    max-width: 100%;
   }
 
-  body.spice-product-page-body .related-products .card-wrapper {
-    width: 100% !important;
+  .related-products .card-wrapper {
+    width: 100%;
   }
 
-  body.spice-product-page-body .related-products .card {
-    width: 100% !important;
+  .related-products .card {
+    width: 100%;
   }
 
-  body.spice-product-page-body .khas-view-btn {
-    width: 100% !important;
-    max-width: 200px !important;
+  .khas-view-btn {
+    width: 100%;
+    max-width: 200px;
   }
 
-  body.spice-product-page-body .related-products .khas-card-tag {
-    font-size: 13px !important;
+  .related-products .khas-card-tag {
+    font-size: 13px;
   }
 
-  body.spice-product-page-body .related-products .card__heading.h5 {
-    font-size: 16px !important;
+  .related-products .card__heading.h5 {
+    font-size: 16px;
   }
 }
 
 /* Responsive styles for tablet */
 @media screen and (min-width: 750px) and (max-width: 989px) {
-  body.spice-product-page-body .related-products__heading {
-    font-size: 28px !important;
+  .related-products__heading {
+    font-size: 28px;
   }
 
-  body.spice-product-page-body .related-products .grid__item {
-    width: calc(50% - 10px) !important;
+  .related-products .grid__item {
+    width: calc(50% - 10px);
   }
 
-  body.spice-product-page-body .khas-view-btn {
-    width: 120px !important;
+  .khas-view-btn {
+    width: 120px;
   }
 }
