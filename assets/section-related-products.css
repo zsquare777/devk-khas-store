@@ -69,15 +69,9 @@
   position: relative;
 }
 
-/* Divider lines around card content area */
-.related-products .card,
-.related-products-fallback .card {
-  position: relative;
-}
-
-/* Divider above - at top of card content */
-.related-products .card__content::before,
-.related-products-fallback .card__content::before {
+/* Divider above features */
+.related-products .khas-card-tags::before,
+.related-products-fallback .khas-card-tags::before {
   content: '';
   display: block;
   width: 100%;
@@ -86,9 +80,9 @@
   margin-bottom: 10px;
 }
 
-/* Divider below - at bottom of card content */
-.related-products .card__content::after,
-.related-products-fallback .card__content::after {
+/* Divider below features */
+.related-products .khas-card-tags::after,
+.related-products-fallback .khas-card-tags::after {
   content: '';
   display: block;
   width: 100%;
