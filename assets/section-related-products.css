@@ -91,27 +91,6 @@
   margin-top: 15px !important;
 }
 
-/* Divider lines for products without features - on card__information */
-.related-products .card__information:not(:has(.khas-card-tags))::before,
-.related-products-fallback .card__information:not(:has(.khas-card-tags))::before {
-  content: '' !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: #e5e5e5 !important;
-  margin-bottom: 15px !important;
-}
-
-.related-products .card__information:not(:has(.khas-card-tags))::after,
-.related-products-fallback .card__information:not(:has(.khas-card-tags))::after {
-  content: '' !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: #e5e5e5 !important;
-  margin-top: 15px !important;
-}
-
 .related-products .khas-card-tag,
 .related-products-fallback .khas-card-tag {
   list-style: none;
