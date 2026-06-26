@@ -64,33 +64,11 @@
 .related-products .khas-card-tags,
 .related-products-fallback .khas-card-tags {
   list-style: none !important;
-  padding: 0 !important;
-  margin: 15px 0 !important;
+  padding: 15px 0 !important;
+  margin: 0 !important;
   position: relative !important;
-}
-
-/* Divider above features - on khas-card-tags */
-.related-products .khas-card-tags::before,
-.related-products-fallback .khas-card-tags::before {
-  content: '' !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: #e5e5e5 !important;
-  margin-bottom: 15px !important;
-  position: relative !important;
-}
-
-/* Divider below features - on khas-card-tags */
-.related-products .khas-card-tags::after,
-.related-products-fallback .khas-card-tags::after {
-  content: '' !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: #e5e5e5 !important;
-  margin-top: 15px !important;
-  position: relative !important;
+  border-top: 1px solid #e5e5e5 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
 }
 
 .related-products .khas-card-tag,
