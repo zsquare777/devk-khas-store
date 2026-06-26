@@ -13,48 +13,56 @@
 }
 
 /* Equal-height cards - work with Shopify's existing grid */
-.related-products .grid__item {
+.related-products .grid__item,
+.related-products-fallback .grid__item {
   display: flex;
   flex-direction: column;
 }
 
-.related-products .card-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.related-products .card {
+.related-products .card-wrapper,
+.related-products-fallback .card-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.related-products .card__content {
+.related-products .card,
+.related-products-fallback .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.related-products .card__content,
+.related-products-fallback .card__content {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.related-products .card__information {
+.related-products .card__information,
+.related-products-fallback .card__information {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 /* Hide overlay heading (product name above picture) */
-.related-products .card__inner .card__heading {
+.related-products .card__inner .card__heading,
+.related-products-fallback .card__inner .card__heading {
   display: none;
 }
 
 /* Increase font size for product name below picture */
-.related-products .card__heading.h5 {
+.related-products .card__heading.h5,
+.related-products-fallback .card__heading.h5 {
   font-size: 18px;
   font-weight: 600;
 }
 
 /* Remove bullets from feature lists */
-.related-products .khas-card-tags {
+.related-products .khas-card-tags,
+.related-products-fallback .khas-card-tags {
   list-style: none;
   padding: 0;
   margin: 10px 0;
@@ -62,7 +70,8 @@
 }
 
 /* Divider above features */
-.related-products .khas-card-tags::before {
+.related-products .khas-card-tags::before,
+.related-products-fallback .khas-card-tags::before {
   content: '';
   display: block;
   width: 100%;
@@ -72,7 +81,8 @@
 }
 
 /* Divider below features */
-.related-products .khas-card-tags::after {
+.related-products .khas-card-tags::after,
+.related-products-fallback .khas-card-tags::after {
   content: '';
   display: block;
   width: 100%;
@@ -81,7 +91,8 @@
   margin-top: 10px;
 }
 
-.related-products .khas-card-tag {
+.related-products .khas-card-tag,
+.related-products-fallback .khas-card-tag {
   list-style: none;
   padding: 0;
   margin: 5px 0;
@@ -90,12 +101,14 @@
   gap: 8px;
 }
 
-.related-products .khas-card-tag::before {
+.related-products .khas-card-tag::before,
+.related-products-fallback .khas-card-tag::before {
   content: none;
 }
 
 /* View Product Button styling */
-.khas-view-btn {
+.related-products .khas-view-btn,
+.related-products-fallback .khas-view-btn {
   display: block;
   width: 140px;
   margin: 15px auto 0 auto;
@@ -117,7 +130,8 @@
 }
 
 /* Hover state */
-.khas-view-btn:hover {
+.related-products .khas-view-btn:hover,
+.related-products-fallback .khas-view-btn:hover {
   background: transparent;
   background-color: transparent;
   color: #be9051;
@@ -137,29 +151,35 @@
     font-size: 24px;
   }
 
-  .related-products .grid__item {
+  .related-products .grid__item,
+  .related-products-fallback .grid__item {
     width: 100%;
     max-width: 100%;
   }
 
-  .related-products .card-wrapper {
+  .related-products .card-wrapper,
+  .related-products-fallback .card-wrapper {
     width: 100%;
   }
 
-  .related-products .card {
+  .related-products .card,
+  .related-products-fallback .card {
     width: 100%;
   }
 
-  .khas-view-btn {
+  .related-products .khas-view-btn,
+  .related-products-fallback .khas-view-btn {
     width: 100%;
     max-width: 200px;
   }
 
-  .related-products .khas-card-tag {
+  .related-products .khas-card-tag,
+  .related-products-fallback .khas-card-tag {
     font-size: 13px;
   }
 
-  .related-products .card__heading.h5 {
+  .related-products .card__heading.h5,
+  .related-products-fallback .card__heading.h5 {
     font-size: 16px;
   }
 }
@@ -170,11 +190,13 @@
     font-size: 28px;
   }
 
-  .related-products .grid__item {
+  .related-products .grid__item,
+  .related-products-fallback .grid__item {
     width: calc(50% - 10px);
   }
 
-  .khas-view-btn {
+  .related-products .khas-view-btn,
+  .related-products-fallback .khas-view-btn {
     width: 120px;
   }
 }
