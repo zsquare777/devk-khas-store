@@ -65,11 +65,12 @@
     >
       {% assign skip_card_product_styles = false %}
       {% assign collection = collections.all %}
-      {% for product in collection.products limit: section.settings.products_to_show %}
-        {% unless product.id == product.id %}
+      {% assign current_product_id = product.id %}
+      {% for collection_product in collection.products limit: section.settings.products_to_show %}
+        {% unless collection_product.id == current_product_id %}
           <li class="grid__item">
             {% render 'card-product',
-              card_product: product,
+              card_product: collection_product,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
               show_secondary_image: section.settings.show_secondary_image,
