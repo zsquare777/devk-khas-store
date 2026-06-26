@@ -1,16 +1,9 @@
 .spice-benefits-section {
   background-color: #424242; /* Matching the screenshot dark background */
-  padding-top: 35px;
-  padding-bottom: 40px;
+  padding: 35px 1.5rem 40px 1.5rem;
   color: #FAF6EE;
   text-align: center;
   width: 100%;
-}
-
-.spice-benefits-section .page-width {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 .spice-benefits-heading {
@@ -28,8 +21,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
   align-items: start;
 }
 
