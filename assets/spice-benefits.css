@@ -3,14 +3,11 @@
   padding: 35px 1.5rem 40px 1.5rem;
   color: #FAF6EE;
   text-align: center;
-  width: 100%;
-  max-width: 100%;
+  margin-top: 50px;
+  width: 100vw;
   position: relative;
   left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
+  transform: translateX(-50%);
 }
 
 .spice-benefits-heading {
