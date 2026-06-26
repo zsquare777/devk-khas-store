@@ -73,9 +73,9 @@
           -%}
           {%- assign product_title_downcase = product.title | downcase -%}
           {%- assign product_handle_downcase = product.handle | downcase -%}
-          {%- assign is_chilli = false -%}
-          {% if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili' %}
-            {%- assign is_chilli = true -%}
+          {%- assign is_spice_product = false -%}
+          {% if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili' or product_handle_downcase contains 'paprika' or product_title_downcase contains 'paprika' %}
+            {%- assign is_spice_product = true -%}
           {% endif %}
 
           <button
@@ -83,8 +83,8 @@
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if is_chilli %}
-              {% comment %}Always enabled for Chilli Powder to match reference screenshot{% endcomment %}
+            {% if is_spice_product %}
+              {% comment %}Always enabled for Spice Products to match reference screenshot{% endcomment %}
             {% else %}
               {% if product.selected_or_first_available_variant.available == false
                 or quantity_rule_soldout
@@ -95,7 +95,7 @@
             {% endif %}
           >
             <span>
-              {%- if is_chilli -%}
+              {%- if is_spice_product -%}
                 ADD TO CART <span class="btn-chevron">&gt;</span>
               {%- else -%}
                 {%- if product.selected_or_first_available_variant == null -%}

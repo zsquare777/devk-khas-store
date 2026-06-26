@@ -1,13 +1,13 @@
 {%- assign product_title_downcase = product.title | downcase -%}
 {%- assign product_handle_downcase = product.handle | downcase -%}
-{%- assign is_chilli = false -%}
-{% if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili' %}
-  {%- assign is_chilli = true -%}
+{%- assign is_spice_product = false -%}
+{% if product_handle_downcase contains 'chilli' or product_handle_downcase contains 'chili' or product_title_downcase contains 'chilli' or product_title_downcase contains 'chili' or product_handle_downcase contains 'paprika' or product_title_downcase contains 'paprika' %}
+  {%- assign is_spice_product = true -%}
 {% endif %}
 
 <product-info
   id="MainProduct-{{ section.id }}"
-  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}{% if is_chilli %} spice-custom-product-page{% endif %}"
+  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}{% if is_spice_product %} spice-custom-product-page{% endif %}"
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
   data-update-url="true"
@@ -24,7 +24,7 @@
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
   {{ 'khas-product.css' | asset_url | stylesheet_tag }}
   
-  {% if is_chilli %}
+  {% if is_spice_product %}
     {{ 'spice-product.css' | asset_url | stylesheet_tag }}
     <style>
       body.spice-product-page-body {
@@ -304,7 +304,7 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images, is_chilli: is_chilli %}
+        {% render 'product-media-gallery', variant_images: variant_images, is_chilli: is_spice_product %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -326,10 +326,10 @@
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  {% if is_chilli %}
+                  {% if is_spice_product %}
                     <div class="spice-vendor">Khas Foods</div>
-                    <h1 class="spice-title">KHAS CHILLI POWDER</h1>
-                    <div class="spice-subtitle">100g</div>
+                    <h1 class="spice-title">KHAS {{ product.title }}</h1>
+                    <div class="spice-subtitle">{{ product.selected_or_first_available_variant.title }}</div>
                   {% else %}
                     <details>
                       <summary style="cursor:pointer;font-size:22px;font-weight:700;">
@@ -382,7 +382,7 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
-                {% if is_chilli %}
+                {% if is_spice_product %}
                   <div class="spice-stock-status">
                     {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
                       {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
@@ -748,7 +748,7 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-                {% if is_chilli %}
+                {% if is_spice_product %}
                   <div class="spice-accordions-wrapper">
                     
                     <!-- Accordion 1: Product Info -->
@@ -2641,7 +2641,7 @@
 }
 {% endschema %}
 
-{%- if is_chilli -%}
+{%- if is_spice_product -%}
 <script>
  document.addEventListener('DOMContentLoaded', function() {
     // Custom Slider Functionality for Chilli Powder Page
