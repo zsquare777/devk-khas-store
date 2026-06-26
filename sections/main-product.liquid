@@ -781,6 +781,8 @@
                           <p>Pure, fresh, and authentic Ginger Paste. Made from premium ginger root to deliver a zesty, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'ginger' -%}
                           <p>Pure, fresh, and authentic Ginger Paste. Made from premium ginger root to deliver a zesty, aromatic flavor and smooth texture that enhances the taste of your favorite dishes.</p>
+                        {%- elsif product_title_downcase contains 'himalayan' or product_title_downcase contains 'rock salt' -%}
+                          <p>Pure, mineral-rich, and authentic Himalayan Rock Salt. Sourced from ancient salt deposits to deliver a natural, pristine flavor and essential minerals that enhance the taste of your favorite dishes.</p>
                         {%- elsif product_title_downcase contains 'vermicelli' -%}
                           <p>Pure, authentic, and premium Vermicelli. Made from high-quality wheat to deliver a delicate texture and perfect consistency that enhances the taste of your favorite dishes.</p>
                         {%- else -%}
@@ -812,6 +814,8 @@
                           <p><strong>Ingredients:</strong> Fresh Ginger, Oil, Salt.</p>
                         {%- elsif product_title_downcase contains 'ginger' -%}
                           <p><strong>Ingredients:</strong> Fresh Ginger, Oil, Salt.</p>
+                        {%- elsif product_title_downcase contains 'himalayan' or product_title_downcase contains 'rock salt' -%}
+                          <p><strong>Ingredients:</strong> 100% Himalayan Rock Salt.</p>
                         {%- elsif product_title_downcase contains 'vermicelli' -%}
                           <p><strong>Ingredients:</strong> Wheat Flour, Water.</p>
                         {%- else -%}
