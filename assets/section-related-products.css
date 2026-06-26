@@ -69,9 +69,15 @@
   position: relative;
 }
 
-/* Divider above features - apply to card */
-.related-products .card::before,
-.related-products-fallback .card::before {
+/* Divider lines around card content area */
+.related-products .card,
+.related-products-fallback .card {
+  position: relative;
+}
+
+/* Divider above - positioned at bottom of card media */
+.related-products .card__media + .card__content::before,
+.related-products-fallback .card__media + .card__content::before {
   content: '';
   display: block;
   width: 100%;
@@ -80,9 +86,9 @@
   margin-bottom: 10px;
 }
 
-/* Divider below features - apply to card */
-.related-products .card::after,
-.related-products-fallback .card::after {
+/* Divider below - positioned at bottom of card content */
+.related-products .card__content::after,
+.related-products-fallback .card__content::after {
   content: '';
   display: block;
   width: 100%;
