@@ -236,6 +236,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 32px;
+  /* Add space for badge to prevent overlap */
 }
 
 /* Specific color rule with !important to prevent theme h3 color overrides */
