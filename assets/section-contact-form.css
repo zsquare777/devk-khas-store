@@ -58,6 +58,12 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.khas-page-crown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
 .khas-page-title {
   font-family: inherit;
   font-size: 42px;
