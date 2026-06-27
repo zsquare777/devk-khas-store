@@ -97,36 +97,76 @@
 
 /* Contact Info Card */
 .khas-contact-card {
-  background: #f8f6f4;
+  position: relative;
+  background: radial-gradient(circle at center, #15120e 0%, #070605 100%);
   border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 50px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   height: fit-content;
-  color: #000000;
+  overflow: visible;
+  color: #ffffff;
+}
+
+.khas-contact-overlay {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  width: 200px;
+  height: 90%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-contact-overlay.left {
+  left: 0;
+}
+
+.khas-contact-overlay.right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.khas-contact-card-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .khas-contact-header {
-  margin-bottom: 35px;
+  text-align: center;
+  margin-bottom: 40px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid rgba(250, 189, 47, 0.2);
+}
+
+.khas-contact-crown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 .khas-contact-title {
   font-family: inherit;
   font-size: 24px;
-  font-weight: 700;
-  color: #111;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: 0.05em;
   margin: 0 0 8px 0;
   line-height: 1.2;
 }
 
+.khas-contact-title .khas-italic {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #fabd2f;
+}
+
 .khas-contact-subtitle {
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  color: #666;
+  color: #a3a3a3;
   margin: 0;
 }
 
