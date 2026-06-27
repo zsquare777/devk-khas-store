@@ -4,7 +4,7 @@
   width: 100%;
   position: relative;
   background: radial-gradient(circle at center, #15120e 0%, #070605 100%) !important;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
@@ -99,6 +99,8 @@
   /* ← was 56px */
   margin-bottom: 64px;
   overflow: visible;
+  /* ← added */
+  position: relative;
   /* ← added */
 }
 
