@@ -99,7 +99,8 @@
   column-gap: 24px;
   row-gap: 0;
   /* ← was 56px */
-  margin-bottom: 64px;
+  margin-bottom: 32px;
+  /* Reduced from 64px to make section smaller */
   overflow: visible;
   /* ← added */
   position: relative;
@@ -281,37 +282,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 16px;
-  padding-bottom: 16px;
-}
-
-.khas-bottom-leaf-container {
-  margin-bottom: 12px;
-}
-
-.khas-bottom-leaf {
-  display: block;
-}
-
-.khas-bottom-motto {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.khas-bottom-motto .motto-text {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  font-size: clamp(16px, 2.2vw, 20px);
-  font-weight: 600;
-  color: #bf9252;
-  letter-spacing: 0.02em;
-}
-
-.khas-bottom-motto .motto-divider {
-  display: block;
-  opacity: 0.8;
+  margin-top: 8px;
+  /* Reduced from 16px */
+  padding-bottom: 8px;
+  /* Reduced from 16px */
 }
 
 /* Responsiveness */
