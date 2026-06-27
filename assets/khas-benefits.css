@@ -157,12 +157,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 100;
   /* Render on top of everything */
   box-shadow: 0 0 0 3px #0c0b0a;
   /* Extra background to ensure no border shows through */
   clip-path: none;
   /* Ensure no clipping */
+  pointer-events: auto;
+  /* Ensure badge is interactive */
+  margin-top: -27px;
+  /* Move badge up by half its height to straddle the border */
 }
 
 .khas-card-badge::before {
