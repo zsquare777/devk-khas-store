@@ -35,6 +35,11 @@
   align-items: center !important;
   justify-content: space-between !important;
   position: relative !important;
+  gap: 0 !important;
+}
+
+.header--middle-center > * {
+  flex: 0 0 auto;
 }
 
 .header--middle-center .header__inline-menu {
@@ -42,7 +47,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 20px;
+  flex: 1;
 }
 
 .header--middle-center .header__heading-link {
@@ -50,6 +55,7 @@
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 10 !important;
+  flex: 0 0 auto !important;
 }
 
 .header__menu-left,
@@ -95,5 +101,9 @@
   .header--middle-center .header__heading-link {
     position: static !important;
     transform: none !important;
+  }
+
+  .header--middle-center .header__inline-menu {
+    display: none;
   }
 }
