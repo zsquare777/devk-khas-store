@@ -148,6 +148,7 @@
   flex-shrink: 0;
 }
 
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .khas-about-section {
