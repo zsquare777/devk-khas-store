@@ -9,7 +9,8 @@
 }
 
 .khas-benefits-inner {
-  max-width: 1040px; /* Reduced width for a more compact and elegant design */
+  max-width: 1040px;
+  /* Reduced width for a more compact and elegant design */
   margin: 0 auto;
   padding: 0 40px;
   text-align: center;
@@ -93,9 +94,12 @@
 .khas-benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 24px; /* Reduced gap for a tighter layout */
-  row-gap: 56px;
+  column-gap: 24px;
+  row-gap: 0;
+  /* ← was 56px */
   margin-bottom: 64px;
+  overflow: visible;
+  /* ← added */
 }
 
 /* Card Styling */
@@ -103,7 +107,8 @@
   position: relative;
   background-color: #0c0b0a;
   padding: 32px 24px 24px 24px;
-  margin-top: 24px;
+  margin-top: 56px;
+  /* ← was 24px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,17 +137,20 @@
 /* Card Badge - Centered exactly on the top border, forced to sit above the border overlay */
 .khas-card-badge {
   position: absolute;
-  top: -27px; /* Centered exactly on the top border overlay */
+  top: -27px;
+  /* Centered exactly on the top border overlay */
   left: 50%;
   transform: translateX(-50%);
   width: 54px;
   height: 54px;
-  background-color: #0c0b0a; /* Matches the card background to mask border line underneath */
+  background-color: #0c0b0a;
+  /* Matches the card background to mask border line underneath */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3; /* Render on top of the border overlay (z-index: 1) */
+  z-index: 3;
+  /* Render on top of the border overlay (z-index: 1) */
 }
 
 .khas-card-badge::before {
@@ -207,7 +215,8 @@
 /* Card Content styling - Stacked above border overlay */
 .khas-card-content {
   position: relative;
-  z-index: 2; /* Sits above the border overlay (z-index: 1) */
+  z-index: 2;
+  /* Sits above the border overlay (z-index: 1) */
   width: 100%;
   text-align: center;
   display: flex;
@@ -300,11 +309,13 @@
   .khas-benefits-inner {
     padding: 0 24px;
   }
+
   .khas-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 56px;
   }
+
   .khas-difference-subheading {
     margin-bottom: 48px;
   }
@@ -315,20 +326,25 @@
     grid-template-columns: 1fr;
     row-gap: 48px;
   }
+
   .khas-benefits-inner {
     padding: 0 20px;
   }
+
   .khas-card {
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .khas-difference-subheading {
     margin-bottom: 40px;
   }
+
   .khas-bottom-motto {
     gap: 8px;
   }
+
   .khas-bottom-motto .motto-divider {
     width: 50px;
   }
