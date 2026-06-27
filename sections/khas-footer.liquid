@@ -8,150 +8,263 @@
   background-position: center;
   {% endif %}
 ">
+  <!-- BOTANICAL BACKGROUND OVERLAYS -->
+  <svg class="khas-footer-bg-overlay left" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#bf9252" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.08">
+      <path d="M-20,380 C30,340 70,240 30,160 C10,130 -30,150 -40,220 C-50,290 10,320 30,280" />
+      <path d="M10,210 Q40,180 55,200 Q25,230 10,210 Z" fill="#bf9252" fill-opacity="0.1" />
+      <path d="M22,270 Q60,250 70,280 Q40,305 22,270 Z" fill="#bf9252" fill-opacity="0.1" />
+      <path d="M-10,240 Q15,255 0,280" />
+    </g>
+  </svg>
+
+  <svg class="khas-footer-bg-overlay right" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#bf9252" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.08">
+      <path d="M220,380 C170,340 130,240 170,160 C190,130 230,150 240,220 C250,290 190,320 170,280" />
+      <path d="M190,210 Q160,180 145,200 Q175,230 190,210 Z" fill="#bf9252" fill-opacity="0.1" />
+      <path d="M178,270 Q140,250 130,280 Q160,305 178,270 Z" fill="#bf9252" fill-opacity="0.1" />
+      <path d="M210,240 Q185,255 200,280" />
+    </g>
+  </svg>
+
+  <!-- TOP DIVIDER -->
+  <div class="khas-footer-divider-container">
+    <div class="khas-footer-divider-line"></div>
+    <div class="khas-footer-divider-icon">
+      <svg class="khas-divider-leaf" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21V13" stroke="#bf9252" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M12 13C8.5 12 6.5 10 6.5 7C8.5 7 10.5 9 12 13Z" fill="#bf9252"/>
+        <path d="M12 13C15.5 12 17.5 10 17.5 7C15.5 7 13.5 9 12 13Z" fill="#bf9252"/>
+        <path d="M12 11.5C10.5 9.5 10.5 6.5 12 3.5C13.5 6.5 13.5 9.5 12 11.5Z" fill="#bf9252"/>
+      </svg>
+    </div>
+    <div class="khas-footer-divider-line"></div>
+  </div>
+
   <div class="khas-footer-inner">
+    <div class="khas-footer-grid">
+      
+      <!-- BRAND & DETAILS COLUMN -->
+      <div class="khas-footer-brand-col">
+        <div class="khas-footer-logo">
+          {%- if settings.logo != blank -%}
+            {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+            <img
+              src="{{ settings.logo | image_url: width: 300 }}"
+              alt="{{ logo_alt }}"
+              class="khas-logo-img"
+              loading="lazy"
+            >
+          {%- else -%}
+            <h2 class="khas-logo-text">{{ shop.name }}</h2>
+          {%- endif -%}
+        </div>
+        
+        <p class="khas-footer-desc">
+          Bringing you authentic spices and food products made with quality ingredients and care.
+        </p>
+        
+        <p class="khas-footer-motto">
+          Authentic. Pure. Khas.
+        </p>
 
-    <!-- TOP SECTION -->
-    <div class="khas-footer-top">
+        <div class="khas-footer-badges">
+          <!-- 100% Natural -->
+          <div class="khas-footer-badge">
+            <div class="khas-footer-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22C17.5 22 22 17.5 22 12S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/>
+                <path d="M12 18s2.5-3 2.5-6S12 7.5 12 7.5s-2.5 1.5-2.5 4.5 2.5 6 2.5 6z"/>
+                <path d="M12 14c1.5-1 2-2.5 2-4m-2 4c-1.5-1-2-2.5-2-4"/>
+              </svg>
+            </div>
+            <span class="khas-footer-badge-text">100%<br>Natural</span>
+          </div>
 
-      <!-- LEFT PANEL -->
-      <div class="khas-footer-left">
-        {% if section.settings.badge_image != blank %}
-          <img
-            src="{{ section.settings.badge_image | image_url: width: 120 }}"
-            alt="Badge"
-            class="khas-footer-badge"
-          >
-        {% endif %}
-        {% if section.settings.heading != blank %}
-          <h2 class="khas-footer-heading">{{ section.settings.heading }}</h2>
-        {% endif %}
-        {% if section.settings.subtext != blank %}
-          <p class="khas-footer-subtext">{{ section.settings.subtext }}</p>
-        {% endif %}
-        {% if section.settings.btn_text != blank %}
-          <a href="{{ section.settings.btn_link }}" class="khas-footer-btn">
-            {{ section.settings.btn_text }}
-          </a>
-        {% endif %}
+          <!-- Premium Quality -->
+          <div class="khas-footer-badge">
+            <div class="khas-footer-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9h12a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5v-3a1 1 0 0 1 1-1z"/>
+                <path d="M9 18v2h6v-2"/>
+                <path d="M18 4.5L12 9.5"/>
+              </svg>
+            </div>
+            <span class="khas-footer-badge-text">Premium<br>Quality</span>
+          </div>
+
+          <!-- Trusted Brand -->
+          <div class="khas-footer-badge">
+            <div class="khas-footer-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="9" r="5"/>
+                <path d="M9 13.5L7 20l5-2.5 5 2.5-2-6.5"/>
+              </svg>
+            </div>
+            <span class="khas-footer-badge-text">Trusted<br>Brand</span>
+          </div>
+
+          <!-- Made in Canada -->
+          <div class="khas-footer-badge">
+            <div class="khas-footer-badge-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3c.07 0 .14.07.14.15v2.2a9.63 9.63 0 0 0 1.29-.29l-.15-.96c0-.07.07-.15.15-.15h.14c.07 0 .15.08.15.15l.36 1c.36 0 .64.07 1 .15l-.5-.72a.15.15 0 0 1 .08-.22l.07-.07c.07-.08.15 0 .22.07l.86 1.22c.21.07.43.21.64.29l-.71-1a.15.15 0 0 1 .07-.22l.14-.14c.07-.08.15 0 .22.07l1.07 1.5c.07.15 0 .36-.14.36l-1.43.43c0 .29-.07.5-.07.79l1.36-.22c.07 0 .14.07.14.15v.21c0 .08-.07.15-.14.15l-1.43.22c0 .28-.07.5-.07.79l1 1c.07.07.07.14 0 .21l-.14.15c-.07.07-.15.07-.22 0l-.93-.93c-.28.29-.57.57-.86.79l.64 1.43c0 .07 0 .14-.07.14h-.21c-.07 0-.15-.07-.15-.14l-.43-1.08c-.5.15-1 .22-1.5.29v1.93c0 .07-.07.15-.14.15h-.29c-.07 0-.14-.08-.14-.15v-1.93c-.5-.07-1-.14-1.5-.29l-.43 1.08c0 .07-.07.14-.15.14h-.21c-.07 0-.07-.07-.07-.14l.64-1.43c-.29-.22-.58-.5-.86-.79l-.93.93c-.07.07-.15.07-.22 0l-.14-.15c-.07-.07-.07-.14 0-.21l1-1c-.07-.29-.07-.5-.07-.79l-1.43-.22c-.07 0-.14-.07-.14-.15v-.21c0-.08.07-.15.14-.15l1.36.22c0-.29-.07-.5-.07-.79l-1.43-.43c-.14 0-.21-.21-.14-.36l1.07-1.5c.07-.07.15-.07.22-.07l.14.14c.07.15.07.22.07.22l-.71 1.22c.21-.08.43-.22.64-.29l.86-1.22c.07-.07.15-.15.22-.07l.07.07a.15.15 0 0 1 .08.22l-.5.72c.36-.08.64-.15 1-.15l.36-1c0-.07.08-.15.15-.15h.14c.07 0 .14.07.14.15l-.15.96c.5.08 1 .15 1.5.29V3.15c0-.08.07-.15.14-.15z"/>
+              </svg>
+            </div>
+            <span class="khas-footer-badge-text">Made in<br>Canada</span>
+          </div>
+        </div>
       </div>
+
+      <!-- VERTICAL DIVIDER -->
+      <div class="khas-footer-vertical-divider"></div>
 
       <!-- LINK COLUMNS -->
-      <div class="khas-footer-columns">
-        {% for i in (1..3) %}
-          {% assign col_title_key = 'col' | append: i | append: '_title' %}
-          {% assign col_menu_key  = 'col' | append: i | append: '_menu' %}
-          {% assign col_title = section.settings[col_title_key] %}
-          {% assign col_menu  = section.settings[col_menu_key] %}
-          {% if col_title != blank or col_menu != blank %}
-            <div class="khas-footer-col">
-              {% if col_title != blank %}
-                <h4 class="khas-footer-col-title">{{ col_title }}</h4>
-              {% endif %}
-              {% if col_menu != blank %}
-                {% assign linklist = linklists[col_menu] %}
-                {% if linklist != blank %}
-                  <ul class="khas-footer-col-links">
-                    {% for link in linklist.links %}
-                      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              {% endif %}
-            </div>
-          {% endif %}
-        {% endfor %}
+      {%- for i in (1..3) -%}
+        {%- assign col_title_key = 'col' | append: i | append: '_title' -%}
+        {%- assign col_menu_key  = 'col' | append: i | append: '_menu' -%}
+        {%- assign col_title = section.settings[col_title_key] -%}
+        {%- assign col_menu  = section.settings[col_menu_key] -%}
+        
+        <div class="khas-footer-col">
+          <h3 class="khas-footer-title">{{ col_title }}</h3>
+          <ul class="khas-footer-links">
+            {%- if col_menu != blank and linklists[col_menu] != blank -%}
+              {%- for link in linklists[col_menu].links -%}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {%- endfor -%}
+            {%- else -%}
+              {%- if i == 1 -%}
+                <li><a href="/collections/all">All Products</a></li>
+                <li><a href="/collections/bestsellers">Bestsellers</a></li>
+                <li><a href="/collections/new-arrivals">New Arrivals</a></li>
+                <li><a href="/collections/spices-seasonings">Spices & Seasonings</a></li>
+                <li><a href="/collections/rice-grains">Rice & Grains</a></li>
+                <li><a href="/collections/flours">Flours</a></li>
+                <li><a href="/collections/cooking-essentials">Cooking Essentials</a></li>
+                <li><a href="/collections/gift-packs">Gift Packs</a></li>
+                <li><a href="/collections/sale">Sale</a></li>
+              {%- elsif i == 2 -%}
+                <li><a href="/pages/about-us">About Us</a></li>
+                <li><a href="/pages/our-story">Our Story</a></li>
+                <li><a href="/pages/why-khas">Why Khas?</a></li>
+                <li><a href="/blogs/news">Blog</a></li>
+                <li><a href="/pages/careers">Careers</a></li>
+                <li><a href="/pages/wholesale">Wholesale</a></li>
+                <li><a href="/pages/contact-us">Contact Us</a></li>
+              {%- elsif i == 3 -%}
+                <li><a href="/pages/shipping-delivery">Shipping & Delivery</a></li>
+                <li><a href="/pages/returns-refunds">Returns & Refunds</a></li>
+                <li><a href="/pages/payment-options">Payment Options</a></li>
+                <li><a href="/pages/faqs">FAQs</a></li>
+                <li><a href="/pages/track-order">Track Your Order</a></li>
+                <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/pages/terms-conditions">Terms & Conditions</a></li>
+              {%- endif -%}
+            {%- endif -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+
+      <!-- VERTICAL DIVIDER -->
+      <div class="khas-footer-vertical-divider"></div>
+
+      <!-- CONNECT & NEWSLETTER COLUMN -->
+      <div class="khas-footer-connect-col">
+        <h3 class="khas-footer-title">Stay Connected</h3>
+        
+        <p class="khas-footer-connect-text">
+          Subscribe to our newsletter and get the latest updates, offers & recipes.
+        </p>
+
+        {%- form 'customer', id: 'ContactFooter', class: 'khas-footer-newsletter' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="khas-newsletter-field">
+            <input
+              id="NewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              value="{{ form.email }}"
+              placeholder="Enter your email"
+              required
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+            >
+            <button type="submit" name="commit" id="Subscribe" aria-label="Subscribe">
+              <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7H17M17 7L11 1M17 7L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          {%- if form.posted_successfully? -%}
+            <p class="khas-newsletter-message success" id="ContactFooter-success" tabindex="-1">Thank you for subscribing!</p>
+          {%- elsif form.errors -%}
+            <p class="khas-newsletter-message error" id="ContactFooter-error">Something went wrong. Please check your email and try again.</p>
+          {%- endif -%}
+        {%- endform -%}
+
+        <div class="khas-footer-socials">
+          <a href="{{ section.settings.facebook_url | default: 'https://www.facebook.com' }}" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="{{ section.settings.instagram_url | default: 'https://www.instagram.com' }}" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="{{ section.settings.youtube_url | default: 'https://www.youtube.com' }}" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2a2.9 2.9 0 00-2-1C17.4 4.8 12 4.8 12 4.8s-5.4 0-7 .2a2.9 2.9 0 00-2 1C2.4 6.6 2.2 8 2.2 8S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2a3 3 0 002 1c1.6.1 6.9.2 6.9.2s5.4 0 7-.2a2.9 2.9 0 002-1c.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.8V9.1l5.6 2.9-5.6 2.8z"/></svg>
+          </a>
+          <a href="{{ section.settings.tiktok_url | default: 'https://www.tiktok.com' }}" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3h-3v11.4a2.4 2.4 0 11-2.4-2.4c.2 0 .5 0 .7.1V9a5.7 5.7 0 101.7 4V3h3z"/></svg>
+          </a>
+        </div>
+
+        <div class="khas-footer-accept">
+          <h4 class="khas-footer-accept-title">We Accept</h4>
+          <div class="khas-footer-accept-line"></div>
+          <div class="khas-footer-payments">
+            <span class="khas-footer-payment-card" title="Visa">
+              <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="3" fill="#fff"/><path d="M15.8 16.4h-2.1l1.3-8h2.1l-1.3 8zm8.6-7.8c-.4-.15-.9-.3-1.6-.3-1.8 0-3 .95-3 2.3 0 1 .9 1.55 1.6 1.9.7.35.95.58.95.9 0 .48-.57.7-1.1.7-.74 0-1.13-.1-1.73-.37l-.24-.11-.26 1.6c.43.2 1.22.37 2.04.38 1.9 0 3.14-.93 3.15-2.38 0-.79-.48-1.4-1.53-1.9-.64-.32-1.03-.53-1.03-.86 0-.29.33-.6 1.05-.6.6 0 1.03.13 1.37.27l.16.08.25-1.6zm4.8-.2h-1.4c-.43 0-.75.12-.94.57l-2.66 6.4H26l.43-1.2h2.32l.25 1.2H31l-1.76-8zm-2.72 4.55l.72-1.95.18-.5.1.45.34 2h-1.34zm-11.1-4.55l-1.78 5.47-.19-.96-.63-3.24c-.11-.44-.43-.57-.82-.59h-2.9l-.03.13c.7.18 1.33.44 1.9.77l1.6 6.42h2.12l3.13-8h-2.1z" fill="#1A1F71"/></svg>
+            </span>
+            <span class="khas-footer-payment-card" title="Mastercard">
+              <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="3" fill="#fff"/><circle cx="15" cy="12" r="6" fill="#EB001B"/><circle cx="23" cy="12" r="6" fill="#F79E1B"/><path d="M19 7.8a6 6 0 010 8.4A6 6 0 0119 7.8z" fill="#FF5F00"/></svg>
+            </span>
+            <span class="khas-footer-payment-card" title="Amex">
+              <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="3" fill="#2557D6"/><path d="M9 9h2.2l.8 2 .8-2H15v-.01L13.5 13h-1.6L10.4 9.5V13H9V9zm6 0h4v1.2h-2.5v.8h2.4v1.1h-2.4v.8H19V14h-4V9zm4.5 0h1.7l1 1.6L23.2 9H25l-1.8 2.5 1.9 2.5h-1.8l-1.1-1.7-1.1 1.7H19l1.9-2.5L19 9h.5z" fill="#fff"/></svg>
+            </span>
+            <span class="khas-footer-payment-card" title="Apple Pay">
+              <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="3" fill="#fff"/><path d="M14.3 8.5c-.4.5-1 .9-1.7.85-.08-.7.26-1.44.66-1.9.4-.48 1.1-.88 1.67-.9.07.73-.22 1.45-.63 1.95zm.62 1c-.94-.05-1.74.53-2.19.53-.45 0-1.12-.5-1.86-.49-1.96.03-3.74 1.74-3.74 4.97 0 2.07.82 4.3 1.84 5.72.87 1.22 1.62 1.77 2.4 1.77.82 0 1.17-.5 2.18-.5 1.03 0 1.3.49 2.2.49.8 0 1.56-.6 2.43-1.82.4-.57.7-1.2.9-1.76-2.1-.8-2.44-3.77-.36-4.92-.56-.77-1.43-1.04-1.8-1.04l-.8.05z" fill="#111"/></svg>
+            </span>
+            <span class="khas-footer-payment-card" title="PayPal">
+              <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="3" fill="#fff"/><path d="M23.5 8c.5 1.5-.2 3.5-2.5 3.5H19l-.8 4H16l1.5-8h4.5c1 0 1.8.3 1.5.5z" fill="#009CDE"/><path d="M21 8c.3 1.2-.5 3-2.5 3H16.5L16 14H14l1.5-8H20c.8 0 1.3.3 1 0z" fill="#003087"/></svg>
+            </span>
+          </div>
+        </div>
       </div>
 
     </div>
+  </div>
 
-    <!-- DIVIDER -->
-    <div class="khas-footer-divider"></div>
-
-    <!-- MIDDLE BAR -->
-    <div class="khas-footer-mid">
-      <div class="khas-footer-mid-left">
-        {% if section.settings.copyright != blank %}
-          <span class="khas-footer-copyright">{{ section.settings.copyright }}</span>
-        {% endif %}
-      </div>
-      <!-- PAYMENT ICONS -->
-      <div class="khas-footer-payments">
-        {% if section.settings.show_visa %}
-          <span class="khas-footer-payment-icon" title="Visa">
-            <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="4" fill="#fff"/><path d="M15.8 16.4h-2.1l1.3-8h2.1l-1.3 8zm8.6-7.8c-.4-.15-.9-.3-1.6-.3-1.8 0-3 .95-3 2.3 0 1 .9 1.55 1.6 1.9.7.35.95.58.95.9 0 .48-.57.7-1.1.7-.74 0-1.13-.1-1.73-.37l-.24-.11-.26 1.6c.43.2 1.22.37 2.04.38 1.9 0 3.14-.93 3.15-2.38 0-.79-.48-1.4-1.53-1.9-.64-.32-1.03-.53-1.03-.86 0-.29.33-.6 1.05-.6.6 0 1.03.13 1.37.27l.16.08.25-1.6zm4.8-.2h-1.4c-.43 0-.75.12-.94.57l-2.66 6.4H26l.43-1.2h2.32l.25 1.2H31l-1.76-8zm-2.72 4.55l.72-1.95.18-.5.1.45.34 2h-1.34zm-11.1-4.55l-1.78 5.47-.19-.96-.63-3.24c-.11-.44-.43-.57-.82-.59h-2.9l-.03.13c.7.18 1.33.44 1.9.77l1.6 6.42h2.12l3.13-8h-2.1z" fill="#1A1F71"/></svg>
-          </span>
-        {% endif %}
-        {% if section.settings.show_mastercard %}
-          <span class="khas-footer-payment-icon" title="Mastercard">
-            <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="4" fill="#fff"/><circle cx="15" cy="12" r="6" fill="#EB001B"/><circle cx="23" cy="12" r="6" fill="#F79E1B"/><path d="M19 7.8a6 6 0 010 8.4A6 6 0 0119 7.8z" fill="#FF5F00"/></svg>
-          </span>
-        {% endif %}
-        {% if section.settings.show_applepay %}
-          <span class="khas-footer-payment-icon" title="Apple Pay">
-            <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="4" fill="#fff"/><path d="M14.3 8.5c-.4.5-1 .9-1.7.85-.08-.7.26-1.44.66-1.9.4-.48 1.1-.88 1.67-.9.07.73-.22 1.45-.63 1.95zm.62 1c-.94-.05-1.74.53-2.19.53-.45 0-1.12-.5-1.86-.49-1.96.03-3.74 1.74-3.74 4.97 0 2.07.82 4.3 1.84 5.72.87 1.22 1.62 1.77 2.4 1.77.82 0 1.17-.5 2.18-.5 1.03 0 1.3.49 2.2.49.8 0 1.56-.6 2.43-1.82.4-.57.7-1.2.9-1.76-2.1-.8-2.44-3.77-.36-4.92-.56-.77-1.43-1.04-1.8-1.04l-.8.05z" fill="#111"/></svg>
-          </span>
-        {% endif %}
-        {% if section.settings.show_amex %}
-          <span class="khas-footer-payment-icon" title="Amex">
-            <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="4" fill="#2557D6"/><path d="M9 9h2.2l.8 2 .8-2H15v-.01L13.5 13h-1.6L10.4 9.5V13H9V9zm6 0h4v1.2h-2.5v.8h2.4v1.1h-2.4v.8H19V14h-4V9zm4.5 0h1.7l1 1.6L23.2 9H25l-1.8 2.5 1.9 2.5h-1.8l-1.1-1.7-1.1 1.7H19l1.9-2.5L19 9h.5z" fill="#fff"/></svg>
-          </span>
-        {% endif %}
-        {% if section.settings.show_paypal %}
-          <span class="khas-footer-payment-icon" title="PayPal">
-            <svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="24" rx="4" fill="#fff"/><path d="M23.5 8c.5 1.5-.2 3.5-2.5 3.5H19l-.8 4H16l1.5-8h4.5c1 0 1.8.3 1.5.5z" fill="#009CDE"/><path d="M21 8c.3 1.2-.5 3-2.5 3H16.5L16 14H14l1.5-8H20c.8 0 1.3.3 1 0z" fill="#003087"/></svg>
-          </span>
-        {% endif %}
-      </div>
+  <!-- BOTTOM DIVIDER -->
+  <div class="khas-footer-divider-container bottom">
+    <div class="khas-footer-divider-line"></div>
+    <div class="khas-footer-divider-icon">
+      <svg class="khas-divider-leaf" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21V13" stroke="#bf9252" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M12 13C8.5 12 6.5 10 6.5 7C8.5 7 10.5 9 12 13Z" fill="#bf9252"/>
+        <path d="M12 13C15.5 12 17.5 10 17.5 7C15.5 7 13.5 9 12 13Z" fill="#bf9252"/>
+        <path d="M12 11.5C10.5 9.5 10.5 6.5 12 3.5C13.5 6.5 13.5 9.5 12 11.5Z" fill="#bf9252"/>
+      </svg>
     </div>
+    <div class="khas-footer-divider-line"></div>
+  </div>
 
-    <!-- DIVIDER -->
-    <div class="khas-footer-divider"></div>
-
-    <!-- BOTTOM BAR -->
-    <div class="khas-footer-bottom">
-      {% if section.settings.brand_name != blank %}
-        <span class="khas-footer-brand">{{ section.settings.brand_name }}</span>
-      {% endif %}
-      <div class="khas-footer-socials">
-        {% if section.settings.youtube_url != blank %}
-          <a href="{{ section.settings.youtube_url }}" class="khas-footer-social" aria-label="YouTube" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2a2.9 2.9 0 00-2-1C17.4 4.8 12 4.8 12 4.8s-5.4 0-7 .2a2.9 2.9 0 00-2 1C2.4 6.6 2.2 8 2.2 8S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2a3 3 0 002 1c1.6.1 6.9.2 6.9.2s5.4 0 7-.2a2.9 2.9 0 002-1c.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.8V9.1l5.6 2.9-5.6 2.8z"/></svg>
-          </a>
-        {% endif %}
-        {% if section.settings.facebook_url != blank %}
-          <a href="{{ section.settings.facebook_url }}" class="khas-footer-social" aria-label="Facebook" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-        {% endif %}
-        {% if section.settings.twitter_url != blank %}
-          <a href="{{ section.settings.twitter_url }}" class="khas-footer-social" aria-label="X / Twitter" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 5H21l-5.6 6.4L22 19h-5.1l-3.8-5-4.4 5H6l6-6.8L2 5h5.3l3.5 4.6L18.3 5zm-1 12.3h1.5L6.7 6.5H5.1l12.2 10.8z"/></svg>
-          </a>
-        {% endif %}
-        {% if section.settings.linkedin_url != blank %}
-          <a href="{{ section.settings.linkedin_url }}" class="khas-footer-social" aria-label="LinkedIn" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zm2-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
-          </a>
-        {% endif %}
-        {% if section.settings.tiktok_url != blank %}
-          <a href="{{ section.settings.tiktok_url }}" class="khas-footer-social" aria-label="TikTok" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3h-3v11.4a2.4 2.4 0 11-2.4-2.4c.2 0 .5 0 .7.1V9a5.7 5.7 0 101.7 4V3h3z"/></svg>
-          </a>
-        {% endif %}
-        {% if section.settings.instagram_url != blank %}
-          <a href="{{ section.settings.instagram_url }}" class="khas-footer-social" aria-label="Instagram" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-        {% endif %}
-      </div>
-    </div>
-
-    {% if section.settings.legal_text != blank %}
-      <div class="khas-footer-legal">
-        <p>{{ section.settings.legal_text }}</p>
-      </div>
-    {% endif %}
-
+  <!-- COPYRIGHT -->
+  <div class="khas-footer-bottom-bar">
+    <span class="khas-footer-copyright-text">
+      {{ section.settings.copyright | default: '© 2025 Khas Foods Ltd. All Rights Reserved.' }}
+    </span>
   </div>
 </footer>
 
