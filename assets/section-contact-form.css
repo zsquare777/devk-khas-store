@@ -97,36 +97,69 @@
 
 /* Contact Info Card */
 .khas-contact-card {
-  background: #f8f6f4;
+  position: relative;
+  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%);
   border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   height: fit-content;
-  color: #000000;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.khas-contact-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-contact-overlay.left {
+  left: 0;
+}
+
+.khas-contact-overlay.right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.khas-contact-inner {
+  position: relative;
+  z-index: 2;
+  padding: 48px 40px;
 }
 
 .khas-contact-header {
-  margin-bottom: 35px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(250, 189, 47, 0.2);
+}
+
+.khas-contact-crown {
+  display: block;
+  margin: 0 auto 16px;
 }
 
 .khas-contact-title {
-  font-family: inherit;
-  font-size: 24px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 22px;
   font-weight: 700;
-  color: #111;
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05em;
   margin: 0 0 8px 0;
   line-height: 1.2;
 }
 
 .khas-contact-subtitle {
-  font-family: inherit;
-  font-size: 15px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
   font-weight: 400;
-  color: #666;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0;
 }
 
