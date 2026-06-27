@@ -99,7 +99,8 @@
   column-gap: 24px;
   row-gap: 0;
   /* ← was 56px */
-  margin-bottom: 64px;
+  margin-bottom: 32px;
+  /* Reduced from 64px to make section smaller */
   overflow: visible;
   /* ← added */
   position: relative;
