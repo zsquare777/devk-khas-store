@@ -2,7 +2,7 @@
 
 .khas-about-section {
   position: relative;
-  background: radial-gradient(circle at center, #ffffff 0%, #e6d6c6 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #ffffff 100%);
   min-height: 100vh;
   padding: 100px 20px;
   overflow: hidden;
