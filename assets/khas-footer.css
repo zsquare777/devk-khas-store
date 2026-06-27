@@ -15,7 +15,7 @@
   color: #fff;
   font-family: 'Inter', -apple-system, sans-serif;
   border-top: 1px solid var(--khas-border-gold);
-  padding: 48px 0;
+  padding: 40px 0;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -339,13 +339,16 @@
   .khas-footer-inner {
     padding: 0 30px;
   }
+
   .khas-footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
+
   .khas-footer-brand-col {
     grid-column: span 2;
   }
+
   .khas-footer-connect-col {
     grid-column: span 2;
     margin-top: 12px;
@@ -359,21 +362,26 @@
   .khas-footer {
     padding: 36px 0;
   }
+
   .khas-footer-inner {
     padding: 0 20px;
   }
+
   .khas-footer-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .khas-footer-brand-col {
     grid-column: span 1;
   }
+
   .khas-footer-connect-col {
     grid-column: span 1;
     border-top: 1px solid var(--khas-border-gold);
     padding-top: 20px;
   }
+
   .khas-footer-bottom-bar {
     flex-direction: column;
     align-items: flex-start;
