@@ -7,6 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -97,7 +98,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "middle-center",
+        "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
