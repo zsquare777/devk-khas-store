@@ -325,7 +325,8 @@
 @media (max-width: 650px) {
   .khas-benefits-grid {
     grid-template-columns: 1fr;
-    row-gap: 48px;
+    row-gap: 0;
+    /* ← was 48px */
   }
 
   .khas-benefits-inner {
