@@ -148,7 +148,7 @@
   /* Position at the visual border line (24px border overlay) */
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Center horizontally and move up by 50% of badge height to straddle border */
+  /* Center badge on the border line - half above, half below */
   width: 54px;
   height: 54px;
   background-color: #0c0b0a;
@@ -165,8 +165,6 @@
   /* Ensure no clipping */
   pointer-events: auto;
   /* Ensure badge is interactive */
-  margin-top: -27px;
-  /* Move badge up by half its height to straddle the border */
 }
 
 .khas-card-badge::before {
