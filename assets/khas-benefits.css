@@ -85,7 +85,7 @@
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: clamp(14px, 1.8vw, 16px);
   color: #a3a3a3;
-  margin: 0 auto 10px;
+  margin: 0 auto 4px;
   /* Reduced from 56px to 16px for smaller gap */
   max-width: 600px;
   font-weight: 400;
