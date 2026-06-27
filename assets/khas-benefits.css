@@ -130,6 +130,8 @@
   /* Reduced from -6px for more subtle animation */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   /* Reduced shadow for more subtle effect */
+  background-color: #0c0b0a !important;
+  /* Explicitly set to prevent any theme hover color changes */
 }
 
 /* Absolute Overlay Border to prevent stacking/clipping issues */
