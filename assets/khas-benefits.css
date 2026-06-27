@@ -142,8 +142,8 @@
 /* Card Badge - Centered exactly on the top border, half above and half inside */
 .khas-card-badge {
   position: absolute;
-  top: -27px;
-  /* Half of badge height (54px/2 = 27px) to straddle the card top edge */
+  top: -51px;
+  /* Position to straddle the visual border (24px border overlay + 27px half-badge) */
   left: 50%;
   transform: translateX(-50%);
   width: 54px;
