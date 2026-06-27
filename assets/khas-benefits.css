@@ -85,7 +85,8 @@
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: clamp(14px, 1.8vw, 16px);
   color: #a3a3a3;
-  margin: 0 auto 56px;
+  margin: 0 auto 16px;
+  /* Reduced from 56px to 16px for smaller gap */
   max-width: 600px;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -125,8 +126,10 @@
 }
 
 .khas-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(197, 168, 128, 0.08);
+  transform: translateY(-3px);
+  /* Reduced from -6px for more subtle animation */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  /* Reduced shadow for more subtle effect */
 }
 
 /* Absolute Overlay Border to prevent stacking/clipping issues */
