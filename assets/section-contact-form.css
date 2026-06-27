@@ -97,108 +97,117 @@
 
 /* Contact Info Card */
 .khas-contact-card {
-  background: #f8f6f4;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
   height: fit-content;
+  border: 1px solid #f0ede8;
 }
 
 .khas-contact-header {
-  margin-bottom: 35px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0ede8;
 }
 
 .khas-contact-title {
-  font-family: inherit;
-  font-size: 24px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 20px;
   font-weight: 700;
   color: #111;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
-  margin: 0 0 8px 0;
+  letter-spacing: 0.02em;
+  margin: 0 0 6px 0;
   line-height: 1.2;
 }
 
 .khas-contact-subtitle {
-  font-family: inherit;
-  font-size: 15px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
   font-weight: 400;
-  color: #666;
+  color: #888;
   margin: 0;
 }
 
 .khas-contact-details {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 12px;
 }
 
-.khas-contact-item {
+.khas-contact-link-item {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
+  padding: 16px;
+  background: #faf9f7;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
 }
 
-.khas-contact-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  background: #be9051;
+.khas-contact-link-item:hover {
+  background: #f5f3ef;
+  border-color: #e8e4de;
+  transform: translateX(4px);
+}
+
+.khas-contact-item-static {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #faf9f7;
   border-radius: 12px;
+}
+
+.khas-contact-icon-wrapper {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  transition: transform 0.2s ease, background 0.2s ease;
+  color: #c5a45f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.khas-contact-icon:hover {
-  transform: translateY(-2px);
-  background: #a97d43;
-}
-
-.khas-contact-icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.khas-contact-content {
+.khas-contact-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .khas-contact-label {
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  color: #be9051;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 0 0 8px 0;
+  letter-spacing: 0.08em;
 }
 
 .khas-contact-value {
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.khas-contact-link {
-  font-family: inherit;
-  font-size: 15px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
   font-weight: 500;
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  color: #111;
+  line-height: 1.4;
 }
 
-.khas-contact-link:hover {
-  color: #a97d43;
-  text-decoration: underline;
+.khas-contact-arrow {
+  flex-shrink: 0;
+  color: #c5a45f;
+  transition: transform 0.25s ease;
+}
+
+.khas-contact-link-item:hover .khas-contact-arrow {
+  transform: translateX(4px);
 }
 
 /* Contact Form Wrapper */
@@ -404,46 +413,49 @@
   }
 
   .khas-contact-card {
-    padding: 30px;
+    padding: 28px;
+    border-radius: 16px;
   }
 
   .khas-contact-header {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
   }
 
   .khas-contact-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .khas-contact-subtitle {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .khas-contact-details {
-    gap: 22px;
+    gap: 10px;
   }
 
-  .khas-contact-icon {
-    width: 44px;
-    height: 44px;
+  .khas-contact-link-item,
+  .khas-contact-item-static {
+    padding: 14px;
+    gap: 14px;
   }
 
-  .khas-contact-icon svg {
-    width: 20px;
-    height: 20px;
+  .khas-contact-icon-wrapper {
+    width: 36px;
+    height: 36px;
   }
 
   .khas-contact-label {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .khas-contact-value {
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  .khas-contact-link {
-    font-size: 14px;
+  .khas-contact-arrow {
+    width: 14px;
+    height: 14px;
   }
 
   .khas-contact-form-wrapper {
