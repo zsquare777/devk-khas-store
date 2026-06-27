@@ -1,17 +1,21 @@
 :root {
-  --khas-gold: #c5a45f;
-  --khas-gold-light: #dfc285;
+  --khas-gold: #fabd2f;
+  /* Updated to match Khas benefits theme */
+  --khas-gold-light: #ffe066;
   --khas-gold-dark: #bf9252;
-  --khas-black: #0a0a0a;
-  --khas-dark-grey: #121212;
-  --khas-text-muted: rgba(255, 255, 255, 0.7);
-  --khas-border-gold: rgba(197, 164, 95, 0.3);
+  --khas-black: #0c0b0a;
+  /* Updated to match Khas benefits background */
+  --khas-dark-grey: #070605;
+  --khas-text-muted: rgba(255, 255, 255, 0.6);
+  --khas-border-gold: rgba(250, 189, 47, 0.25);
+  /* Updated to use new gold */
 }
 
 .khas-footer {
   position: relative;
   width: 100%;
-  background-color: var(--khas-black);
+  background: radial-gradient(circle at center, #0c0b0a 0%, #070605 100%);
+  /* Updated to match Khas benefits gradient */
   color: #fff;
   font-family: 'Inter', -apple-system, sans-serif;
   overflow: hidden;
@@ -27,6 +31,8 @@
   height: 400px;
   pointer-events: none;
   z-index: 1;
+  opacity: 0.6;
+  /* Reduced opacity for more minimalist look */
 }
 
 .khas-footer-bg-overlay.left {
@@ -59,7 +65,8 @@
 .khas-footer-divider-line {
   flex: 1;
   height: 1px;
-  background: var(--khas-border-gold);
+  background: linear-gradient(90deg, transparent, var(--khas-border-gold), transparent);
+  /* Updated to use gradient for more elegant look */
 }
 
 .khas-footer-divider-icon {
@@ -70,8 +77,9 @@
 }
 
 .khas-divider-leaf {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  /* Reduced from 24px for more minimalist look */
 }
 
 /* INNER CONTAINER & GRID */
@@ -115,16 +123,20 @@
 }
 
 .khas-logo-img {
-  max-width: 160px;
+  max-width: 140px;
   height: auto;
   display: block;
+  opacity: 0.9;
+  /* Added subtle opacity for elegance */
 }
 
 .khas-logo-text {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--khas-gold-light);
+  color: var(--khas-gold);
   margin: 0;
+  letter-spacing: 0.05em;
+  /* Added letter spacing for elegance */
 }
 
 .khas-footer-desc {
@@ -173,12 +185,14 @@
   height: 36px;
   /* Reduced from 42px */
   border-radius: 50%;
-  border: 1px solid rgba(197, 164, 95, 0.45);
+  border: 1px solid rgba(250, 189, 47, 0.35);
+  /* Updated to use new gold with lower opacity */
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--khas-gold-dark);
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: all 0.3s ease;
+  /* Improved transition */
 }
 
 .khas-footer-badge-icon svg {
@@ -197,8 +211,10 @@
 }
 
 .khas-footer-badge:hover .khas-footer-badge-icon {
-  border-color: #fff;
-  background-color: rgba(197, 164, 95, 0.08);
+  border-color: var(--khas-gold);
+  background-color: rgba(250, 189, 47, 0.1);
+  transform: scale(1.05);
+  /* Added subtle scale animation */
 }
 
 /* LINK COLUMNS */
@@ -214,10 +230,14 @@
   /* Reduced from 13px */
   font-weight: 600;
   color: var(--khas-gold);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
+  /* Reduced from 0.15em for cleaner look */
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 2px;
+  padding-bottom: 8px;
+  /* Increased from 2px */
+  border-bottom: 1px solid rgba(250, 189, 47, 0.2);
+  /* Added subtle border for elegance */
 }
 
 .khas-footer-links {
@@ -240,9 +260,9 @@
 }
 
 .khas-footer-links a:hover {
-  color: var(--khas-gold-light);
-  transform: translateX(2px);
-  transition: all 0.2s ease;
+  color: var(--khas-gold);
+  transform: translateX(3px);
+  transition: all 0.25s ease;
 }
 
 /* STAY CONNECTED COLUMN */
@@ -271,10 +291,14 @@
   align-items: center;
   height: 38px;
   /* Reduced from 42px */
-  border: 1px solid rgba(197, 164, 95, 0.45);
-  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(250, 189, 47, 0.35);
+  /* Updated to use new gold */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Increased background opacity */
   overflow: hidden;
   box-sizing: border-box;
+  border-radius: 4px;
+  /* Added border radius for elegance */
 }
 
 .khas-newsletter-field input {
@@ -304,16 +328,20 @@
   /* Reduced from 48px */
   background-color: var(--khas-gold);
   border: none;
+  border-left: 1px solid rgba(250, 189, 47, 0.35);
+  /* Added left border */
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--khas-black);
   cursor: pointer;
-  transition: background-color 0.25s, color 0.25s;
+  transition: all 0.25s ease;
 }
 
 .khas-newsletter-field button:hover {
   background-color: var(--khas-gold-light);
+  transform: scale(1.05);
+  /* Added subtle scale */
 }
 
 .khas-newsletter-field button svg {
@@ -348,20 +376,23 @@
   height: 32px;
   /* Reduced from 36px */
   border-radius: 50%;
-  border: 1px solid rgba(197, 164, 95, 0.45);
+  border: 1px solid rgba(250, 189, 47, 0.35);
+  /* Updated to use new gold */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--khas-gold-dark);
+  color: var(--khas-gold);
+  /* Changed from gold-dark to gold */
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .khas-footer-socials a:hover {
-  border-color: #fff;
-  color: #fff;
-  background-color: rgba(197, 164, 95, 0.12);
-  transform: translateY(-2px);
+  border-color: var(--khas-gold);
+  color: var(--khas-gold-light);
+  background-color: rgba(250, 189, 47, 0.15);
+  transform: translateY(-3px) scale(1.05);
+  /* Enhanced hover effect */
 }
 
 .khas-footer-socials svg {
@@ -386,15 +417,17 @@
   /* Reduced from 12px */
   font-weight: 600;
   color: var(--khas-gold);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
+  /* Reduced from 0.15em */
   text-transform: uppercase;
   margin: 0;
 }
 
 .khas-footer-accept-line {
-  width: 28px;
+  width: 24px;
   height: 1px;
-  background-color: var(--khas-gold);
+  background: linear-gradient(90deg, var(--khas-gold), transparent);
+  /* Changed to gradient for elegance */
   margin-bottom: 8px;
 }
 
