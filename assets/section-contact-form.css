@@ -102,6 +102,7 @@
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   height: fit-content;
+  color: #000000;
 }
 
 .khas-contact-header {
