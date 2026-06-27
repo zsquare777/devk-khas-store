@@ -19,6 +19,26 @@
   box-sizing: border-box;
 }
 
+/* BOTANICAL OVERLAYS */
+.khas-footer-bg-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-footer-bg-overlay.left {
+  left: 0;
+  transform: scaleX(1);
+}
+
+.khas-footer-bg-overlay.right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
 /* INNER CONTAINER & GRID */
 .khas-footer-inner {
   position: relative;
@@ -246,10 +266,18 @@
 
 .khas-footer-payment-card {
   display: flex;
+  width: 38px;
+  height: 24px;
   border-radius: 3px;
   overflow: hidden;
   opacity: 0.9;
   transition: opacity 0.2s;
+}
+
+.khas-footer-payment-card svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 .khas-footer-payment-card:hover {
