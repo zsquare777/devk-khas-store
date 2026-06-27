@@ -117,8 +117,8 @@
   box-sizing: border-box;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
   overflow: visible;
-  padding-top: 48px;
-  /* Add more top padding to accommodate badge */
+  padding-top: 32px;
+  /* Revert to original padding */
 }
 
 .khas-card:hover {
