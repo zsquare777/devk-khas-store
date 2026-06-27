@@ -114,6 +114,7 @@
   align-items: center;
   box-sizing: border-box;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  overflow: visible;
 }
 
 .khas-card:hover {
@@ -151,6 +152,8 @@
   justify-content: center;
   z-index: 3;
   /* Render on top of the border overlay (z-index: 1) */
+  box-shadow: 0 0 0 3px #0c0b0a;
+  /* Extra background to ensure no border shows through */
 }
 
 .khas-card-badge::before {
