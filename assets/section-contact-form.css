@@ -166,36 +166,33 @@
 .khas-contact-details {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .khas-contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 18px;
+  align-items: center;
+  gap: 16px;
 }
 
 .khas-contact-icon {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  background: #be9051;
+  width: 44px;
+  height: 44px;
+  background: rgba(250, 189, 47, 0.15);
+  border: 1px solid rgba(250, 189, 47, 0.3);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  transition: transform 0.2s ease, background 0.2s ease;
+  color: #fabd2f;
+  transition: all 0.3s ease;
 }
 
 .khas-contact-icon:hover {
+  background: rgba(250, 189, 47, 0.25);
+  border-color: rgba(250, 189, 47, 0.5);
   transform: translateY(-2px);
-  background: #a97d43;
-}
-
-.khas-contact-icon svg {
-  width: 22px;
-  height: 22px;
 }
 
 .khas-contact-content {
@@ -203,35 +200,36 @@
 }
 
 .khas-contact-label {
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  color: #be9051;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fabd2f;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
+  display: block;
 }
 
 .khas-contact-value {
-  font-family: inherit;
+  font-family: 'Inter', -apple-system, sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: #000000 !important;
+  color: #ffffff !important;
   margin: 0;
   line-height: 1.5;
 }
 
 .khas-contact-link {
-  font-family: inherit;
+  font-family: 'Inter', -apple-system, sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #000000 !important;
+  color: #ffffff !important;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .khas-contact-link:hover {
-  color: #a97d43;
+  color: #fabd2f !important;
   text-decoration: underline;
 }
 
@@ -438,38 +436,46 @@
   }
 
   .khas-contact-card {
-    padding: 30px;
+    border-radius: 12px;
+  }
+
+  .khas-contact-overlay {
+    width: 120px;
+  }
+
+  .khas-contact-inner {
+    padding: 36px 24px;
   }
 
   .khas-contact-header {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+  }
+
+  .khas-contact-crown {
+    width: 60px;
+    height: 21px;
   }
 
   .khas-contact-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .khas-contact-subtitle {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .khas-contact-details {
-    gap: 22px;
+    gap: 20px;
   }
 
   .khas-contact-icon {
-    width: 44px;
-    height: 44px;
-  }
-
-  .khas-contact-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   }
 
   .khas-contact-label {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .khas-contact-value {
@@ -481,7 +487,7 @@
   }
 
   .khas-contact-form-wrapper {
-    padding: 30px;
+    padding: 30px 24px;
   }
 
   .khas-form-header {
