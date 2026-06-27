@@ -17,6 +17,8 @@
   position: relative;
   z-index: 2;
   box-sizing: border-box;
+  overflow: visible;
+  /* Ensure badges are not clipped */
 }
 
 /* Side Botanical Overlays */
@@ -146,7 +148,7 @@
   /* Position at the visual border line (24px border overlay) */
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Center horizontally and move up by 50% of badge height */
+  /* Center horizontally and move up by 50% of badge height to straddle border */
   width: 54px;
   height: 54px;
   background-color: #0c0b0a;
