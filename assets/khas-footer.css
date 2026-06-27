@@ -27,6 +27,7 @@
   height: 400px;
   pointer-events: none;
   z-index: 1;
+  opacity: 1;
 }
 
 .khas-footer-bg-overlay.left {
