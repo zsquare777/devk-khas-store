@@ -30,12 +30,26 @@
 }
 
 /* KHAS Centered Logo Header Layout */
-.header__inline-menu {
+.header--middle-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: relative !important;
+}
+
+.header--middle-center .header__inline-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   gap: 20px;
+}
+
+.header--middle-center .header__heading-link {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
 }
 
 .header__menu-left,
@@ -76,5 +90,10 @@
   .header__menu-left,
   .header__menu-right {
     display: none;
+  }
+
+  .header--middle-center .header__heading-link {
+    position: static !important;
+    transform: none !important;
   }
 }
