@@ -8,8 +8,10 @@
 <nav class="header__inline-menu">
   <div class="header__menu-left">
     <ul class="list-menu list-menu--inline" role="list">
+      {%- assign link_count = section.settings.menu.links.size -%}
+      {%- assign mid_point = link_count | divided_by: 2 -%}
       {%- for link in section.settings.menu.links -%}
-        {%- if link.title == 'Shop' or link.title == 'Best Sellers' or link.title == 'About Us' -%}
+        {%- if forloop.index <= mid_point -%}
           <li>
             {%- if link.links != blank -%}
               <header-menu>
@@ -88,7 +90,7 @@
   <div class="header__menu-right">
     <ul class="list-menu list-menu--inline" role="list">
       {%- for link in section.settings.menu.links -%}
-        {%- if link.title == 'Catalog' or link.title == 'Wholesale' or link.title == 'Contact Us' -%}
+        {%- if forloop.index > mid_point -%}
           <li>
             {%- if link.links != blank -%}
               <header-menu>
