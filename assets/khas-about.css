@@ -99,7 +99,7 @@
   margin-top: 60px;
   padding: 60px 40px;
   background: rgba(250, 189, 47, 0.05);
-  border: 1px solid rgba(250, 189, 47, 0.1);
+  border: 1px solid rgba(67, 47, 1, 0.1);
   border-radius: 16px;
 }
 
@@ -135,7 +135,7 @@
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #74591a;
+  color: #fabd2f;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0;
