@@ -10,21 +10,24 @@
 
 .khas-about-overlay {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 200px;
-  height: 100%;
+  height: 400px;
   pointer-events: none;
   z-index: 1;
+  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .khas-about-overlay.left {
-  left: 0;
+  left: 20px;
 }
 
 .khas-about-overlay.right {
-  right: 0;
-  transform: scaleX(-1);
+  right: 20px;
+  transform: translateY(-50%) scaleX(-1);
 }
 
 .khas-about-container {
@@ -156,6 +159,15 @@
 
   .khas-about-overlay {
     width: 120px;
+    height: 240px;
+  }
+
+  .khas-about-overlay.left {
+    left: 10px;
+  }
+
+  .khas-about-overlay.right {
+    right: 10px;
   }
 
   .khas-about-hero {
