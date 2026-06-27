@@ -156,15 +156,6 @@
 
   .khas-about-overlay {
     width: 120px;
-    height: 240px;
-  }
-
-  .khas-about-overlay.left {
-    left: 10px;
-  }
-
-  .khas-about-overlay.right {
-    right: 10px;
   }
 
   .khas-about-hero {
