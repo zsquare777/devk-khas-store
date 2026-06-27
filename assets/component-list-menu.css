@@ -31,15 +31,12 @@
 
 /* KHAS Centered Logo Header Layout */
 .header--middle-center {
-  display: grid !important;
-  grid-template-columns: 1fr auto 1fr !important;
+  display: flex !important;
   align-items: center !important;
+  justify-content: space-between !important;
   position: relative !important;
   gap: 0 !important;
-}
-
-.header--middle-center > * {
-  grid-column: auto;
+  padding: 0 20px !important;
 }
 
 .header--middle-center .header__inline-menu {
@@ -47,13 +44,15 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  grid-column: 1 / -1;
+  padding: 0 180px;
 }
 
 .header--middle-center .header__heading-link {
-  grid-column: 2;
-  justify-self: center;
-  z-index: 10;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  margin: 0 !important;
 }
 
 .header__menu-left,
@@ -97,10 +96,15 @@
   }
 
   .header--middle-center .header__heading-link {
-    grid-column: auto;
+    position: static !important;
+    transform: none !important;
   }
 
   .header--middle-center .header__inline-menu {
     display: none;
+  }
+
+  .header--middle-center {
+    padding: 0 !important;
   }
 }
