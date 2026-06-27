@@ -1,0 +1,231 @@
+/* Khas About Us Section */
+
+.khas-about-section {
+  position: relative;
+  background: radial-gradient(circle at center, #ffffff 0%, #0c0b0a 100%);
+  min-height: 100vh;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.khas-about-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-about-overlay.left {
+  left: 0;
+}
+
+.khas-about-overlay.right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.khas-about-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.khas-about-hero {
+  text-align: center;
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(250, 189, 47, 0.15);
+}
+
+.khas-about-crown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.khas-about-title {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+}
+
+.khas-about-subtitle {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Content Section */
+.khas-about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.khas-about-text-block {
+  padding: 0 40px;
+}
+
+.khas-about-text {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Values Section */
+.khas-about-values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 60px;
+  padding: 60px 40px;
+  background: rgba(250, 189, 47, 0.05);
+  border: 1px solid rgba(250, 189, 47, 0.1);
+  border-radius: 16px;
+}
+
+.khas-value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  flex: 1;
+  max-width: 200px;
+}
+
+.khas-value-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(250, 189, 47, 0.1);
+  border: 1px solid rgba(250, 189, 47, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.khas-value-icon:hover {
+  background: rgba(250, 189, 47, 0.2);
+  border-color: rgba(250, 189, 47, 0.5);
+  transform: translateY(-4px);
+}
+
+.khas-value-title {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fabd2f;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.khas-value-divider {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(250, 189, 47, 0.3), transparent);
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .khas-about-section {
+    padding: 60px 16px;
+  }
+
+  .khas-about-overlay {
+    width: 120px;
+  }
+
+  .khas-about-hero {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+  }
+
+  .khas-about-crown svg {
+    width: 70px;
+    height: 24px;
+  }
+
+  .khas-about-title {
+    font-size: 36px;
+  }
+
+  .khas-about-subtitle {
+    font-size: 14px;
+  }
+
+  .khas-about-content {
+    gap: 30px;
+  }
+
+  .khas-about-text-block {
+    padding: 0 16px;
+  }
+
+  .khas-about-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .khas-about-values {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 24px;
+  }
+
+  .khas-value-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(250, 189, 47, 0.3), transparent);
+  }
+
+  .khas-value-item {
+    max-width: 100%;
+  }
+
+  .khas-value-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .khas-value-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .khas-value-title {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .khas-about-title {
+    font-size: 28px;
+  }
+
+  .khas-about-text {
+    font-size: 15px;
+  }
+}
