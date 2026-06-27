@@ -144,7 +144,7 @@
 .khas-value-divider {
   width: 1px;
   height: 60px;
-  background: linear-gradient(to bottom, transparent, rgba(250, 189, 47, 0.3), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3), transparent);
   flex-shrink: 0;
 }
 
