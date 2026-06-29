@@ -32,4 +32,9 @@
 /* KHAS Header Menu Font Size */
 .header__menu-item {
   font-size: 1.8rem !important;
+  color: #ffffff !important;
+}
+
+.header__menu-item:hover {
+  color: #fabd2f !important;
 }
