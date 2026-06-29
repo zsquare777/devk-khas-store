@@ -1,0 +1,251 @@
+/* Khas Hero Banner */
+
+.khas-hero {
+  position: relative;
+  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%);
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.khas-hero-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-hero-overlay.left {
+  left: 0;
+}
+
+.khas-hero-overlay.right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.khas-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  min-height: 60rem;
+}
+
+.khas-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.khas-hero__crown {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.khas-hero__rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.khas-hero__stars {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.khas-hero__stars svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #fabd2f;
+}
+
+.khas-hero__rating-text {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.khas-hero__heading {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: clamp(3.2rem, 5vw, 5.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.khas-hero__heading em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #fabd2f;
+}
+
+.khas-hero__subheading {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 48rem;
+  margin: 0;
+}
+
+.khas-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.khas-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 3rem;
+  border-radius: 50px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+}
+
+.khas-hero__btn--primary {
+  background: linear-gradient(135deg, #fabd2f 0%, #c5a45f 100%);
+  color: #0c0b0a;
+  border: none;
+  box-shadow: 0 4px 20px rgba(250, 189, 47, 0.3);
+}
+
+.khas-hero__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(250, 189, 47, 0.4);
+}
+
+.khas-hero__btn--secondary {
+  background: transparent;
+  color: #fabd2f;
+  border: 2px solid #fabd2f;
+}
+
+.khas-hero__btn--secondary:hover {
+  background: rgba(250, 189, 47, 0.1);
+  transform: translateY(-2px);
+}
+
+.khas-hero__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.khas-hero__image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  max-height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(250, 189, 47, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-hero__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive Design */
+@media screen and (max-width: 989px) {
+  .khas-hero {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .khas-hero-overlay {
+    width: 120px;
+  }
+
+  .khas-hero__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 3rem;
+  }
+
+  .khas-hero__image-wrapper {
+    order: -1;
+  }
+
+  .khas-hero__image-container {
+    max-width: 350px;
+    max-height: 280px;
+    padding: 1rem;
+  }
+
+  .khas-hero__content {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .khas-hero__crown {
+    justify-content: center;
+  }
+
+  .khas-hero__rating {
+    justify-content: center;
+  }
+
+  .khas-hero__buttons {
+    justify-content: center;
+  }
+
+  .khas-hero__subheading {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .khas-hero__heading {
+    font-size: 2.4rem;
+  }
+
+  .khas-hero__subheading {
+    font-size: 1.4rem;
+  }
+
+  .khas-hero__btn {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
+  }
+
+  .khas-hero__image-container {
+    max-width: 280px;
+  }
+}
