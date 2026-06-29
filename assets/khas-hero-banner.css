@@ -175,7 +175,7 @@
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
-  transform: scale(1.7) translateY(-20px);
+  transform: scale(1.9) translateY(-20px);
 }
 
 /* Responsive Design */
