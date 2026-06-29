@@ -160,7 +160,7 @@
 .khas-hero__image-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   border-radius: 20px;
   overflow: hidden;
   padding: 2rem;
@@ -169,6 +169,7 @@
 .khas-hero__image {
   width: 100%;
   height: auto;
+  max-height: 550px;
   object-fit: contain;
   display: block;
 }
@@ -195,8 +196,12 @@
   }
 
   .khas-hero__image-container {
-    max-width: 350px;
+    max-width: 500px;
     padding: 1.5rem;
+  }
+
+  .khas-hero__image {
+    max-height: 400px;
   }
 
   .khas-hero__content {
