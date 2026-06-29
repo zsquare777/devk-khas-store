@@ -115,7 +115,7 @@
   }
 
   .spice-benefits-col:not(:last-child) {
-    border-bottom: 1.5px dashed rgba(250, 246, 238, 0.2);
+    border-bottom: 1.5px dashed rgba(250, 189, 47, 0.2);
     padding-bottom: 40px;
   }
 
