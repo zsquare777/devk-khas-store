@@ -2442,12 +2442,12 @@ input[type='checkbox'] {
 }
 
 .header__heading-link:hover .h2 {
-  color: rgb(var(--color-foreground));
+  color: #fabd2f;
 }
 
 .header__heading-link .h2 {
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
+  color: #ffffff;
 }
 
 .header__heading-logo {
@@ -2524,7 +2524,11 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: #ffffff;
+}
+
+.header__icon:hover {
+  color: #fabd2f;
 }
 
 .header__icon span {
