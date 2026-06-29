@@ -173,11 +173,11 @@
 .khas-hero__image {
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 800px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
-  transform: scale(1.8) ;
+  transform: scale(1.1) ;
 }
 
 /* Responsive Design */
