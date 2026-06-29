@@ -1,159 +1,53 @@
-<style>
-  .khas-hero {
-    overflow: hidden;
-  }
-
-  .khas-hero__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 4rem;
-    min-height: 52rem;
-  }
-
-  .khas-hero__content {
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-    padding: 5rem 0 5rem 2rem;
-  }
-
-  .khas-hero__rating {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .khas-hero__stars {
-    display: flex;
-    gap: 0.3rem;
-  }
-
-  .khas-hero__stars svg {
-    width: 1.8rem;
-    height: 1.8rem;
-    fill: #22c55e;
-  }
-
-  .khas-hero__rating-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #444444;
-  }
-
-  .khas-hero__heading {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(3.8rem, 4.5vw, 6.4rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    color: #1a1a1a;
-    margin: 0;
-  }
-
-  .khas-hero__heading em {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-weight: 700;
-  }
-
-  .khas-hero__subheading {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #555555;
-    line-height: 1.65;
-    max-width: 44rem;
-    margin: 0;
-  }
-
-  .khas-hero__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    margin-top: 0.8rem;
-  }
-
-  .khas-hero__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.4rem 3rem;
-    border-radius: 50px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: opacity 0.18s ease;
-    cursor: pointer;
-    letter-spacing: -0.01em;
-  }
-
-  .khas-hero__btn--primary {
-    background-color: #111111;
-    color: #ffffff;
-    border: 0.15rem solid #111111;
-  }
-
-  .khas-hero__btn--secondary {
-    background-color: transparent;
-    color: #111111;
-    border: 0.15rem solid #111111;
-  }
-
-  .khas-hero__btn:hover {
-    opacity: 0.75;
-  }
-
-  .khas-hero__image-wrapper {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .khas-hero__image {
-    width: 100%;
-    height: auto;
-    max-height: 580px;
-    object-fit: contain;
-    object-position: bottom center;
-    display: block;
-  }
-
-  @media screen and (max-width: 989px) {
-    .khas-hero__inner {
-      grid-template-columns: 1fr;
-      min-height: auto;
-      gap: 0;
-    }
-
-    .khas-hero__image-wrapper {
-      order: -1;
-      max-height: 36rem;
-    }
-
-    .khas-hero__content {
-      padding: 3rem 2rem 4rem;
-    }
-  }
-</style>
+{{ 'khas-hero-banner.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .khas-hero-{{ section.id }} {
-    background-color: {{ section.settings.background_color }};
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
 
 <section class="khas-hero khas-hero-{{ section.id }}">
+  
+  <!-- Left Botanical Overlay -->
+  <svg class="khas-hero-overlay left" viewBox="0 0 200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#fabd2f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+      <path d="M -20,50 C 50,80 80,150 40,220 C 10,270 -30,250 -40,180 C -50,110 10,80 30,120" />
+      <path d="M 40,220 C 80,260 120,380 60,450 C 20,490 -40,460 -30,380 C -20,300 40,320 50,370" />
+      <path d="M 18,90 Q 50,60 70,80 Q 40,110 18,90 Z" fill="#fabd2f" fill-opacity="0.2" />
+      <path d="M 32,170 Q 75,150 90,180 Q 55,210 32,170 Z" fill="#fabd2f" fill-opacity="0.2" />
+      <path d="M 45,290 Q 95,270 110,310 Q 70,335 45,290 Z" fill="#fabd2f" fill-opacity="0.2" />
+      <path d="M -10,130 Q 20,150 0,180" />
+      <path d="M 5,320 Q 40,340 15,380" />
+    </g>
+  </svg>
+
+  <!-- Right Botanical Overlay -->
+  <svg class="khas-hero-overlay right" viewBox="0 0 200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#fabd2f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+      <path d="M -20,50 C 50,80 80,150 40,220 C 10,270 -30,250 -40,180 C -50,110 10,80 30,120" />
+      <path d="M 40,220 C 80,260 120,380 60,450 C 20,490 -40,460 -30,380 C -20,300 40,320 50,370" />
+      <path d="M 18,90 Q 50,60 70,80 Q 40,110 18,90 Z" fill="#fabd2f" fill-opacity="0.2" />
+      <path d="M 32,170 Q 75,150 90,180 Q 55,210 32,170 Z" fill="#fabd2f" fill-opacity="0.2" />
+      <path d="M 45,290 Q 95,270 110,310 Q 70,335 45,290 Z" fill="#fabd2f" fill-opacity="0.2" />
+      <path d="M -10,130 Q 20,150 0,180" />
+      <path d="M 5,320 Q 40,340 15,380" />
+    </g>
+  </svg>
+
   <div class="khas-hero__inner page-width">
 
     <div class="khas-hero__content">
+
+      <div class="khas-hero__crown">
+        <svg viewBox="0 0 100 35" width="120" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 40,30 L 60,30 L 62,24 L 56,26 L 50,15 L 44,26 L 38,24 Z" fill="#fabd2f" />
+          <circle cx="50" cy="13" r="1.5" fill="#fabd2f" />
+          <circle cx="38" cy="22" r="1" fill="#fabd2f" />
+          <circle cx="62" cy="22" r="1" fill="#fabd2f" />
+          <path d="M 42,28 Q 50,29 58,28" stroke="#fabd2f" stroke-width="1" />
+        </svg>
+      </div>
 
       {%- if section.settings.show_rating -%}
         <div class="khas-hero__rating">
@@ -199,16 +93,18 @@
 
     {%- if section.settings.image != blank -%}
       <div class="khas-hero__image-wrapper">
-        {{
-          section.settings.image
-          | image_url: width: 900
-          | image_tag:
-            class: 'khas-hero__image',
-            loading: 'lazy',
-            widths: '450, 600, 750, 900',
-            sizes: '(max-width: 989px) 100vw, 50vw',
-            alt: section.settings.image.alt | default: shop.name
-        }}
+        <div class="khas-hero__image-container">
+          {{
+            section.settings.image
+            | image_url: width: 900
+            | image_tag:
+              class: 'khas-hero__image',
+              loading: 'lazy',
+              widths: '450, 600, 750, 900',
+              sizes: '(max-width: 989px) 100vw, 50vw',
+              alt: section.settings.image.alt | default: shop.name
+          }}
+        </div>
       </div>
     {%- endif -%}
 
@@ -221,12 +117,6 @@
   "tag": "section",
   "class": "section",
   "settings": [
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background color",
-      "default": "#f2f0eb"
-    },
     {
       "type": "header",
       "content": "Rating"
@@ -251,26 +141,26 @@
       "type": "text",
       "id": "heading_start",
       "label": "Heading (bold part)",
-      "default": "Fast, nutritious, "
+      "default": "Premium spices, "
     },
     {
       "type": "text",
       "id": "heading_italic",
       "label": "Heading italic word",
-      "default": "complete",
+      "default": "authentic",
       "info": "This word renders in italic serif style"
     },
     {
       "type": "text",
       "id": "heading_end",
       "label": "Heading end (bold part)",
-      "default": " food."
+      "default": " flavor."
     },
     {
       "type": "textarea",
       "id": "subheading",
       "label": "Subheading",
-      "default": "Designed by expert nutritionists as a convenient way to get all the daily nutrients you need."
+      "default": "Experience the richness of premium spices sourced from the finest regions, crafted to bring authentic taste to your kitchen."
     },
     {
       "type": "header",
