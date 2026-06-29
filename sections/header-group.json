@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -118,7 +117,6 @@
       "type": "khas-hero-banner",
       "name": "Khas Hero Banner",
       "settings": {
-        "background_color": "#f2f0eb",
         "show_rating": true,
         "rating_text": "2M+ happy customers",
         "heading_start": "Bring Purity,",
@@ -129,7 +127,7 @@
         "button1_link": "",
         "button2_text": "Discover more",
         "button2_link": "",
-        "image": "shopify://shop_images/ChatGPT_Image_Jun_17_2026_01_57_25_AM.png",
+        "image": "shopify://shop_images/4ef39a21-fda1-4fb1-bfcf-f1b610da0ea4.png",
         "padding_top": 0,
         "padding_bottom": 0
       }
