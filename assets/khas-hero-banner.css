@@ -2,7 +2,7 @@
 
 .khas-hero {
   position: relative;
-  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%);
+  background: radial-gradient(circle at center, #090a07 0%, #0c0b0a 100%);
   overflow: hidden;
   min-height: 80vh;
   display: flex;
