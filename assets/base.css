@@ -2343,7 +2343,7 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%);
+  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%) !important;
 }
 
 .header-wrapper--border-bottom {
