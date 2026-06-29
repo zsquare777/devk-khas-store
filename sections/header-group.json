@@ -53,6 +53,7 @@
         "marquee-item-2",
         "marquee-item-3"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#111111",
         "text_color": "#ffffff",
