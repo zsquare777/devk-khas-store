@@ -84,7 +84,6 @@
   letter-spacing: -0.02em;
   color: #ffffff;
   margin: 0;
-  word-spacing: 0.1em;
 }
 
 .khas-hero__heading em {
@@ -92,7 +91,6 @@
   font-style: italic;
   font-weight: 700;
   color: #fabd2f;
-  margin: 0 0.1em;
 }
 
 .khas-hero__subheading {
@@ -156,76 +154,62 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  overflow: visible;
-  position: relative;
+  overflow: hidden;
 }
 
 .khas-hero__image-container {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   border-radius: 20px;
-  overflow: visible;
-  padding: 0;
-  margin-right: -100px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(250, 189, 47, 0.2);
+  padding: 2rem;
 }
 
 .khas-hero__image {
   width: 100%;
   height: auto;
-  max-height: 800px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
-  transform: scale(1.1) ;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
 /* Responsive Design */
 @media screen and (max-width: 989px) {
   .khas-hero {
     min-height: auto;
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
 
   .khas-hero-overlay {
-    width: 100px;
+    width: 120px;
   }
 
   .khas-hero__inner {
     grid-template-columns: 1fr;
     min-height: auto;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .khas-hero__image-wrapper {
-    order: 1;
-    overflow: hidden;
+    order: -1;
   }
 
   .khas-hero__image-container {
     max-width: 350px;
-    margin-right: 0;
-  }
-
-  .khas-hero__image {
-    max-height: 350px;
-    transform: scale(1.1);
+    padding: 1.5rem;
   }
 
   .khas-hero__content {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     text-align: center;
-    order: 0;
   }
 
   .khas-hero__crown {
     justify-content: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .khas-hero__crown svg {
-    width: 80px;
-    height: 28px;
   }
 
   .khas-hero__rating {
@@ -243,28 +227,20 @@
 }
 
 @media screen and (max-width: 480px) {
-  .khas-hero {
-    padding: 2rem 0;
-  }
-
   .khas-hero__heading {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   .khas-hero__subheading {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .khas-hero__btn {
-    padding: 1.2rem 2rem;
-    font-size: 1.3rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
   }
 
   .khas-hero__image-container {
     max-width: 280px;
-  }
-
-  .khas-hero__image {
-    max-height: 280px;
   }
 }
