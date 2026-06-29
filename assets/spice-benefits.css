@@ -1,7 +1,7 @@
 .spice-benefits-section {
-  background-color: #424242; /* Matching the screenshot dark background */
+  background: radial-gradient(circle at center, #1a1815 0%, #0c0b0a 100%);
   padding: 35px 1.5rem 40px 1.5rem;
-  color: #FAF6EE;
+  color: #ffffff;
   text-align: center;
   margin-top: 50px;
   width: 100vw;
@@ -14,7 +14,7 @@
   font-family: inherit;
   font-size: 32px;
   font-weight: 700;
-  color: #FAF6EE;
+  color: #fabd2f;
   margin-top: 0;
   margin-bottom: 50px;
   letter-spacing: -0.5px;
@@ -45,7 +45,7 @@
   top: 10px;
   bottom: 10px;
   width: 1px;
-  border-right: 1.5px dashed rgba(250, 246, 238, 0.3);
+  border-right: 1.5px dashed rgba(250, 189, 47, 0.3);
 }
 
 .spice-benefits-icon {
