@@ -2343,7 +2343,7 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background: linear-gradient(135deg, #4a3728 0%, #3d2e1f 40%, #2d2416 100%) !important;
+  background: linear-gradient(135deg, #2d2416 0%, #3d2e1f 40%, #2d2416 100%) !important;
   border-bottom: 1px solid rgba(250, 189, 47, 0.2);
 }
 
