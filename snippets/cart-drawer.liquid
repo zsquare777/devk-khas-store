@@ -8,19 +8,34 @@
 {{ 'khas-cart-drawer.css' | asset_url | stylesheet_tag }}
 
 <style>
-  /* Force remove ALL Shopify theme styling from cart drawer */
-  .drawer__inner * {
+  /* COMPLETE CSS RESET - Remove ALL Shopify theme styling */
+  .drawer__inner,
+  .drawer__inner *,
+  .drawer__inner *::before,
+  .drawer__inner *::after,
+  #CartDrawer,
+  #CartDrawer *,
+  #CartDrawer *::before,
+  #CartDrawer *::after {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+    background-image: none !important;
+    background: transparent !important;
   }
   
-  /* Restore only our premium shadows */
+  /* Restore only our premium styling */
   .drawer__inner {
-    box-shadow: -12px 0 48px rgba(59, 36, 22, 0.25) !important;
+    background: linear-gradient(180deg, #FAF5E8 0%, #F5EED8 100%) !important;
+    width: 440px !important;
+    max-width: calc(100% - 20px) !important;
+    box-shadow: -12px 0 48px rgba(59, 36, 22, 0.25), 0 0 0 1px rgba(176, 141, 66, 0.1) !important;
   }
   
   .cart-item {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F0 100%) !important;
+    border: 1px solid rgba(176, 141, 66, 0.18) !important;
+    border-radius: 24px !important;
     box-shadow: 0 4px 20px rgba(59, 36, 22, 0.08) !important;
   }
   
@@ -29,56 +44,77 @@
   }
   
   .cart-item__image {
+    border-radius: 16px !important;
     box-shadow: 0 4px 12px rgba(59, 36, 22, 0.12) !important;
   }
   
   .quantity {
+    background: linear-gradient(135deg, #FAF5E8 0%, #F0E8D8 100%) !important;
+    border-radius: 24px !important;
     box-shadow: 0 2px 8px rgba(59, 36, 22, 0.08) !important;
   }
   
   .quantity__button {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%) !important;
+    border-radius: 50% !important;
     box-shadow: 0 2px 6px rgba(59, 36, 22, 0.08) !important;
   }
   
   .quantity__button:hover {
+    background: linear-gradient(135deg, var(--khas-cart-gold) 0%, #8B6D32 100%) !important;
     box-shadow: 0 4px 12px rgba(176, 141, 66, 0.3) !important;
   }
   
   .cart-remove-button {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%) !important;
+    border-radius: 50% !important;
     box-shadow: 0 2px 8px rgba(205, 92, 92, 0.15) !important;
   }
   
   .cart-remove-button:hover {
+    background: linear-gradient(135deg, #CD5C5C 0%, #A04A4A 100%) !important;
     box-shadow: 0 4px 16px rgba(205, 92, 92, 0.35) !important;
   }
   
   .drawer__close {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%) !important;
+    border-radius: 50% !important;
     box-shadow: 0 4px 12px rgba(59, 36, 22, 0.1) !important;
   }
   
   .drawer__close:hover {
+    background: linear-gradient(135deg, var(--khas-cart-dark-brown) 0%, #2C1A0F 100%) !important;
     box-shadow: 0 6px 20px rgba(59, 36, 22, 0.25) !important;
   }
   
   .cart__checkout-button {
+    background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%) !important;
+    color: #F8E8B5 !important;
+    border-radius: 50px !important;
     box-shadow: 0 8px 28px rgba(44, 26, 15, 0.35), 0 0 0 1px rgba(232, 194, 104, 0.1) !important;
   }
   
   .cart__checkout-button:hover {
+    background: linear-gradient(135deg, #5A3820 0%, #372114 100%) !important;
+    color: #FFF8E8 !important;
     box-shadow: 0 12px 40px rgba(44, 26, 15, 0.45), 0 0 0 1px rgba(232, 194, 104, 0.2) !important;
   }
   
   .button {
+    background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%) !important;
+    color: #F8E8B5 !important;
+    border-radius: 50px !important;
     box-shadow: 0 6px 20px rgba(44, 26, 15, 0.3) !important;
   }
   
   .button:hover {
+    background: linear-gradient(135deg, #5A3820 0%, #372114 100%) !important;
+    color: #FFF8E8 !important;
     box-shadow: 0 10px 30px rgba(44, 26, 15, 0.4) !important;
   }
 </style>
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'khas-cart-drawer.js' | asset_url }}" defer="defer"></script>
 
 <style>
