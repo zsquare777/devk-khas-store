@@ -2,7 +2,7 @@
 
 .khas-hero {
   position: relative;
-  background: radial-gradient(circle at center, #2d2416 0%, #1a1815 50%, #0c0b0a 100%);
+  background: radial-gradient(circle at center, #f5e6c8 0%, #e8d4a8 50%, #d4c090 100%);
   overflow: hidden;
   min-height: 80vh;
   display: flex;
@@ -82,7 +82,7 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #2d2416;
   margin: 0;
 }
 
