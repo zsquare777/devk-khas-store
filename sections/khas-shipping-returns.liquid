@@ -1,0 +1,355 @@
+{{ 'khas-shipping-returns.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .khas-shipping-returns-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<section class="khas-shipping-returns khas-shipping-returns-{{ section.id }}" id="KhasShippingReturnsSection">
+  
+  <!-- Hero Section -->
+  <div class="khas-shipping-returns-hero">
+    <!-- Top Left Botanical Decoration - Star Anise -->
+    <div class="khas-shipping-returns-decoration top-left">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Star anise pattern -->
+          <path d="M 100,20 L 110,50 L 140,55 L 115,75 L 120,105 L 100,90 L 80,105 L 85,75 L 60,55 L 90,50 Z" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="100" cy="60" r="8" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 100,20 Q 95,40 100,60 Q 105,40 100,20" />
+          <path d="M 140,55 Q 120,60 100,60 Q 120,65 140,55" />
+          <path d="M 120,105 Q 110,85 100,60 Q 115,90 120,105" />
+          <path d="M 80,105 Q 90,85 100,60 Q 85,90 80,105" />
+          <path d="M 60,55 Q 80,60 100,60 Q 80,65 60,55" />
+          <!-- Small decorative elements -->
+          <path d="M 40,30 Q 45,25 50,30 Q 45,35 40,30 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 150,35 Q 155,30 160,35 Q 155,40 150,35 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 45,150 Q 50,145 55,150 Q 50,155 45,150 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 145,145 Q 150,140 155,145 Q 150,150 145,145 Z" fill="#3B2416" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Bottom Right Botanical Decoration - Clove Branch -->
+    <div class="khas-shipping-returns-decoration bottom-right">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Clove branch -->
+          <path d="M 20,180 C 40,170 60,180 80,175 C 100,170 120,180 140,175 C 160,170 180,180 180,180" />
+          <!-- Clove buds -->
+          <ellipse cx="35" cy="175" rx="8" ry="12" fill="#3B2416" fill-opacity="0.08" />
+          <ellipse cx="75" cy="172" rx="8" ry="12" fill="#3B2416" fill-opacity="0.08" />
+          <ellipse cx="115" cy="175" rx="8" ry="12" fill="#3B2416" fill-opacity="0.08" />
+          <ellipse cx="155" cy="172" rx="8" ry="12" fill="#3B2416" fill-opacity="0.08" />
+          <!-- Small stems -->
+          <path d="M 35,163 L 35,175" />
+          <path d="M 75,160 L 75,172" />
+          <path d="M 115,163 L 115,175" />
+          <path d="M 155,160 L 155,172" />
+          <!-- Small leaves -->
+          <path d="M 30,165 Q 25,160 30,155 Q 35,160 30,165 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 80,162 Q 75,157 80,152 Q 85,157 80,162 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 120,165 Q 115,160 120,155 Q 125,160 120,165 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 160,162 Q 155,157 160,152 Q 165,157 160,162 Z" fill="#3B2416" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="khas-shipping-returns-hero-content">
+      <div class="khas-shipping-returns-crown">
+        <svg viewBox="0 0 100 35" width="120" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 40,30 L 60,30 L 62,24 L 56,26 L 50,15 L 44,26 L 38,24 Z" fill="#fabd2f" />
+          <circle cx="50" cy="13" r="1.5" fill="#fabd2f" />
+          <circle cx="38" cy="22" r="1" fill="#fabd2f" />
+          <circle cx="62" cy="22" r="1" fill="#fabd2f" />
+          <path d="M 42,28 Q 50,29 58,28" stroke="#fabd2f" stroke-width="1" />
+        </svg>
+      </div>
+      <h1 class="khas-shipping-returns-hero-heading">Shipping & Returns</h1>
+      <p class="khas-shipping-returns-hero-subheading">We carefully prepare every order so your favorite Khas Foods products arrive fresh, safe, and ready for your kitchen.</p>
+    </div>
+  </div>
+
+  <!-- Highlight Box -->
+  <div class="khas-shipping-returns-highlight">
+    <div class="khas-shipping-returns-highlight-icon">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 20,5 L 25,15 L 35,15 L 27,22 L 30,32 L 20,26 L 10,32 L 13,22 L 5,15 L 15,15 Z" stroke="#B08D42" stroke-width="1.5" fill="none" />
+      </svg>
+    </div>
+    <p class="khas-shipping-returns-highlight-text">Every Khas Foods order is carefully packed to preserve freshness, aroma, and quality before it reaches your home.</p>
+  </div>
+
+  <!-- Information Cards Grid -->
+  <div class="khas-shipping-returns-cards">
+    
+    <!-- Shipping Information Card -->
+    <div class="khas-shipping-returns-card">
+      <div class="khas-shipping-returns-card-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="16" width="32" height="24" rx="2" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 8,16 L 16,8 L 32,8 L 40,16" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <line x1="16" y1="8" x2="16" y2="16" stroke="#B08D42" stroke-width="2"/>
+          <line x1="32" y1="8" x2="32" y2="16" stroke="#B08D42" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3 class="khas-shipping-returns-card-heading">Shipping Information</h3>
+      <ul class="khas-shipping-returns-card-list">
+        <li><strong>Processing Time:</strong> 1–2 business days</li>
+        <li><strong>Delivery Time:</strong> 3–7 business days</li>
+        <li><strong>Shipping Locations:</strong> UK-wide delivery</li>
+        <li><strong>Shipping Charges:</strong> Free on orders over £50</li>
+      </ul>
+    </div>
+
+    <!-- Order Processing Card -->
+    <div class="khas-shipping-returns-card">
+      <div class="khas-shipping-returns-card-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="18" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 24,12 L 24,24 L 32,28" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="khas-shipping-returns-card-heading">Order Processing</h3>
+      <ul class="khas-shipping-returns-card-list">
+        <li>Order confirmation sent immediately</li>
+        <li>Careful packaging for freshness</li>
+        <li>Dispatch within 1–2 business days</li>
+        <li>Processing excludes weekends & holidays</li>
+      </ul>
+    </div>
+
+    <!-- Delivery Card -->
+    <div class="khas-shipping-returns-card">
+      <div class="khas-shipping-returns-card-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="20" width="40" height="20" rx="3" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <circle cx="12" cy="40" r="4" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <circle cx="36" cy="40" r="4" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 4,20 L 12,8 L 36,8 L 44,20" stroke="#B08D42" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <h3 class="khas-shipping-returns-card-heading">Delivery</h3>
+      <ul class="khas-shipping-returns-card-list">
+        <li>Reliable courier partners</li>
+        <li>Full tracking provided via email</li>
+        <li>Delivery attempts made to your address</li>
+        <li>Delays possible during peak periods</li>
+      </ul>
+    </div>
+
+    <!-- Returns Card -->
+    <div class="khas-shipping-returns-card">
+      <div class="khas-shipping-returns-card-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 24,8 L 24,32" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 16,24 L 24,32 L 32,24" stroke="#B08D42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 8,32 L 8,40 L 40,40 L 40,32" stroke="#B08D42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="khas-shipping-returns-card-heading">Returns</h3>
+      <ul class="khas-shipping-returns-card-list">
+        <li><strong>Return Window:</strong> 7 days from delivery</li>
+        <li>Products must be unopened & sealed</li>
+        <li>Original packaging required</li>
+        <li>Non-returnable: Opened food items</li>
+      </ul>
+    </div>
+
+    <!-- Damaged Orders Card -->
+    <div class="khas-shipping-returns-card">
+      <div class="khas-shipping-returns-card-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 24,4 L 44,12 L 44,36 L 24,44 L 4,36 L 4,12 Z" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 4,12 L 24,20 L 44,12" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 24,20 L 24,44" stroke="#B08D42" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <h3 class="khas-shipping-returns-card-heading">Damaged Orders</h3>
+      <ul class="khas-shipping-returns-card-list">
+        <li>Report within 24 hours of delivery</li>
+        <li>Provide photos of damage</li>
+        <li>Replacement or refund available</li>
+        <li>Unboxing video recommended</li>
+      </ul>
+    </div>
+
+    <!-- Refunds Card -->
+    <div class="khas-shipping-returns-card">
+      <div class="khas-shipping-returns-card-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="32" height="32" rx="4" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 16,20 L 32,20" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 16,28 L 28,28" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="36" cy="12" r="6" stroke="#B08D42" stroke-width="2" fill="none"/>
+          <path d="M 33,12 L 35,14 L 39,10" stroke="#B08D42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="khas-shipping-returns-card-heading">Refunds</h3>
+      <ul class="khas-shipping-returns-card-list">
+        <li><strong>Processing Time:</strong> 8–15 business days</li>
+        <li>Refund to original payment method</li>
+        <li>Confirmation email sent when processed</li>
+        <li>Return shipping: £3 fixed fee</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Timeline Section -->
+  <div class="khas-shipping-returns-timeline-section">
+    <h2 class="khas-shipping-returns-timeline-heading">Your Order Journey</h2>
+    <div class="khas-shipping-returns-timeline-divider"></div>
+    
+    <div class="khas-shipping-returns-timeline">
+      <div class="khas-shipping-returns-timeline-step">
+        <div class="khas-shipping-returns-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 8,6 L 16,6 L 16,18 L 8,18 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 10,10 L 14,10" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 10,14 L 14,14" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-shipping-returns-timeline-label">Place Order</p>
+      </div>
+      
+      <div class="khas-shipping-returns-timeline-line"></div>
+      
+      <div class="khas-shipping-returns-timeline-step">
+        <div class="khas-shipping-returns-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12,4 L 14,10 L 20,10 L 15,14 L 17,20 L 12,16 L 7,20 L 9,14 L 4,10 L 10,10 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-shipping-returns-timeline-label">Order Confirmed</p>
+      </div>
+      
+      <div class="khas-shipping-returns-timeline-line"></div>
+      
+      <div class="khas-shipping-returns-timeline-step">
+        <div class="khas-shipping-returns-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="16" height="12" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 4,8 L 8,4 L 16,4 L 20,8" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-shipping-returns-timeline-label">Packed with Care</p>
+      </div>
+      
+      <div class="khas-shipping-returns-timeline-line"></div>
+      
+      <div class="khas-shipping-returns-timeline-step">
+        <div class="khas-shipping-returns-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="10" width="20" height="10" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="6" cy="20" r="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="18" cy="20" r="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-shipping-returns-timeline-label">Shipped</p>
+      </div>
+      
+      <div class="khas-shipping-returns-timeline-line"></div>
+      
+      <div class="khas-shipping-returns-timeline-step">
+        <div class="khas-shipping-returns-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12,2 C 7,2 3,6 3,11 C 3,16 12,22 12,22 C 12,22 21,16 21,11 C 21,6 17,2 12,2 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="12" cy="11" r="3" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-shipping-returns-timeline-label">Delivered</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Card -->
+  <div class="khas-shipping-returns-contact-card">
+    <!-- Left Botanical Decoration - Cardamom Pod -->
+    <div class="khas-shipping-returns-contact-decoration left">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Cardamom pod -->
+          <ellipse cx="50" cy="50" rx="15" ry="25" fill="#3B2416" fill-opacity="0.08" />
+          <path d="M 50,25 L 50,75" />
+          <path d="M 35,50 L 65,50" />
+          <!-- Small seeds -->
+          <circle cx="45" cy="40" r="2" fill="#3B2416" fill-opacity="0.06" />
+          <circle cx="55" cy="45" r="2" fill="#3B2416" fill-opacity="0.06" />
+          <circle cx="45" cy="55" r="2" fill="#3B2416" fill-opacity="0.06" />
+          <circle cx="55" cy="60" r="2" fill="#3B2416" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Right Botanical Decoration - Pepper Vine -->
+    <div class="khas-shipping-returns-contact-decoration right">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Pepper vine -->
+          <path d="M 10,80 C 30,70 50,70 70,60 C 80,55 90,50 90,40" />
+          <!-- Pepper berries -->
+          <circle cx="30" cy="72" r="5" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="50" cy="65" r="5" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="70" cy="55" r="5" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="85" cy="45" r="5" fill="#3B2416" fill-opacity="0.08" />
+          <!-- Small leaves -->
+          <path d="M 25,68 Q 20,63 25,58 Q 30,63 25,68 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 55,60 Q 50,55 55,50 Q 60,55 55,60 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 75,50 Q 70,45 75,40 Q 80,45 75,50 Z" fill="#3B2416" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="khas-shipping-returns-contact-content">
+      <h2 class="khas-shipping-returns-contact-heading">Need Help With Your Order?</h2>
+      <p class="khas-shipping-returns-contact-text">If you have any questions regarding shipping, returns, or delivery, our team is always happy to assist.</p>
+      <div class="khas-shipping-returns-contact-buttons">
+        <a href="/pages/contact" class="khas-shipping-returns-btn khas-shipping-returns-btn--primary">Contact Us</a>
+        <a href="/collections/all" class="khas-shipping-returns-btn khas-shipping-returns-btn--secondary">Shop Products</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Khas Shipping & Returns",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Khas Shipping & Returns"
+    }
+  ]
+}
+{% endschema %}
