@@ -689,6 +689,7 @@
 /* Buttons */
 .khas-wholesale-btn {
   display: inline-flex;
+  margin-top: 20px;
   align-items: center;
   justify-content: center;
   padding: 14px 32px;
