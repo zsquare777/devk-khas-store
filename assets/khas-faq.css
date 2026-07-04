@@ -371,11 +371,11 @@
   }
 
   .khas-faq-hero-heading {
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 
   .khas-faq-hero-subheading {
-    font-size: 1.1rem;
+    font-size: 14px;
   }
 
   .khas-faq-decoration.top-left,
@@ -394,8 +394,7 @@
   }
 
   .khas-faq-category-heading {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+    font-size: 24px;
   }
 
   .khas-faq-accordion-trigger {
@@ -403,12 +402,13 @@
   }
 
   .khas-faq-accordion-title {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .khas-faq-accordion-content p {
+    font-size: 16px;
+    line-height: 1.7;
     padding: 0 24px 20px;
-    font-size: 0.95rem;
   }
 
   .khas-faq-contact-card {
@@ -417,11 +417,11 @@
   }
 
   .khas-faq-contact-heading {
-    font-size: 1.6rem;
+    font-size: 24px;
   }
 
   .khas-faq-contact-text {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .khas-faq-contact-buttons {
