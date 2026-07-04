@@ -3,7 +3,7 @@
 .khas-benefits {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at center, #faf6ec 0%, #ece0c4 100%) !important;
+  background: radial-gradient(circle at center, #fdf8ef 0%, #f0dfb8 55%, #ddbf85 100%) !important;
   overflow: visible;
   box-sizing: border-box;
 }
