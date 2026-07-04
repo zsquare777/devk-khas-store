@@ -1,4 +1,5 @@
 {{ 'khas-hero-banner.css' | asset_url | stylesheet_tag }}
+<!-- Cache bust: {{ 'now' | date: '%s' }} -->
 
 {%- style -%}
   .khas-hero-{{ section.id }} {
