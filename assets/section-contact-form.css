@@ -70,9 +70,9 @@
   font-weight: 700;
   color: #111;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
-  margin: 0 0 20px 0;
-  line-height: 1.2;
+   letter-spacing: 0.05em;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
 }
 
 .khas-page-subtitle {
