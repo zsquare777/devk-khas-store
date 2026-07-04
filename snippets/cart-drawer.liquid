@@ -11,6 +11,7 @@
   /* AGGRESSIVE CSS RESET - Remove ALL Shopify theme styling */
   #CartDrawer, #CartDrawer *, #CartDrawer *::before, #CartDrawer *::after {
     border: none !important;
+    border-color: transparent !important;
     outline: none !important;
     box-shadow: none !important;
     background-image: none !important;
@@ -35,6 +36,7 @@
   #CartDrawer .cart__ctas button,
   #CartDrawer .cart-remove-button {
     border: none !important;
+    border-color: transparent !important;
     outline: none !important;
     box-shadow: none !important;
     -webkit-appearance: none !important;
@@ -49,8 +51,28 @@
   #CartDrawer .button--tertiary,
   #CartDrawer .button--secondary {
     border: none !important;
+    border-color: transparent !important;
     outline: none !important;
     box-shadow: none !important;
+  }
+  
+  /* Additional: Set border-width to 0 and match border-color to background */
+  #CartDrawer input, #CartDrawer button, #CartDrawer .quantity, #CartDrawer .quantity__button {
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: #FAF5E8 !important;
+  }
+  
+  #CartDrawer .quantity {
+    border-color: #FAF5E8 !important;
+  }
+  
+  #CartDrawer .quantity__button {
+    border-color: #FFFFFF !important;
+  }
+  
+  #CartDrawer .cart__checkout-button {
+    border-color: #4A2E1A !important;
   }
   
   /* Restore only our premium styling */
