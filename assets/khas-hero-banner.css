@@ -66,7 +66,7 @@
 .khas-hero__stars svg {
   width: 1.6rem;
   height: 1.6rem;
-  fill: #c9a227;
+  fill: #c4a45e;
 }
 
 .khas-hero__rating-text {
@@ -127,25 +127,25 @@
 }
 
 .khas-hero__btn--primary {
-  background: linear-gradient(135deg, #d4a84b 0%, #b8962e 100%);
-  color: #0c0b0a;
+  background: linear-gradient(135deg, #c4a45e 0%, #a88a3e 100%);
+  color: #ffffff;
   border: none;
-  box-shadow: 0 4px 20px rgba(212, 168, 75, 0.3);
+  box-shadow: 0 4px 20px rgba(196, 164, 94, 0.3);
 }
 
 .khas-hero__btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(212, 168, 75, 0.4);
+  box-shadow: 0 6px 25px rgba(196, 164, 94, 0.4);
 }
 
 .khas-hero__btn--secondary {
   background: transparent;
-  color: #d4a84b;
-  border: 2px solid #d4a84b;
+  color: #c4a45e;
+  border: 2px solid #c4a45e;
 }
 
 .khas-hero__btn--secondary:hover {
-  background: rgba(212, 168, 75, 0.1);
+  background: rgba(196, 164, 94, 0.1);
   transform: translateY(-2px);
 }
 
