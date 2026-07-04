@@ -196,13 +196,15 @@
 
 .khas-faq-accordion-title {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 600;
-  color: var(--khas-faq-dark-brown);
+  color: #1a0000;
   margin: 0;
   line-height: 1.4;
   flex: 1;
   padding-right: 16px;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .khas-faq-accordion-icon {
@@ -236,9 +238,10 @@
 
 .khas-faq-accordion-content p {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--khas-faq-text);
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.8;
   margin: 0;
   padding: 0 28px 24px;
 }
