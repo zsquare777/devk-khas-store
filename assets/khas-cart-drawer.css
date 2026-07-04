@@ -323,9 +323,34 @@
 .cart__checkout-button,
 .cart-remove-button,
 .quantity__button,
-.drawer__close {
+.drawer__close,
+input,
+button,
+.quantity__input,
+.cart-item__media,
+.cart-item__details,
+.drawer__cart-items-wrapper,
+.cart-drawer__footer,
+.drawer__footer {
   border: none !important;
   outline: none !important;
+}
+
+/* Remove table borders */
+.cart-items,
+.cart-items thead,
+.cart-items tbody,
+.cart-items tr,
+.cart-items td,
+.cart-items th {
+  border: none !important;
+}
+
+/* Remove any focus outlines */
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  outline-offset: 0 !important;
 }
 
 /* Responsive */
