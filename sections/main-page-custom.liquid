@@ -1,0 +1,52 @@
+{%- if page.handle == 'shipping-returns' -%}
+  {% render 'khas-shipping-returns' %}
+{%- elsif page.handle == 'terms-conditions' -%}
+  {% render 'khas-terms' %}
+{%- elsif page.handle == 'faq' -%}
+  {% render 'khas-faq' %}
+{%- elsif page.handle == 'about-us' -%}
+  {% render 'khas-about' %}
+{%- else -%}
+  <div class="page-width page-width--narrow">
+    <h1 class="main-page-title page-header h1">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte">
+      {{ page.content }}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 28
+    }
+  ]
+}
+{% endschema %}
