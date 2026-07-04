@@ -10,6 +10,35 @@
   transform: translateX(-50%);
 }
 
+/* Vintage Corner Borders */
+.spice-benefits-corner {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spice-benefits-corner.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.spice-benefits-corner.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.spice-benefits-corner.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.spice-benefits-corner.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
 .spice-benefits-heading {
   font-family: inherit;
   font-size: 32px;
