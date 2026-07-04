@@ -1,0 +1,53 @@
+{%- comment -%}
+  Custom page wrapper that shows different sections based on page handle
+{%- endcomment -%}
+
+{%- if page.handle == 'shipping-returns' -%}
+  {% section 'khas-shipping-returns' %}
+{%- elsif page.handle == 'terms-conditions' -%}
+  {% section 'khas-terms' %}
+{%- elsif page.handle == 'faq' -%}
+  {% section 'khas-faq' %}
+{%- elsif page.handle == 'about-us' -%}
+  {% section 'khas-about' %}
+{%- else -%}
+  {% section 'main-page' %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Page Wrapper",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Page Wrapper"
+    }
+  ]
+}
+{% endschema %}
