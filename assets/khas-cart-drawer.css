@@ -326,6 +326,30 @@
   outline: none !important;
 }
 
+/* Specific border removal for quantity selector */
+.quantity,
+.quantity__button,
+.quantity__button::before,
+.quantity__button::after,
+.quantity__input,
+.quantity__input::before,
+.quantity__input::after,
+.quantity-popover-wrapper,
+.quantity-popover-container {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Specific border removal for checkout button */
+.cart__checkout-button,
+.cart__checkout-button::before,
+.cart__checkout-button::after,
+.cart__ctas .button {
+  border: none !important;
+  outline: none !important;
+}
+
 /* Restore premium shadows for specific elements */
 .drawer__inner {
   box-shadow: -12px 0 48px rgba(59, 36, 22, 0.25), 0 0 0 1px rgba(176, 141, 66, 0.1) !important;
