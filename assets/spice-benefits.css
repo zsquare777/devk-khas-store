@@ -10,40 +10,6 @@
   transform: translateX(-50%);
 }
 
-.spice-benefits-overlay {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.spice-benefits-overlay.top-left {
-  top: 15px;
-  left: 30px;
-  width: 80px;
-  height: 80px;
-}
-
-.spice-benefits-overlay.top-right {
-  top: 15px;
-  right: 30px;
-  width: 80px;
-  height: 80px;
-}
-
-.spice-benefits-overlay.bottom-left {
-  bottom: 20px;
-  left: 40px;
-  width: 60px;
-  height: 60px;
-}
-
-.spice-benefits-overlay.bottom-right {
-  bottom: 20px;
-  right: 40px;
-  width: 60px;
-  height: 60px;
-}
-
 .spice-benefits-heading {
   font-family: inherit;
   font-size: 32px;
