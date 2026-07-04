@@ -8,35 +8,6 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
-}
-
-.spice-benefits-overlay {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.spice-benefits-overlay.top-left {
-  top: 20px;
-  left: 20px;
-}
-
-.spice-benefits-overlay.top-right {
-  top: 20px;
-  right: 20px;
-}
-
-.spice-benefits-overlay.bottom-left {
-  bottom: 20px;
-  left: 20px;
-}
-
-.spice-benefits-overlay.bottom-right {
-  bottom: 20px;
-  right: 20px;
 }
 
 .spice-benefits-heading {
