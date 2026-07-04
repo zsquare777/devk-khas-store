@@ -10,35 +10,6 @@
   transform: translateX(-50%);
 }
 
-/* Royal Corner Overlays */
-.spice-corner-overlay {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.spice-corner-overlay.top-left {
-  top: 0;
-  left: 0;
-}
-
-.spice-corner-overlay.top-right {
-  top: 0;
-  right: 0;
-}
-
-.spice-corner-overlay.bottom-left {
-  bottom: 0;
-  left: 0;
-}
-
-.spice-corner-overlay.bottom-right {
-  bottom: 0;
-  right: 0;
-}
-
 .spice-benefits-heading {
   font-family: inherit;
   font-size: 32px;
