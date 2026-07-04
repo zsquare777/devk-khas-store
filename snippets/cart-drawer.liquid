@@ -8,159 +8,71 @@
 {{ 'khas-cart-drawer.css' | asset_url | stylesheet_tag }}
 
 <style>
-  /* AGGRESSIVE CSS RESET - Remove ALL Shopify theme styling */
-  #CartDrawer, #CartDrawer *, #CartDrawer *::before, #CartDrawer *::after {
+  /* Force remove ALL Shopify theme styling from cart drawer */
+  .drawer__inner * {
     border: none !important;
-    border-color: transparent !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background-image: none !important;
-    background: transparent !important;
-  }
-  
-  /* Force remove borders from all inputs and buttons - MAXIMUM SPECIFICITY */
-  #CartDrawer input, 
-  #CartDrawer input[type="number"],
-  #CartDrawer button, 
-  #CartDrawer button[type="button"],
-  #CartDrawer button[type="submit"],
-  #CartDrawer .quantity, 
-  #CartDrawer .quantity__button, 
-  #CartDrawer .quantity__input,
-  #CartDrawer .quantity-popover-wrapper,
-  #CartDrawer .quantity-popover-container,
-  #CartDrawer .cart-item__quantity,
-  #CartDrawer .cart-quantity,
-  #CartDrawer .cart__checkout-button,
-  #CartDrawer .button,
-  #CartDrawer .cart__ctas button,
-  #CartDrawer .cart-remove-button {
-    border: none !important;
-    border-color: transparent !important;
-    outline: none !important;
-    box-shadow: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-  }
-  
-  /* Target specific Shopify classes that might be adding borders */
-  #CartDrawer .field__input,
-  #CartDrawer .text-area,
-  #CartDrawer .select__select,
-  #CartDrawer .button--tertiary,
-  #CartDrawer .button--secondary {
-    border: none !important;
-    border-color: transparent !important;
     outline: none !important;
     box-shadow: none !important;
   }
   
-  /* Additional: Set border-width to 0 and match border-color to background */
-  #CartDrawer input, #CartDrawer button, #CartDrawer .quantity, #CartDrawer .quantity__button {
-    border-width: 0 !important;
-    border-style: none !important;
-    border-color: #FAF5E8 !important;
+  /* Restore only our premium shadows */
+  .drawer__inner {
+    box-shadow: -12px 0 48px rgba(59, 36, 22, 0.25) !important;
   }
   
-  #CartDrawer .quantity {
-    border-color: #FAF5E8 !important;
-  }
-  
-  #CartDrawer .quantity__button {
-    border-color: #FFFFFF !important;
-  }
-  
-  #CartDrawer .cart__checkout-button {
-    border-color: #4A2E1A !important;
-  }
-  
-  /* Restore only our premium styling */
-  #CartDrawer .drawer__inner {
-    background: linear-gradient(180deg, #FAF5E8 0%, #F5EED8 100%) !important;
-    width: 440px !important;
-    max-width: calc(100% - 20px) !important;
-    box-shadow: -12px 0 48px rgba(59, 36, 22, 0.25), 0 0 0 1px rgba(176, 141, 66, 0.1) !important;
-  }
-  
-  #CartDrawer .cart-item {
-    background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F0 100%) !important;
-    border: 1px solid rgba(176, 141, 66, 0.18) !important;
-    border-radius: 24px !important;
+  .cart-item {
     box-shadow: 0 4px 20px rgba(59, 36, 22, 0.08) !important;
   }
   
-  #CartDrawer .cart-item:hover {
+  .cart-item:hover {
     box-shadow: 0 8px 32px rgba(59, 36, 22, 0.15) !important;
   }
   
-  #CartDrawer .cart-item__image {
-    border-radius: 16px !important;
+  .cart-item__image {
     box-shadow: 0 4px 12px rgba(59, 36, 22, 0.12) !important;
   }
   
-  #CartDrawer .quantity {
-    background: linear-gradient(135deg, #FAF5E8 0%, #F0E8D8 100%) !important;
-    border-radius: 24px !important;
+  .quantity {
     box-shadow: 0 2px 8px rgba(59, 36, 22, 0.08) !important;
   }
   
-  #CartDrawer .quantity__button {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%) !important;
-    border-radius: 50% !important;
+  .quantity__button {
     box-shadow: 0 2px 6px rgba(59, 36, 22, 0.08) !important;
   }
   
-  #CartDrawer .quantity__button:hover {
-    background: linear-gradient(135deg, #B08D42 0%, #8B6D32 100%) !important;
+  .quantity__button:hover {
     box-shadow: 0 4px 12px rgba(176, 141, 66, 0.3) !important;
   }
   
-  #CartDrawer .cart-remove-button {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%) !important;
-    border-radius: 50% !important;
+  .cart-remove-button {
     box-shadow: 0 2px 8px rgba(205, 92, 92, 0.15) !important;
   }
   
-  #CartDrawer .cart-remove-button:hover {
-    background: linear-gradient(135deg, #CD5C5C 0%, #A04A4A 100%) !important;
+  .cart-remove-button:hover {
     box-shadow: 0 4px 16px rgba(205, 92, 92, 0.35) !important;
   }
   
-  #CartDrawer .drawer__close {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%) !important;
-    border-radius: 50% !important;
+  .drawer__close {
     box-shadow: 0 4px 12px rgba(59, 36, 22, 0.1) !important;
   }
   
-  #CartDrawer .drawer__close:hover {
-    background: linear-gradient(135deg, #3B2416 0%, #2C1A0F 100%) !important;
+  .drawer__close:hover {
     box-shadow: 0 6px 20px rgba(59, 36, 22, 0.25) !important;
   }
   
-  #CartDrawer .cart__checkout-button {
-    background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%) !important;
-    color: #F8E8B5 !important;
-    border-radius: 50px !important;
+  .cart__checkout-button {
     box-shadow: 0 8px 28px rgba(44, 26, 15, 0.35), 0 0 0 1px rgba(232, 194, 104, 0.1) !important;
   }
   
-  #CartDrawer .cart__checkout-button:hover {
-    background: linear-gradient(135deg, #5A3820 0%, #372114 100%) !important;
-    color: #FFF8E8 !important;
+  .cart__checkout-button:hover {
     box-shadow: 0 12px 40px rgba(44, 26, 15, 0.45), 0 0 0 1px rgba(232, 194, 104, 0.2) !important;
   }
   
-  #CartDrawer .button {
-    background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%) !important;
-    color: #F8E8B5 !important;
-    border-radius: 50px !important;
+  .button {
     box-shadow: 0 6px 20px rgba(44, 26, 15, 0.3) !important;
   }
   
-  #CartDrawer .button:hover {
-    background: linear-gradient(135deg, #5A3820 0%, #372114 100%) !important;
-    color: #FFF8E8 !important;
+  .button:hover {
     box-shadow: 0 10px 30px rgba(44, 26, 15, 0.4) !important;
   }
 </style>
@@ -168,41 +80,6 @@
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'khas-cart-drawer.js' | asset_url }}" defer="defer"></script>
-
-<script>
-  // AGGRESSIVE: Force remove borders from quantity and checkout buttons
-  function removeBorders() {
-    const cartDrawer = document.getElementById('CartDrawer');
-    if (cartDrawer) {
-      const elements = cartDrawer.querySelectorAll('*');
-      elements.forEach(function(el) {
-        el.style.setProperty('border', 'none', 'important');
-        el.style.setProperty('outline', 'none', 'important');
-        el.style.setProperty('box-shadow', 'none', 'important');
-      });
-    }
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    removeBorders();
-    setInterval(removeBorders, 50);
-    
-    // Use MutationObserver to catch any dynamically added styles
-    const observer = new MutationObserver(function(mutations) {
-      removeBorders();
-    });
-    
-    const cartDrawer = document.getElementById('CartDrawer');
-    if (cartDrawer) {
-      observer.observe(cartDrawer, { 
-        attributes: true, 
-        childList: true, 
-        subtree: true,
-        attributeFilter: ['style', 'class']
-      });
-    }
-  });
-</script>
 
 <style>
   .drawer {
