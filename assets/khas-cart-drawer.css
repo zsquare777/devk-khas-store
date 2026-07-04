@@ -326,28 +326,40 @@
   outline: none !important;
 }
 
-/* Specific border removal for quantity selector */
-.quantity,
-.quantity__button,
-.quantity__button::before,
-.quantity__button::after,
-.quantity__input,
-.quantity__input::before,
-.quantity__input::after,
-.quantity-popover-wrapper,
-.quantity-popover-container {
+/* Specific border removal for quantity selector - MAXIMUM SPECIFICITY */
+.cart-item__quantity .quantity,
+.cart-item__quantity .quantity__button,
+.cart-item__quantity .quantity__input,
+.cart-item__quantity .quantity-popover-wrapper,
+.cart-item__quantity .quantity-popover-container,
+.drawer__inner .quantity,
+.drawer__inner .quantity__button,
+.drawer__inner .quantity__input,
+.drawer__inner .quantity-popover-wrapper,
+.drawer__inner .quantity-popover-container,
+.quantity-popover-wrapper .quantity,
+.quantity-popover-wrapper .quantity__button,
+.quantity-popover-wrapper .quantity__input,
+.quantity-popover-container .quantity,
+.quantity-popover-container .quantity__button,
+.quantity-popover-container .quantity__input {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-/* Specific border removal for checkout button */
-.cart__checkout-button,
-.cart__checkout-button::before,
-.cart__checkout-button::after,
-.cart__ctas .button {
+/* Specific border removal for checkout button - MAXIMUM SPECIFICITY */
+.cart__ctas .cart__checkout-button,
+.cart__ctas .button,
+.drawer__footer .cart__checkout-button,
+.drawer__footer .button,
+.cart-drawer__footer .cart__checkout-button,
+.cart-drawer__footer .button,
+#CartDrawer-Checkout,
+.cart-drawer form button[type="submit"] {
   border: none !important;
   outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Restore premium shadows for specific elements */

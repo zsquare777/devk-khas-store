@@ -9,6 +9,15 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'khas-cart-drawer.css' | asset_url | stylesheet_tag }}
 
+<style>
+  /* Force remove borders from quantity and checkout */
+  .quantity, .quantity__button, .quantity__input, .cart__checkout-button, .cart__ctas button {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+</style>
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'khas-cart-drawer.js' | asset_url }}" defer="defer"></script>
