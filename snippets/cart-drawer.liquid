@@ -5,16 +5,75 @@
   {% render 'cart-drawer' %}
 {% endcomment %}
 
-{{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'khas-cart-drawer.css' | asset_url | stylesheet_tag }}
 
 <style>
-  /* Force remove borders from quantity and checkout */
-  .quantity, .quantity__button, .quantity__input, .cart__checkout-button, .cart__ctas button {
+  /* Force remove ALL Shopify theme styling from cart drawer */
+  .drawer__inner * {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+  }
+  
+  /* Restore only our premium shadows */
+  .drawer__inner {
+    box-shadow: -12px 0 48px rgba(59, 36, 22, 0.25) !important;
+  }
+  
+  .cart-item {
+    box-shadow: 0 4px 20px rgba(59, 36, 22, 0.08) !important;
+  }
+  
+  .cart-item:hover {
+    box-shadow: 0 8px 32px rgba(59, 36, 22, 0.15) !important;
+  }
+  
+  .cart-item__image {
+    box-shadow: 0 4px 12px rgba(59, 36, 22, 0.12) !important;
+  }
+  
+  .quantity {
+    box-shadow: 0 2px 8px rgba(59, 36, 22, 0.08) !important;
+  }
+  
+  .quantity__button {
+    box-shadow: 0 2px 6px rgba(59, 36, 22, 0.08) !important;
+  }
+  
+  .quantity__button:hover {
+    box-shadow: 0 4px 12px rgba(176, 141, 66, 0.3) !important;
+  }
+  
+  .cart-remove-button {
+    box-shadow: 0 2px 8px rgba(205, 92, 92, 0.15) !important;
+  }
+  
+  .cart-remove-button:hover {
+    box-shadow: 0 4px 16px rgba(205, 92, 92, 0.35) !important;
+  }
+  
+  .drawer__close {
+    box-shadow: 0 4px 12px rgba(59, 36, 22, 0.1) !important;
+  }
+  
+  .drawer__close:hover {
+    box-shadow: 0 6px 20px rgba(59, 36, 22, 0.25) !important;
+  }
+  
+  .cart__checkout-button {
+    box-shadow: 0 8px 28px rgba(44, 26, 15, 0.35), 0 0 0 1px rgba(232, 194, 104, 0.1) !important;
+  }
+  
+  .cart__checkout-button:hover {
+    box-shadow: 0 12px 40px rgba(44, 26, 15, 0.45), 0 0 0 1px rgba(232, 194, 104, 0.2) !important;
+  }
+  
+  .button {
+    box-shadow: 0 6px 20px rgba(44, 26, 15, 0.3) !important;
+  }
+  
+  .button:hover {
+    box-shadow: 0 10px 30px rgba(44, 26, 15, 0.4) !important;
   }
 </style>
 
