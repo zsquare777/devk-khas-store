@@ -47,14 +47,12 @@
   height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%);
-  border: 2px solid rgba(176, 141, 66, 0.25);
   box-shadow: 0 4px 12px rgba(59, 36, 22, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .drawer__close:hover {
   background: linear-gradient(135deg, var(--khas-cart-dark-brown) 0%, #2C1A0F 100%);
-  border-color: var(--khas-cart-dark-brown);
   transform: rotate(90deg);
   box-shadow: 0 6px 20px rgba(59, 36, 22, 0.25);
 }
@@ -326,6 +324,16 @@
   color: #FFF8E8;
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(44, 26, 15, 0.4);
+}
+
+/* Remove original Shopify button borders */
+.button,
+.cart__checkout-button,
+.cart-remove-button,
+.quantity__button,
+.drawer__close {
+  border: none !important;
+  outline: none !important;
 }
 
 /* Responsive */
