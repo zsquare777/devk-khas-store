@@ -1,0 +1,897 @@
+/* Khas Wholesale Page Styles */
+
+:root {
+  --khas-wholesale-bg: #FAF5E8;
+  --khas-wholesale-gold: #B08D42;
+  --khas-wholesale-dark-brown: #3B2416;
+  --khas-wholesale-secondary-brown: #6A4A28;
+  --khas-wholesale-text: #4B3A2C;
+  --khas-wholesale-white: #FFFFFF;
+}
+
+/* Main Section */
+.khas-wholesale {
+  background-color: var(--khas-wholesale-bg);
+  color: var(--khas-wholesale-text);
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.khas-wholesale-hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.khas-wholesale-crown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.khas-wholesale-crown svg {
+  display: block;
+}
+
+.khas-wholesale-hero-heading {
+  font-family: inherit;
+  font-size: 36px;
+  font-weight: 670;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+}
+
+.khas-wholesale-hero-subheading {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 450;
+  color: rgba(46, 37, 37, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 32px;
+}
+
+.khas-wholesale-hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botanical Decorations */
+.khas-wholesale-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-wholesale-decoration.top-left {
+  top: 0;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.khas-wholesale-decoration.bottom-right {
+  bottom: 0;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.khas-wholesale-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section Styling */
+.khas-wholesale-section {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.khas-wholesale-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.khas-wholesale-section-heading {
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+.khas-wholesale-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--khas-wholesale-gold) 0%, transparent 100%);
+  margin: 0 auto;
+}
+
+/* Cards Grid */
+.khas-wholesale-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.khas-wholesale-card {
+  background-color: var(--khas-wholesale-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 22px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(59, 36, 22, 0.06);
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.khas-wholesale-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59, 36, 22, 0.12);
+}
+
+.khas-wholesale-card-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-wholesale-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-wholesale-card-heading {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.khas-wholesale-card-text {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--khas-wholesale-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Industries Grid */
+.khas-wholesale-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.khas-wholesale-industry-card {
+  background-color: var(--khas-wholesale-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.khas-wholesale-industry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(59, 36, 22, 0.1);
+}
+
+.khas-wholesale-industry-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-wholesale-industry-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-wholesale-industry-text {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--khas-wholesale-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Categories Grid */
+.khas-wholesale-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.khas-wholesale-category-card {
+  background-color: var(--khas-wholesale-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.khas-wholesale-category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(59, 36, 22, 0.1);
+  border-color: var(--khas-wholesale-gold);
+}
+
+.khas-wholesale-category-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-wholesale-category-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-wholesale-category-text {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--khas-wholesale-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Timeline */
+.khas-wholesale-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.khas-wholesale-timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.khas-wholesale-timeline-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--khas-wholesale-white);
+  border: 2px solid var(--khas-wholesale-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(176, 141, 66, 0.15);
+}
+
+.khas-wholesale-timeline-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(176, 141, 66, 0.25);
+}
+
+.khas-wholesale-timeline-circle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.khas-wholesale-timeline-label {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--khas-wholesale-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+}
+
+.khas-wholesale-timeline-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--khas-wholesale-gold) 0%, var(--khas-wholesale-gold) 50%, transparent 100%);
+  min-width: 30px;
+}
+
+/* Benefits Grid */
+.khas-wholesale-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.khas-wholesale-benefit-card {
+  background-color: var(--khas-wholesale-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.khas-wholesale-benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(59, 36, 22, 0.08);
+}
+
+.khas-wholesale-benefit-check {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--khas-wholesale-gold) 0%, #8B6D3A 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.khas-wholesale-benefit-text {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--khas-wholesale-text);
+  margin: 0;
+}
+
+/* Form Card */
+.khas-wholesale-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--khas-wholesale-white);
+  border-radius: 22px;
+  padding: 50px 40px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(59, 36, 22, 0.08);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+}
+
+.khas-wholesale-form-ornament {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-wholesale-form-ornament.top-left {
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.khas-wholesale-form-ornament.top-right {
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.khas-wholesale-form-ornament.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.khas-wholesale-form-ornament.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.khas-wholesale-form-ornament svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-wholesale-form {
+  position: relative;
+  z-index: 2;
+}
+
+.khas-wholesale-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.khas-wholesale-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.khas-wholesale-form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.khas-wholesale-form-label {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--khas-wholesale-dark-brown);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.khas-wholesale-form-input,
+.khas-wholesale-form-select,
+.khas-wholesale-form-textarea {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--khas-wholesale-text);
+  background-color: #FAF5E8;
+  border: 1px solid rgba(176, 141, 66, 0.3);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.khas-wholesale-form-input:focus,
+.khas-wholesale-form-select:focus,
+.khas-wholesale-form-textarea:focus {
+  border-color: var(--khas-wholesale-gold);
+  box-shadow: 0 0 0 3px rgba(176, 141, 66, 0.1);
+}
+
+.khas-wholesale-form-input::placeholder,
+.khas-wholesale-form-textarea::placeholder {
+  color: rgba(75, 58, 44, 0.5);
+}
+
+.khas-wholesale-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.khas-wholesale-form-message {
+  margin-top: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.khas-wholesale-form-message.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #2E7D32;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.khas-wholesale-form-message.error {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #C62828;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Trust Banner */
+.khas-wholesale-trust-banner {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 40px 60px;
+  background: linear-gradient(135deg, rgba(176, 141, 66, 0.08) 0%, rgba(176, 141, 66, 0.04) 100%);
+  border: 1px solid rgba(176, 141, 66, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.khas-wholesale-trust-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-wholesale-trust-decoration.left {
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-wholesale-trust-decoration.right {
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-wholesale-trust-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-wholesale-trust-text {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--khas-wholesale-dark-brown);
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.05em;
+}
+
+/* FAQ */
+.khas-wholesale-faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.khas-wholesale-faq-item {
+  background-color: var(--khas-wholesale-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.khas-wholesale-faq-button {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--khas-wholesale-dark-brown);
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.khas-wholesale-faq-button:hover {
+  background-color: rgba(176, 141, 66, 0.05);
+}
+
+.khas-wholesale-faq-question {
+  flex: 1;
+}
+
+.khas-wholesale-faq-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.khas-wholesale-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.khas-wholesale-faq-answer p {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--khas-wholesale-text);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 24px 20px;
+}
+
+/* Contact Card */
+.khas-wholesale-contact-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--khas-wholesale-white);
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(59, 36, 22, 0.08);
+}
+
+.khas-wholesale-contact-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-wholesale-contact-decoration.left {
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-wholesale-contact-decoration.right {
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-wholesale-contact-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-wholesale-contact-content {
+  position: relative;
+  z-index: 2;
+}
+
+.khas-wholesale-contact-heading {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.khas-wholesale-contact-text {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(46, 37, 37, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.khas-wholesale-contact-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.khas-wholesale-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.khas-wholesale-btn--primary {
+  background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%);
+  color: #F8E8B5;
+  border: 1px solid rgba(232, 194, 104, 0.25);
+  box-shadow: 0 8px 24px rgba(44, 26, 15, 0.25);
+}
+
+.khas-wholesale-btn--primary:hover {
+  background: linear-gradient(135deg, #5A3820 0%, #372114 100%);
+  color: #FFF3CC;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(44, 26, 15, 0.35);
+}
+
+.khas-wholesale-btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: #3B2416;
+  border: 2px solid rgba(59, 36, 22, 0.65);
+  box-shadow: 0 4px 18px rgba(44, 26, 15, 0.08);
+}
+
+.khas-wholesale-btn--secondary:hover {
+  background: #3B2416;
+  color: #F8E8B5;
+  border-color: #3B2416;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(44, 26, 15, 0.28);
+}
+
+.khas-wholesale-btn--full {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 749px) {
+  .khas-wholesale-hero {
+    padding: 60px 20px 40px;
+  }
+
+  .khas-wholesale-hero-heading {
+    font-size: 28px;
+  }
+
+  .khas-wholesale-hero-subheading {
+    font-size: 14px;
+  }
+
+  .khas-wholesale-decoration.top-left,
+  .khas-wholesale-decoration.bottom-right {
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+  }
+
+  .khas-wholesale-section {
+    padding: 0 16px;
+    margin-bottom: 60px;
+  }
+
+  .khas-wholesale-section-heading {
+    font-size: 22px;
+  }
+
+  .khas-wholesale-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .khas-wholesale-industries-grid,
+  .khas-wholesale-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .khas-wholesale-timeline {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .khas-wholesale-timeline-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--khas-wholesale-gold) 0%, var(--khas-wholesale-gold) 50%, transparent 100%);
+    min-width: auto;
+  }
+
+  .khas-wholesale-timeline-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .khas-wholesale-timeline-circle svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .khas-wholesale-timeline-label {
+    font-size: 11px;
+  }
+
+  .khas-wholesale-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .khas-wholesale-form-card {
+    padding: 40px 24px;
+  }
+
+  .khas-wholesale-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .khas-wholesale-trust-banner {
+    padding: 30px 24px;
+  }
+
+  .khas-wholesale-trust-text {
+    font-size: 15px;
+  }
+
+  .khas-wholesale-contact-card {
+    padding: 40px 24px;
+  }
+
+  .khas-wholesale-contact-heading {
+    font-size: 18px;
+  }
+
+  .khas-wholesale-contact-text {
+    font-size: 14px;
+  }
+
+  .khas-wholesale-contact-buttons {
+    flex-direction: column;
+  }
+
+  .khas-wholesale-btn {
+    width: 100%;
+  }
+
+  .khas-wholesale-hero-buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .khas-wholesale-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .khas-wholesale-industries-grid,
+  .khas-wholesale-categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .khas-wholesale-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .khas-wholesale-contact-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .khas-wholesale-card,
+  .khas-wholesale-industry-card,
+  .khas-wholesale-category-card,
+  .khas-wholesale-timeline-circle,
+  .khas-wholesale-benefit-card,
+  .khas-wholesale-form-input,
+  .khas-wholesale-form-select,
+  .khas-wholesale-form-textarea,
+  .khas-wholesale-btn,
+  .khas-wholesale-faq-button,
+  .khas-wholesale-faq-answer {
+    transition: none;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.khas-wholesale-btn:focus-visible,
+.khas-wholesale-faq-button:focus-visible,
+.khas-wholesale-form-input:focus-visible,
+.khas-wholesale-form-select:focus-visible,
+.khas-wholesale-form-textarea:focus-visible {
+  outline: 2px solid var(--khas-wholesale-gold);
+  outline-offset: 2px;
+}
