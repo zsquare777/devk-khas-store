@@ -126,29 +126,48 @@
   letter-spacing: -0.01em;
 }
 
+/* ===========================
+   Primary Button
+=========================== */
+
 .khas-hero__btn--primary {
-  background: linear-gradient(135deg, #2d2416 0%, #1a1410 100%);
-  color: #e9cf8f;
-  border: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%);
+  color: #F8E8B5;
+  border: 1px solid rgba(232, 194, 104, 0.25);
+  box-shadow:
+    0 8px 24px rgba(44, 26, 15, 0.25),
+    inset 0 1px 0 rgba(255, 240, 200, 0.12);
+  transition: all .35s ease;
 }
 
 .khas-hero__btn--primary:hover {
-  background: linear-gradient(135deg, #3a2f1e 0%, #241d14 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #5A3820 0%, #372114 100%);
+  color: #FFF3CC;
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 34px rgba(44, 26, 15, 0.35),
+    inset 0 1px 0 rgba(255, 240, 200, 0.18);
 }
 
+/* ===========================
+   Secondary Button
+=========================== */
+
 .khas-hero__btn--secondary {
-  background: transparent;
-  color: #3b2c1e;
-  border: 2px solid #3b2c1e;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  color: #3B2416;
+  border: 2px solid rgba(59,36,22,0.65);
+  box-shadow: 0 4px 18px rgba(44,26,15,.08);
+  transition: all .35s ease;
 }
 
 .khas-hero__btn--secondary:hover {
-  background: rgba(247, 236, 214, 0.12);
-  border-color: #f7ecd6;
-  transform: translateY(-2px);
+  background: #3B2416;
+  color: #F8E8B5;
+  border-color: #3B2416;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(44,26,15,.28);
 }
 
 .khas-hero__image-wrapper {
