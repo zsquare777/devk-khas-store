@@ -752,3 +752,64 @@
     box-shadow: 0 10px 30px rgba(44, 26, 15, 0.4) !important;
   }
 </style>
+
+<script>
+  // Force remove all borders and black styling from cart drawer
+  document.addEventListener('DOMContentLoaded', function() {
+    function removeCartDrawerBorders() {
+      const cartDrawer = document.getElementById('CartDrawer');
+      if (!cartDrawer) return;
+      
+      // Remove borders from all elements
+      const allElements = cartDrawer.querySelectorAll('*');
+      allElements.forEach(el => {
+        el.style.setProperty('border', 'none', 'important');
+        el.style.setProperty('outline', 'none', 'important');
+        el.style.setProperty('box-shadow', 'none', 'important');
+        el.style.setProperty('background-image', 'none', 'important');
+      });
+      
+      // Restore premium shadows for specific elements
+      const drawerInner = cartDrawer.querySelector('.drawer__inner');
+      if (drawerInner) {
+        drawerInner.style.setProperty('box-shadow', '-12px 0 48px rgba(59, 36, 22, 0.25), 0 0 0 1px rgba(176, 141, 66, 0.1)', 'important');
+      }
+      
+      const cartItems = cartDrawer.querySelectorAll('.cart-item');
+      cartItems.forEach(item => {
+        item.style.setProperty('box-shadow', '0 4px 20px rgba(59, 36, 22, 0.08)', 'important');
+      });
+      
+      const quantitySelectors = cartDrawer.querySelectorAll('.quantity');
+      quantitySelectors.forEach(q => {
+        q.style.setProperty('box-shadow', '0 2px 8px rgba(59, 36, 22, 0.08)', 'important');
+      });
+      
+      const quantityButtons = cartDrawer.querySelectorAll('.quantity__button');
+      quantityButtons.forEach(btn => {
+        btn.style.setProperty('box-shadow', '0 2px 6px rgba(59, 36, 22, 0.08)', 'important');
+      });
+      
+      const checkoutButton = cartDrawer.querySelector('.cart__checkout-button');
+      if (checkoutButton) {
+        checkoutButton.style.setProperty('box-shadow', '0 8px 28px rgba(44, 26, 15, 0.35), 0 0 0 1px rgba(232, 194, 104, 0.1)', 'important');
+      }
+    }
+    
+    // Run immediately and on cart drawer open
+    removeCartDrawerBorders();
+    
+    // Observer for cart drawer changes
+    const observer = new MutationObserver(function(mutations) {
+      removeCartDrawerBorders();
+    });
+    
+    const cartDrawer = document.getElementById('CartDrawer');
+    if (cartDrawer) {
+      observer.observe(cartDrawer, { childList: true, subtree: true });
+    }
+    
+    // Also run on cart drawer open event
+    document.addEventListener('cart-drawer:open', removeCartDrawerBorders);
+  });
+</script>
