@@ -12,6 +12,8 @@
   {% section 'khas-faq' %}
 {%- elsif page.handle == 'about-us' or page.handle == 'about' -%}
   {% section 'khas-about-new' %}
+{%- elsif page.handle == 'contact' -%}
+  {% section 'khas-contact-new' %}
 {%- else -%}
   {% section 'main-page' %}
 {%- endif -%}
