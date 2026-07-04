@@ -8,6 +8,22 @@
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
+<style>
+  /* Khas theme button colors */
+  .cart__checkout-button,
+  .button,
+  .cart-drawer .button {
+    background-color: #3B2416 !important;
+    color: #FFFFFF !important;
+  }
+  
+  .cart__checkout-button:hover,
+  .button:hover,
+  .cart-drawer .button:hover {
+    background-color: #4A2E1A !important;
+  }
+</style>
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
