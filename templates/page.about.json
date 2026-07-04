@@ -9,15 +9,15 @@
  */
 {
   "sections": {
-    "khas_about": {
-      "type": "khas-about",
+    "khas_about_new": {
+      "type": "khas-about-new",
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
-    "khas_about"
+    "khas_about_new"
   ]
 }
