@@ -1,13 +1,26 @@
 {%- if page.handle == 'shipping-returns' -%}
-  {% render 'khas-shipping-returns' %}
+  {{ 'khas-shipping-returns.css' | asset_url | stylesheet_tag }}
+  <section class="khas-shipping-returns" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {% render 'khas-shipping-returns-content' %}
+  </section>
 {%- elsif page.handle == 'terms-conditions' -%}
-  {% render 'khas-terms' %}
+  {{ 'khas-terms.css' | asset_url | stylesheet_tag }}
+  <section class="khas-terms" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {% render 'khas-terms-content' %}
+  </section>
 {%- elsif page.handle == 'faq' -%}
-  {% render 'khas-faq' %}
+  {{ 'khas-faq.css' | asset_url | stylesheet_tag }}
+  {{ 'khas-faq.js' | asset_url | script_tag }}
+  <section class="khas-faq" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {% render 'khas-faq-content' %}
+  </section>
 {%- elsif page.handle == 'about-us' -%}
-  {% render 'khas-about' %}
+  {{ 'khas-about.css' | asset_url | stylesheet_tag }}
+  <section class="khas-about-section" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    {% render 'khas-about-content' %}
+  </section>
 {%- else -%}
-  <div class="page-width page-width--narrow">
+  <div class="page-width page-width--narrow" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
     <h1 class="main-page-title page-header h1">
       {{ page.title | escape }}
     </h1>
