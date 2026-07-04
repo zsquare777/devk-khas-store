@@ -67,18 +67,21 @@
 }
 
 .cart-item {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F0 100%);
-  border: 1px solid rgba(176, 141, 66, 0.18);
-  border-radius: 24px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 20px rgba(59, 36, 22, 0.08), 0 0 0 1px rgba(176, 141, 66, 0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin-bottom: 24px;
+  box-shadow: none !important;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .cart-item:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 8px 32px rgba(59, 36, 22, 0.15), 0 0 0 1px rgba(176, 141, 66, 0.15);
-  border-color: rgba(176, 141, 66, 0.3);
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
 }
 
 .cart-item__media {
