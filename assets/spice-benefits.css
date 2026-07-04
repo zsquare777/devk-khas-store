@@ -8,6 +8,35 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.spice-benefits-overlay {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spice-benefits-overlay.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.spice-benefits-overlay.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.spice-benefits-overlay.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.spice-benefits-overlay.bottom-right {
+  bottom: 20px;
+  right: 20px;
 }
 
 .spice-benefits-heading {
@@ -54,7 +83,7 @@
   justify-content: center;
   height: 80px;
   width: 80px;
-  color: #03680c;
+  color: #8a5f1a;
 }
 
 .spice-benefits-icon svg {
