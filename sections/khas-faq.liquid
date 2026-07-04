@@ -1,0 +1,443 @@
+{{ 'khas-faq.css' | asset_url | stylesheet_tag }}
+{{ 'khas-faq.js' | asset_url | script_tag }}
+
+{%- style -%}
+  .khas-faq-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<section class="khas-faq khas-faq-{{ section.id }}" id="KhasFAQSection">
+  
+  <!-- Hero Section -->
+  <div class="khas-faq-hero">
+    <!-- Top Left Botanical Decoration -->
+    <div class="khas-faq-decoration top-left">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#6A4A28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Bay leaf branch -->
+          <path d="M 10,20 C 30,15 50,25 70,20 C 90,15 110,25 130,20" />
+          <path d="M 25,25 Q 30,20 35,25 Q 30,30 25,25 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 45,28 Q 50,23 55,28 Q 50,33 45,28 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 65,25 Q 70,20 75,25 Q 70,30 65,25 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 85,28 Q 90,23 95,28 Q 90,33 85,28 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 105,25 Q 110,20 115,25 Q 110,30 105,25 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <!-- Small leaves -->
+          <path d="M 15,35 Q 20,30 25,35 Q 20,40 15,35 Z" fill="#6A4A28" fill-opacity="0.06" />
+          <path d="M 35,40 Q 40,35 45,40 Q 40,45 35,40 Z" fill="#6A4A28" fill-opacity="0.06" />
+          <path d="M 55,38 Q 60,33 65,38 Q 60,43 55,38 Z" fill="#6A4A28" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Bottom Right Botanical Decoration -->
+    <div class="khas-faq-decoration bottom-right">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#6A4A28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Cinnamon branch -->
+          <path d="M 180,180 C 160,175 140,185 120,180 C 100,175 80,185 60,180" />
+          <path d="M 165,175 Q 160,170 155,175 Q 160,180 165,175 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 145,178 Q 140,173 135,178 Q 140,183 145,178 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 125,175 Q 120,170 115,175 Q 120,180 125,175 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 105,178 Q 100,173 95,178 Q 100,183 105,178 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <path d="M 85,175 Q 80,170 75,175 Q 80,180 85,175 Z" fill="#6A4A28" fill-opacity="0.08" />
+          <!-- Small decorative elements -->
+          <path d="M 175,165 Q 180,160 185,165 Q 180,170 175,165 Z" fill="#6A4A28" fill-opacity="0.06" />
+          <path d="M 155,160 Q 160,155 165,160 Q 160,165 155,160 Z" fill="#6A4A28" fill-opacity="0.06" />
+          <path d="M 135,162 Q 140,157 145,162 Q 140,167 135,162 Z" fill="#6A4A28" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="khas-faq-hero-content">
+      <h1 class="khas-faq-hero-heading">Frequently Asked Questions</h1>
+      <p class="khas-faq-hero-subheading">Everything you need to know about Khas Foods, our products, orders, delivery, and quality.</p>
+    </div>
+  </div>
+
+  <!-- Search Section -->
+  <div class="khas-faq-search-container">
+    <div class="khas-faq-search-wrapper">
+      <svg class="khas-faq-search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="8" stroke="#6A4A28" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 17,17 L 21,21" stroke="#6A4A28" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <input 
+        type="text" 
+        class="khas-faq-search-input" 
+        id="khasFaqSearch" 
+        placeholder="Search for answers..."
+        aria-label="Search FAQs"
+      />
+    </div>
+  </div>
+
+  <!-- FAQ Categories and Accordions -->
+  <div class="khas-faq-content">
+    
+    <!-- Products Category -->
+    <div class="khas-faq-category">
+      <h2 class="khas-faq-category-heading">Products</h2>
+      
+      <div class="khas-faq-accordion" data-category="products">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Are your products 100% natural?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Yes, all Khas Foods products are made from 100% natural ingredients. We source our spices, herbs, and other ingredients from trusted suppliers who share our commitment to quality and purity. No artificial colors, flavors, or preservatives are added to our products.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="products">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Do your spices contain preservatives?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>No, our spices are completely free from preservatives. We use traditional processing methods and careful packaging to ensure freshness without the need for artificial preservatives.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="products">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Where are your spices sourced?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>We source our spices from the finest growing regions in Pakistan and around the world. Each ingredient is carefully selected for its quality, aroma, and authentic flavor profile.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="products">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Are your products halal?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Yes, all Khas Foods products are halal-certified. We follow strict halal guidelines in our production processes to ensure our products meet the highest standards of purity and compliance.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="products">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">How should I store spices?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Store your spices in a cool, dry place away from direct sunlight. Keep them in airtight containers to maintain freshness and aroma. Properly stored, our spices can maintain their quality for 12-18 months.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders Category -->
+    <div class="khas-faq-category">
+      <h2 class="khas-faq-category-heading">Orders</h2>
+      
+      <div class="khas-faq-accordion" data-category="orders">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">How do I place an order?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>You can place an order directly through our website. Simply browse our products, add items to your cart, and proceed to checkout. You can also contact us via phone or WhatsApp for assistance with your order.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="orders">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Can I cancel my order?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Orders can be cancelled within 2 hours of placement, provided they haven't been shipped yet. Please contact our customer support team as soon as possible with your order details to request a cancellation.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="orders">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Can I change my shipping address?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Address changes can be made within 2 hours of order placement, as long as the order hasn't been shipped. Contact our support team immediately with your order number and new address details.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipping Category -->
+    <div class="khas-faq-category">
+      <h2 class="khas-faq-category-heading">Shipping</h2>
+      
+      <div class="khas-faq-accordion" data-category="shipping">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Which areas do you deliver to?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>We deliver to all major cities across Pakistan. For specific location availability, please enter your address during checkout or contact our customer support team.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="shipping">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">How long does delivery take?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Standard delivery takes 2-4 business days for major cities and 4-7 business days for other areas. Express delivery options are available for urgent orders.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="shipping">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Do you offer international shipping?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Currently, we only ship within Pakistan. We are working on expanding our shipping capabilities to international markets. Please check our website for updates on international shipping availability.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Returns Category -->
+    <div class="khas-faq-category">
+      <h2 class="khas-faq-category-heading">Returns</h2>
+      
+      <div class="khas-faq-accordion" data-category="returns">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Can I return a product?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Due to the nature of food products, we generally do not accept returns. However, if you receive a damaged or incorrect product, please contact us within 48 hours of delivery for a replacement or refund.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="returns">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">What if my order arrives damaged?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>If your order arrives damaged, please contact us immediately with photos of the damaged items and packaging. We will arrange for a replacement or full refund at no additional cost to you.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payments Category -->
+    <div class="khas-faq-category">
+      <h2 class="khas-faq-category-heading">Payments</h2>
+      
+      <div class="khas-faq-accordion" data-category="payments">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Which payment methods are accepted?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>We accept all major credit/debit cards, bank transfers, and mobile payment platforms including JazzCash, EasyPaisa, and Raast. All transactions are secure and encrypted.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="payments">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Is Cash on Delivery available?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Yes, Cash on Delivery (COD) is available in most areas. You can select this payment method during checkout. Please note that COD orders may have additional processing time.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Category -->
+    <div class="khas-faq-category">
+      <h2 class="khas-faq-category-heading">General</h2>
+      
+      <div class="khas-faq-accordion" data-category="general">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">How can I contact customer support?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>You can reach our customer support team via phone, WhatsApp, or email. Our contact details are available on our website's contact page. We're available Monday through Saturday, 9 AM to 6 PM.</p>
+        </div>
+      </div>
+
+      <div class="khas-faq-accordion" data-category="general">
+        <button class="khas-faq-accordion-trigger" aria-expanded="false">
+          <span class="khas-faq-accordion-title">Where can I buy Khas Foods?</span>
+          <span class="khas-faq-accordion-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12,6 L 12,18" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 6,12 L 18,12" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="khas-faq-accordion-content">
+          <p>Khas Foods products are available through our official website and selected retail stores across Pakistan. Visit our store locator page to find a retailer near you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Card -->
+  <div class="khas-faq-contact-card">
+    <!-- Left Botanical Decoration -->
+    <div class="khas-faq-contact-decoration left">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#6A4A28" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.08">
+          <!-- Coriander flower -->
+          <path d="M 10,50 Q 30,30 50,50 Q 30,70 10,50 Z" fill="#6A4A28" fill-opacity="0.05" />
+          <path d="M 20,40 Q 25,35 30,40 Q 25,45 20,40 Z" fill="#6A4A28" fill-opacity="0.04" />
+          <path d="M 35,45 Q 40,40 45,45 Q 40,50 35,45 Z" fill="#6A4A28" fill-opacity="0.04" />
+          <path d="M 20,60 Q 25,55 30,60 Q 25,65 20,60 Z" fill="#6A4A28" fill-opacity="0.04" />
+          <path d="M 35,55 Q 40,50 45,55 Q 40,60 35,55 Z" fill="#6A4A28" fill-opacity="0.04" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Right Botanical Decoration -->
+    <div class="khas-faq-contact-decoration right">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#6A4A28" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.08">
+          <!-- Garlic stem -->
+          <path d="M 90,50 C 70,45 50,55 30,50 C 20,47 15,40 10,35" />
+          <path d="M 75,48 Q 70,43 65,48 Q 70,53 75,48 Z" fill="#6A4A28" fill-opacity="0.05" />
+          <path d="M 55,52 Q 50,47 45,52 Q 50,57 55,52 Z" fill="#6A4A28" fill-opacity="0.05" />
+          <path d="M 35,48 Q 30,43 25,48 Q 30,53 35,48 Z" fill="#6A4A28" fill-opacity="0.05" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="khas-faq-contact-content">
+      <h2 class="khas-faq-contact-heading">Still have questions?</h2>
+      <p class="khas-faq-contact-text">Our team is always happy to help.</p>
+      <div class="khas-faq-contact-buttons">
+        <a href="/pages/contact" class="khas-faq-btn khas-faq-btn--primary">Contact Us</a>
+        <a href="/collections/all" class="khas-faq-btn khas-faq-btn--secondary">Shop Products</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Khas FAQ",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Khas FAQ"
+    }
+  ]
+}
+{% endschema %}
