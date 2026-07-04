@@ -1,0 +1,692 @@
+{{ 'khas-wholesale.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .khas-wholesale-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<section class="khas-wholesale khas-wholesale-{{ section.id }}" id="KhasWholesaleSection">
+  
+  <!-- Hero Section -->
+  <div class="khas-wholesale-hero">
+    <!-- Top Left Botanical Decoration - Pepper Vine -->
+    <div class="khas-wholesale-decoration top-left">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Pepper vine -->
+          <path d="M 10,180 C 30,170 50,170 70,160 C 90,150 110,150 130,140 C 150,130 170,120 180,100" />
+          <!-- Pepper berries -->
+          <circle cx="30" cy="172" r="6" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="55" cy="162" r="6" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="80" cy="152" r="6" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="105" cy="142" r="6" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="130" cy="132" r="6" fill="#3B2416" fill-opacity="0.08" />
+          <circle cx="155" cy="122" r="6" fill="#3B2416" fill-opacity="0.08" />
+          <!-- Small leaves -->
+          <path d="M 25,165 Q 20,158 25,151 Q 30,158 25,165 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 50,155 Q 45,148 50,141 Q 55,148 50,155 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 75,145 Q 70,138 75,131 Q 80,138 75,145 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 100,135 Q 95,128 100,121 Q 105,128 100,135 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 125,125 Q 120,118 125,111 Q 130,118 125,125 Z" fill="#3B2416" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Bottom Right Botanical Decoration - Spice Blossom -->
+    <div class="khas-wholesale-decoration bottom-right">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Spice blossom center -->
+          <circle cx="100" cy="100" r="15" fill="#3B2416" fill-opacity="0.08" />
+          <!-- Petals -->
+          <ellipse cx="100" cy="60" rx="8" ry="20" fill="#3B2416" fill-opacity="0.06" />
+          <ellipse cx="140" cy="100" rx="20" ry="8" fill="#3B2416" fill-opacity="0.06" />
+          <ellipse cx="100" cy="140" rx="8" ry="20" fill="#3B2416" fill-opacity="0.06" />
+          <ellipse cx="60" cy="100" rx="20" ry="8" fill="#3B2416" fill-opacity="0.06" />
+          <!-- Diagonal petals -->
+          <ellipse cx="128" cy="72" rx="8" ry="18" fill="#3B2416" fill-opacity="0.05" transform="rotate(45 128 72)" />
+          <ellipse cx="128" cy="128" rx="8" ry="18" fill="#3B2416" fill-opacity="0.05" transform="rotate(-45 128 128)" />
+          <ellipse cx="72" cy="128" rx="8" ry="18" fill="#3B2416" fill-opacity="0.05" transform="rotate(45 72 128)" />
+          <ellipse cx="72" cy="72" rx="8" ry="18" fill="#3B2416" fill-opacity="0.05" transform="rotate(-45 72 72)" />
+          <!-- Small decorative dots -->
+          <circle cx="100" cy="100" r="3" fill="#3B2416" fill-opacity="0.1" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="khas-wholesale-hero-content">
+      <div class="khas-wholesale-crown">
+        <svg viewBox="0 0 100 35" width="120" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 40,30 L 60,30 L 62,24 L 56,26 L 50,15 L 44,26 L 38,24 Z" fill="#fabd2f" />
+          <circle cx="50" cy="13" r="1.5" fill="#fabd2f" />
+          <circle cx="38" cy="22" r="1" fill="#fabd2f" />
+          <circle cx="62" cy="22" r="1" fill="#fabd2f" />
+          <path d="M 42,28 Q 50,29 58,28" stroke="#fabd2f" stroke-width="1" />
+        </svg>
+      </div>
+      <h1 class="khas-wholesale-hero-heading">Wholesale Partnerships</h1>
+      <p class="khas-wholesale-hero-subheading">Bring the authentic taste of Khas Foods to your customers with premium-quality spices, herbs, pastes, salts, and everyday essentials.</p>
+      <div class="khas-wholesale-hero-buttons">
+        <a href="#wholesale-form" class="khas-wholesale-btn khas-wholesale-btn--primary">Become a Wholesale Partner</a>
+        <a href="/collections/all" class="khas-wholesale-btn khas-wholesale-btn--secondary">Browse Products</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Partner With Khas -->
+  <div class="khas-wholesale-section">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Why Partner With Khas</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-cards-grid">
+      <div class="khas-wholesale-card">
+        <div class="khas-wholesale-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 24,4 L 28,16 L 40,16 L 30,24 L 34,36 L 24,28 L 14,36 L 18,24 L 8,16 L 20,16 Z" stroke="#B08D42" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="khas-wholesale-card-heading">Premium Quality</h3>
+        <p class="khas-wholesale-card-text">Only carefully selected ingredients sourced from trusted suppliers.</p>
+      </div>
+      <div class="khas-wholesale-card">
+        <div class="khas-wholesale-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 8,12 L 40,12 L 40,40 L 8,40 Z" stroke="#B08D42" stroke-width="2" fill="none"/>
+            <path d="M 8,20 L 40,20" stroke="#B08D42" stroke-width="2"/>
+            <path d="M 16,28 L 24,28" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 16,34 L 32,34" stroke="#B08D42" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="khas-wholesale-card-heading">Competitive Pricing</h3>
+        <p class="khas-wholesale-card-text">Designed for businesses of every size with flexible terms.</p>
+      </div>
+      <div class="khas-wholesale-card">
+        <div class="khas-wholesale-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="20" width="40" height="20" rx="3" stroke="#B08D42" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="40" r="4" stroke="#B08D42" stroke-width="2" fill="none"/>
+            <circle cx="36" cy="40" r="4" stroke="#B08D42" stroke-width="2" fill="none"/>
+            <path d="M 4,20 L 12,8 L 36,8 L 44,20" stroke="#B08D42" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="khas-wholesale-card-heading">Reliable Supply</h3>
+        <p class="khas-wholesale-card-text">Consistent stock and dependable fulfillment for your business.</p>
+      </div>
+      <div class="khas-wholesale-card">
+        <div class="khas-wholesale-card-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 24,4 L 44,12 L 44,36 L 24,44 L 4,36 L 4,12 Z" stroke="#B08D42" stroke-width="2" fill="none"/>
+            <path d="M 4,12 L 24,20 L 44,12" stroke="#B08D42" stroke-width="2" fill="none"/>
+            <path d="M 24,20 L 24,44" stroke="#B08D42" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="khas-wholesale-card-heading">Trusted Brand</h3>
+        <p class="khas-wholesale-card-text">Deliver authentic flavor your customers can rely on.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Industries We Serve -->
+  <div class="khas-wholesale-section">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Industries We Serve</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-industries-grid">
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="32" height="24" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 4,16 L 36,16" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Grocery Stores</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="4" width="24" height="32" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 8,12 L 32,12" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Supermarkets</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 8,12 L 12,8 L 28,8 L 32,12 L 32,32 L 8,32 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="18" cy="24" r="3" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="22" cy="24" r="3" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Restaurants</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="16" width="32" height="20" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 8,16 L 8,8 L 32,8 L 32,16" stroke="#B08D42" stroke-width="1.5"/>
+            <rect x="12" y="20" width="6" height="12" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Hotels</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12,8 L 12,28 L 28,28 L 28,8" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 8,28 L 32,28" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 12,8 L 8,4 L 32,4 L 28,8" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Cafés</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="12" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 20,8 L 20,12" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 20,28 L 20,32" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 8,20 L 12,20" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 28,20 L 32,20" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Catering Services</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="32" height="24" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 12,16 L 28,16" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 12,24 L 24,24" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Food Manufacturers</p>
+      </div>
+      <div class="khas-wholesale-industry-card">
+        <div class="khas-wholesale-industry-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="12" width="32" height="20" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 4,20 L 36,20" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 12,8 L 12,12" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 28,8 L 28,12" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-industry-text">Wholesale Distributors</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Categories -->
+  <div class="khas-wholesale-section">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Product Categories</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-categories-grid">
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="8" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 20,12 L 20,8" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 20,32 L 20,28" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 12,20 L 8,20" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 32,20 L 28,20" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Spices</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 20,8 C 16,8 12,12 12,16 C 12,20 16,24 20,24 C 24,24 28,20 28,16 C 28,12 24,8 20,8 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 20,24 L 20,32" stroke="#B08D42" stroke-width="1.5"/>
+            <path d="M 16,28 L 24,28" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Herbs</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="12" width="24" height="16" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 8,16 L 32,16" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Seasonings</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="16" width="32" height="12" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 8,16 L 8,8 L 32,8 L 32,16" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Cooking Pastes</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="24" height="24" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 12,16 L 28,16" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 12,24 L 24,24" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Salts</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="20" cy="20" rx="8" ry="12" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 12,20 L 28,20" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Vermicelli</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="10" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 14,20 L 26,20" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 20,14 L 20,26" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Fried Onion</p>
+      </div>
+      <div class="khas-wholesale-category-card">
+        <div class="khas-wholesale-category-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="12" width="32" height="16" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 8,12 L 8,8 L 32,8 L 32,12" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-category-text">Kitchen Essentials</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wholesale Process Timeline -->
+  <div class="khas-wholesale-section">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Wholesale Process</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-timeline">
+      <div class="khas-wholesale-timeline-step">
+        <div class="khas-wholesale-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12,4 L 16,8 L 12,12 L 8,8 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 12,12 L 12,20" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-timeline-label">Inquiry</p>
+      </div>
+      <div class="khas-wholesale-timeline-line"></div>
+      <div class="khas-wholesale-timeline-step">
+        <div class="khas-wholesale-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 12,8 L 12,12 L 15,15" stroke="#B08D42" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-timeline-label">Consultation</p>
+      </div>
+      <div class="khas-wholesale-timeline-line"></div>
+      <div class="khas-wholesale-timeline-step">
+        <div class="khas-wholesale-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="16" height="12" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 4,12 L 20,12" stroke="#B08D42" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-timeline-label">Quotation</p>
+      </div>
+      <div class="khas-wholesale-timeline-line"></div>
+      <div class="khas-wholesale-timeline-step">
+        <div class="khas-wholesale-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 12,4 L 14,10 L 20,10 L 15,14 L 17,20 L 12,16 L 7,20 L 9,14 L 4,10 L 10,10 Z" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-timeline-label">Order Confirmation</p>
+      </div>
+      <div class="khas-wholesale-timeline-line"></div>
+      <div class="khas-wholesale-timeline-step">
+        <div class="khas-wholesale-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="16" height="12" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <path d="M 4,8 L 8,4 L 16,4 L 20,8" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-timeline-label">Packaging</p>
+      </div>
+      <div class="khas-wholesale-timeline-line"></div>
+      <div class="khas-wholesale-timeline-step">
+        <div class="khas-wholesale-timeline-circle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="10" width="20" height="10" rx="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="6" cy="20" r="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+            <circle cx="18" cy="20" r="2" stroke="#B08D42" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <p class="khas-wholesale-timeline-label">Delivery</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits Highlight -->
+  <div class="khas-wholesale-section">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Why Businesses Choose Khas Foods</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-benefits-grid">
+      <div class="khas-wholesale-benefit-card">
+        <div class="khas-wholesale-benefit-check">✔</div>
+        <p class="khas-wholesale-benefit-text">Consistent Quality</p>
+      </div>
+      <div class="khas-wholesale-benefit-card">
+        <div class="khas-wholesale-benefit-check">✔</div>
+        <p class="khas-wholesale-benefit-text">Authentic Taste</p>
+      </div>
+      <div class="khas-wholesale-benefit-card">
+        <div class="khas-wholesale-benefit-check">✔</div>
+        <p class="khas-wholesale-benefit-text">Reliable Distribution</p>
+      </div>
+      <div class="khas-wholesale-benefit-card">
+        <div class="khas-wholesale-benefit-check">✔</div>
+        <p class="khas-wholesale-benefit-text">Premium Packaging</p>
+      </div>
+      <div class="khas-wholesale-benefit-card">
+        <div class="khas-wholesale-benefit-check">✔</div>
+        <p class="khas-wholesale-benefit-text">Competitive Pricing</p>
+      </div>
+      <div class="khas-wholesale-benefit-card">
+        <div class="khas-wholesale-benefit-check">✔</div>
+        <p class="khas-wholesale-benefit-text">Dedicated Support</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wholesale Inquiry Form -->
+  <div class="khas-wholesale-section" id="wholesale-form">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Wholesale Inquiry</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-form-card">
+      <div class="khas-wholesale-form-ornament top-left">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 0,0 L 0,20 Q 0,0 20,0 L 0,0 Z" stroke="#B08D42" stroke-width="1.5" fill="none" opacity="0.3"/>
+          <circle cx="10" cy="10" r="2" fill="#B08D42" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="khas-wholesale-form-ornament top-right">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 60,0 L 60,20 Q 60,0 40,0 L 60,0 Z" stroke="#B08D42" stroke-width="1.5" fill="none" opacity="0.3"/>
+          <circle cx="50" cy="10" r="2" fill="#B08D42" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="khas-wholesale-form-ornament bottom-left">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 0,60 L 0,40 Q 0,60 20,60 L 0,60 Z" stroke="#B08D42" stroke-width="1.5" fill="none" opacity="0.3"/>
+          <circle cx="10" cy="50" r="2" fill="#B08D42" opacity="0.2"/>
+        </svg>
+      </div>
+      <div class="khas-wholesale-form-ornament bottom-right">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 60,60 L 60,40 Q 60,60 40,60 L 60,60 Z" stroke="#B08D42" stroke-width="1.5" fill="none" opacity="0.3"/>
+          <circle cx="50" cy="50" r="2" fill="#B08D42" opacity="0.2"/>
+        </svg>
+      </div>
+      
+      {%- form 'contact', class: 'khas-wholesale-form' -%}
+        <div class="khas-wholesale-form-grid">
+          <div class="khas-wholesale-form-field">
+            <label for="business-name" class="khas-wholesale-form-label">Business Name *</label>
+            <input type="text" id="business-name" name="contact[business_name]" required class="khas-wholesale-form-input" placeholder="Your business name">
+          </div>
+          <div class="khas-wholesale-form-field">
+            <label for="contact-person" class="khas-wholesale-form-label">Contact Person *</label>
+            <input type="text" id="contact-person" name="contact[contact_person]" required class="khas-wholesale-form-input" placeholder="Your name">
+          </div>
+          <div class="khas-wholesale-form-field">
+            <label for="email" class="khas-wholesale-form-label">Email *</label>
+            <input type="email" id="email" name="contact[email]" required class="khas-wholesale-form-input" placeholder="your@email.com">
+          </div>
+          <div class="khas-wholesale-form-field">
+            <label for="phone" class="khas-wholesale-form-label">Phone Number *</label>
+            <input type="tel" id="phone" name="contact[phone]" required class="khas-wholesale-form-input" placeholder="+44 XXXX XXXXXX">
+          </div>
+          <div class="khas-wholesale-form-field">
+            <label for="city" class="khas-wholesale-form-label">City *</label>
+            <input type="text" id="city" name="contact[city]" required class="khas-wholesale-form-input" placeholder="Your city">
+          </div>
+          <div class="khas-wholesale-form-field">
+            <label for="business-type" class="khas-wholesale-form-label">Business Type *</label>
+            <select id="business-type" name="contact[business_type]" required class="khas-wholesale-form-select">
+              <option value="">Select business type</option>
+              <option value="grocery">Grocery Store</option>
+              <option value="supermarket">Supermarket</option>
+              <option value="restaurant">Restaurant</option>
+              <option value="hotel">Hotel</option>
+              <option value="cafe">Café</option>
+              <option value="catering">Catering Service</option>
+              <option value="manufacturer">Food Manufacturer</option>
+              <option value="distributor">Wholesale Distributor</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="khas-wholesale-form-field full-width">
+            <label for="products" class="khas-wholesale-form-label">Products Interested In *</label>
+            <input type="text" id="products" name="contact[products]" required class="khas-wholesale-form-input" placeholder="e.g., Spices, Herbs, Cooking Pastes">
+          </div>
+          <div class="khas-wholesale-form-field full-width">
+            <label for="requirement" class="khas-wholesale-form-label">Estimated Monthly Requirement *</label>
+            <input type="text" id="requirement" name="contact[requirement]" required class="khas-wholesale-form-input" placeholder="e.g., 50-100 units per month">
+          </div>
+          <div class="khas-wholesale-form-field full-width">
+            <label for="message" class="khas-wholesale-form-label">Message</label>
+            <textarea id="message" name="contact[body]" rows="4" class="khas-wholesale-form-textarea" placeholder="Tell us more about your requirements..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="khas-wholesale-btn khas-wholesale-btn--primary khas-wholesale-btn--full">Submit Inquiry</button>
+        {%- if form.posted_successfully? -%}
+          <p class="khas-wholesale-form-message success">Thank you for your inquiry! We'll get back to you within 24-48 hours.</p>
+        {%- elsif form.errors -%}
+          <p class="khas-wholesale-form-message error">Please fill in all required fields.</p>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+
+  <!-- Trust Banner -->
+  <div class="khas-wholesale-trust-banner">
+    <div class="khas-wholesale-trust-decoration left">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#B08D42" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.15">
+          <path d="M 10,50 Q 30,30 50,50 Q 30,70 10,50 Z" fill="#B08D42" fill-opacity="0.1" />
+          <path d="M 20,40 Q 25,35 30,40 Q 25,45 20,40 Z" fill="#B08D42" fill-opacity="0.08" />
+          <path d="M 35,45 Q 40,40 45,45 Q 40,50 35,45 Z" fill="#B08D42" fill-opacity="0.08" />
+        </g>
+      </svg>
+    </div>
+    <div class="khas-wholesale-trust-decoration right">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#B08D42" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.15">
+          <path d="M 90,50 Q 70,30 50,50 Q 70,70 90,50 Z" fill="#B08D42" fill-opacity="0.1" />
+          <path d="M 80,40 Q 75,35 70,40 Q 75,45 80,40 Z" fill="#B08D42" fill-opacity="0.08" />
+          <path d="M 65,45 Q 60,40 55,45 Q 60,50 65,45 Z" fill="#B08D42" fill-opacity="0.08" />
+        </g>
+      </svg>
+    </div>
+    <p class="khas-wholesale-trust-text">Supplying premium ingredients that help businesses serve authentic flavors every day.</p>
+  </div>
+
+  <!-- FAQ Preview -->
+  <div class="khas-wholesale-section">
+    <div class="khas-wholesale-section-header">
+      <h2 class="khas-wholesale-section-heading">Frequently Asked Questions</h2>
+      <div class="khas-wholesale-divider"></div>
+    </div>
+    <div class="khas-wholesale-faq">
+      <div class="khas-wholesale-faq-item">
+        <button class="khas-wholesale-faq-button" aria-expanded="false">
+          <span class="khas-wholesale-faq-question">Is there a minimum order quantity?</span>
+          <svg class="khas-wholesale-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6,9 L 12,15 L 18,9" stroke="#3B2416" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="khas-wholesale-faq-answer">
+          <p>Yes, we have minimum order quantities depending on the product category. Contact us for specific details based on your requirements.</p>
+        </div>
+      </div>
+      <div class="khas-wholesale-faq-item">
+        <button class="khas-wholesale-faq-button" aria-expanded="false">
+          <span class="khas-wholesale-faq-question">Do you provide nationwide delivery?</span>
+          <svg class="khas-wholesale-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6,9 L 12,15 L 18,9" stroke="#3B2416" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="khas-wholesale-faq-answer">
+          <p>Yes, we provide nationwide delivery across the UK. Delivery times and costs may vary based on location and order size.</p>
+        </div>
+      </div>
+      <div class="khas-wholesale-faq-item">
+        <button class="khas-wholesale-faq-button" aria-expanded="false">
+          <span class="khas-wholesale-faq-question">Can I request a custom quotation?</span>
+          <svg class="khas-wholesale-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6,9 L 12,15 L 18,9" stroke="#3B2416" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="khas-wholesale-faq-answer">
+          <p>Absolutely! Use our inquiry form above to request a custom quotation based on your specific product requirements and volume needs.</p>
+        </div>
+      </div>
+      <div class="khas-wholesale-faq-item">
+        <button class="khas-wholesale-faq-button" aria-expanded="false">
+          <span class="khas-wholesale-faq-question">How quickly can orders be fulfilled?</span>
+          <svg class="khas-wholesale-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6,9 L 12,15 L 18,9" stroke="#3B2416" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="khas-wholesale-faq-answer">
+          <p>Most orders are processed within 1-2 business days and delivered within 3-7 business days, depending on your location and order size.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="khas-wholesale-contact-card">
+    <div class="khas-wholesale-contact-decoration left">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Herb stem -->
+          <path d="M 10,80 C 20,70 30,70 40,60 C 50,50 60,50 70,40" />
+          <!-- Small leaves -->
+          <path d="M 20,68 Q 15,63 20,58 Q 25,63 20,68 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 35,58 Q 30,53 35,48 Q 40,53 35,58 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 50,48 Q 45,43 50,38 Q 55,43 50,48 Z" fill="#3B2416" fill-opacity="0.06" />
+          <path d="M 65,38 Q 60,33 65,28 Q 70,33 65,38 Z" fill="#3B2416" fill-opacity="0.06" />
+        </g>
+      </svg>
+    </div>
+    <div class="khas-wholesale-contact-decoration right">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#3B2416" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+          <!-- Cinnamon stick -->
+          <rect x="20" y="30" width="60" height="12" rx="6" fill="#3B2416" fill-opacity="0.08" />
+          <path d="M 20,36 L 80,36" stroke="#3B2416" stroke-width="1" />
+          <path d="M 30,30 L 30,42" stroke="#3B2416" stroke-width="0.8" />
+          <path d="M 50,30 L 50,42" stroke="#3B2416" stroke-width="0.8" />
+          <path d="M 70,30 L 70,42" stroke="#3B2416" stroke-width="0.8" />
+        </g>
+      </svg>
+    </div>
+    <div class="khas-wholesale-contact-content">
+      <h2 class="khas-wholesale-contact-heading">Let's Grow Together</h2>
+      <p class="khas-wholesale-contact-text">Whether you're a local retailer or a nationwide distributor, we'd love to discuss how Khas Foods can support your business.</p>
+      <div class="khas-wholesale-contact-buttons">
+        <a href="/pages/contact" class="khas-wholesale-btn khas-wholesale-btn--primary">Contact Us</a>
+        <a href="/collections/all" class="khas-wholesale-btn khas-wholesale-btn--secondary">Download Catalog</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion
+  const faqButtons = document.querySelectorAll('.khas-wholesale-faq-button');
+  
+  faqButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const answer = this.nextElementSibling;
+      
+      // Close all other FAQs
+      faqButtons.forEach(otherButton => {
+        if (otherButton !== button) {
+          otherButton.setAttribute('aria-expanded', 'false');
+          otherButton.nextElementSibling.style.maxHeight = null;
+          otherButton.querySelector('.khas-wholesale-faq-icon').style.transform = 'rotate(0deg)';
+        }
+      });
+      
+      // Toggle current FAQ
+      this.setAttribute('aria-expanded', !isExpanded);
+      if (!isExpanded) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        this.querySelector('.khas-wholesale-faq-icon').style.transform = 'rotate(180deg)';
+      } else {
+        answer.style.maxHeight = null;
+        this.querySelector('.khas-wholesale-faq-icon').style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Khas Wholesale",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Khas Wholesale"
+    }
+  ]
+}
+{% endschema %}
