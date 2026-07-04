@@ -90,14 +90,14 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 700;
-  color: #c9a227;
+  color: #c4a45e;
 }
 
 .khas-hero__subheading {
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(45, 36, 22, 0.8);
   line-height: 1.6;
   max-width: 48rem;
   margin: 0;
