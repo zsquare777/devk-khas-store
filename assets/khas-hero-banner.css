@@ -127,25 +127,27 @@
 }
 
 .khas-hero__btn--primary {
-  background: linear-gradient(135deg, #ebe9e33f 0%, #51030333 100%);
-  color: #2d2416;
+  background: linear-gradient(135deg, #2d2416 0%, #1a1410 100%);
+  color: #e9cf8f;
   border: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .khas-hero__btn--primary:hover {
+  background: linear-gradient(135deg, #3a2f1e 0%, #241d14 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(196, 164, 94, 0.5);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 .khas-hero__btn--secondary {
   background: transparent;
-  color: #c4a45e;
-  border: 2px solid #c4a45e;
+  color: #f7ecd6;
+  border: 2px solid rgba(247, 236, 214, 0.8);
 }
 
 .khas-hero__btn--secondary:hover {
-  background: rgba(196, 164, 94, 0.15);
+  background: rgba(247, 236, 214, 0.12);
+  border-color: #f7ecd6;
   transform: translateY(-2px);
 }
 
