@@ -127,7 +127,7 @@
 }
 
 .khas-hero__btn--primary {
-  background: linear-gradient(135deg, #e8c547 0%, #c4a45e 100%);
+  background: linear-gradient(135deg, #e8c5473f 0%, #c4a45e 100%);
   color: #2d2416;
   border: none;
   box-shadow: 0 4px 20px rgba(196, 164, 94, 0.4);
