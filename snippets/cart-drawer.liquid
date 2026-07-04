@@ -17,8 +17,37 @@
     background: transparent !important;
   }
   
-  /* Force remove borders from all inputs and buttons */
-  #CartDrawer input, #CartDrawer button, #CartDrawer .quantity, #CartDrawer .quantity__button, #CartDrawer .quantity__input {
+  /* Force remove borders from all inputs and buttons - MAXIMUM SPECIFICITY */
+  #CartDrawer input, 
+  #CartDrawer input[type="number"],
+  #CartDrawer button, 
+  #CartDrawer button[type="button"],
+  #CartDrawer button[type="submit"],
+  #CartDrawer .quantity, 
+  #CartDrawer .quantity__button, 
+  #CartDrawer .quantity__input,
+  #CartDrawer .quantity-popover-wrapper,
+  #CartDrawer .quantity-popover-container,
+  #CartDrawer .cart-item__quantity,
+  #CartDrawer .cart-quantity,
+  #CartDrawer .cart__checkout-button,
+  #CartDrawer .button,
+  #CartDrawer .cart__ctas button,
+  #CartDrawer .cart-remove-button {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+  }
+  
+  /* Target specific Shopify classes that might be adding borders */
+  #CartDrawer .field__input,
+  #CartDrawer .text-area,
+  #CartDrawer .select__select,
+  #CartDrawer .button--tertiary,
+  #CartDrawer .button--secondary {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
