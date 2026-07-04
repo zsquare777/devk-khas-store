@@ -3,14 +3,13 @@
 .khas-benefits {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at center, #15120e 0%, #070605 100%) !important;
+  background: radial-gradient(circle at center, #faf6ec 0%, #ece0c4 100%) !important;
   overflow: visible;
   box-sizing: border-box;
 }
 
 .khas-benefits-inner {
   max-width: 1040px;
-  /* Reduced width for a more compact and elegant design */
   margin: 0 auto;
   padding: 0 40px;
   text-align: center;
@@ -18,10 +17,8 @@
   z-index: 2;
   box-sizing: border-box;
   overflow: visible;
-  /* Ensure badges are not clipped */
 }
 
-/* Side Botanical Overlays */
 .khas-side-overlay {
   position: absolute;
   top: 5%;
@@ -41,7 +38,6 @@
   transform: scaleX(-1);
 }
 
-/* Header Elements */
 .khas-top-crown-container {
   display: flex;
   justify-content: center;
@@ -57,7 +53,7 @@
   font-weight: 300;
   font-family: 'Inter', -apple-system, sans-serif;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: #2d2416;
   margin: 10px 0;
   line-height: 1.2;
   text-transform: none;
@@ -67,7 +63,7 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 600;
-  color: #bf9252;
+  color: #8a5f1a;
   margin-right: 4px;
 }
 
@@ -84,37 +80,29 @@
 .khas-difference-subheading {
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: clamp(14px, 1.8vw, 16px);
-  color: #a3a3a3;
+  color: rgba(45, 36, 22, 0.65);
   margin: 0 auto 4px;
-  /* Reduced from 56px to 16px for smaller gap */
   max-width: 600px;
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
 
-/* Grid Layout */
 .khas-benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 24px;
   row-gap: 0;
-  /* ← was 56px */
   margin-bottom: 0;
-  /* Removed to allow container padding-bottom to control spacing */
   overflow: visible;
-  /* ← added */
   position: relative;
-  /* ← added */
 }
 
-/* Card Styling */
 .khas-card {
   position: relative;
-  background-color: #0c0b0a;
+  background-color: #fffaf0;
   padding: 32px 24px 24px 24px;
   margin-top: 56px;
-  /* ← was 24px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,19 +110,14 @@
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
   overflow: visible;
   padding-top: 32px;
-  /* Revert to original padding */
 }
 
 .khas-card:hover {
   transform: translateY(-3px);
-  /* Reduced from -6px for more subtle animation */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  /* Reduced shadow for more subtle effect */
-  background-color: #0c0b0a !important;
-  /* Explicitly set to prevent any theme hover color changes */
+  box-shadow: 0 8px 20px rgba(138, 95, 26, 0.18);
+  background-color: #fffaf0 !important;
 }
 
-/* Absolute Overlay Border to prevent stacking/clipping issues */
 .khas-card-border {
   position: absolute;
   top: 0;
@@ -142,35 +125,27 @@
   right: 0;
   bottom: 0;
   border: 24px solid transparent;
-  border-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTIwIDEyMCI+CiAgPHBhdGggZD0iTSAyNCw4IEwgOTYsOCBMIDk2LDI0IEwgMTEyLDI0IEwgMTEyLDk2IEwgOTYsOTYgTCA5NiwxMTIgTCAyNCwxMTIgTCAyNCw5NiBMIDgsOTYgTCA4LDI0IEwgMjQsMjQgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzVhODgwIiBzdHJva2Utd2lkdGg9IjEuNSIgLz4KICA8cGF0aCBkPSJNIDIwLDEyIEwgMTAwLDEyIEwgMTAwLDIwIEwgMTA4LDIwIEwgMTA4LDEwMCBMIDEwMCwxMDAgTCAxMDAsMTA4IEwgMjAsMTA4IEwgMjAsMTAwIEwgMTIsMTAwIEwgMTIsMjAgTCAyMCwyMCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiNjNWE4ODAiIHN0cm9rZS13aWR0aD0iMC43NSIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIgLz4KICAKICA8IS0tIFRvcC1MZWZ0IGZsb3VyaXNoIC0tPgogIDxwYXRoIGQ9Ik0gMjIsMjIgQyAxNiwxNiAxMCwxMiA2LDYgQyAxMiwxMCAxNiwxNiAyMiwyMiBaIiBmaWxsPSIjYzVhODgwIiAvPgogIDxwYXRoIGQ9Ik0gMTgsMTggQyAxMiwxNCA2LDEwIDIsMiBDIDEwLDYgMTQsMTIgMTgsMTggWiIgZmlsbD0iI2M1YTg4MCIgZmlsbC1vcGFjaXR5PSIwLjciIC8+CiAgPHBhdGggZD0iTSAyMCwyMCBDIDE0LDE0IDgsOCA0LDQiIHN0cm9rZT0iI2M1YTg4MCIgc3Ryb2tlLXdpZHRoPSIwLjc1IiAvPgogIAogIDwhLS0gVG9wLVJpZ2h0IGZsb3VyaXNoIC0tPgogIDxwYXRoIGQ9Ik0gOTgsMjIgQyAxMDQsMTYgMTEwLDEyIDExNCw2IEMgMTA4LDEwIDEwNCwxNiA5OCwyMiBaIiBmaWxsPSIjYzVhODgwIiAvPgogIDxwYXRoIGQ9Ik0gMTAyLDE4IEMgMTA4LDE0IDExNCwxMCAxMTgsMiBDIDExMCw2IDEwNiwxMiAxMDIsMTggWiIgZmlsbD0iI2M1YTg4MCIgZmlsbC1vcGFjaXR5PSIwLjciIC8+CiAgPHBhdGggZD0iTSAxMDAsMjAgQyAxMDYsMTQgMTEyLDggMTE2LDQiIHN0cm9rZT0iI2M1YTg4MCIgc3Ryb2tlLXdpZHRoPSIwLjc1IiAvPgogIAogIDwhLS0gQm90dG9tLUxlZnQgZmxvdXJpc2ggLS0+CiAgPHBhdGggZD0iTSAyMiw5OCBDIDE2LDEwNCAxMCwxMDggNiwxMTQgQyAxMiwxMTAgMTYsMTA0IDIyLDk4IFoiIGZpbGw9IiNjNWE4ODAiIC8+CiAgPHBhdGggZD0iTSAxOCwxMDIgQyAxMiwxMDYgNiwxMTAgMiwxMTggQyAxMCwxMTQgMTQsMTA4IDE4LDEwMiBaIiBmaWxsPSIjYzVhODgwIiBmaWxsLW9wYWNpdHk9IjAuNyIgLz4KICA8cGF0aCBkPSJNIDIwLDEwMCBDIDE0LDEwNiA4LDExMiA0LDExNiIgc3Ryb2tlPSIjYzVhODgwIiBzdHJva2Utd2lkdGg9IjAuNzUiIC8+CiAgCiAgPCEtLSBCb3R0b20tUmlnaHQgZmxvdXJpc2ggLS0+CiAgPHBhdGggZD0iTSA5OCw5OCBDIDEwNCwxMDQgMTEwLDEwOCAxMTQsMTE0IEMgMTA4LDExMCAxMDQsMTA0IDk4LDk4IFoiIGZpbGw9IiNjNWE4ODAiIC8+CiAgPHBhdGggZD0iTSAxMDIsMTAyIEMgMTA4LDEwNiAxMTQsMTEwIDExOCwxMTggQyAxMTAsMTE0IDEwNiwxMDggMTAyLDEwMiBaIiBmaWxsPSIjYzVhODgwIiBmaWxsLW9wYWNpdHk9IjAuNyIgLz4KICA8cGF0aCBkPSJNIDEwMCwxMDAgQyAxMDYsMTA2IDExMiwxMTIgMTE2LDExNiIgc3Ryb2tlPSIjYzVhODgwIiBzdHJva2Utd2lkdGg9IjAuNzUiIC8+Cjwvc3ZnPg==") 24 fill stretch;
+  border-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTIwIDEyMCI+CiAgPHBhdGggZD0iTSAyNCw4IEwgOTYsOCBMIDk2LDI0IEwgMTEyLDI0IEwgMTEyLDk2IEwgOTYsOTYgTCA5NiwxMTIgTCAyNCwxMTIgTCAyNCw5NiBMIDgsOTYgTCA4LDI0IEwgMjQsMjQgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE1ZjFhIiBzdHJva2Utd2lkdGg9IjEuNSIgLz4KICA8cGF0aCBkPSJNIDIwLDEyIEwgMTAwLDEyIEwgMTAwLDIwIEwgMTA4LDIwIEwgMTA4LDEwMCBMIDEwMCwxMDAgTCAxMDAsMTA4IEwgMjAsMTA4IEwgMjAsMTAwIEwgMTIsMTAwIEwgMTIsMjAgTCAyMCwyMCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiM4YTVmMWEiIHN0cm9rZS13aWR0aD0iMC43NSIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIgLz4KICAKICA8IS0tIFRvcC1MZWZ0IGZsb3VyaXNoIC0tPgogIDxwYXRoIGQ9Ik0gMjIsMjIgQyAxNiwxNiAxMCwxMiA2LDYgQyAxMiwxMCAxNiwxNiAyMiwyMiBaIiBmaWxsPSIjOGE1ZjFhIiAvPgogIDxwYXRoIGQ9Ik0gMTgsMTggQyAxMiwxNCA2LDEwIDIsMiBDIDEwLDYgMTQsMTIgMTgsMTggWiIgZmlsbD0iIzhhNWYxYSIgZmlsbC1vcGFjaXR5PSIwLjciIC8+CiAgPHBhdGggZD0iTSAyMCwyMCBDIDE0LDE0IDgsOCA0LDQiIHN0cm9rZT0iIzhhNWYxYSIgc3Ryb2tlLXdpZHRoPSIwLjc1IiAvPgogIAogIDwhLS0gVG9wLVJpZ2h0IGZsb3VyaXNoIC0tPgogIDxwYXRoIGQ9Ik0gOTgsMjIgQyAxMDQsMTYgMTEwLDEyIDExNCw2IEMgMTA4LDEwIDEwNCwxNiA5OCwyMiBaIiBmaWxsPSIjOGE1ZjFhIiAvPgogIDxwYXRoIGQ9Ik0gMTAyLDE4IEMgMTA4LDE0IDExNCwxMCAxMTgsMiBDIDExMCw2IDEwNiwxMiAxMDIsMTggWiIgZmlsbD0iIzhhNWYxYSIgZmlsbC1vcGFjaXR5PSIwLjciIC8+CiAgPHBhdGggZD0iTSAxMDAsMjAgQyAxMDYsMTQgMTEyLDggMTE2LDQiIHN0cm9rZT0iIzhhNWYxYSIgc3Ryb2tlLXdpZHRoPSIwLjc1IiAvPgogIAogIDwhLS0gQm90dG9tLUxlZnQgZmxvdXJpc2ggLS0+CiAgPHBhdGggZD0iTSAyMiw5OCBDIDE2LDEwNCAxMCwxMDggNiwxMTQgQyAxMiwxMTAgMTYsMTA0IDIyLDk4IFoiIGZpbGw9IiM4YTVmMWEiIC8+CiAgPHBhdGggZD0iTSAxOCwxMDIgQyAxMiwxMDYgNiwxMTAgMiwxMTggQyAxMCwxMTQgMTQsMTA4IDE4LDEwMiBaIiBmaWxsPSIjOGE1ZjFhIiBmaWxsLW9wYWNpdHk9IjAuNyIgLz4KICA8cGF0aCBkPSJNIDIwLDEwMCBDIDE0LDEwNiA4LDExMiA0LDExNiIgc3Ryb2tlPSIjOGE1ZjFhIiBzdHJva2Utd2lkdGg9IjAuNzUiIC8+CiAgCiAgPCEtLSBCb3R0b20tUmlnaHQgZmxvdXJpc2ggLS0+CiAgPHBhdGggZD0iTSA5OCw5OCBDIDEwNCwxMDQgMTEwLDEwOCAxMTQsMTE0IEMgMTA4LDExMCAxMDQsMTA0IDk4LDk4IFoiIGZpbGw9IiM4YTVmMWEiIC8+CiAgPHBhdGggZD0iTSAxMDIsMTAyIEMgMTA4LDEwNiAxMTQsMTEwIDExOCwxMTggQyAxMTAsMTE0IDEwNiwxMDggMTAyLDEwMiBaIiBmaWxsPSIjOGE1ZjFhIiBmaWxsLW9wYWNpdHk9IjAuNyIgLz4KICA8cGF0aCBkPSJNIDEwMCwxMDAgQyAxMDYsMTA2IDExMiwxMTIgMTE2LDExNiIgc3Ryb2tlPSIjOGE1ZjFhIiBzdHJva2Utd2lkdGg9IjAuNzUiIC8+Cjwvc3ZnPg==") 24 fill stretch;
   z-index: 1;
   pointer-events: none;
 }
 
-/* Card Badge - Centered exactly on the top border, half above and half inside */
 .khas-card-badge {
   position: absolute;
   top: 24px;
-  /* Position at the visual border line (24px border overlay) */
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Center badge on the border line - half above, half below */
   width: 54px;
   height: 54px;
-  background-color: #0c0b0a;
-  /* Matches the card background to mask border line underneath */
+  background-color: #fffaf0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  /* Render on top of everything */
-  box-shadow: 0 0 0 3px #0c0b0a;
-  /* Extra background to ensure no border shows through */
+  box-shadow: 0 0 0 3px #fffaf0;
   clip-path: none;
-  /* Ensure no clipping */
   pointer-events: auto;
-  /* Ensure badge is interactive */
 }
 
 .khas-card-badge::before {
@@ -180,7 +155,7 @@
   left: -3px;
   right: -3px;
   bottom: -3px;
-  border: 1px solid #bf9252;
+  border: 1px solid #8a5f1a;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -188,12 +163,12 @@
 .khas-card-badge-inner {
   width: 48px;
   height: 48px;
-  border: 1px solid #bf9252;
+  border: 1px solid #8a5f1a;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0c0b0a;
+  background-color: #fffaf0;
   box-sizing: border-box;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -208,7 +183,6 @@
   display: block;
 }
 
-/* Badge Flourishes */
 .khas-badge-flourish {
   position: absolute;
   top: 50%;
@@ -232,27 +206,23 @@
   display: block;
 }
 
-/* Card Content styling - Stacked above border overlay */
 .khas-card-content {
   position: relative;
   z-index: 2;
-  /* Sits above the border overlay (z-index: 1) */
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
-  /* Add space for badge to prevent overlap */
 }
 
-/* Specific color rule with !important to prevent theme h3 color overrides */
 .khas-benefits .khas-card-title {
   margin: 16px 0 6px 0 !important;
   font-family: 'Inter', -apple-system, sans-serif !important;
   font-size: 15px !important;
   font-weight: 600 !important;
-  color: #bf9252 !important;
+  color: #8a5f1a !important;
   letter-spacing: 0.08em !important;
   line-height: 1.3 !important;
   text-transform: uppercase !important;
@@ -277,20 +247,17 @@
   font-family: 'Inter', -apple-system, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #d1d1d1;
+  color: rgba(45, 36, 22, 0.75);
   line-height: 1.6;
   max-width: 260px;
 }
 
-/* Bottom elements */
 .khas-bottom-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 8px;
-  /* Reduced from 16px */
   padding-bottom: 8px;
-  /* Reduced from 16px */
 }
 
 .khas-bottom-leaf-container {
@@ -313,7 +280,7 @@
   font-style: italic;
   font-size: clamp(16px, 2.2vw, 20px);
   font-weight: 600;
-  color: #bf9252;
+  color: #8a5f1a;
   letter-spacing: 0.02em;
 }
 
@@ -322,7 +289,6 @@
   opacity: 0.8;
 }
 
-/* Responsiveness */
 @media (max-width: 1280px) {
   .khas-side-overlay {
     display: none;
@@ -338,7 +304,6 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 0;
-    /* ← was 56px */
   }
 
   .khas-difference-subheading {
@@ -350,7 +315,6 @@
   .khas-benefits-grid {
     grid-template-columns: 1fr;
     row-gap: 0;
-    /* ← was 48px */
   }
 
   .khas-benefits-inner {
