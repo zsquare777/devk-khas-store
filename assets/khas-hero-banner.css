@@ -127,25 +127,25 @@
 }
 
 .khas-hero__btn--primary {
-  background: linear-gradient(135deg, #c9a227 0%, #a6852a 100%);
+  background: linear-gradient(135deg, #d4a84b 0%, #b8962e 100%);
   color: #0c0b0a;
   border: none;
-  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+  box-shadow: 0 4px 20px rgba(212, 168, 75, 0.3);
 }
 
 .khas-hero__btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(201, 162, 39, 0.4);
+  box-shadow: 0 6px 25px rgba(212, 168, 75, 0.4);
 }
 
 .khas-hero__btn--secondary {
   background: transparent;
-  color: #c9a227;
-  border: 2px solid #c9a227;
+  color: #d4a84b;
+  border: 2px solid #d4a84b;
 }
 
 .khas-hero__btn--secondary:hover {
-  background: rgba(201, 162, 39, 0.1);
+  background: rgba(212, 168, 75, 0.1);
   transform: translateY(-2px);
 }
 
