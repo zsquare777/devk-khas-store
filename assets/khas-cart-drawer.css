@@ -134,7 +134,6 @@
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #FAF5E8 0%, #F0E8D8 100%);
-  border: 2px solid rgba(176, 141, 66, 0.25);
   border-radius: 24px;
   padding: 6px;
   gap: 6px;
@@ -146,7 +145,6 @@
   height: 36px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FFFFFF 0%, #F8F0E0 100%);
-  border: 1px solid rgba(176, 141, 66, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,7 +155,6 @@
 
 .quantity__button:hover {
   background: linear-gradient(135deg, var(--khas-cart-gold) 0%, #8B6D32 100%);
-  border-color: var(--khas-cart-gold);
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(176, 141, 66, 0.3);
 }
