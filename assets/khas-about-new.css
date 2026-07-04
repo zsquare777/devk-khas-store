@@ -1,0 +1,876 @@
+/* Khas About New Page Styles */
+
+:root {
+  --khas-about-new-bg: #FAF5E8;
+  --khas-about-new-gold: #B08D42;
+  --khas-about-new-dark-brown: #3B2416;
+  --khas-about-new-secondary-brown: #6A4A28;
+  --khas-about-new-text: #4B3A2C;
+  --khas-about-new-white: #FFFFFF;
+}
+
+/* Main Section */
+.khas-about-new {
+  background-color: var(--khas-about-new-bg);
+  color: var(--khas-about-new-text);
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.khas-about-new-hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.khas-about-new-crown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.khas-about-new-crown svg {
+  display: block;
+}
+
+.khas-about-new-hero-heading {
+  font-family: inherit;
+  font-size: 36px;
+  font-weight: 670;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+}
+
+.khas-about-new-hero-subheading {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 450;
+  color: rgba(46, 37, 37, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 32px;
+}
+
+.khas-about-new-hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botanical Decorations */
+.khas-about-new-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-about-new-decoration.top-left {
+  top: 0;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.khas-about-new-decoration.bottom-right {
+  bottom: 0;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.khas-about-new-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section Styling */
+.khas-about-new-section {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.khas-about-new-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.khas-about-new-section-heading {
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+.khas-about-new-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--khas-about-new-gold) 0%, transparent 100%);
+  margin: 0 auto;
+}
+
+/* Story Section */
+.khas-about-new-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.khas-about-new-story-content {
+  order: 2;
+}
+
+.khas-about-new-story-image {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.khas-about-new-story-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(59, 36, 22, 0.12);
+}
+
+.khas-about-new-story-block {
+  margin-bottom: 40px;
+}
+
+.khas-about-new-story-block:last-child {
+  margin-bottom: 0;
+}
+
+.khas-about-new-story-heading {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.khas-about-new-story-text {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--khas-about-new-text);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Philosophy Grid */
+.khas-about-new-philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.khas-about-new-philosophy-card {
+  background-color: var(--khas-about-new-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 22px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(59, 36, 22, 0.06);
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.khas-about-new-philosophy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59, 36, 22, 0.12);
+}
+
+.khas-about-new-philosophy-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-about-new-philosophy-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-about-new-philosophy-heading {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.khas-about-new-philosophy-text {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--khas-about-new-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Values Grid */
+.khas-about-new-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.khas-about-new-value-card {
+  background-color: var(--khas-about-new-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.khas-about-new-value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(59, 36, 22, 0.1);
+}
+
+.khas-about-new-value-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-about-new-value-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-about-new-value-text {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--khas-about-new-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Timeline */
+.khas-about-new-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.khas-about-new-timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.khas-about-new-timeline-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--khas-about-new-white);
+  border: 2px solid var(--khas-about-new-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(176, 141, 66, 0.15);
+}
+
+.khas-about-new-timeline-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(176, 141, 66, 0.25);
+}
+
+.khas-about-new-timeline-circle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.khas-about-new-timeline-label {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--khas-about-new-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+}
+
+.khas-about-new-timeline-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--khas-about-new-gold) 0%, var(--khas-about-new-gold) 50%, transparent 100%);
+  min-width: 30px;
+}
+
+/* Benefits Grid */
+.khas-about-new-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.khas-about-new-benefit-card {
+  background-color: var(--khas-about-new-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.khas-about-new-benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(59, 36, 22, 0.08);
+}
+
+.khas-about-new-benefit-check {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--khas-about-new-gold) 0%, #8B6D3A 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.khas-about-new-benefit-text {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--khas-about-new-text);
+  margin: 0;
+}
+
+/* Stats Section */
+.khas-about-new-stats {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 50px 60px;
+  background: linear-gradient(135deg, rgba(176, 141, 66, 0.08) 0%, rgba(176, 141, 66, 0.04) 100%);
+  border: 1px solid rgba(176, 141, 66, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.khas-about-new-stats-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-about-new-stats-decoration.left {
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-about-new-stats-decoration.right {
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-about-new-stats-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-about-new-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.khas-about-new-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.khas-about-new-stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.khas-about-new-stat-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-about-new-stat-number {
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--khas-about-new-gold);
+  margin: 0;
+}
+
+.khas-about-new-stat-label {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--khas-about-new-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Quote Section */
+.khas-about-new-quote {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 60px 80px;
+  background: linear-gradient(135deg, rgba(176, 141, 66, 0.08) 0%, rgba(176, 141, 66, 0.04) 100%);
+  border: 1px solid rgba(176, 141, 66, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.khas-about-new-quote-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-about-new-quote-decoration.left {
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-about-new-quote-decoration.right {
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-about-new-quote-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-about-new-quote-content {
+  position: relative;
+  z-index: 2;
+}
+
+.khas-about-new-quote-mark {
+  font-family: inherit;
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--khas-about-new-gold);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.khas-about-new-quote-text {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--khas-about-new-dark-brown);
+  line-height: 1.6;
+  margin: 0 0 30px;
+  font-style: italic;
+}
+
+.khas-about-new-quote-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--khas-about-new-gold) 0%, transparent 100%);
+  margin: 0 auto;
+}
+
+/* Commitment Section */
+.khas-about-new-commitment {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.khas-about-new-commitment-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.khas-about-new-commitment-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--khas-about-new-white);
+  border: 1px solid rgba(176, 141, 66, 0.15);
+  border-radius: 50%;
+}
+
+.khas-about-new-commitment-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.khas-about-new-commitment-content {
+  flex: 1;
+}
+
+.khas-about-new-commitment-heading {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.khas-about-new-commitment-text {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--khas-about-new-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA Section */
+.khas-about-new-cta {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--khas-about-new-white);
+  border-radius: 16px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(59, 36, 22, 0.08);
+}
+
+.khas-about-new-cta-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.khas-about-new-cta-decoration.left {
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-about-new-cta-decoration.right {
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.khas-about-new-cta-decoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.khas-about-new-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.khas-about-new-cta-heading {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a0000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.khas-about-new-cta-text {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(46, 37, 37, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.khas-about-new-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.khas-about-new-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.khas-about-new-btn--primary {
+  background: linear-gradient(135deg, #4A2E1A 0%, #2C1A0F 100%);
+  color: #F8E8B5;
+  border: 1px solid rgba(232, 194, 104, 0.25);
+  box-shadow: 0 8px 24px rgba(44, 26, 15, 0.25);
+}
+
+.khas-about-new-btn--primary:hover {
+  background: linear-gradient(135deg, #5A3820 0%, #372114 100%);
+  color: #FFF3CC;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(44, 26, 15, 0.35);
+}
+
+.khas-about-new-btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: #3B2416;
+  border: 2px solid rgba(59, 36, 22, 0.65);
+  box-shadow: 0 4px 18px rgba(44, 26, 15, 0.08);
+}
+
+.khas-about-new-btn--secondary:hover {
+  background: #3B2416;
+  color: #F8E8B5;
+  border-color: #3B2416;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(44, 26, 15, 0.28);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 749px) {
+  .khas-about-new-hero {
+    padding: 60px 20px 40px;
+  }
+
+  .khas-about-new-hero-heading {
+    font-size: 28px;
+  }
+
+  .khas-about-new-hero-subheading {
+    font-size: 14px;
+  }
+
+  .khas-about-new-decoration.top-left,
+  .khas-about-new-decoration.bottom-right {
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+  }
+
+  .khas-about-new-section {
+    padding: 0 16px;
+    margin-bottom: 60px;
+  }
+
+  .khas-about-new-section-heading {
+    font-size: 22px;
+  }
+
+  .khas-about-new-story {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .khas-about-new-story-content {
+    order: 2;
+  }
+
+  .khas-about-new-story-image {
+    order: 1;
+  }
+
+  .khas-about-new-story-img {
+    max-width: 100%;
+  }
+
+  .khas-about-new-philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .khas-about-new-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .khas-about-new-timeline {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .khas-about-new-timeline-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--khas-about-new-gold) 0%, var(--khas-about-new-gold) 50%, transparent 100%);
+    min-width: auto;
+  }
+
+  .khas-about-new-timeline-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .khas-about-new-timeline-circle svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .khas-about-new-timeline-label {
+    font-size: 11px;
+  }
+
+  .khas-about-new-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .khas-about-new-stats {
+    padding: 40px 24px;
+  }
+
+  .khas-about-new-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .khas-about-new-quote {
+    padding: 40px 24px;
+  }
+
+  .khas-about-new-quote-text {
+    font-size: 18px;
+  }
+
+  .khas-about-new-commitment-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .khas-about-new-cta {
+    padding: 40px 24px;
+  }
+
+  .khas-about-new-cta-heading {
+    font-size: 18px;
+  }
+
+  .khas-about-new-cta-text {
+    font-size: 14px;
+  }
+
+  .khas-about-new-cta-buttons {
+    flex-direction: column;
+  }
+
+  .khas-about-new-btn {
+    width: 100%;
+  }
+
+  .khas-about-new-hero-buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .khas-about-new-philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .khas-about-new-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .khas-about-new-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .khas-about-new-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .khas-about-new-cta-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .khas-about-new-philosophy-card,
+  .khas-about-new-value-card,
+  .khas-about-new-benefit-card,
+  .khas-about-new-timeline-circle,
+  .khas-about-new-btn {
+    transition: none;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.khas-about-new-btn:focus-visible {
+  outline: 2px solid var(--khas-about-new-gold);
+  outline-offset: 2px;
+}
